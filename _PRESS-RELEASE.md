@@ -17,19 +17,19 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  Jobbish
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  The best central place to get job listings from all sources.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Using this application eases the stress of having to check website A, website B, and so on looking for that next opportunity.  Using Jobbish takes all that Job -ish and makes it easy to manage!
 
 ## Problem ##
-  > Describe the problem your product solves.
+  Simplistic management of all job boards in one central place.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  Using several of the most common job search website's job search API's, we can pull in several of their amazing resources into one central hub that makes it easy to see a full spectrum of what the job search world looks like.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
