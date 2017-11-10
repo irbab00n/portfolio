@@ -39,3 +39,6 @@ bower_components/
 
 #Package-lock
 package-lock.json
+
+#Bundle file
+public/bundle.js
