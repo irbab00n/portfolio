@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "webpack --watch"
+    "compile": "webpack --watch",
+    "server-dev": "nodemon server",
+    "start": "npm run compile & npm run server-dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/irbab00n/hrsf84-mvp.git"
+    "url": "git+https://github.com/irbab00n/portfolio.git"
   },
   "keywords": [],
   "author": "",
@@ -19,10 +21,20 @@
   },
   "homepage": "https://github.com/irbab00n/hrsf84-mvp#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "mysql": "^2.15.0",
     "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
   }
 }
