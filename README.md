@@ -1,7 +1,9 @@
-Jobbish
+Portfolio
 ---
 
-Welcome to Jobbish, the central hub of your job search!
+Welcome to my portfolio repository!
+
+This repository offers me the ability to be able to engineer new projects and test new concepts as I continue to expand my software development skills over time.
 
 
 Setup
@@ -13,8 +15,8 @@ Download all dependencies:
 npm install
 ```
 
-Start up the webpack:
+Start up the server and webpack:
 
 ```
-npm run compile
+npm start
 ```

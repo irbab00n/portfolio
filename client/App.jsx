@@ -65,6 +65,7 @@ class App extends React.Component {
           fontSize: '30px',
           color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 14))})`
         }}>
+          {/* Install a timer that will change this message once every few seconds */}
           Welcome to my professional programming paradise
         </div>
 
