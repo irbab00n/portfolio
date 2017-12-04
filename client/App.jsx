@@ -27,10 +27,10 @@ class App extends React.Component {
   }
 
   amountScrolled() {
-    var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight;
-    var docheight = getDocHeight();
+    var windowHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
+    var documentHeight = getDocHeight();
     var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    var trackLength = docheight - winheight;
+    var trackLength = documentHeight - windowHeight;
     var percentScrolled = Math.floor(scrollTop / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
     this.setState({percentScrolled: percentScrolled});
   }
