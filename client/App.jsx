@@ -43,7 +43,9 @@ class App extends React.Component {
   render() {
 
     const { screenWidth, percentScrolled } = this.state;
-    let direction = screenWidth >= 700 ? 'row' : 'column';
+    let direction = screenWidth >= 1000 ? 'row' : 'column';
+
+    console.log(screenWidth);
 
     return (
 
@@ -81,7 +83,7 @@ class App extends React.Component {
           alignItems: 'center'
         }}>
           <div>
-            <img src='https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/18836086_10209017808024673_7516630657116328846_n.jpg?oh=93faa42d38b0979fc5748433b746c096&oe=5AD74B88'
+            <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
               style={{height: '300px', padding: '25px'}}
             />
           </div>
