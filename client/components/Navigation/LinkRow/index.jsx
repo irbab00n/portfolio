@@ -6,15 +6,25 @@ import style from '../navbarStyle';
 
 import scrollEffects from '../../../helpers/scrollEffects';
 
-const LinkRow = (props) => (
+class LinkRow extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
 
-  <div style={style.navigation_body}>
-    <NavLink name={'Resume'} onClick={() => { scrollEffects.linear(props.yOffset, 450) }}/>
-    <NavLink name={'Projects'} onClick={() => { scrollEffects.accelerate(props.yOffset, 1000) }}/>
-    <NavLink name={'Blog'} onClick={() => { scrollEffects.accelerate(props.yOffset, 2000) }}/>
-  </div>
+  render() {
 
-);
+    return (
+
+      <div style={style.navigation_body}>
+        <NavLink name={'Resume'} onClick={() => { scrollEffects.linear(this.props.yOffset, 450) }}/>
+        <NavLink name={'Projects'} onClick={() => { scrollEffects.accelerate(this.props.yOffset, 1000) }}/>
+        <NavLink name={'Blog'} onClick={() => { scrollEffects.accelerate(this.props.yOffset, 2000) }}/>
+      </div>
+
+    );
+  }
+}
 
 export default LinkRow;
 

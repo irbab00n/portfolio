@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navbar from './components/Navigation/index.jsx';
 
-import getDocHeight from './helpers/getDocHeight';
+import getDocumentHeight from './helpers/getDocumentHeight';
 import getCurrentYOffset from './helpers/getCurrentYOffset';
 
 
@@ -13,26 +13,26 @@ class App extends React.Component {
       screenWidth: window.innerWidth,
       percentScrolled: 0
     };
-    this.amountScrolled = this.amountScrolled.bind(this);
+    this.calculateScrolled = this.calculateScrolled.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
   componentWillMount() {
     window.addEventListener('resize', this.handleWindowResize);
-    window.addEventListener('scroll', this.amountScrolled);
+    window.addEventListener('scroll', this.calculateScrolled);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowResize);
-    window.removeEventListener("scroll", this.amountScrolled);
+    window.removeEventListener("scroll", this.calculateScrolled);
   }
 
-  amountScrolled() {
-    var windowHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
-    var documentHeight = getDocHeight();
-    var currentYOffset = getCurrentYOffset();
-    var trackLength = documentHeight - windowHeight;
-    var percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+  calculateScrolled() {
+    let windowHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
+    let documentHeight = getDocumentHeight();
+    let currentYOffset = getCurrentYOffset();
+    let trackLength = documentHeight - windowHeight;
+    let percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
     this.setState({percentScrolled: percentScrolled});
   }
 
@@ -44,8 +44,6 @@ class App extends React.Component {
 
     const { screenWidth, percentScrolled } = this.state;
     let direction = screenWidth >= 1000 ? 'row' : 'column';
-
-    console.log(screenWidth);
 
     return (
 
@@ -65,7 +63,7 @@ class App extends React.Component {
           width: '100%',
           background: `linear-gradient(to bottom, #ffffff 6%, #b3e3ff 68%)`,
           fontSize: '30px',
-          color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 14))})`
+          color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`
         }}>
           {/* Install a timer that will change this message once every few seconds */}
           Welcome to my professional programming paradise
