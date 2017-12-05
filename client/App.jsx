@@ -92,7 +92,7 @@ class App extends React.Component {
         </div>
 
         <div style={{
-          height: '500px',
+          height: '1000px',
           backgroundColor: 'gray',
           padding: '15px'
 
@@ -101,7 +101,7 @@ class App extends React.Component {
         </div>
 
         <div style={{
-          height: '500px',
+          height: '1000px',
           backgroundColor: 'gray',
           padding: '15px'
         }}>
