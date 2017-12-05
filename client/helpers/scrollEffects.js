@@ -32,6 +32,8 @@ module.exports.accelerate = (start, destination) => {
   };
 
   let calculateCoefficient = (i) => {
+    // Multipliers here are determined by visual testing only
+    // They should be adjusted as the size of the page adjusts
     if (peaked) {
       return (2.2 - (3.14 * calculatePercentage(i)));
     } else {
