@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from './components/Navigation/index.jsx';
 
 import getDocHeight from './helpers/getDocHeight';
+import getCurrentYOffset from './helpers/getCurrentYOffset';
 
 
 class App extends React.Component {
@@ -29,9 +30,9 @@ class App extends React.Component {
   amountScrolled() {
     var windowHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
     var documentHeight = getDocHeight();
-    var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    var currentYOffset = getCurrentYOffset();
     var trackLength = documentHeight - windowHeight;
-    var percentScrolled = Math.floor(scrollTop / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+    var percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
     this.setState({percentScrolled: percentScrolled});
   }
 
@@ -52,8 +53,7 @@ class App extends React.Component {
         alignItems: 'center'
       }}>
 
-        <Navbar screenWidth={screenWidth} percentScrolled={percentScrolled}/>
-
+        <Navbar screenWidth={screenWidth} percentScrolled={percentScrolled} yOffset={getCurrentYOffset()} animationOption={'sharp'} />
 
         <div style={{
           display: 'flex',

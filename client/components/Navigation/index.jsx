@@ -13,20 +13,37 @@ class Navbar extends React.Component {
     super(props);
     this.state = {
     };
+    this.renderOption = this.renderOption.bind(this);
+  }
+
+  renderOption(option) {
+    const { percentScrolled, yOffset } = this.props;
+    switch(option) {
+      case 'fadeIn':
+        return {
+          backgroundColor: `rgba(250, 250, 250, ${(percentScrolled / 10).toFixed(1)})`, 
+          boxShadow: `0 4px 8px 0 rgba(0, 0, 0, ${(percentScrolled / 100).toFixed(2) >= 0.4 ? 0.4 : (percentScrolled / 100).toFixed(2)})`
+        };
+      case 'sharp':
+        return ( yOffset >= 425 && {
+          backgroundColor: 'rgba(250, 250, 250, 1.0)', 
+          boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)'
+        })
+    }
   }
 
   render() {
 
-    const { percentScrolled, screenWidth } = this.props;
-    let currentScroll = {
-      backgroundColor: `rgba(250, 250, 250, ${(percentScrolled / 10).toFixed(1)})`, 
-      boxShadow: `0 4px 8px 0 rgba(0, 0, 0, ${(percentScrolled / 100).toFixed(2) >= 0.4 ? 0.4 : (percentScrolled / 100).toFixed(2)})`
-    };
+    const { percentScrolled, screenWidth, yOffset, animationOption } = this.props;
+    // let currentScroll = {
+    //   backgroundColor: `rgba(250, 250, 250, ${(percentScrolled / 10).toFixed(1)})`, 
+    //   boxShadow: `0 4px 8px 0 rgba(0, 0, 0, ${(percentScrolled / 100).toFixed(2) >= 0.4 ? 0.4 : (percentScrolled / 100).toFixed(2)})`
+    // };
     let mobileToggle = screenWidth < 700;
 
     return (
 
-      <div style={applyStyles(style.main, currentScroll)}>
+      <div style={applyStyles(style.main, this.renderOption(animationOption))}>
 
         <Title />
 

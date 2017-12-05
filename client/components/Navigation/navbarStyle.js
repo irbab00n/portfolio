@@ -6,7 +6,7 @@ module.exports.main = {
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  WebkitTransition: '0.1s',
+  WebkitTransition: 'linear 0.1s',
   zIndex: '1'
 };
 
