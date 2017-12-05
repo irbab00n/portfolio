@@ -52,13 +52,14 @@ class Dropdown extends React.Component {
 
         </div>
 
-        <div id='dropdown-list-body' style={applyStyles({display: 'hidden', height: '0px', width: '100%', backgroundColor: 'white', WebkitTransition: 'height 0.2s'}, dropdownToggle && {display: 'flex', height: '225px'})}>
+        <div id='dropdown-list-body' style={applyStyles({display: 'hidden', height: '0px', width: '100%', backgroundColor: 'white', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)', WebkitTransition: 'height 0.2s'}, dropdownToggle && {display: 'flex', height: '225px'})}>
 
-                <div style={applyStyles({display: 'hidden', flexDirection: 'column', alignItems: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>
-                  <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 1' : ''}</span>
-                  <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 2' : ''}</span>
-                  <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 3' : ''}</span>
-                </div>
+          <div style={applyStyles({display: 'hidden', flexDirection: 'column', alignItems: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>
+            <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 1' : ''}</span>
+            <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 2' : ''}</span>
+            <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 3' : ''}</span>
+          </div>
+          
         </div>
 
       </div>
