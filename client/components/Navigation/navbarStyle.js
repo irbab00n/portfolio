@@ -24,16 +24,15 @@ module.exports.title_right = {
 module.exports.select_button = {
   alignSelf: 'flex-start',
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'flex-end',
   height: '36px',
   width: '100px',
-  padding: '17px',
+  margin: '17px 50px 17px',
   backgroundColor: 'rgb(179, 227, 255)',
   borderWidth: '2px',
   borderRadius: '2px',
-  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
   WebkitTransition: 'height 0.4s',
 };
 
