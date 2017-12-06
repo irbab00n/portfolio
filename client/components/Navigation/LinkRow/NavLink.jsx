@@ -1,8 +1,8 @@
 import React from 'react';
 
-import style from './navbarStyle';
+import style from '../navbarStyle';
 
-import applyStyles from '../../helpers/applyStyles';
+import applyStyles from '../../../helpers/applyStyles';
 
 
 class NavLink extends React.Component {

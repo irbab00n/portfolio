@@ -2,7 +2,8 @@ import React from 'react';
 
 import Navbar from './components/Navigation/index.jsx';
 
-import getDocHeight from './helpers/getDocHeight';
+import getDocumentHeight from './helpers/getDocumentHeight';
+import getCurrentYOffset from './helpers/getCurrentYOffset';
 
 
 class App extends React.Component {
@@ -12,26 +13,26 @@ class App extends React.Component {
       screenWidth: window.innerWidth,
       percentScrolled: 0
     };
-    this.amountScrolled = this.amountScrolled.bind(this);
+    this.calculateScrolled = this.calculateScrolled.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
   componentWillMount() {
     window.addEventListener('resize', this.handleWindowResize);
-    window.addEventListener('scroll', this.amountScrolled);
+    window.addEventListener('scroll', this.calculateScrolled);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowResize);
-    window.removeEventListener("scroll", this.amountScrolled);
+    window.removeEventListener("scroll", this.calculateScrolled);
   }
 
-  amountScrolled() {
-    var windowHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
-    var documentHeight = getDocHeight();
-    var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    var trackLength = documentHeight - windowHeight;
-    var percentScrolled = Math.floor(scrollTop / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+  calculateScrolled() {
+    let windowHeight = window.innerHeight || (document.documentElement || document.body).clientHeight;
+    let documentHeight = getDocumentHeight();
+    let currentYOffset = getCurrentYOffset();
+    let trackLength = documentHeight - windowHeight;
+    let percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
     this.setState({percentScrolled: percentScrolled});
   }
 
@@ -42,7 +43,7 @@ class App extends React.Component {
   render() {
 
     const { screenWidth, percentScrolled } = this.state;
-    let direction = screenWidth >= 700 ? 'row' : 'column';
+    let direction = screenWidth >= 1000 ? 'row' : 'column';
 
     return (
 
@@ -52,8 +53,7 @@ class App extends React.Component {
         alignItems: 'center'
       }}>
 
-        <Navbar screenWidth={screenWidth} percentScrolled={percentScrolled}/>
-
+        <Navbar screenWidth={screenWidth} percentScrolled={percentScrolled} yOffset={getCurrentYOffset()} animationOption={'sharp'} />
 
         <div style={{
           display: 'flex',
@@ -63,7 +63,7 @@ class App extends React.Component {
           width: '100%',
           background: `linear-gradient(to bottom, #ffffff 6%, #b3e3ff 68%)`,
           fontSize: '30px',
-          color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 14))})`
+          color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`
         }}>
           {/* Install a timer that will change this message once every few seconds */}
           Welcome to my professional programming paradise
@@ -81,7 +81,7 @@ class App extends React.Component {
           alignItems: 'center'
         }}>
           <div>
-            <img src='https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/18836086_10209017808024673_7516630657116328846_n.jpg?oh=93faa42d38b0979fc5748433b746c096&oe=5AD74B88'
+            <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
               style={{height: '300px', padding: '25px'}}
             />
           </div>
@@ -92,7 +92,7 @@ class App extends React.Component {
         </div>
 
         <div style={{
-          height: '500px',
+          height: '1000px',
           backgroundColor: 'gray',
           padding: '15px'
 
@@ -101,7 +101,7 @@ class App extends React.Component {
         </div>
 
         <div style={{
-          height: '500px',
+          height: '1000px',
           backgroundColor: 'gray',
           padding: '15px'
         }}>
