@@ -34,6 +34,7 @@
     "webpack": "^3.8.1"
   },
   "devDependencies": {
+    "json-loader": "^0.5.7",
     "react": "^16.1.0",
     "react-dom": "^16.1.0"
   }
