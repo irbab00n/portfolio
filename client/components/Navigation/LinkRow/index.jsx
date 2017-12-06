@@ -4,18 +4,13 @@ import NavLink from './NavLink.jsx';
 
 import style from '../navbarStyle';
 
-import scrollEffects from '../../../helpers/scrollEffects';
 import calculateDistanceToTarget from '../../../helpers/calculateDistanceToTarget';
+import animationChooser from '../../../helpers/animationChooser';
+import scrollEffects from '../../../helpers/scrollEffects';
 
 class LinkRow extends React.Component {
   constructor(props){
     super(props);
-    this.animate = this.animate.bind(this);
-  }
-
-  animate(y, target) {
-    let animation = calculateDistanceToTarget(y, target) >= 800 ? scrollEffects.accelerate : scrollEffects.accelerate;
-    return () => animation(y, target);
   }
 
   render() {
@@ -25,9 +20,9 @@ class LinkRow extends React.Component {
     return (
 
       <div style={style.navigation_body}>
-        <NavLink name={'Resume'} onClick={this.animate(yOffset, 450)}/>
-        <NavLink name={'Projects'} onClick={this.animate(yOffset, 1000)}/>
-        <NavLink name={'Blog'} onClick={this.animate(yOffset, 2000)}/>
+        <NavLink name={'Resume'} onClick={animationChooser(yOffset, 440, calculateDistanceToTarget, scrollEffects)}/>
+        <NavLink name={'Projects'} onClick={animationChooser(yOffset, 1000, calculateDistanceToTarget, scrollEffects)}/>
+        <NavLink name={'Blog'} onClick={animationChooser(yOffset, 2000, calculateDistanceToTarget, scrollEffects)}/>
       </div>
 
     );

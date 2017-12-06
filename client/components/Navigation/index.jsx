@@ -5,6 +5,9 @@ import Dropdown from './Dropdown/index.jsx';
 import LinkRow from './LinkRow/index.jsx';
 
 import applyStyles from '../../helpers/applyStyles';
+import animationChooser from '../../helpers/animationChooser';
+import calculateDistanceToTarget from '../../helpers/calculateDistanceToTarget';
+import scrollEffects from '../../helpers/scrollEffects';
 
 import style from './navbarStyle';
 
@@ -26,7 +29,7 @@ class Navbar extends React.Component {
         }]);
       case 'sharp':
         return ([
-          yOffset >= 425 && {WebkitTransition: 'ease-in 0.2s', backgroundColor: `rgba(250, 250, 250, ${(percentScrolled / 10).toFixed(1)})`}, 
+          yOffset >= 420 && {WebkitTransition: 'ease-in 0.2s', backgroundColor: `rgba(250, 250, 250, ${(percentScrolled / 10).toFixed(1)})`}, 
           yOffset >= 425 && {boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)'}
         ]);
     }
@@ -41,7 +44,7 @@ class Navbar extends React.Component {
 
       <div style={applyStyles(style.main, ...this.renderOption(animationOption))}>
 
-        <Title />
+        <Title onClick={animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects)}/>
         {
           mobileToggle
             ? <Dropdown />

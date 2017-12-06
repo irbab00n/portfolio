@@ -11,7 +11,8 @@ module.exports.main = {
 };
 
 module.exports.title_left = {
-  paddingLeft: '50px',
+  marginLeft: '50px',
+  padding: '0 6px',
   fontSize: '30px',
   color: 'rgba(41, 67, 78, 1.0)'
 };
