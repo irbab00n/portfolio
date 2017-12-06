@@ -42,7 +42,6 @@ class Navbar extends React.Component {
       <div style={applyStyles(style.main, ...this.renderOption(animationOption))}>
 
         <Title />
-
         {
           mobileToggle
             ? <Dropdown />
