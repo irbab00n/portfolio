@@ -44,7 +44,7 @@ class Navbar extends React.Component {
 
       <div style={applyStyles(style.main, ...this.renderOption(animationOption))}>
 
-        <Title onClick={animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects)}/>
+        <Title onClick={yOffset === 0 ? () => {} : animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects)}/>
         {
           mobileToggle
             ? <Dropdown />
