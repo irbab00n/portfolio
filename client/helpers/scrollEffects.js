@@ -32,23 +32,10 @@ module.exports.accelerate = (start, destination) => {
   };
 
   let calculateCoefficient = (i) => {
-    // Multipliers here are determined by visual testing only
-    // They should be adjusted as the size of the page adjusts
-    if (peaked) {
-      return (2.2 - (3.14 * calculatePercentage(i)));
-    } else {
-      return 3.14 * calculatePercentage(i) / 2 ;
-    }
-  };
-
-  let checkPeaked = (i) => {
-    if (i >= (start + (originalGap / 2))) {
-      peaked = true;
-    }
+      return  (2.17 - (3 * calculatePercentage(i)));
   };
 
   let int = setInterval(() => {
-    checkPeaked(i);
     if (scrollDown) {
       window.scrollTo(0, i);
       i += (10 * (1 + calculateCoefficient(i)));

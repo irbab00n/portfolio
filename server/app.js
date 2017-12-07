@@ -13,4 +13,8 @@ app.use(bodyParser.json());
 
 */
 
+app.get('/', (req, res) => {
+  console.log('root of app reached');
+});
+
 module.exports = app;
