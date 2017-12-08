@@ -51,7 +51,7 @@ class Dropdown extends React.Component {
 
         <div style={applyStyles(style.dropdownBody_collapsed, dropdownToggle && style.dropdownBody_expanded)}>
 
-          <div style={applyStyles(style.linkContainer_collapsed, dropdownToggle && style.link_expanded)}>
+          <div style={applyStyles(style.linkContainer_collapsed, dropdownToggle && style.linkContainer_collapsed)}>
             <Link 
               name={'Resume'}
               dropdownToggle={dropdownToggle}
