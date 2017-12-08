@@ -9,22 +9,26 @@ module.exports.button = {
   alignItems: 'center',
   borderWidth: '2px',
   borderRadius: '2px',
-  background: 'linear-gradient(to bottom, #29434e 14%, #3e6475 87%)',
   WebkitTransition: '0.1s'
 };
 
 module.exports.currentSelection = {
   height: '50px',
+  width: '100%',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
   color: 'white',
+  background: 'linear-gradient(to bottom, #627580 17%, #7d909b 83%)',
+  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
   WebkitTransition: '0.1s'
 };
 
 module.exports.currentSelection_pressed= {
-  color: 'rgba(41, 67, 78, 1.0)'
+  color: 'rgba(44, 53, 58, 1.0)',
+  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.0)',
+  background: 'linear-gradient(to bottom, #7d909b 17%, #a9b5bc 83%)'
 };
 
 module.exports.dropdownBody_collapsed = {
