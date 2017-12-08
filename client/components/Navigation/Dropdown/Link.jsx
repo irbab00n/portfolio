@@ -24,7 +24,7 @@ class Link extends React.Component {
         style={applyStyles(style.link_collapsed, dropdownToggle && style.link_expanded, hovered && {backgroundColor: 'rgb(242, 242, 242)'})}
         onMouseEnter={dropdownToggle ? () => {this.setState({hovered: true})} : () => {} }
         onMouseLeave={dropdownToggle ? () => {this.setState({hovered: false})} : () => {} }
-        onClick={() => { onClick() }}
+        onClick={this.props.onClick}
       >
         {dropdownToggle ? name : ''}
       </div>
