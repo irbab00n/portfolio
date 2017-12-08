@@ -32,13 +32,17 @@ class Dropdown extends React.Component {
   render() {
 
     const { dropdownToggle } = this.state;
-    const { yOffset } = this.props;
+    const { yOffset, targets } = this.props;
 
     return (
 
       <div style={style.button}
         onClick={() => { this.toggleDropdown(dropdownToggle); }}
       >
+
+      {/* Update the below section into it's own component. This is where we will conditionally render the current page info */}
+      {/* ------------------------------------------------------------------------------------------------------------------ */}
+ 
         <div style={style.currentSelection}>
           
           {
@@ -46,6 +50,9 @@ class Dropdown extends React.Component {
               ? 'Open'
               : 'Closed'
           }
+
+      {/* ------------------------------------------------------------------------------------------------------------------ */}
+
 
         </div>
 
