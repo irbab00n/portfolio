@@ -37,7 +37,7 @@ class Navbar extends React.Component {
 
   render() {
 
-    const { percentScrolled, screenWidth, yOffset, animationOption } = this.props;
+    const { percentScrolled, screenWidth, yOffset, animationOption, targets } = this.props;
     let mobileToggle = screenWidth < 982;
 
     return (
@@ -47,7 +47,7 @@ class Navbar extends React.Component {
         <Title onClick={yOffset === 0 ? () => {} : animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects)}/>
         {
           mobileToggle
-            ? <Dropdown />
+            ? <Dropdown yOffset={yOffset} targets={targets} />
             : <LinkRow yOffset={yOffset}/>
         }
 

@@ -19,6 +19,7 @@ module.exports.linear = (start, destination) => {
 };
 
 module.exports.accelerate = (start, destination) => {
+  clearInterval();
   let i = start;
   let originalGap = Math.abs(start - destination);
   let peaked = false;

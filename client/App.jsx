@@ -44,6 +44,28 @@ class App extends React.Component {
 
     const { screenWidth, percentScrolled } = this.state;
     let direction = screenWidth >= 1000 ? 'row' : 'column';
+    let targets = {
+      block1: {
+        start: 0,
+        end: 438,
+        label: 'Home'
+      },
+      block2: {
+        start: 439,
+        end: 999,
+        label: 'Resume'
+      },
+      block3: {
+        start: 1000,
+        end: 1999,
+        label: 'Projects'
+      },
+      block4: {
+        start: 2000,
+        end: 5000,
+        label: 'Blog'
+      }
+    };
 
     return (
 
@@ -53,7 +75,13 @@ class App extends React.Component {
         alignItems: 'center'
       }}>
 
-        <Navbar screenWidth={screenWidth} percentScrolled={percentScrolled} yOffset={getCurrentYOffset()} animationOption={'sharp'} />
+        <Navbar 
+          screenWidth={screenWidth}
+          percentScrolled={percentScrolled}
+          yOffset={getCurrentYOffset()}
+          animationOption={'sharp'}
+          targets={targets}
+        />
 
         <div style={{
           display: 'flex',
