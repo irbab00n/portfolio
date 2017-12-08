@@ -7,7 +7,9 @@ module.exports.button = {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: 'black',
+  borderWidth: '2px',
+  borderRadius: '2px',
+  background: 'linear-gradient(to bottom, #29434e 14%, #3e6475 87%)',
   WebkitTransition: '0.1s'
 };
 
@@ -17,7 +19,12 @@ module.exports.currentSelection = {
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  color: 'white'
+  color: 'white',
+  WebkitTransition: '0.1s'
+};
+
+module.exports.currentSelection_pressed= {
+  color: 'rgba(41, 67, 78, 1.0)'
 };
 
 module.exports.dropdownBody_collapsed = {

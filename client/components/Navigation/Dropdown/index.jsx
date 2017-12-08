@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from './Link.jsx';
+import CurrentSelection from './CurrentSelection.jsx'
 
 import applyStyles from '../../../helpers/applyStyles';
 
@@ -36,25 +37,11 @@ class Dropdown extends React.Component {
 
     return (
 
-      <div style={style.button}
+      <div style={applyStyles(style.button, dropdownToggle && style.button_pressed)}
         onClick={() => { this.toggleDropdown(dropdownToggle); }}
       >
-
-      {/* Update the below section into it's own component. This is where we will conditionally render the current page info */}
-      {/* ------------------------------------------------------------------------------------------------------------------ */}
  
-        <div style={style.currentSelection}>
-          
-          {
-            dropdownToggle
-              ? 'Open'
-              : 'Closed'
-          }
-
-      {/* ------------------------------------------------------------------------------------------------------------------ */}
-
-
-        </div>
+        <CurrentSelection yOffset={yOffset} targets={targets} dropdownToggle={dropdownToggle} />
 
         <div style={applyStyles(style.dropdownBody_collapsed, dropdownToggle && style.dropdownBody_expanded)}>
 
@@ -67,12 +54,12 @@ class Dropdown extends React.Component {
             <Link 
               name={'Projects'}
               dropdownToggle={dropdownToggle}
-              onClick={animationChooser(yOffset, 1000, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 1010, calculateDistanceToTarget, scrollEffects)}
             />
             <Link 
               name={'Blog'}
               dropdownToggle={dropdownToggle}
-              onClick={animationChooser(yOffset, 2000, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 2010, calculateDistanceToTarget, scrollEffects)}
             />
           </div>
           

@@ -11,6 +11,7 @@ module.exports.main = {
 };
 
 module.exports.title_left = {
+  cursor: 'pointer',
   marginLeft: '50px',
   padding: '0 6px',
   fontSize: '30px',
@@ -45,6 +46,7 @@ module.exports.navigation_body = {
 };
 
 module.exports.navigation_link = {
+  cursor: 'pointer',
   padding: '15px 30px 15px',
   fontSize: '24px',
   color: 'rgba(41, 67, 78, 1.0)',
