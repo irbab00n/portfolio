@@ -1,14 +1,28 @@
 import React from 'react';
 
+import Link from './Link.jsx';
+
 import applyStyles from '../../../helpers/applyStyles';
+
+import calculateDistanceToTarget from '../../../helpers/calculateDistanceToTarget';
+import animationChooser from '../../../helpers/animationChooser';
+import scrollEffects from '../../../helpers/scrollEffects';
+
+import style from './style';
 
 class Dropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       dropdownToggle: false,
+      selected: 'Home'
     };
     this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.updateSelected = this.updateSelected.bind(this);
+  }
+
+  updateSelected(name) {
+    this.setState({selected: name});
   }
 
   toggleDropdown(currentFlag) {
@@ -18,31 +32,14 @@ class Dropdown extends React.Component {
   render() {
 
     const { dropdownToggle } = this.state;
+    const { yOffset } = this.props;
 
     return (
 
-      <div style={{
-        alignSelf: 'flex-start',
-        marginRight: '50px',
-        marginTop: '10px',
-        width: '150px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black',
-        WebkitTransition: '0.2s'
-      }}
+      <div style={style.button}
         onClick={() => { this.toggleDropdown(dropdownToggle); }}
       >
-        <div id='current-selected' style={{
-          height: '50px',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: 'white'
-        }}>
+        <div style={style.currentSelection}>
           
           {
             dropdownToggle
@@ -52,12 +49,24 @@ class Dropdown extends React.Component {
 
         </div>
 
-        <div id='dropdown-list-body' style={applyStyles({display: 'hidden', height: '0px', width: '100%', backgroundColor: 'white', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)', WebkitTransition: 'height 0.2s'}, dropdownToggle && {display: 'flex', height: '225px'})}>
+        <div style={applyStyles(style.dropdownBody_collapsed, dropdownToggle && style.dropdownBody_expanded)}>
 
-          <div style={applyStyles({display: 'hidden', flexDirection: 'column', alignItems: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>
-            <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 1' : ''}</span>
-            <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 2' : ''}</span>
-            <span style={applyStyles({height: '75px', width: '100%', display: 'hidden', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', WebkitTransition: '0.2s'}, dropdownToggle && {display: 'flex'})}>{dropdownToggle ? 'Item 3' : ''}</span>
+          <div style={applyStyles(style.linkContainer_collapsed, dropdownToggle && style.link_expanded)}>
+            <Link 
+              name={'Resume'}
+              dropdownToggle={dropdownToggle}
+              onClick={animationChooser(yOffset, 440, calculateDistanceToTarget, scrollEffects)}
+            />
+            <Link 
+              name={'Projects'}
+              dropdownToggle={dropdownToggle}
+              onClick={animationChooser(yOffset, 1000, calculateDistanceToTarget, scrollEffects)}
+            />
+            <Link 
+              name={'Blog'}
+              dropdownToggle={dropdownToggle}
+              onClick={animationChooser(yOffset, 2000, calculateDistanceToTarget, scrollEffects)}
+            />
           </div>
           
         </div>
