@@ -27,7 +27,7 @@ module.exports.currentSelection = {
 
 module.exports.currentSelection_pressed= {
   color: 'rgba(44, 53, 58, 1.0)',
-  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.0)',
+  boxShadow: 'inset 0 4px 8px 4px rgba(0, 0, 0, 0.2)',
   background: 'linear-gradient(to bottom, #7d909b 17%, #a9b5bc 83%)'
 };
 

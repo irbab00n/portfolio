@@ -49,7 +49,7 @@ class Dropdown extends React.Component {
             <Link 
               name={'Resume'}
               dropdownToggle={dropdownToggle}
-              onClick={animationChooser(yOffset, 440, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 445, calculateDistanceToTarget, scrollEffects)}
             />
             <Link 
               name={'Projects'}
