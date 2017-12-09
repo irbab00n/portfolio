@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from '../navbarStyle';
+import style from './style';
 
 import applyStyles from '../../../helpers/applyStyles';
 
