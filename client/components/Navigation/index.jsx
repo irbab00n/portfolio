@@ -9,7 +9,7 @@ import animationChooser from '../../helpers/animationChooser';
 import calculateDistanceToTarget from '../../helpers/calculateDistanceToTarget';
 import scrollEffects from '../../helpers/scrollEffects';
 
-import style from './navbarStyle';
+import style from './style';
 
 class Navbar extends React.Component {
   constructor(props) {

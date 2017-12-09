@@ -22,6 +22,8 @@ module.exports.accelerate = (start, destination) => {
   clearInterval();
   let i = start;
   let originalGap = Math.abs(start - destination);
+  // Bug found if original gap was less than 10, animation would jump to of page
+  if (originalGap <= 10) {return;} 
   let peaked = false;
   let scrollDown = start <= destination;
 
@@ -39,13 +41,13 @@ module.exports.accelerate = (start, destination) => {
   let int = setInterval(() => {
     if (scrollDown) {
       window.scrollTo(0, i);
-      i += (10 * (1 + calculateCoefficient(i)));
+      i += (8 * (1 + calculateCoefficient(i)));
       if (i >= destination) {
         clearInterval(int);
       }
     } else {
       window.scrollTo(0, i);
-      i -= (10 * (1 + calculateCoefficient(i)));
+      i -= (8 * (1 + calculateCoefficient(i)));
       if (i <= destination) {
         clearInterval(int);
       }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import NavLink from './NavLink.jsx';
 
-import style from '../navbarStyle';
+import style from './style';
 
 import calculateDistanceToTarget from '../../../helpers/calculateDistanceToTarget';
 import animationChooser from '../../../helpers/animationChooser';

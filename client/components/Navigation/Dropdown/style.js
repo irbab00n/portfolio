@@ -20,15 +20,15 @@ module.exports.currentSelection = {
   justifyContent: 'center',
   alignItems: 'center',
   color: 'white',
-  background: 'linear-gradient(to bottom, #627580 17%, #7d909b 83%)',
+  background: 'linear-gradient(to bottom, #007ac1 17%, #44aaee 83%)',
   boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
   WebkitTransition: '0.1s'
 };
 
 module.exports.currentSelection_pressed= {
   color: 'rgba(44, 53, 58, 1.0)',
-  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.0)',
-  background: 'linear-gradient(to bottom, #7d909b 17%, #a9b5bc 83%)'
+  boxShadow: 'inset 0 4px 8px 4px rgba(0, 0, 0, 0.2)',
+  background: 'linear-gradient(to bottom, #59a9f4 17%, #b9dff8 83%)'
 };
 
 module.exports.dropdownBody_collapsed = {
