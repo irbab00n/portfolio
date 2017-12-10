@@ -7,15 +7,15 @@ module.exports.body = {
   justifyContent: 'center',
   height: '500px',
   width: '100%',
-  background: `linear-gradient(to bottom, #ffffff 6%, #b3e3ff 68%)`,
-  backgroundImage: 'url("https://s3-us-west-1.amazonaws.com/cos-bytes.com/backgroundClouds.png"), linear-gradient(to bottom, #ffffff 6%, #b3e3ff 68%)',
+  background: `linear-gradient(to top, #ffffff 6%, #b3e3ff 68%)`,
+  backgroundImage: 'url("https://s3-us-west-1.amazonaws.com/cos-bytes.com/backgroundClouds.png"), linear-gradient(to top, #ffffff 6%, #b3e3ff 68%)',
   fontSize: '30px',
 };
 
 module.exports.rightCloud = {
   position: 'relative',
   zIndex: '-1',
-  top: '-300px',
+  top: '-200px',
   height: '100px',
   width: '500px',
   alignSelf: 'flex-end',
@@ -25,7 +25,7 @@ module.exports.rightCloud = {
 module.exports.leftCloud = {
   position: 'relative',
   zIndex: '-1',
-  top: '-100px',
+  top: '-150px',
   height: '100px',
   width: '500px',
   alignSelf: 'flex-start',
