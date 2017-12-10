@@ -8,6 +8,7 @@ module.exports.body = {
   height: '500px',
   width: '100%',
   background: `linear-gradient(to bottom, #ffffff 6%, #b3e3ff 68%)`,
+  backgroundImage: 'url("http://flywithacs.com/wp-content/themes/AmericanCharterServices/images/cloud-2.png"), linear-gradient(to bottom, #ffffff 6%, #b3e3ff 68%)',
   fontSize: '30px',
 };
 

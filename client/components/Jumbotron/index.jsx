@@ -1,7 +1,8 @@
 import React from 'react';
 
-import LeftCloud from './LeftCloud.jsx'
-import RightCloud from './RightCloud.jsx'
+import LeftCloud from './LeftCloud.jsx';
+import RightCloud from './RightCloud.jsx';
+import TextScroller from './TextScroller.jsx';
 
 import applyStyles from '../../helpers/applyStyles';
 
@@ -21,8 +22,8 @@ class Jumbotron extends React.Component {
       <div style={applyStyles(style.body, {color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`})}>
 
         <RightCloud yOffset={yOffset} />
-        
-        <span style={{marginBottom: '-400px'}}>Welcome to my professional programming paradise</span>
+
+        <TextScroller percentScrolled={percentScrolled}/>
 
         <LeftCloud yOffset={yOffset} />
 
