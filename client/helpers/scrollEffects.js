@@ -4,13 +4,13 @@ module.exports.linear = (start, destination) => {
   let int = setInterval(() =>  {
     if (scrollDown) {
       window.scrollTo(0, i);
-      i += 10;
+      i += 10; // Incrementation based on visual testing
       if (i >= destination) {
         clearInterval(int);
       }
     } else {
       window.scrollTo(0, i);
-      i -= 10;
+      i -= 10; // Incrementation based on visual testing
       if (i <= destination) {
         clearInterval(int);
       }
@@ -18,36 +18,36 @@ module.exports.linear = (start, destination) => {
   }, 1);
 };
 
+const calculatePercentage = (i, destination, originalGap) => {
+  let currentGap = Math.abs(i - destination);
+  let remainder = originalGap - currentGap;
+  let percentage = remainder / originalGap;
+  return percentage;
+};
+
+const calculateCoefficient = (i, destination, originalGap) => {
+    return  (2.17 - (3 * calculatePercentage(i, destination, originalGap))); // Percentage based on visual testing
+};
+
 module.exports.accelerate = (start, destination) => {
-  clearInterval();
+  clearInterval(int);
   let i = start;
   let originalGap = Math.abs(start - destination);
-  // Bug found if original gap was less than 10, animation would jump to of page
-  if (originalGap <= 10) {return;} 
+  if (originalGap <= 10) {
+    return;
+  } 
   let peaked = false;
-  let scrollDown = start <= destination;
-
-  let calculatePercentage = (i) => {
-    let currentGap = Math.abs(i - destination);
-    let remainder = originalGap - currentGap;
-    let percentage = remainder / originalGap;
-    return percentage;
-  };
-
-  let calculateCoefficient = (i) => {
-      return  (2.17 - (3 * calculatePercentage(i)));
-  };
-
+  let scrollDown = start <= destination; // True: Scroll Down, False: Scroll Up
   let int = setInterval(() => {
     if (scrollDown) {
       window.scrollTo(0, i);
-      i += (8 * (1 + calculateCoefficient(i)));
+      i += (8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
       if (i >= destination) {
         clearInterval(int);
       }
     } else {
       window.scrollTo(0, i);
-      i -= (8 * (1 + calculateCoefficient(i)));
+      i -= (8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
       if (i <= destination) {
         clearInterval(int);
       }

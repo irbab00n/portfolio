@@ -84,7 +84,7 @@ class App extends React.Component {
           targets={targets}
         />
 
-        <Jumbotron percentScrolled={percentScrolled} />
+        <Jumbotron percentScrolled={percentScrolled} yOffset={getCurrentYOffset()}/>
 
         <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(41, 67, 78, 0.1)'}}>
 

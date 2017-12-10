@@ -1,5 +1,9 @@
 import React from 'react';
 
+import LeftCloud from './LeftCloud.jsx';
+import RightCloud from './RightCloud.jsx';
+import TextScroller from './TextScroller.jsx';
+
 import applyStyles from '../../helpers/applyStyles';
 
 import style from './style';
@@ -11,13 +15,18 @@ class Jumbotron extends React.Component {
 
   render() {
 
-    const { percentScrolled } = this.props;
+    const { percentScrolled, yOffset } = this.props;
 
     return (
 
       <div style={applyStyles(style.body, {color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`})}>
-        {/* Install a timer that will change this message once every few seconds */}
-        Welcome to my professional programming paradise
+
+        <RightCloud yOffset={yOffset} />
+
+        <TextScroller percentScrolled={percentScrolled}/>
+
+        <LeftCloud yOffset={yOffset} />
+
       </div>
 
     );
