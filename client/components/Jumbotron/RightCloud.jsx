@@ -6,7 +6,7 @@ import style from './style';
 
 const RightCloud = (props) => (
 
-  <div style={applyStyles(style.rightCloud, {marginRight: `${-(props.yOffset * 1.11)}px`})}>
+  <div style={applyStyles(style.rightCloud, {right: `${-(props.yOffset * 1.11)}px`})}>
     <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/rightCloud.png'/>
   </div>
 
