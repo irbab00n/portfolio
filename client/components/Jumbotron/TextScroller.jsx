@@ -39,7 +39,7 @@ class TextScroller extends React.Component {
       <div style={{
         height: '30px',
         marginBottom: '-400px',
-        color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`
+        color: `rgba(41, 67, 78, 1.0)`
       }}>
         {messages[currentMessageIndex]}
       </div>
@@ -49,4 +49,5 @@ class TextScroller extends React.Component {
   }
 }
 
+// ${(1 - (percentScrolled / 7))}
 export default TextScroller;
