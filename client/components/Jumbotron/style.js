@@ -4,7 +4,7 @@ module.exports.body = {
   overflow: 'hidden',
   flexDirection: 'column',
   alignItems:'center',
-  justifyContent: 'space-evenly',
+  justifyContent: 'center',
   height: '500px',
   width: '100%',
   background: `linear-gradient(to bottom, #ffffff 6%, #b3e3ff 68%)`,
@@ -13,8 +13,9 @@ module.exports.body = {
 };
 
 module.exports.rightCloud = {
+  position: 'relative',
   zIndex: '-1',
-  marginTop: '-400px',
+  top: '-300px',
   height: '100px',
   width: '500px',
   alignSelf: 'flex-end',
@@ -22,7 +23,9 @@ module.exports.rightCloud = {
 };
 
 module.exports.leftCloud = {
+  position: 'relative',
   zIndex: '-1',
+  top: '-100px',
   height: '100px',
   width: '500px',
   alignSelf: 'flex-start',
