@@ -38,7 +38,7 @@ class App extends React.Component {
   }
 
   handleWindowResize() {
-    this.setState({screenWidth: window.innerWidth})
+    this.setState({screenWidth: window.innerWidth, screenHeight: window.innerHeight})
   }
 
   render() {
@@ -78,6 +78,7 @@ class App extends React.Component {
 
         <Navbar 
           screenWidth={screenWidth}
+          screenHeight={}
           percentScrolled={percentScrolled}
           yOffset={getCurrentYOffset()}
           animationOption={'sharp'}

@@ -38,7 +38,7 @@ class Navbar extends React.Component {
   render() {
 
     const { percentScrolled, screenWidth, yOffset, animationOption, targets } = this.props;
-    let mobileToggle = screenWidth < 982;
+    let mobileToggle = screenWidth < 1000;
 
     return (
 
