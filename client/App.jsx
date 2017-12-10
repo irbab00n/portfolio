@@ -53,16 +53,16 @@ class App extends React.Component {
       },
       block2: {
         start: 439,
-        end: 999,
+        end: 926,
         label: 'Resume'
       },
       block3: {
-        start: 1000,
-        end: 1999,
+        start: 927,
+        end: 1960,
         label: 'Projects'
       },
       block4: {
-        start: 2000,
+        start: 1961,
         end: 5000,
         label: 'Blog'
       }
@@ -110,19 +110,23 @@ class App extends React.Component {
 
         <div style={{
           height: '1000px',
-          backgroundColor: 'gray',
+          width: '100%',
+          backgroundColor: 'rgba(242, 242, 242, 1.0)',
           padding: '15px'
 
         }}>
-          This is going to be a huge block of content
+          1000px height block<br/>
+          Content Will be available soon!
         </div>
 
         <div style={{
           height: '1000px',
-          backgroundColor: 'gray',
+          width: '100%',
+          backgroundColor: 'rgba(236, 236, 236, 1.0)',
           padding: '15px'
         }}>
-          This is going to be a huge block of content
+          1000px height block<br/>
+          Content Will be available soon!
         </div>
 
       </div>

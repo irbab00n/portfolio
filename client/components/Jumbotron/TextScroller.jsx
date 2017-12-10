@@ -8,7 +8,8 @@ class TextScroller extends React.Component {
     this.state = {
       messages: [
         'Welcome to my portfolio programming paradise',
-        'I am Thomas Cosby, a software engineer'
+        'I am Thomas Cosby, a software engineer',
+        'I am currently seeking employment as a JavaScript Developer'
       ],
       currentMessageIndex: 0
     };
@@ -38,8 +39,8 @@ class TextScroller extends React.Component {
 
       <div style={{
         height: '30px',
-        // marginBottom: '-400px',
-        color: `rgba(41, 67, 78, 1.0)`
+        zIndex: '1',
+        color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`
       }}>
         {messages[currentMessageIndex]}
       </div>
@@ -49,5 +50,4 @@ class TextScroller extends React.Component {
   }
 }
 
-// ${(1 - (percentScrolled / 7))}
 export default TextScroller;
