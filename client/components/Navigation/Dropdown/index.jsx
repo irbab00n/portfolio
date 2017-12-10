@@ -49,17 +49,17 @@ class Dropdown extends React.Component {
             <Link 
               name={'Resume'}
               dropdownToggle={dropdownToggle}
-              onClick={animationChooser(yOffset, 445, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 442, calculateDistanceToTarget, scrollEffects)}
             />
             <Link 
               name={'Projects'}
               dropdownToggle={dropdownToggle}
-              onClick={animationChooser(yOffset, 1010, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 928, calculateDistanceToTarget, scrollEffects)}
             />
             <Link 
               name={'Blog'}
               dropdownToggle={dropdownToggle}
-              onClick={animationChooser(yOffset, 2010, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 1960, calculateDistanceToTarget, scrollEffects)}
             />
           </div>
           
