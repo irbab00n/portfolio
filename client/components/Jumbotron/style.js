@@ -19,7 +19,7 @@ module.exports.rightCloud = {
   height: '100px',
   width: '500px',
   alignSelf: 'flex-end',
-  WebkitTransition: '0.1s'
+  // WebkitTransition: '0.1s'
 };
 
 module.exports.leftCloud = {
@@ -29,5 +29,5 @@ module.exports.leftCloud = {
   height: '100px',
   width: '500px',
   alignSelf: 'flex-start',
-  WebkitTransition: '0.1s'
+  // WebkitTransition: '0.1s'
 };
