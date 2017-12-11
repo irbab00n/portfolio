@@ -2,6 +2,7 @@ import React from 'react';
 
 import Navbar from './components/Navigation/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
+import Resume from './components/Resume/index.jsx';
 
 import getDocumentHeight from './helpers/getDocumentHeight';
 import getCurrentYOffset from './helpers/getCurrentYOffset';
@@ -45,7 +46,8 @@ class App extends React.Component {
   render() {
 
     const { screenWidth, screenHeight, percentScrolled } = this.state;
-    let direction = screenWidth >= 1000 ? 'row' : 'column';
+    const mobileToggle = screenWidth < 1000; // True: Mobile View, False: Desktop View
+    const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscaped
     let targets = {
       block1: {
         start: 0,
@@ -83,8 +85,10 @@ class App extends React.Component {
           screenWidth={screenWidth}
           screenHeight={screenHeight}
           percentScrolled={percentScrolled}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
           yOffset={getCurrentYOffset()}
-          animationOption={'sharp'}
+          animationOption={'fadeIn'}
           targets={targets}
         />
 
@@ -94,23 +98,11 @@ class App extends React.Component {
 
         </span>
 
-        <div style={{
-          height: '500px',
-          display: 'flex',
-          flexDirection: direction,
-          justifyContent: 'space-evenly',
-          alignItems: 'center'
-        }}>
-          <div>
-            <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
-              style={{height: '300px', padding: '25px'}}
-            />
-          </div>
-
-          <div style={{width: '300px', padding: '25px'}}>
-            This will be a small biography about me and my mission statement
-          </div>
-        </div>
+        <Resume 
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          percentScrolled={percentScrolled}
+        />
 
         <div style={{
           height: '1000px',
