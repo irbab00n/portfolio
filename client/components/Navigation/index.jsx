@@ -46,7 +46,11 @@ class Navbar extends React.Component {
 
       <div style={applyStyles(style.main, ...this.renderOption(animationOption), (mobileToggle && orientationFlag) && style.main_mobile)}>
 
-        <Title onClick={yOffset === 0 ? () => {} : animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects)}/>
+        <Title
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          onClick={yOffset === 0 ? () => {} : animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects)}
+        />
         
         {
           mobileToggle

@@ -1,18 +1,36 @@
 import React from 'react';
 
+import applyStyles from '../../../helpers/applyStyles';
+
 import style from './style';
 
-const Title = (props) => (
+const Title = (props) => {
 
-  <span 
-    onClick={() => {props.onClick()}}
-    style={style.title_left}
-  >
-    COS
-    <span style={style.title_right}>-BYTES</span>
-  </span>
+  const { mobileToggle, orientationFlag } = props;
 
-);
+  return (
+    <span
+      onClick={() => {props.onClick()}}
+      style={
+        applyStyles(
+          style.title,
+          (mobileToggle && orientationFlag) && style.title_mobile
+        )
+      }
+    >
+      COS
+      <span 
+        style={
+          applyStyles(
+            style.title_blue
+          )
+        }
+      >
+        -BYTES
+      </span>
+    </span>
+  )
+};
 
 export default Title;
 
