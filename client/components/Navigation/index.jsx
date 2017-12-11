@@ -37,18 +37,28 @@ class Navbar extends React.Component {
 
   render() {
 
-    const { percentScrolled, screenWidth, yOffset, animationOption, targets } = this.props;
-    let mobileToggle = screenWidth < 1000;
+    const { percentScrolled, screenWidth, screenHeight, yOffset, animationOption, targets } = this.props;
+
+    let mobileToggle = screenWidth < 1000; // True: Mobile View, False: Desktop View
+    let orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscaped
 
     return (
 
-      <div style={applyStyles(style.main, ...this.renderOption(animationOption))}>
+      <div style={applyStyles(style.main, ...this.renderOption(animationOption), (mobileToggle && orientationFlag) && style.main_mobile)}>
 
         <Title onClick={yOffset === 0 ? () => {} : animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects)}/>
+        
         {
           mobileToggle
-            ? <Dropdown yOffset={yOffset} targets={targets} />
-            : <LinkRow yOffset={yOffset}/>
+            ? <Dropdown 
+                yOffset={yOffset}
+                targets={targets}
+                orientationFlag={orientationFlag}
+              />
+            : <LinkRow 
+                yOffset={yOffset}
+                orientationFlag={orientationFlag}
+              />
         }
 
       </div>

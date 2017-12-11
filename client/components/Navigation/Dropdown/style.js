@@ -76,7 +76,9 @@ module.exports.link_expanded = {
   width: '100%'
 };
 
-
+module.exports.link_hovered = {
+  backgroundColor: 'rgb(242, 242, 242)'
+};
 
 
 

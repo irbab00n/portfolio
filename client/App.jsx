@@ -74,7 +74,8 @@ class App extends React.Component {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        color: 'black',
       }}>
 
         <Navbar 

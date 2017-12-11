@@ -9,3 +9,7 @@ module.exports.main = {
   WebkitTransition: 'linear 0.1s',
   zIndex: '1'
 };
+
+module.exports.main_mobile = {
+  height: '100px',
+};
