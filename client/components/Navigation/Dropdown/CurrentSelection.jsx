@@ -22,11 +22,17 @@ class CurrentSelection extends React.Component {
 
   render() {
 
-    const { yOffset, targets, dropdownToggle } = this.props;
+    const { yOffset, targets, dropdownToggle, orientationFlag } = this.props;
 
     return (
 
-      <div style={applyStyles(style.currentSelection, dropdownToggle && style.currentSelection_pressed)}>
+      <div style={
+        applyStyles(
+          style.currentSelection,
+          dropdownToggle && style.currentSelection_pressed,
+          orientationFlag && style.currentSelection_mobile
+        )
+      }>
         {
           this.displayCurrentSection(yOffset, targets)
         }

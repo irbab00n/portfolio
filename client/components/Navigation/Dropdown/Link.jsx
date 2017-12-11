@@ -16,12 +16,19 @@ class Link extends React.Component {
   render() {
 
     const { hovered } = this.state;
-    const { dropdownToggle, name, onClick } = this.props;
+    const { name, dropdownToggle, orientationFlag, onClick } = this.props;
 
     return (
 
       <div
-        style={applyStyles(style.link_collapsed, dropdownToggle && style.link_expanded, hovered && {backgroundColor: 'rgb(242, 242, 242)'})}
+        style={
+          applyStyles(
+            style.link_collapsed,
+            dropdownToggle && style.link_expanded,
+            (dropdownToggle && orientationFlag) && style.link_expanded_mobile,
+            hovered && style.link_hovered,
+          )
+        }
         onMouseEnter={dropdownToggle ? () => {this.setState({hovered: true})} : () => {} }
         onMouseLeave={dropdownToggle ? () => {this.setState({hovered: false})} : () => {} }
         onClick={this.props.onClick}
