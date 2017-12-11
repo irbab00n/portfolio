@@ -12,6 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
       percentScrolled: 0
     };
     this.calculateScrolled = this.calculateScrolled.bind(this);
@@ -38,12 +39,12 @@ class App extends React.Component {
   }
 
   handleWindowResize() {
-    this.setState({screenWidth: window.innerWidth})
+    this.setState({screenWidth: window.innerWidth, screenHeight: window.innerHeight})
   }
 
   render() {
 
-    const { screenWidth, percentScrolled } = this.state;
+    const { screenWidth, screenHeight, percentScrolled } = this.state;
     let direction = screenWidth >= 1000 ? 'row' : 'column';
     let targets = {
       block1: {
@@ -63,7 +64,7 @@ class App extends React.Component {
       },
       block4: {
         start: 1961,
-        end: 5000,
+        end: getDocumentHeight(),
         label: 'Blog'
       }
     };
@@ -78,6 +79,7 @@ class App extends React.Component {
 
         <Navbar 
           screenWidth={screenWidth}
+          screenHeight={screenHeight}
           percentScrolled={percentScrolled}
           yOffset={getCurrentYOffset()}
           animationOption={'sharp'}
