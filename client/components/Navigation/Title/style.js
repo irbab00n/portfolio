@@ -1,7 +1,7 @@
 module.exports.title = {
   cursor: 'pointer',
   marginLeft: '50px',
-  padding: '15px 15px 15px 0',
+  padding: '21.5px 21.5px 21.5px 0',
   fontSize: '30px',
   color: 'rgba(41, 67, 78, 1.0)',
   WebkitTransition: '0.1s'

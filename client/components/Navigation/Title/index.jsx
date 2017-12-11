@@ -19,7 +19,8 @@ const Title = (props) => {
       }
     >
       COS
-      <span 
+      <span
+        onClick={() => {props.onClick()}}
         style={
           applyStyles(
             style.title_blue
