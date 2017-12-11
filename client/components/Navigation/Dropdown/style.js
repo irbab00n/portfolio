@@ -13,6 +13,7 @@ module.exports.buttonBody = {
 };
 
 module.exports.buttonBody_mobile = {
+  marginTop: '15px',
   width: '200px',
 };
 
@@ -87,6 +88,11 @@ module.exports.link_expanded = {
   display: 'flex',
   height: '75px',
   width: '100%'
+};
+
+module.exports.link_expanded_mobile = {
+  height: '100px',
+  fontSize: '32px'
 };
 
 module.exports.link_hovered = {

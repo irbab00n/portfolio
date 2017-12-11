@@ -58,7 +58,8 @@ class Dropdown extends React.Component {
         <div style={
           applyStyles(
             style.dropdownBody_collapsed,
-            dropdownToggle && style.dropdownBody_expanded
+            dropdownToggle && style.dropdownBody_expanded,
+            (dropdownToggle && orientationFlag) && style.dropdownBody_mobile
           )
         }>
 
@@ -70,16 +71,19 @@ class Dropdown extends React.Component {
             <Link 
               name={'Resume'}
               dropdownToggle={dropdownToggle}
+              orientationFlag={orientationFlag}
               onClick={animationChooser(yOffset, 442, calculateDistanceToTarget, scrollEffects)}
             />
             <Link 
               name={'Projects'}
               dropdownToggle={dropdownToggle}
+              orientationFlag={orientationFlag}
               onClick={animationChooser(yOffset, 928, calculateDistanceToTarget, scrollEffects)}
             />
             <Link 
               name={'Blog'}
               dropdownToggle={dropdownToggle}
+              orientationFlag={orientationFlag}
               onClick={animationChooser(yOffset, 1960, calculateDistanceToTarget, scrollEffects)}
             />
           </div>

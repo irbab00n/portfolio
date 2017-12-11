@@ -16,14 +16,16 @@ class Link extends React.Component {
   render() {
 
     const { hovered } = this.state;
-    const { dropdownToggle, name, onClick } = this.props;
+    const { name, dropdownToggle, orientationFlag, onClick } = this.props;
 
     return (
 
       <div
         style={
           applyStyles(
-            style.link_collapsed, dropdownToggle && style.link_expanded,
+            style.link_collapsed,
+            dropdownToggle && style.link_expanded,
+            (dropdownToggle && orientationFlag) && style.link_expanded_mobile,
             hovered && style.link_hovered,
           )
         }
