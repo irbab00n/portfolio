@@ -1,4 +1,4 @@
-module.exports.button = {
+module.exports.buttonBody = {
   alignSelf: 'flex-start',
   marginRight: '50px',
   marginTop: '10px',
@@ -12,6 +12,10 @@ module.exports.button = {
   WebkitTransition: '0.1s'
 };
 
+module.exports.buttonBody_mobile = {
+  width: '200px',
+};
+
 module.exports.currentSelection = {
   height: '50px',
   width: '100%',
@@ -23,6 +27,10 @@ module.exports.currentSelection = {
   background: 'linear-gradient(to bottom, #007ac1 17%, #44aaee 83%)',
   boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
   WebkitTransition: '0.1s'
+};
+
+module.exports.currentSelection_mobile = {
+  height: '100px'
 };
 
 module.exports.currentSelection_pressed= {
@@ -46,7 +54,7 @@ module.exports.dropdownBody_expanded = {
   height: '225px'
 };
 
-module.exports.linkContainer_collapsed = {
+module.exports.linkContainer = {
   display: 'hidden',
   height: '0px',
   width: '100%',
@@ -54,11 +62,6 @@ module.exports.linkContainer_collapsed = {
   alignItems: 'center',
   justifyContent: 'center',
   WebkitTransition: '0.2s'
-};
-
-module.exports.linkContainer_expanded = {
-  display: 'flex',
-  height: '225px'
 };
 
 module.exports.link_collapsed = {

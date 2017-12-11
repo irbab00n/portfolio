@@ -11,5 +11,5 @@ module.exports.main = {
 };
 
 module.exports.main_mobile = {
-  height: '100px',
+  height: '120px',
 };

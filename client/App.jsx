@@ -72,6 +72,8 @@ class App extends React.Component {
     return (
 
       <div style={{
+        margin: 0,
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -115,7 +117,7 @@ class App extends React.Component {
           height: '1000px',
           width: '100%',
           backgroundColor: 'rgba(242, 242, 242, 1.0)',
-          padding: '15px'
+          padding: '15px 0'
 
         }}>
           1000px height block<br/>
@@ -126,7 +128,7 @@ class App extends React.Component {
           height: '1000px',
           width: '100%',
           backgroundColor: 'rgba(236, 236, 236, 1.0)',
-          padding: '15px'
+          padding: '15px 0'
         }}>
           1000px height block<br/>
           Content Will be available soon!

@@ -33,19 +33,40 @@ class Dropdown extends React.Component {
   render() {
 
     const { dropdownToggle } = this.state;
-    const { yOffset, targets } = this.props;
+    const { yOffset, targets, orientationFlag } = this.props;
 
     return (
 
-      <div style={applyStyles(style.button, dropdownToggle && style.button_pressed)}
+      <div 
         onClick={() => { this.toggleDropdown(dropdownToggle); }}
+        style={
+          applyStyles(
+            style.buttonBody,
+            dropdownToggle && style.button_pressed,
+            orientationFlag && style.buttonBody_mobile
+          )
+        }
       >
  
-        <CurrentSelection yOffset={yOffset} targets={targets} dropdownToggle={dropdownToggle} />
+        <CurrentSelection 
+          yOffset={yOffset}
+          targets={targets}
+          dropdownToggle={dropdownToggle}
+          orientationFlag={orientationFlag}
+        />
 
-        <div style={applyStyles(style.dropdownBody_collapsed, dropdownToggle && style.dropdownBody_expanded)}>
+        <div style={
+          applyStyles(
+            style.dropdownBody_collapsed,
+            dropdownToggle && style.dropdownBody_expanded
+          )
+        }>
 
-          <div style={applyStyles(style.linkContainer_collapsed, dropdownToggle && style.linkContainer_collapsed)}>
+          <div style={
+            applyStyles(
+              style.linkContainer,
+            )
+          }>
             <Link 
               name={'Resume'}
               dropdownToggle={dropdownToggle}
