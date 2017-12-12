@@ -49,3 +49,17 @@ module.exports.leftCloud = {
 module.exports.leftCloud_mobile_portrait = {
   top: '-250px'
 };
+
+
+module.exports.textScroller = {
+  height: '30px',
+  margin: '0 15px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  zIndex: 1,
+};
+
+module.exports.textScroller_mobile_portrait = {
+  fontSize: '42px'
+};

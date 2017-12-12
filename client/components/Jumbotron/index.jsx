@@ -42,6 +42,8 @@ class Jumbotron extends React.Component {
         />
 
         <TextScroller
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
           percentScrolled={percentScrolled}
         />
 

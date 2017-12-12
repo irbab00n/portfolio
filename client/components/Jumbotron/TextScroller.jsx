@@ -2,6 +2,10 @@ import React from 'react';
 
 import TextFadeInterval from './TextFadeInterval.jsx';
 
+import applyStyles from '../../helpers/applyStyles';
+
+import style from './style';
+
 class TextScroller extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +13,7 @@ class TextScroller extends React.Component {
       messages: [
         'Welcome to my portfolio programming paradise',
         'I am Thomas Cosby, a software engineer',
-        'I am currently seeking employment as a JavaScript Developer'
+        'I am currently seeking new opportunities as a JavaScript Developer'
       ],
       currentMessageIndex: 0
     };
@@ -33,16 +37,22 @@ class TextScroller extends React.Component {
   render() {
 
     const { messages, currentMessageIndex } = this.state;
-    let { percentScrolled } = this.props;
+    const {
+      percentScrolled,
+      mobileToggle,
+      orientationFlag
+    } = this.props;
 
     return (
 
-      <div style={{
-        height: '30px',
-        zIndex: '1',
-        color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`
-      }}>
-        {messages[currentMessageIndex]}
+      <div style={
+        applyStyles(
+          style.textScroller,
+          {color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`},
+          (mobileToggle && orientationFlag) && style.textScroller_mobile_portrait
+        )
+      }>
+        <center>{messages[currentMessageIndex]}</center>
       </div>
 
     );
