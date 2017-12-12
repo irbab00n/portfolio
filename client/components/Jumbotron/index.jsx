@@ -15,11 +15,25 @@ class Jumbotron extends React.Component {
 
   render() {
 
-    const { percentScrolled, yOffset } = this.props;
+    const {
+      screenWidth,
+      screenHeight,
+      percentScrolled,
+      mobileToggle,
+      orientationFlag,
+      yOffset
+    } = this.props;
 
     return (
 
-      <div style={applyStyles(style.body, {color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`})}>
+      <div style={
+        applyStyles(
+          style.body,
+          {color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`},
+          mobileToggle && style.body_mobile_landscape,
+          (mobileToggle && orientationFlag) && style.body_mobile_portrait
+        )
+      }>
 
         <RightCloud yOffset={yOffset} />
 

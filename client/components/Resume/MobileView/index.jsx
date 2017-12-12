@@ -10,7 +10,7 @@ class MobileView extends React.Component {
     return (
 
       <div style={{
-        height: '500px',
+        height: '1000px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-evenly',
@@ -18,7 +18,7 @@ class MobileView extends React.Component {
       }}>
         <div>
           <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
-            style={{height: '300px', padding: '25px'}}
+            style={{height: '600px', padding: '25px'}}
           />
         </div>
 

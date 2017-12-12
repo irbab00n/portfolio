@@ -23,16 +23,30 @@ class DesktopView extends React.Component {
           />
         </div>
 
-        <div style={{width: '100%', height: '300px', padding: '25px'}}>
+        <div style={{
+          width: '100%',
+          height: '300px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '25px'
+        }}>
           This will be a small biography about me and my mission statement
         </div>
 
         <div style={{
           width: '400px',
           height: '300px',
-          padding: '25px'
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'space-evenly',
+          padding: '25px',
+          backgroundColor: 'gray'
         }}>
-
+          <span>Linkedin</span>
+          <span>Github</span>
+          <span>Resume Link || Download</span>
         </div>
       </div>
 

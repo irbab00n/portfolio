@@ -57,7 +57,7 @@ class App extends React.Component {
       block2: {
         start: 439,
         end: 926,
-        label: 'Resume'
+        label: 'About Me'
       },
       block3: {
         start: 927,
@@ -92,7 +92,14 @@ class App extends React.Component {
           targets={targets}
         />
 
-        <Jumbotron percentScrolled={percentScrolled} yOffset={getCurrentYOffset()}/>
+        <Jumbotron
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          percentScrolled={percentScrolled}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={getCurrentYOffset()}
+        />
 
         <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(41, 67, 78, 0.1)'}}>
 
