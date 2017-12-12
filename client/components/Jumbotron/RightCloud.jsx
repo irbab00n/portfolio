@@ -7,9 +7,6 @@ import style from './style';
 const RightCloud = (props) => {
 
   const {
-    screenWidth,
-    screenHeight,
-    percentScrolled,
     mobileToggle,
     orientationFlag,
     yOffset

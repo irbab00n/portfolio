@@ -7,9 +7,6 @@ import style from './style';
 const LeftCloud = (props) => {
 
   const {
-    screenWidth,
-    screenHeight,
-    percentScrolled,
     mobileToggle,
     orientationFlag,
     yOffset
