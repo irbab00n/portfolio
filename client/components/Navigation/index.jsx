@@ -48,7 +48,6 @@ class Navbar extends React.Component {
       targets
     } = this.props;
 
-
     return (
 
       <div style={

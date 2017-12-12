@@ -88,7 +88,7 @@ class App extends React.Component {
           mobileToggle={mobileToggle}
           orientationFlag={orientationFlag}
           yOffset={getCurrentYOffset()}
-          animationOption={'fadeIn'}
+          animationOption={'sharp'}
           targets={targets}
         />
 
@@ -102,6 +102,9 @@ class App extends React.Component {
           screenWidth={screenWidth}
           screenHeight={screenHeight}
           percentScrolled={percentScrolled}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={getCurrentYOffset()}
         />
 
         <div style={{

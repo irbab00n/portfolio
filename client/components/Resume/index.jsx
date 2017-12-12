@@ -1,5 +1,8 @@
 import React from 'react';
 
+import DesktopView from './DesktopView/index.jsx';
+import MobileView from './MobileView/index.jsx';
+
 class Resume extends React.Component {
   constructor(props) {
     super(props);
@@ -7,30 +10,25 @@ class Resume extends React.Component {
 
   render() {
 
-    const { screenWidth, screenHeight, percentScrolled } = this.props;
-    const mobileToggle = screenWidth <= 100; // True
+    const {
+      screenWidth,
+      screenHeight,
+      percentScrolled,
+      mobileToggle,
+      orientationFlag,
+      yOffset
+    } = this.props;
 
-    let direction = screenWidth < screenHeight ? 'row' : 'column';
+    // Mobile toggle is the value that will change between desktop and mobile component
+    // orientation flag will be the deciding boolean to display for portrait/landscape usage
 
     return (
 
-      <div style={{
-        height: '500px',
-        display: 'flex',
-        flexDirection: direction,
-        justifyContent: 'space-evenly',
-        alignItems: 'center'
-      }}>
-        <div>
-          <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
-            style={{height: '300px', padding: '25px'}}
+      mobileToggle
+        ? <MobileView 
+            orientationFlag={orientationFlag}
           />
-        </div>
-
-        <div style={{width: '300px', padding: '25px'}}>
-          This will be a small biography about me and my mission statement
-        </div>
-      </div>
+        : <DesktopView />
 
     );
 

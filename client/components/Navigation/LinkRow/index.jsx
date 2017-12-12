@@ -20,7 +20,7 @@ class LinkRow extends React.Component {
     return (
 
       <div style={style.navigation_body}>
-        <NavLink name={'Resume'} onClick={animationChooser(yOffset, 440, calculateDistanceToTarget, scrollEffects)}/>
+        <NavLink name={'About Me'} onClick={animationChooser(yOffset, 440, calculateDistanceToTarget, scrollEffects)}/>
         <NavLink name={'Projects'} onClick={animationChooser(yOffset, 927, calculateDistanceToTarget, scrollEffects)}/>
         <NavLink name={'Blog'} onClick={animationChooser(yOffset, 1962, calculateDistanceToTarget, scrollEffects)}/>
       </div>
