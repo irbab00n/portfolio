@@ -35,11 +35,21 @@ class Jumbotron extends React.Component {
         )
       }>
 
-        <RightCloud yOffset={yOffset} />
+        <RightCloud
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={yOffset}
+        />
 
-        <TextScroller percentScrolled={percentScrolled}/>
+        <TextScroller
+          percentScrolled={percentScrolled}
+        />
 
-        <LeftCloud yOffset={yOffset} />
+        <LeftCloud
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={yOffset}
+        />
 
       </div>
 

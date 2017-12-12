@@ -20,6 +20,7 @@ module.exports.body_mobile_portrait = {
   height: '800px'
 };
 
+
 module.exports.rightCloud = {
   position: 'relative',
   zIndex: '-1',
@@ -30,6 +31,11 @@ module.exports.rightCloud = {
   // WebkitTransition: '0.1s'
 };
 
+module.exports.rightCloud_mobile_portrait = {
+  top: '100px'
+};
+
+
 module.exports.leftCloud = {
   position: 'relative',
   zIndex: '-1',
@@ -38,4 +44,8 @@ module.exports.leftCloud = {
   width: '500px',
   alignSelf: 'flex-start',
   // WebkitTransition: '0.1s'
+};
+
+module.exports.leftCloud_mobile_portrait = {
+  top: '-250px'
 };
