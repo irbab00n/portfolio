@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ResumeLink from './ResumeLink.jsx';
+
 
 class LinkColumn extends React.Component {
   constructor(props) {
@@ -7,6 +9,8 @@ class LinkColumn extends React.Component {
   }
 
   render() {
+
+    const { changeSlides } = this.props;
 
     return (
 
@@ -19,10 +23,22 @@ class LinkColumn extends React.Component {
         alignItems: 'center',
         justifyContent: 'space-evenly'
       }}>
-        <span>Skills</span>
-        <span>Experience</span>
-        <span>Education</span>
-        <span>Links</span>
+        <ResumeLink 
+          name={'Skills'}
+          onClick={() => { changeSlides('skills') }}
+        />
+        <ResumeLink 
+          name={'Experience'}
+          onClick={() => { changeSlides('experience') }}
+        />
+        <ResumeLink 
+          name={'Education'}
+          onClick={() => { changeSlides('education') }}
+        />
+        <ResumeLink 
+          name={'Links'}
+          onClick={() => { changeSlides('links') }}
+        />
       </div>
 
     );

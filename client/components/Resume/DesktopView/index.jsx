@@ -7,9 +7,21 @@ import DisplayBox from './DisplayBox.jsx';
 class DesktopView extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentSlide: ''
+    };
+    this.changeSlides = this.changeSlides.bind(this);
+  }
+
+  changeSlides(slide) {
+    this.setState({
+      currentSlide: slide
+    });
   }
 
   render() {
+
+    const { currentSlide } = this.state;
 
     return (
 
@@ -34,9 +46,13 @@ class DesktopView extends React.Component {
           </div>
         </div>
 
-        <LinkColumn />
+        <LinkColumn 
+          changeSlides={this.changeSlides}
+        />
 
-        <DisplayBox />
+        <DisplayBox 
+          currentSlide={currentSlide}
+        />
 
       </div>
 
