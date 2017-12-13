@@ -1,5 +1,9 @@
 import React from 'react';
 
+import LinkColumn from './LinkColumn.jsx';
+import DisplayBox from './DisplayBox.jsx';
+
+
 class DesktopView extends React.Component {
   constructor(props) {
     super(props);
@@ -11,43 +15,29 @@ class DesktopView extends React.Component {
 
       <div style={{
         height: '500px',
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        backgroundColor: 'rgba(128, 128, 128, 1.0)'
       }}>
+
         <div>
           <img 
             src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
-            style={{height: '300px', padding: '25px'}}
+            style={{height: '300px', padding: '25px 25px 25px 50px'}}
           />
+          <div>
+            <center>Thomas Cosby</center>
+          </div>
         </div>
 
-        <div style={{
-          width: '100%',
-          height: '300px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '25px'
-        }}>
-          This will be a small biography about me and my mission statement
-        </div>
+        <LinkColumn />
 
-        <div style={{
-          width: '400px',
-          height: '300px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'space-evenly',
-          padding: '25px',
-          backgroundColor: 'gray'
-        }}>
-          <span>Linkedin</span>
-          <span>Github</span>
-          <span>Resume Link || Download</span>
-        </div>
+        <DisplayBox />
+
       </div>
 
     );

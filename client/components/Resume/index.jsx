@@ -25,8 +25,10 @@ class Resume extends React.Component {
     return (
 
       mobileToggle
-        ? <MobileView 
+        ? <MobileView
+            mobileToggle={mobileToggle}
             orientationFlag={orientationFlag}
+            yOffset={yOffset}
           />
         : <DesktopView />
 
