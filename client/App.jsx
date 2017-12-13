@@ -101,7 +101,7 @@ class App extends React.Component {
           yOffset={getCurrentYOffset()}
         />
 
-        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.8)'}}>
+        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.2)'}}>
 
         </span>
 

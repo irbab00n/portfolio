@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Slide from './Slide.jsx';
+
 
 class DisplayBox extends React.Component {
   constructor(props) {
@@ -10,15 +12,35 @@ class DisplayBox extends React.Component {
   renderSlide(slide) {
     switch(slide) {
       case 'skills':
-        return <span>Skills view</span>
+        return (
+          <Slide 
+            name={'Skills'}
+          />
+        );
       case 'experience':
-        return <span>Experience view</span>
+        return (
+          <Slide 
+            name={'Experience'}
+          />
+        );
       case 'education':
-        return <span>Education view</span>
+        return (
+          <Slide 
+            name={'Education'}
+          />
+        );
       case 'links':
-        return <span>Links view</span>
+        return (
+          <Slide 
+            name={'Links'}
+          />
+        );
       default: 
-        return <span>Default View</span>
+        return (
+          <Slide 
+            name={'Default'}
+          />
+        );
     }
   }
 
@@ -30,7 +52,7 @@ class DisplayBox extends React.Component {
 
       <div style={{
         height: '450px',
-        width: '100%',
+        width: '500px',
         margin: '25px 50px 25px 25px'
       }}>
         {this.renderSlide(currentSlide)}

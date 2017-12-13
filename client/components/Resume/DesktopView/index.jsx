@@ -31,9 +31,9 @@ class DesktopView extends React.Component {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(128, 128, 128, 1.0)'
+        backgroundColor: 'rgba(230, 230, 230, 1.0)'
       }}>
 
         <div>
