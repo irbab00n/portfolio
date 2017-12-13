@@ -30,7 +30,9 @@ class Resume extends React.Component {
             orientationFlag={orientationFlag}
             yOffset={yOffset}
           />
-        : <DesktopView />
+        : <DesktopView 
+            yOffset={yOffset}
+          />
 
     );
 

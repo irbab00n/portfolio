@@ -3,6 +3,9 @@ import React from 'react';
 import LinkColumn from './LinkColumn.jsx';
 import DisplayBox from './DisplayBox.jsx';
 
+import applyStyles from '../../../helpers/applyStyles';
+
+import style from './style';
 
 class DesktopView extends React.Component {
   constructor(props) {
@@ -22,19 +25,16 @@ class DesktopView extends React.Component {
   render() {
 
     const { currentSlide } = this.state;
+    const { yOffset } = this.props;
 
     return (
 
-      <div style={{
-        height: '500px',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'rgba(230, 230, 230, 1.0)'
-      }}>
+      <div style={
+        applyStyles(
+          style.desktopBody,
+          yOffset >= 425 && {backgroundColor: 'rgba(250, 250, 250, 1.0)'}
+        )
+      }>
 
         <div>
           <img 

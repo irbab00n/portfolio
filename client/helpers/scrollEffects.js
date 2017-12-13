@@ -26,7 +26,7 @@ const calculatePercentage = (i, destination, originalGap) => {
 };
 
 const calculateCoefficient = (i, destination, originalGap) => {
-    return  (2.2 - (3 * calculatePercentage(i, destination, originalGap))); // Percentage based on visual testing
+    return  (2.17 - (3 * calculatePercentage(i, destination, originalGap))); // Percentage based on visual testing
 };
 
 module.exports.accelerate = (start, destination) => {
