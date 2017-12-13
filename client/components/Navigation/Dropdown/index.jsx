@@ -69,7 +69,7 @@ class Dropdown extends React.Component {
             )
           }>
             <Link 
-              name={'Resume'}
+              name={'About Me'}
               dropdownToggle={dropdownToggle}
               orientationFlag={orientationFlag}
               onClick={animationChooser(yOffset, 442, calculateDistanceToTarget, scrollEffects)}

@@ -57,7 +57,7 @@ class App extends React.Component {
       block2: {
         start: 439,
         end: 926,
-        label: 'Resume'
+        label: 'About Me'
       },
       block3: {
         start: 927,
@@ -88,13 +88,20 @@ class App extends React.Component {
           mobileToggle={mobileToggle}
           orientationFlag={orientationFlag}
           yOffset={getCurrentYOffset()}
-          animationOption={'fadeIn'}
+          animationOption={'sharp'}
           targets={targets}
         />
 
-        <Jumbotron percentScrolled={percentScrolled} yOffset={getCurrentYOffset()}/>
+        <Jumbotron
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          percentScrolled={percentScrolled}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={getCurrentYOffset()}
+        />
 
-        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(41, 67, 78, 0.1)'}}>
+        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.2)'}}>
 
         </span>
 
@@ -102,6 +109,9 @@ class App extends React.Component {
           screenWidth={screenWidth}
           screenHeight={screenHeight}
           percentScrolled={percentScrolled}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={getCurrentYOffset()}
         />
 
         <div style={{

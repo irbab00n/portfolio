@@ -36,7 +36,6 @@ module.exports.accelerate = (start, destination) => {
   if (originalGap <= 10) {
     return;
   } 
-  let peaked = false;
   let scrollDown = start <= destination; // True: Scroll Down, False: Scroll Up
   let int = setInterval(() => {
     if (scrollDown) {

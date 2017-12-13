@@ -12,15 +12,29 @@ module.exports.body = {
   fontSize: '30px',
 };
 
+module.exports.body_mobile_landscape = {
+  height: '550px'
+};
+
+module.exports.body_mobile_portrait = {
+  height: '800px'
+};
+
+
 module.exports.rightCloud = {
   position: 'relative',
   zIndex: '-1',
-  top: '-200px',
+  top: '0px',
   height: '100px',
   width: '500px',
   alignSelf: 'flex-end',
   // WebkitTransition: '0.1s'
 };
+
+module.exports.rightCloud_mobile_portrait = {
+  top: '100px'
+};
+
 
 module.exports.leftCloud = {
   position: 'relative',
@@ -30,4 +44,22 @@ module.exports.leftCloud = {
   width: '500px',
   alignSelf: 'flex-start',
   // WebkitTransition: '0.1s'
+};
+
+module.exports.leftCloud_mobile_portrait = {
+  top: '-250px'
+};
+
+
+module.exports.textScroller = {
+  height: '30px',
+  margin: '0 15px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  zIndex: 1,
+};
+
+module.exports.textScroller_mobile_portrait = {
+  fontSize: '42px'
 };
