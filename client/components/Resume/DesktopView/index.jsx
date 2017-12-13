@@ -41,7 +41,10 @@ class DesktopView extends React.Component {
             src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
             style={{height: '300px', padding: '25px 25px 25px 50px'}}
           />
-          <div>
+          <div style={{
+            height: '30px',
+            padding: '25px 25px 25px 50px'
+          }}>
             <center>Thomas Cosby</center>
           </div>
         </div>

@@ -48,11 +48,13 @@ class DisplayBox extends React.Component {
 
     const { currentSlide } = this.props;
 
+    // Let's create a container that will resize dynamically depending on the window innerWidth
+
     return (
 
       <div style={{
         height: '450px',
-        width: '500px',
+        width: '600px',
         margin: '25px 50px 25px 25px'
       }}>
         {this.renderSlide(currentSlide)}

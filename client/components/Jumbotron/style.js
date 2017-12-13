@@ -24,7 +24,7 @@ module.exports.body_mobile_portrait = {
 module.exports.rightCloud = {
   position: 'relative',
   zIndex: '-1',
-  top: '-200px',
+  top: '0px',
   height: '100px',
   width: '500px',
   alignSelf: 'flex-end',
