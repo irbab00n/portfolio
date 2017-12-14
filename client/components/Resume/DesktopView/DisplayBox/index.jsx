@@ -4,7 +4,7 @@ import SkillsSlide from './Slides/SkillsSlide.jsx';
 import ExperienceSlide from './Slides/ExperienceSlide.jsx';
 import EducationSlide from './Slides/EducationSlide.jsx';
 import LinksSlide from './Slides/LinksSlide.jsx';
-import DefaultSlide from './Slides/DefaultSlide.jsx';
+import DefaultSlide from './Slides/Default/index.jsx';
 
 
 class DisplayBox extends React.Component {

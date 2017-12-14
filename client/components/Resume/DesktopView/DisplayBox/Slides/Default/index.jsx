@@ -1,5 +1,8 @@
 import React from 'react';
 
+import applyStyles from '../../../../../../helpers/applyStyles';
+
+import style from './style';
 
 class DefaultSlide extends React.Component {
   constructor(props) {
@@ -10,15 +13,11 @@ class DefaultSlide extends React.Component {
 
     return (
 
-      <div style={{
-        height: '100%',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'rgb(250, 250, 250)'
-      }}>
+      <div style={
+        applyStyles(
+          style.body
+        )
+      }>
         <center>This is the default view.  This will be open by default, and will be toggled back to.</center>
       </div>
 
