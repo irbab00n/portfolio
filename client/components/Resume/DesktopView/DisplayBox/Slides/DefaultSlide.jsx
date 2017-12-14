@@ -1,23 +1,25 @@
 import React from 'react';
 
 
-class Slide extends React.Component {
+class DefaultSlide extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
 
-    const { name } = this.props;
-
     return (
 
       <div style={{
         height: '100%',
         width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: 'rgb(250, 250, 250)'
       }}>
-        {name}
+        <center>This is the default view.  This will be open by default, and will be toggled back to.</center>
       </div>
 
     ); 
@@ -25,4 +27,4 @@ class Slide extends React.Component {
   }
 }
 
-export default Slide;
+export default DefaultSlide;

@@ -1,23 +1,25 @@
 import React from 'react';
 
 
-class Slide extends React.Component {
+class ExperienceSlide extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
 
-    const { name } = this.props;
-
     return (
 
       <div style={{
         height: '100%',
         width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: 'rgb(250, 250, 250)'
       }}>
-        {name}
+        <center>This is the Experience Slide.  This slide will display when the Experience Tab is clicked</center>
       </div>
 
     ); 
@@ -25,4 +27,4 @@ class Slide extends React.Component {
   }
 }
 
-export default Slide;
+export default ExperienceSlide;

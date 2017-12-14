@@ -18,31 +18,26 @@ class DisplayBox extends React.Component {
       case 'skills':
         return (
           <SkillsSlide 
-            name={'Skills'}
           />
         );
       case 'experience':
         return (
           <ExperienceSlide 
-            name={'Experience'}
           />
         );
       case 'education':
         return (
           <EducationSlide 
-            name={'Education'}
           />
         );
       case 'links':
         return (
           <LinksSlide 
-            name={'Links'}
           />
         );
       default: 
         return (
           <DefaultSlide 
-            name={'Default'}
           />
         );
     }
@@ -55,9 +50,9 @@ class DisplayBox extends React.Component {
     return (
 
       <div style={{
-        height: '450px',
+        height: '400px',
         width: '600px',
-        margin: '25px 50px 25px 25px'
+        margin: '50px 50px 50px 25px'
       }}>
         {this.renderSlide(currentSlide)}
       </div>
