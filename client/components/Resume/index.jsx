@@ -16,7 +16,8 @@ class Resume extends React.Component {
       percentScrolled,
       mobileToggle,
       orientationFlag,
-      yOffset
+      yOffset,
+      applyStyles
     } = this.props;
 
     return (
@@ -26,9 +27,11 @@ class Resume extends React.Component {
             mobileToggle={mobileToggle}
             orientationFlag={orientationFlag}
             yOffset={yOffset}
+            applyStyles={applyStyles}
           />
         : <DesktopView 
             yOffset={yOffset}
+            applyStyles={applyStyles}
           />
 
     );

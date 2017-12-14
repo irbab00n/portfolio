@@ -1,7 +1,5 @@
 import React from 'react';
 
-import applyStyles from '../../../../../../helpers/applyStyles';
-
 import style from './style';
 
 class DefaultSlide extends React.Component {
@@ -10,6 +8,8 @@ class DefaultSlide extends React.Component {
   }
 
   render() {
+
+    const { applyStyles } = this.props;
 
     return (
 

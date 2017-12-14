@@ -6,6 +6,7 @@ import Resume from './components/Resume/index.jsx';
 
 import getDocumentHeight from './helpers/getDocumentHeight';
 import getCurrentYOffset from './helpers/getCurrentYOffset';
+import applyStyles from './helpers/applyStyles';
 
 
 class App extends React.Component {
@@ -112,6 +113,7 @@ class App extends React.Component {
           mobileToggle={mobileToggle}
           orientationFlag={orientationFlag}
           yOffset={getCurrentYOffset()}
+          applyStyles={applyStyles}
         />
 
         <div style={{
