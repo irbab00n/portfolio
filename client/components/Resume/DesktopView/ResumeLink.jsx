@@ -14,7 +14,7 @@ class ResumeLink extends React.Component {
 
   render() {
 
-    const { name, onClick } = this.props;
+    const { name, currentSlide, onClick, triggeredOn } = this.props;
     const { hovered } = this.state;
 
     return (
@@ -26,7 +26,9 @@ class ResumeLink extends React.Component {
         style={
           applyStyles(
             style.resumeLink,
-            hovered && style.resumeLink_hovered
+            triggeredOn && style.resumeLink_on,
+            hovered && style.resumeLink_hovered,
+            name.toLowerCase() === currentSlide && style.resumeLink_hovered
           )
         }
       >

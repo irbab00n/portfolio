@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LinkColumn from './LinkColumn.jsx';
-import DisplayBox from './DisplayBox.jsx';
+import DisplayBox from './DisplayBox/index.jsx';
 
 import applyStyles from '../../../helpers/applyStyles';
 
@@ -17,6 +17,10 @@ class DesktopView extends React.Component {
   }
 
   changeSlides(slide) {
+    let { currentSlide } = this.state;
+    if (slide === currentSlide) {
+      slide = '';
+    }
     this.setState({
       currentSlide: slide
     });
@@ -27,19 +31,26 @@ class DesktopView extends React.Component {
     const { currentSlide } = this.state;
     const { yOffset } = this.props;
 
+    let triggeredOn = yOffset >= 50 && yOffset <= 800;
+
     return (
 
       <div style={
         applyStyles(
           style.desktopBody,
-          yOffset >= 425 && {backgroundColor: 'rgba(250, 250, 250, 1.0)'}
+          triggeredOn && style.desktopBody_on
         )
       }>
 
         <div>
           <img 
             src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
-            style={{height: '300px', padding: '25px 25px 25px 50px'}}
+            style={
+              applyStyles(
+                style.image,
+                triggeredOn && style.image_active
+              )
+            }
           />
           <div style={{
             height: '30px',
@@ -49,12 +60,17 @@ class DesktopView extends React.Component {
           </div>
         </div>
 
-        <LinkColumn 
+        <LinkColumn
+          currentSlide={currentSlide}
           changeSlides={this.changeSlides}
+          yOffset={yOffset}
+          triggeredOn={triggeredOn}
         />
 
         <DisplayBox 
           currentSlide={currentSlide}
+          yOffset={yOffset}
+          triggeredOn={triggeredOn}
         />
 
       </div>

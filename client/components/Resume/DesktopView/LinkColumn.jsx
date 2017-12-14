@@ -10,7 +10,7 @@ class LinkColumn extends React.Component {
 
   render() {
 
-    const { changeSlides } = this.props;
+    const { currentSlide, changeSlides, triggeredOn } = this.props;
 
     return (
 
@@ -25,18 +25,26 @@ class LinkColumn extends React.Component {
       }}>
         <ResumeLink 
           name={'Skills'}
+          currentSlide={currentSlide}
+          triggeredOn={triggeredOn}
           onClick={() => { changeSlides('skills') }}
         />
         <ResumeLink 
           name={'Experience'}
+          currentSlide={currentSlide}
+          triggeredOn={triggeredOn}
           onClick={() => { changeSlides('experience') }}
         />
         <ResumeLink 
           name={'Education'}
+          currentSlide={currentSlide}
+          triggeredOn={triggeredOn}
           onClick={() => { changeSlides('education') }}
         />
         <ResumeLink 
           name={'Links'}
+          currentSlide={currentSlide}
+          triggeredOn={triggeredOn}
           onClick={() => { changeSlides('links') }}
         />
       </div>

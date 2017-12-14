@@ -1,6 +1,10 @@
 import React from 'react';
 
-import Slide from './Slide.jsx';
+import SkillsSlide from './Slides/SkillsSlide.jsx';
+import ExperienceSlide from './Slides/ExperienceSlide.jsx';
+import EducationSlide from './Slides/EducationSlide.jsx';
+import LinksSlide from './Slides/LinksSlide.jsx';
+import DefaultSlide from './Slides/DefaultSlide.jsx';
 
 
 class DisplayBox extends React.Component {
@@ -13,32 +17,27 @@ class DisplayBox extends React.Component {
     switch(slide) {
       case 'skills':
         return (
-          <Slide 
-            name={'Skills'}
+          <SkillsSlide 
           />
         );
       case 'experience':
         return (
-          <Slide 
-            name={'Experience'}
+          <ExperienceSlide 
           />
         );
       case 'education':
         return (
-          <Slide 
-            name={'Education'}
+          <EducationSlide 
           />
         );
       case 'links':
         return (
-          <Slide 
-            name={'Links'}
+          <LinksSlide 
           />
         );
       default: 
         return (
-          <Slide 
-            name={'Default'}
+          <DefaultSlide 
           />
         );
     }
@@ -48,14 +47,12 @@ class DisplayBox extends React.Component {
 
     const { currentSlide } = this.props;
 
-    // Let's create a container that will resize dynamically depending on the window innerWidth
-
     return (
 
       <div style={{
-        height: '450px',
+        height: '400px',
         width: '600px',
-        margin: '25px 50px 25px 25px'
+        margin: '50px 50px 50px 25px'
       }}>
         {this.renderSlide(currentSlide)}
       </div>

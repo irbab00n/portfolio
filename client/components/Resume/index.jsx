@@ -19,9 +19,6 @@ class Resume extends React.Component {
       yOffset
     } = this.props;
 
-    // Mobile toggle is the value that will change between desktop and mobile component
-    // orientation flag will be the deciding boolean to display for portrait/landscape usage
-
     return (
 
       mobileToggle
