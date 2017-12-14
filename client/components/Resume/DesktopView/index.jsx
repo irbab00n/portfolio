@@ -17,6 +17,10 @@ class DesktopView extends React.Component {
   }
 
   changeSlides(slide) {
+    let { currentSlide } = this.state;
+    if (slide === currentSlide) {
+      slide = '';
+    }
     this.setState({
       currentSlide: slide
     });
