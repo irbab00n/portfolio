@@ -1,9 +1,9 @@
 import React from 'react';
 
-import SkillsSlide from './Slides/SkillsSlide.jsx';
-import ExperienceSlide from './Slides/ExperienceSlide.jsx';
-import EducationSlide from './Slides/EducationSlide.jsx';
-import LinksSlide from './Slides/LinksSlide.jsx';
+import SkillsSlide from './Slides/Skills/index.jsx';
+import ExperienceSlide from './Slides/Experience/index.jsx';
+import EducationSlide from './Slides/Education/index.jsx';
+import LinksSlide from './Slides/Links/index.jsx';
 import DefaultSlide from './Slides/Default/index.jsx';
 
 
