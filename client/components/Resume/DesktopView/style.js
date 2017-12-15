@@ -2,6 +2,7 @@ module.exports.desktopBody = {
   height: '500px',
   width: '100%',
   display: 'flex',
+  overflowX: 'hidden',
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',

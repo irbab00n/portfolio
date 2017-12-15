@@ -4,6 +4,9 @@ import Navbar from './components/Navigation/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
 
+
+import Board from './components/Minesweeper/Board.jsx';
+
 import getDocumentHeight from './helpers/getDocumentHeight';
 import getCurrentYOffset from './helpers/getCurrentYOffset';
 import applyStyles from './helpers/applyStyles';
