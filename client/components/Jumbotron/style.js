@@ -24,11 +24,10 @@ module.exports.body_mobile_portrait = {
 module.exports.rightCloud = {
   position: 'relative',
   zIndex: '-1',
-  top: '0px',
+  top: '-100px',
   height: '100px',
   width: '500px',
   alignSelf: 'flex-end',
-  // WebkitTransition: '0.1s'
 };
 
 module.exports.rightCloud_mobile_portrait = {
@@ -43,7 +42,6 @@ module.exports.leftCloud = {
   height: '100px',
   width: '500px',
   alignSelf: 'flex-start',
-  // WebkitTransition: '0.1s'
 };
 
 module.exports.leftCloud_mobile_portrait = {

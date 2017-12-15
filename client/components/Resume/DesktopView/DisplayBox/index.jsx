@@ -1,10 +1,10 @@
 import React from 'react';
 
-import SkillsSlide from './Slides/SkillsSlide.jsx';
-import ExperienceSlide from './Slides/ExperienceSlide.jsx';
-import EducationSlide from './Slides/EducationSlide.jsx';
-import LinksSlide from './Slides/LinksSlide.jsx';
-import DefaultSlide from './Slides/DefaultSlide.jsx';
+import SkillsSlide from './Slides/Skills/index.jsx';
+import ExperienceSlide from './Slides/Experience/index.jsx';
+import EducationSlide from './Slides/Education/index.jsx';
+import LinksSlide from './Slides/Links/index.jsx';
+import DefaultSlide from './Slides/Default/index.jsx';
 
 
 class DisplayBox extends React.Component {
@@ -17,27 +17,32 @@ class DisplayBox extends React.Component {
     switch(slide) {
       case 'skills':
         return (
-          <SkillsSlide 
+          <SkillsSlide
+            applyStyles={this.props.applyStyles} 
           />
         );
       case 'experience':
         return (
-          <ExperienceSlide 
+          <ExperienceSlide
+            applyStyles={this.props.applyStyles} 
           />
         );
       case 'education':
         return (
-          <EducationSlide 
+          <EducationSlide
+            applyStyles={this.props.applyStyles} 
           />
         );
       case 'links':
         return (
-          <LinksSlide 
+          <LinksSlide
+            applyStyles={this.props.applyStyles} 
           />
         );
       default: 
         return (
-          <DefaultSlide 
+          <DefaultSlide
+            applyStyles={this.props.applyStyles} 
           />
         );
     }

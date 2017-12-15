@@ -3,8 +3,6 @@ import React from 'react';
 import LinkColumn from './LinkColumn.jsx';
 import DisplayBox from './DisplayBox/index.jsx';
 
-import applyStyles from '../../../helpers/applyStyles';
-
 import style from './style';
 
 class DesktopView extends React.Component {
@@ -29,7 +27,7 @@ class DesktopView extends React.Component {
   render() {
 
     const { currentSlide } = this.state;
-    const { yOffset } = this.props;
+    const { yOffset, applyStyles } = this.props;
 
     let triggeredOn = yOffset >= 50 && yOffset <= 800;
 
@@ -65,12 +63,14 @@ class DesktopView extends React.Component {
           changeSlides={this.changeSlides}
           yOffset={yOffset}
           triggeredOn={triggeredOn}
+          applyStyles={applyStyles}
         />
 
         <DisplayBox 
           currentSlide={currentSlide}
           yOffset={yOffset}
           triggeredOn={triggeredOn}
+          applyStyles={applyStyles}
         />
 
       </div>
