@@ -28,7 +28,7 @@ class App extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowResize);
-    window.removeEventListener("scroll", this.calculateScrolled);
+    window.removeEventListener('scroll', this.calculateScrolled);
   }
 
   calculateScrolled() {
