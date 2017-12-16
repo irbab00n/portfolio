@@ -18,12 +18,9 @@ class ResumeLink extends React.Component {
     const { hovered, clicked } = this.state;
     const { name, currentSlide, onClick, triggeredOn } = this.props;
 
-    console.log('state of clicked: ', clicked);
-
     return (
 
       <div
-
         onClick={
           () => {this.setState({clicked: true}, () => {
             setTimeout(() => {
@@ -31,9 +28,8 @@ class ResumeLink extends React.Component {
             }, 100);
           });}
         }
-
-        onMouseEnter={() => { this.setState({hovered: true});}}
-        onMouseLeave={() => { this.setState({hovered: false});}}
+        onMouseEnter={() => { this.setState({hovered: true}); }}
+        onMouseLeave={() => { this.setState({hovered: false}); }}
         style={
           applyStyles(
             style.resumeLink,
