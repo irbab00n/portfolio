@@ -41,6 +41,12 @@ module.exports.resumeLink_hovered = {
   color: '#f2f2f2'
 };
 
+module.exports.resumeLink_clicked = {
+  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.0)',
+  backgroundColor: 'rgba(0, 60, 100, 1.0)',
+  color: '#f2f2f2'
+};
+
 module.exports.resumeLink_on = {
   boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.3)',
 };
