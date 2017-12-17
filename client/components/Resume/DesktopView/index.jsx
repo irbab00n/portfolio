@@ -27,7 +27,7 @@ class DesktopView extends React.Component {
   render() {
 
     const { currentSlide } = this.state;
-    const { yOffset, applyStyles } = this.props;
+    const { screenWidth, screenHeight, yOffset, applyStyles } = this.props;
 
     let triggeredOn = yOffset >= 50 && yOffset <= 800;
 
@@ -66,8 +66,10 @@ class DesktopView extends React.Component {
           applyStyles={applyStyles}
         />
 
-        <DisplayBox 
+        <DisplayBox
           currentSlide={currentSlide}
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
           yOffset={yOffset}
           triggeredOn={triggeredOn}
           applyStyles={applyStyles}
