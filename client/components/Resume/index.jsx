@@ -30,6 +30,8 @@ class Resume extends React.Component {
             applyStyles={applyStyles}
           />
         : <DesktopView 
+            screenWidth={screenWidth}
+            screenHeight={screenHeight}
             yOffset={yOffset}
             applyStyles={applyStyles}
           />

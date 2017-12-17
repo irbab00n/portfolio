@@ -18,6 +18,8 @@ class DisplayBox extends React.Component {
       case 'skills':
         return (
           <SkillsSlide
+            screenWidth={this.props.screenWidth}
+            screenHeight={this.props.screenHeight}
             applyStyles={this.props.applyStyles} 
           />
         );
