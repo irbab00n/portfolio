@@ -84,7 +84,7 @@ class SkillsSlide extends React.Component {
             </div>
           </div>
 
-          <div id="Strong Skills" style={{
+          <div id="Experienced Skills" style={{
             height: '300px',
             width: '50%',
             display: 'flex',

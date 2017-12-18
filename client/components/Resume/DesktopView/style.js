@@ -26,6 +26,7 @@ module.exports.image_active = {
 
 
 module.exports.resumeLink = {
+  cursor: 'pointer',
   height: '70px',
   width: '100%',
   display: 'flex',
