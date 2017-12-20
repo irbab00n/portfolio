@@ -18,7 +18,6 @@ class ExperienceSlide extends React.Component {
   }
 
   changeIndex(direction) {
-    console.log('click registered');
     let { jobNames, jobIndex } = this.state;
     switch(direction) {
       case 'left': 
