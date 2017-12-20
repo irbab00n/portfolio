@@ -59,6 +59,8 @@ class ExperienceSlide extends React.Component {
           job={jobs[jobNames[jobIndex]]}
         />
 
+      {/* This slider bar needs more work!  Will refactor to be more alive and have greater functionality */}
+
         <div style={{
           height: '50px',
           width: '100%',
