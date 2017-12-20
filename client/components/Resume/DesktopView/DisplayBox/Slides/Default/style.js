@@ -6,7 +6,7 @@ module.exports.body = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'space-evenly',
+  justifyContent: 'center',
   backgroundColor: 'rgb(250, 250, 250)',
   WebkitTransition: '0.2s'
 };
