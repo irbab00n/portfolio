@@ -67,9 +67,8 @@ class ExperienceSlide extends React.Component {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-          <div onClick={() => {this.changeIndex('left')}}>Left</div>
-          <div>Center</div>
-          <div onClick={() => {this.changeIndex('right')}}>Right</div>
+          <div onClick={() => {this.changeIndex('left')}}>Prev</div>
+          <div onClick={() => {this.changeIndex('right')}}>Next</div>
         </div>
 
       </div>
