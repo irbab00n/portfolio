@@ -35,7 +35,7 @@ module.exports.headerLayout = {
 };
 
 module.exports.headerImage = {
-  height: '50px'
+  width: '40%'
 };
 
 module.exports.headerTitleLayout = {
@@ -58,6 +58,6 @@ module.exports.descriptionLayout = {
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
+  alignItems: 'flex-start',
   fontSize: '14px'
 };

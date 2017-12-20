@@ -11,7 +11,7 @@ const Description = (props) => {
     <div style={style.descriptionLayout}>
       {
         duties.map((description, i) => {
-          return <span key={'description' + i} style={{paddingBottom: '15px'}}>&bull;&nbsp;{description}</span>
+          return <span key={'description' + i} style={{paddingBottom: '15px'}}>{description}</span>
         })
       }
     </div>

@@ -12,7 +12,6 @@ module.exports.hackReactor = {
   title: 'Software Engineering Teaching Assistant'
 };
 
-
 module.exports.eisenbeiss = {
   duties: [
     `Serviced and overhauled gearboxes from customer industries ranging from food processing, plastic extrusion, public transportation and power generation.`,
@@ -20,10 +19,36 @@ module.exports.eisenbeiss = {
     `Operated turning and grinding equipment to precision machine replacement wear parts in accordance with drawing specified tolerances.`,
     `Performed magnetic particle inspections of critical gearing components to identify subsurface defects.`
   ],
-  image: 'https://static1.squarespace.com/static/ta/522a22cbe4b04681b0bff826/3098/assets/images/logo/hack-reactor-logo.png',
+  image: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/eisenbeiss.png',
   employmentRange: {
     start: 'Feb. 2017',
     end: 'June 2017'
   },
   title: 'Gearbox Technician'
 };
+
+module.exports.republic = {
+  duties: [
+    `Maintained, repaired, and repainted waste removal containers servicing both residential and commercial applications.`,
+    `Duties included the use of the MIG welding process to weld mild steel frames, floor panels and patches onto corroded waste containers.`,
+    `Used a cutting torch to remove, cut and shape replacement panels and frames.`,
+    `Operated a water-based painting spray booth to apply protective layers of paint onto repaired equipment.`
+  ],
+  image: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/republic.png',
+  employmentRange: {
+    start: 'May 2014',
+    end: 'Nov. 2014'
+  },
+  title: 'Roll-off Repair Specialist'
+};
+
+
+
+
+
+
+
+
+
+
+

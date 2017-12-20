@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Header from './Header.jsx';
-import Description from './Description.jsx';
+import Job from './Job.jsx';
 
 import jobs from './jobs';
 
@@ -12,7 +11,27 @@ class ExperienceSlide extends React.Component {
     super(props);
     this.state = {
       loaded: false,
+      jobNames: ['hackReactor', 'eisenbeiss', 'republic'],
+      jobIndex: 0
     };
+    this.changeIndex = this.changeIndex.bind(this);
+  }
+
+  changeIndex(direction) {
+    console.log('click registered');
+    let { jobNames, jobIndex } = this.state;
+    switch(direction) {
+      case 'left': 
+        if (jobIndex > 0) {
+          this.setState({jobIndex: jobIndex -= 1});
+        }
+        break;
+      case 'right':
+        if (jobIndex < jobNames.length - 1) {
+          this.setState({jobIndex: jobIndex += 1});
+        }
+        break;
+    }
   }
 
   componentDidMount() {
@@ -25,7 +44,7 @@ class ExperienceSlide extends React.Component {
 
   render() {
 
-    const { loaded } = this.state;
+    const { loaded, jobNames, jobIndex } = this.state;
     const { applyStyles } = this.props;
 
     return (
@@ -37,19 +56,9 @@ class ExperienceSlide extends React.Component {
         )
       }>
 
-        <div style={style.slideLayout}>
-
-          <Header 
-            image={jobs.hackReactor.image}
-            employmentRange={jobs.hackReactor.employmentRange}
-            title={jobs.hackReactor.title}
-          />
-
-          <Description 
-            duties={jobs.hackReactor.duties}
-          />
-
-        </div>
+        <Job 
+          job={jobs[jobNames[jobIndex]]}
+        />
 
         <div style={{
           height: '50px',
@@ -58,9 +67,9 @@ class ExperienceSlide extends React.Component {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-          <span>Left</span>
-          <span>Current</span>
-          <span>Right</span>
+          <div onClick={() => {this.changeIndex('left')}}>Left</div>
+          <div>Center</div>
+          <div onClick={() => {this.changeIndex('right')}}>Right</div>
         </div>
 
       </div>
