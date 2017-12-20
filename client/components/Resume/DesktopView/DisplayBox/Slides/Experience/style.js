@@ -1,7 +1,7 @@
-module.exports.body = {
+module.exports.slideBody = {
   position: 'relative',
-  right: '-1000px',
-  height: '100%',
+  right: '-2000px',
+  height: '400px',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -11,6 +11,8 @@ module.exports.body = {
   WebkitTransition: '0.2s'
 };
 
-module.exports.body_loaded = {
+module.exports.slideBody_loaded = {
   right: '0px'
 };
+
+
