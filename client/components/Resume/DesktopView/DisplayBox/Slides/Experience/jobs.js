@@ -21,7 +21,7 @@ module.exports.eisenbeiss = {
   ],
   image: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/eisenbeiss.png',
   employmentRange: {
-    start: 'Feb. 2017',
+    start: 'Feb. 2015',
     end: 'June 2017'
   },
   title: 'Gearbox Technician'

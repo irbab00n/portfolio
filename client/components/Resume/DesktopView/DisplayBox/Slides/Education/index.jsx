@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Institution from './Institution.jsx';
+
+import colleges from './colleges';
+
 import style from './style';
 
 class EducationSlide extends React.Component {
@@ -31,9 +35,17 @@ class EducationSlide extends React.Component {
           loaded && style.body_loaded
         )
       }>
-        <center>This is the Education Slide.  This slide will display when the Education Tab is clicked</center>
-      </div>
 
+        <Institution
+          college={colleges.hackReactor}
+        />
+
+        <Institution
+          college={colleges.americanRiver}
+          reverse={true}
+        />
+
+      </div>
     ); 
 
   }
