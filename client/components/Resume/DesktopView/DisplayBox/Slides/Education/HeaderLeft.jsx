@@ -8,11 +8,16 @@ class Header extends React.Component {
 
   render() {
 
-    const { reverse } = this.props;
+    const {
+      image,
+      title,
+      location,
+      studied
+    } = this.props;
 
     return (
 
-      <div id="Header" style={{
+      <div style={{
         height: '70px',
         paddingBottom: '15px',
         width: '100%',
@@ -21,17 +26,15 @@ class Header extends React.Component {
         justifyContent: 'space-between',
       }}>
 
-
         <img
-          src="http://static1.squarespace.com/static/522a22cbe4b04681b0bff826/t/581cc65fe4fcb5a68ecd940c/1478280803080/hrhq-avatar.png"
+          src={image}
           style={{height: '100%', paddingRight: '15px'}}
         />
-        <div style={{width: '100%', textAlign: 'right'}}>
-          <span style={{fontSize: '24px', fontWeight: 'bold'}}>Hack Reactor</span><br/>
-          <span style={{fontSize: '16px'}}>San Francisco</span><br/>
-          <span style={{fontSize: '12px'}}>Advanced Software Engineering Immersive</span>
+        <div style={{width: '100%', textAlign: 'right', lineHeight: '90%'}}>
+          <span style={{fontSize: '24px', fontWeight: 'bold'}}>{title}</span><br/>
+          <span style={{fontSize: '16px'}}>{location}</span><br/>
+          <span style={{fontSize: '12px'}}>{studied}</span>
         </div>
-
 
       </div>
 

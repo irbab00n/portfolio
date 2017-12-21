@@ -11,7 +11,7 @@ class Institution extends React.Component {
 
   render() {
 
-    const { reverse } = this.props; 
+    const { reverse, college } = this.props; 
 
     return (
 
@@ -25,11 +25,24 @@ class Institution extends React.Component {
 
         {
           reverse
-            ? <HeaderRight />
-            : <HeaderLeft />
+            ? <HeaderRight 
+                image={college.image}
+                title={college.title}
+                location={college.location}
+                studied={college.studied}
+              />
+            : <HeaderLeft 
+                image={college.image}
+                title={college.title}
+                location={college.location}
+                studied={college.studied}
+              />
         }
 
-        <Description />
+        <Description 
+          text={college.text}
+          range={college.range}
+        />
 
       </div>
 

@@ -3,17 +3,19 @@ import React from 'react';
 
 const Description = (props) => {
 
+  const { text, range } = props;
+
   return (
 
-    <div id="Content" style={{
+    <div style={{
       height: '100px',
       width: '100%',
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      flexDirection: 'column',
       fontSize: '14px'
     }}>
-      Hack Reactor is an immersive full-stack development program that help students master advanced HTML and CSS, front-end JavaScript frameworks, server development with Node, and databases with SQL and Mongo during 800 hours of instruction, projects, and hands-on work.
+      <span style={{fontWeight: 'bold', paddingBottom: '15px'}}>{`${range.start} - ${range.end}`}</span>
+      {text}
     </div>
 
   );

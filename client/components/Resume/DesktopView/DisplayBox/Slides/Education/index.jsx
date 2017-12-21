@@ -36,10 +36,12 @@ class EducationSlide extends React.Component {
         )
       }>
 
-        <Institution 
+        <Institution
+          college={colleges.hackReactor}
         />
 
         <Institution
+          college={colleges.americanRiver}
           reverse={true}
         />
 
