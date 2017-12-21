@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Institution from './Institution.jsx';
+
+import colleges from './colleges';
+
 import style from './style';
 
 class EducationSlide extends React.Component {
@@ -32,82 +36,14 @@ class EducationSlide extends React.Component {
         )
       }>
 
-        <div id="Educational Institution" style={{
-          height: '200px',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignContent: 'center',
-          backgroundColor: '#f2f2f2'
-        }}>
+        <Institution 
+        />
 
-          <div id="Header" style={{
-            height: '70px',
-            paddingBottom: '30px',
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
-            <div>
-              Image
-            </div>
-            <div>
-              Title
-            </div>
-          </div>
-
-          <div id="Content" style={{
-            height: '100px',
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            Body
-          </div>
-
-        </div>
-
-        <div id="Educational Institution" style={{
-          height: '200px',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignContent: 'center',
-          backgroundColor: '#f2f2f2'
-        }}>
-
-          <div id="Header" style={{
-            height: '70px',
-            paddingBottom: '30px',
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
-            <div>
-              Image
-            </div>
-            <div>
-              Title
-            </div>
-          </div>
-
-          <div id="Content" style={{
-            height: '100px',
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            Body
-          </div>
-
-        </div>
+        <Institution
+          reverse={true}
+        />
 
       </div>
-
     ); 
 
   }
