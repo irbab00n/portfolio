@@ -1,5 +1,6 @@
 import React from 'react';
 
+import style from './style';
 
 const Description = (props) => {
 
@@ -7,14 +8,8 @@ const Description = (props) => {
 
   return (
 
-    <div style={{
-      height: '100px',
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      fontSize: '14px'
-    }}>
-      <span style={{fontWeight: 'bold', paddingBottom: '15px'}}>{`${range.start} - ${range.end}`}</span>
+    <div style={style.descriptionBody}>
+      <span style={style.rangeAttended}>{`${range.start} - ${range.end}`}</span>
       {text}
     </div>
 

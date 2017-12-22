@@ -31,8 +31,8 @@ class EducationSlide extends React.Component {
 
       <div style={
         applyStyles(
-          style.body,
-          loaded && style.body_loaded
+          style.slideBody,
+          loaded && style.slideBody_loaded
         )
       }>
 

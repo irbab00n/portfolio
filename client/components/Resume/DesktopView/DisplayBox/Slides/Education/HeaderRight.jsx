@@ -1,48 +1,32 @@
 import React from 'react';
 
+import style from './style';
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const HeaderRight = (props) => {
 
-  render() {
+  const {
+    image,
+    title,
+    location,
+    studied
+  } = props;
 
-    const {
-      image,
-      title,
-      location,
-      studied
-    } = this.props;
+  return (
 
-    return (
-
-      <div style={{
-        height: '70px',
-        paddingBottom: '15px',
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}>
-
-
-        <div style={{width: '100%', textAlign: 'left', lineHeight: '90%'}}>
-          <span style={{fontSize: '24px', fontWeight: 'bold'}}>{title}</span><br/>
-          <span style={{fontSize: '16px'}}>{location}</span><br/>
-          <span style={{fontSize: '12px'}}>{studied}</span>
-        </div>
-        <img
-          src={image}
-          style={{height: '100%', paddingRight: '15px'}}
-        />
-
-
+    <div style={style.headerRightBody}>
+      <div style={style.rightTextCluster}>
+        <span style={style.rightTextTitle}>{title}</span><br/>
+        <span style={style.rightTextLocation}>{location}</span><br/>
+        <span style={style.rightTextStudied}>{studied}</span>
       </div>
+      <img
+        src={image}
+        style={style.rightImage}
+      />
+    </div>
 
-    );
+  );
 
-  }
 }
 
-export default Header;
+export default HeaderRight;
