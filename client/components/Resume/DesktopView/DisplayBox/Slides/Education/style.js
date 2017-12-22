@@ -95,3 +95,19 @@ module.exports.rightImage = {
   height: '100%',
   paddingRight: '15px'
 };
+
+/* Description Component Styles */
+
+module.exports.descriptionBody = {
+  height: '100px',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  fontSize: '12px'
+};
+
+module.exports.rangeAttended = {
+  fontWeight: 'bold',
+  paddingBottom: '15px',
+  fontSize: '14px'
+};
