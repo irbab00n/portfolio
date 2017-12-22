@@ -4,6 +4,8 @@ import HeaderLeft from './HeaderLeft.jsx';
 import HeaderRight from './HeaderRight.jsx';
 import Description from './Description.jsx';
 
+import style from './style';
+
 class Institution extends React.Component {
   constructor(props) {
     super(props);
@@ -15,13 +17,7 @@ class Institution extends React.Component {
 
     return (
 
-      <div id="Educational Institution" style={{
-        height: '200px',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignContent: 'center',
-      }}>
+      <div style={style.institutionBody}>
 
         {
           reverse
