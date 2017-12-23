@@ -63,6 +63,7 @@ class ExperienceSlide extends React.Component {
         <Navigation 
           prevClick={() => {this.changeIndex('left')}}
           nextClick={() => {this.changeIndex('right')}}
+          applyStyles={applyStyles}
         />
 
       </div>

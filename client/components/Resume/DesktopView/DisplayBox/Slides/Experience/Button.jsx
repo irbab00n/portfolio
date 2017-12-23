@@ -1,30 +1,49 @@
 import React from 'react';
 
+import style from './style';
 
 class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      hovered: false,
+      clicked: false
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    let { onClick } = this.props;
+    this.setState({clicked: true}, () => {
+      setTimeout(
+        this.setState({clicked: false}), onClick);
+    }, 100);
   }
 
   render() {
 
-    const { label, onClick } = this.props;
+    const { hovered, clicked } = this.state;
+    const { label, onClick, applyStyles } = this.props;
 
     return (
 
       <div 
-        onClick={onClick}
-        style={{
-          height: '30px',
-          width: '50px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#f2f2f2'
-        }}
+        onClick={
+          () => {this.setState({clicked: true}, () => {
+            setTimeout(() => {
+              this.setState({clicked: false}, onClick)
+            }, 100);
+          });}
+        }
+        onMouseEnter={() => { this.setState({hovered: true}); }}
+        onMouseLeave={() => { this.setState({hovered: false}); }}
+        style={
+          applyStyles(
+            style.button,
+            hovered && style.button_hovered,
+            clicked && style.button_clicked
+          )
+        }
       >
         {label}
       </div>
