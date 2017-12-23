@@ -34,6 +34,11 @@ module.exports.resumeLink = {
   borderRadius: '2px',
   justifyContent: 'center',
   backgroundColor: 'rgb(250, 250, 250)',
+  WebkitUserSelect: 'none',
+  khtmlUserSelect: 'none',
+  MozUserSelect: 'none',
+  OUserSelect: 'none',
+  userSelect: 'none',
   WebkitTransition: '0.4s'
 };
 

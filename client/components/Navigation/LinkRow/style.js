@@ -1,6 +1,11 @@
 module.exports.navigation_body = {
   display: 'flex',
   flexDirection: 'row',
+  WebkitUserSelect: 'none',
+  khtmlUserSelect: 'none',
+  MozUserSelect: 'none',
+  OUserSelect: 'none',
+  userSelect: 'none',
   paddingRight: '50px'
 };
 
