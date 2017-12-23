@@ -1,32 +1,27 @@
 import React from 'react';
 
+import Button from './Button.jsx';
 
-class Navigation extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {};
-  }
+import style from './style';
 
-  render() {
+const Navigation = (props) => {
 
-    const { prevClick, nextClick } = this.props;
+  const { prevClick, nextClick } = props;
 
-    return (
+  return (
 
-      <div style={{
-        height: '50px',
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}>
-        <div onClick={prevClick}>Prev</div>
-        <div onClick={nextClick}>Next</div>
-      </div>
+    <div style={style.navigationLayout}>
+      <Button 
+        label={'Prev'}
+        onClick={prevClick}
+      />
+      <Button 
+        label={'Next'}
+        onClick={nextClick}
+      />
+    </div>
 
-    );
-
-  }
+  );
 }
 
 export default Navigation;

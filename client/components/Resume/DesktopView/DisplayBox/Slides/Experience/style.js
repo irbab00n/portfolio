@@ -61,3 +61,12 @@ module.exports.descriptionLayout = {
   alignItems: 'flex-start',
   fontSize: '14px'
 };
+
+
+module.exports.navigationLayout = {
+  height: '50px',
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+};
