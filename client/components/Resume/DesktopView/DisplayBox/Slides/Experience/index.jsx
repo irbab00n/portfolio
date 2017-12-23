@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Job from './Job.jsx';
+import Navigation from './Navigation.jsx';
 
 import jobs from './jobs';
 
@@ -59,18 +60,10 @@ class ExperienceSlide extends React.Component {
           job={jobs[jobNames[jobIndex]]}
         />
 
-      {/* This slider bar needs more work!  Will refactor to be more alive and have greater functionality */}
-
-        <div style={{
-          height: '50px',
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}>
-          <div onClick={() => {this.changeIndex('left')}}>Prev</div>
-          <div onClick={() => {this.changeIndex('right')}}>Next</div>
-        </div>
+        <Navigation 
+          prevClick={() => {this.changeIndex('left')}}
+          nextClick={() => {this.changeIndex('right')}}
+        />
 
       </div>
 
