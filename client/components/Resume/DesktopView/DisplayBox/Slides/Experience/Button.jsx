@@ -15,9 +15,10 @@ class Button extends React.Component {
   handleClick() {
     let { onClick } = this.props;
     this.setState({clicked: true}, () => {
-      setTimeout(
-        this.setState({clicked: false}), onClick);
-    }, 100);
+      setTimeout(() => {
+        this.setState({clicked: false}, onClick)
+      }, 100);
+    });
   }
 
   render() {
@@ -28,13 +29,7 @@ class Button extends React.Component {
     return (
 
       <div 
-        onClick={
-          () => {this.setState({clicked: true}, () => {
-            setTimeout(() => {
-              this.setState({clicked: false}, onClick)
-            }, 100);
-          });}
-        }
+        onClick={this.handleClick}
         onMouseEnter={() => { this.setState({hovered: true}); }}
         onMouseLeave={() => { this.setState({hovered: false}); }}
         style={
