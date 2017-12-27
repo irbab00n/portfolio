@@ -4,6 +4,11 @@ module.exports.title = {
   padding: '21.5px 21.5px 21.5px 0',
   fontSize: '30px',
   color: 'rgba(41, 67, 78, 1.0)',
+  WebkitUserSelect: 'none',
+  khtmlUserSelect: 'none',
+  MozUserSelect: 'none',
+  OUserSelect: 'none',
+  userSelect: 'none',
   WebkitTransition: '0.1s'
 };
 
