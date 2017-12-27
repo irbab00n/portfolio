@@ -28,6 +28,11 @@ module.exports.rightCloud = {
   height: '100px',
   width: '500px',
   alignSelf: 'flex-end',
+  WebkitUserSelect: 'none',
+  khtmlUserSelect: 'none',
+  MozUserSelect: 'none',
+  OUserSelect: 'none',
+  userSelect: 'none',
 };
 
 module.exports.rightCloud_mobile_portrait = {
@@ -42,6 +47,11 @@ module.exports.leftCloud = {
   height: '100px',
   width: '500px',
   alignSelf: 'flex-start',
+  WebkitUserSelect: 'none',
+  khtmlUserSelect: 'none',
+  MozUserSelect: 'none',
+  OUserSelect: 'none',
+  userSelect: 'none',
 };
 
 module.exports.leftCloud_mobile_portrait = {
