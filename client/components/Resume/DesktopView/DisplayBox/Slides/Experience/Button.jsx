@@ -6,6 +6,7 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loaded: false,
       hovered: false,
       clicked: false
     };
@@ -21,9 +22,17 @@ class Button extends React.Component {
     });
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loaded: true
+      }); 
+    }, 500);
+  }
+
   render() {
 
-    const { hovered, clicked } = this.state;
+    const { loaded, hovered, clicked } = this.state;
     const { label, onClick, applyStyles } = this.props;
 
     return (
@@ -35,6 +44,7 @@ class Button extends React.Component {
         style={
           applyStyles(
             style.button,
+            loaded && style.button_loaded,
             hovered && style.button_hovered,
             clicked && style.button_clicked
           )
