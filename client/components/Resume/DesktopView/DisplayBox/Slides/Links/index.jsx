@@ -58,26 +58,13 @@ class LinksSlide extends React.Component {
 
         </div>
 
-        <div style={{
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
+        <div style={style.resumeLinkBody}>
 
-          <div style={{
-            height: '100px',
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+          <div style={style.resumeDescription}>
             <center>If you would like to view or download my resume, click below!</center>
           </div>
 
-          <a href={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/resume.pdf'} target='_blank'>
+          <a style={style.textLabelFormat} href={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/resume.pdf'} target='_blank'>
             <Button 
               label={'Resume'}
               hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}

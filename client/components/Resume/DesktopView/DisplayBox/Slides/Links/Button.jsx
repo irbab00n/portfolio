@@ -30,7 +30,7 @@ class Button extends React.Component {
       case 'image': 
         return (<img style={applyStyles(hovered && style.buttonLabel_hovered)} src={label} />);
       default:
-        return label 
+        return label;
     }
   }
 

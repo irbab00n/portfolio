@@ -1,3 +1,5 @@
+/* Main Body styles */
+
 module.exports.body = {
   position: 'relative',
   right: '-1000px',
@@ -7,7 +9,7 @@ module.exports.body = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'space-evenly',
-  backgroundColor: 'rgb(250, 250, 250)',
+  backgroundColor: 'rgba(250, 250, 250, 1.0)',
   WebkitTransition: '0.2s'
 };
 
@@ -15,7 +17,7 @@ module.exports.body_loaded = {
   right: '0px'
 };
 
-
+/* Link Body styles */
 
 module.exports.externalLinksBody = {
   height: '100%',
@@ -26,9 +28,29 @@ module.exports.externalLinksBody = {
   justifyContent: 'space-evenly',
 };
 
-module.exports.resumeL
+module.exports.resumeLinkBody = {
+  height: '100%',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
 
+module.exports.resumeDescription = {
+  height: '100px',
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
 
+module.exports.textLabelFormat = {
+  textDecoration: 'none',
+  color: 'black'
+};
+
+/* Button styles */
 
 module.exports.button = {
   cursor: 'pointer',
@@ -37,7 +59,7 @@ module.exports.button = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: '#ffffff',
+  backgroundColor: 'rgba(250, 250, 250, 1.0)',
   borderWidth: '2px',
   borderRadius: '2px',
   borderColor: '#f2f2f2',
