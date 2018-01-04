@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Button from './Button.jsx';
+
 import style from './style';
 
 class LinksSlide extends React.Component {
@@ -31,7 +33,61 @@ class LinksSlide extends React.Component {
           loaded && style.body_loaded
         )
       }>
-        <center>This is the Links Slide.  This slide will display when the Links Tab is clicked</center>
+
+        <div style={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'space-evenly',
+        }}>
+
+          <Button 
+            label={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/github_logo.png'}
+            labelType={'image'}
+            hoverColor={{backgroundColor: 'rgb(64, 64, 64)'}}
+            onClick={() => { console.log('Github button click'); }}
+            applyStyles={applyStyles}
+          />
+
+          <Button 
+            label={'Linkedin'}
+            hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
+            onClick={() => { console.log('Linkedin button click'); }}
+            applyStyles={applyStyles}
+          />
+
+        </div>
+
+        <div style={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+
+          <div style={{
+            height: '100px',
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <center>If you would like to view or download my resume, click below!</center>
+          </div>
+
+          <Button 
+            label={'Resume'}
+            hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
+            onClick={() => { console.log('Resume button click'); }}
+            applyStyles={applyStyles}
+          />
+
+        </div>
+
       </div>
 
     ); 
@@ -40,3 +96,5 @@ class LinksSlide extends React.Component {
 }
 
 export default LinksSlide;
+
+// <center><a href="https://s3-us-west-1.amazonaws.com/cos-bytes.com/resume.pdf" target="_blank">Link</a></center>
