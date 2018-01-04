@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Button from './Button.jsx';
+
 import style from './style';
 
 class LinksSlide extends React.Component {
@@ -31,7 +33,48 @@ class LinksSlide extends React.Component {
           loaded && style.body_loaded
         )
       }>
-        <center>This is the Links Slide.  This slide will display when the Links Tab is clicked</center>
+
+        <div style={style.externalLinksBody}>
+
+          <a href={'https://github.com/irbab00n'} target='_blank'>
+            <Button 
+              label={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/github_logo.png'}
+              labelType={'image'}
+              hoverColor={{backgroundColor: 'rgb(64, 64, 64)'}}
+              onClick={() => { console.log('Github button click'); }}
+              applyStyles={applyStyles}
+            />
+          </a>
+
+          <a href={'https://www.linkedin.com/in/cosbyts/'} target='_blank'>
+            <Button 
+              label={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/linkedin_logo.png'}
+              labelType={'image'}
+              hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
+              onClick={() => { console.log('Linkedin button click'); }}
+              applyStyles={applyStyles}
+            />
+          </a>
+
+        </div>
+
+        <div style={style.resumeLinkBody}>
+
+          <div style={style.resumeDescription}>
+            <center>If you would like to view or download my resume, click below!</center>
+          </div>
+
+          <a style={style.textLabelFormat} href={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/resume.pdf'} target='_blank'>
+            <Button 
+              label={'Resume'}
+              hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
+              onClick={() => { console.log('Resume button click'); }}
+              applyStyles={applyStyles}
+            />
+          </a>
+
+        </div>
+
       </div>
 
     ); 
@@ -40,3 +83,11 @@ class LinksSlide extends React.Component {
 }
 
 export default LinksSlide;
+
+
+
+
+
+
+
+
