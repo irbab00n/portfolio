@@ -11,6 +11,7 @@ class Button extends React.Component {
       clicked: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.renderLabel = this.renderLabel.bind(this);
   }
 
   handleClick() {
@@ -20,6 +21,17 @@ class Button extends React.Component {
         this.setState({clicked: false}, onClick)
       }, 100);
     });
+  }
+
+  renderLabel(labelType) {
+    let { hovered } = this.state;
+    let { label = '', applyStyles } = this.props; // initialize label to empty string if none passed in
+    switch(labelType) {
+      case 'image': 
+        return (<img style={applyStyles(hovered && style.buttonLabel_hovered)} src={label} />);
+      default:
+        return label 
+    }
   }
 
   componentDidMount() {
@@ -33,11 +45,12 @@ class Button extends React.Component {
   render() {
 
     const { loaded, hovered, clicked } = this.state;
-    const { label, hoverColor = {backgroundColor: 'rgba(0, 122, 193, 1.0)'}, onClick, applyStyles } = this.props;
-
-    let labelTrigger = typeof label === 'object';
-
-    console.log(label);
+    const { 
+      labelType,
+      hoverColor = {backgroundColor: 'rgba(0, 122, 193, 1.0)'}, // initialize to blue hover color if none passed in
+      onClick,
+      applyStyles
+    } = this.props;
 
     return (
 
@@ -54,9 +67,7 @@ class Button extends React.Component {
           )
         }
       >
-        {
-          label
-        }
+        {this.renderLabel(labelType)}
       </div>
 
     );

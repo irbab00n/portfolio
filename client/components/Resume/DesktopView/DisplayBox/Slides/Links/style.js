@@ -16,6 +16,20 @@ module.exports.body_loaded = {
 };
 
 
+
+module.exports.externalLinksBody = {
+  height: '100%',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'space-evenly',
+};
+
+module.exports.resumeL
+
+
+
 module.exports.button = {
   cursor: 'pointer',
   height: '50px',
@@ -44,6 +58,15 @@ module.exports.button_hovered = {
   boxShadow: '0 2px 6px 0 rgba(0, 0, 0, 0.6)',
   // backgroundColor: 'rgba(0, 122, 193, 1.0)',
   color: '#f2f2f2'
+};
+
+module.exports.buttonLabel = {
+  WebkitTransition: '0.2s'
+};
+
+module.exports.buttonLabel_hovered = {
+  WebkitFilter: 'invert(1)',
+  filter: 'invert(1)',
 };
 
 module.exports.button_clicked = {

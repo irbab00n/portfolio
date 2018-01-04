@@ -7,7 +7,7 @@ module.exports.hackReactor = {
   image: 'https://static1.squarespace.com/static/ta/522a22cbe4b04681b0bff826/3098/assets/images/logo/hack-reactor-logo.png',
   employmentRange: {
     start: 'Sept. 2017',
-    end: 'Present'
+    end: 'Jan. 2018'
   },
   title: 'Software Engineering Teaching Assistant'
 };
