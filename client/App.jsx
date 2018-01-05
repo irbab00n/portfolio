@@ -103,9 +103,7 @@ class App extends React.Component {
           yOffset={getCurrentYOffset()}
         />
 
-        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.2)'}}>
-
-        </span>
+        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.2)'}}></span>
 
         <Resume 
           screenWidth={screenWidth}
@@ -117,7 +115,14 @@ class App extends React.Component {
           applyStyles={applyStyles}
         />
 
-        <Projects />
+        <Projects
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={getCurrentYOffset()}
+          applyStyles={applyStyles}
+        />
 
         <div style={{
           height: '1000px',
