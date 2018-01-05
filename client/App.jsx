@@ -5,6 +5,8 @@ import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
 import Projects from './components/Projects/index.jsx';
 
+import Board from './components/Minesweeper/Board.jsx';
+
 import getDocumentHeight from './helpers/getDocumentHeight';
 import getCurrentYOffset from './helpers/getCurrentYOffset';
 import applyStyles from './helpers/applyStyles';
@@ -37,7 +39,7 @@ class App extends React.Component {
     let documentHeight = getDocumentHeight();
     let currentYOffset = getCurrentYOffset();
     let trackLength = documentHeight - windowHeight;
-    let percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+    let percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength === 0)
     this.setState({percentScrolled: percentScrolled});
   }
 
@@ -49,7 +51,7 @@ class App extends React.Component {
 
     const { screenWidth, screenHeight, percentScrolled } = this.state;
     const mobileToggle = screenWidth < 1000; // True: Mobile View, False: Desktop View
-    const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscaped
+    const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscape
     let targets = {
       block1: {
         start: 0,
@@ -127,11 +129,14 @@ class App extends React.Component {
         <div style={{
           height: '1000px',
           width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
           backgroundColor: 'rgba(236, 236, 236, 1.0)',
           padding: '15px 0'
         }}>
-          1000px height block<br/>
-          Content Will be available soon!
+          Content coming soon!
         </div>
 
       </div>
