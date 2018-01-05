@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from './components/Navigation/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
+import Projects from './components/Projects/index.jsx';
 
 import getDocumentHeight from './helpers/getDocumentHeight';
 import getCurrentYOffset from './helpers/getCurrentYOffset';
@@ -116,16 +117,7 @@ class App extends React.Component {
           applyStyles={applyStyles}
         />
 
-        <div style={{
-          height: '1000px',
-          width: '100%',
-          backgroundColor: 'rgba(242, 242, 242, 1.0)',
-          padding: '15px 0'
-
-        }}>
-          1000px height block<br/>
-          Content Will be available soon!
-        </div>
+        <Projects />
 
         <div style={{
           height: '1000px',
