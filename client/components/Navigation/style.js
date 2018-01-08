@@ -7,7 +7,7 @@ module.exports.main = {
   justifyContent: 'space-between',
   alignItems: 'center',
   WebkitTransition: '0.1s',
-  zIndex: '1'
+  zIndex: '100'
 };
 
 module.exports.main_mobile = {

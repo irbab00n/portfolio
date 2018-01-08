@@ -1,11 +1,16 @@
 import React from 'react';
 
+import ProjectTabs from './ProjectTabs.jsx';
+import ProjectContent from './ProjectContent.jsx';
+
 class ProjectView extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+
+    const { applyStyles } = this.props;
 
     return (
 
@@ -19,61 +24,19 @@ class ProjectView extends React.Component {
         backgroundColor: 'rgba(225, 225, 225, 1.0)',
       }}>
 
-        <div style={{
+        <div id="Layering Ancestor" style={{
           position: 'relative',
           top: 0,
           left: 0,
-          height:'100%',
+          height: '100%',
           width: '100%',
           maxWidth: '1250px',
-          display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: '#e2e2e2'
         }}>
 
-          <div style={{
-            height:'700px',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'rgba(242, 242, 242, 1.0)',
-          }}>
-            Top
-          </div>
-
-          <div style={{
-            height:'300px',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-
-            <div style={{
-              height:'100%',
-              width: '30%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              backgroundColor: 'rgba(237, 237, 237, 1.0)',
-            }}>
-              Bottom-Left
-            </div>
-
-            <div style={{
-              height:'100%',
-              width: '70%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              backgroundColor: 'rgba(232, 232, 232, 1.0)',
-            }}>
-              Bottom-Right
-            </div>
-
-          </div>
+          <ProjectTabs 
+            applyStyles={applyStyles}
+          />
+          <ProjectContent />
 
         </div>
 

@@ -9,9 +9,13 @@ class Projects extends React.Component {
 
   render() {
 
+    const { applyStyles } = this.props;
+
     return (
 
-      <DesktopView />
+      <DesktopView 
+        applyStyles={applyStyles}
+      />
 
     );
 
