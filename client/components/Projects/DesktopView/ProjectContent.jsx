@@ -8,6 +8,8 @@ class ProjectContent extends React.Component {
 
   render() {
 
+    const { tabsClickToggleFalse } = this.props;
+
     return (
 
       <div style={{
@@ -28,7 +30,22 @@ class ProjectContent extends React.Component {
             justifyContent: 'center',
             backgroundColor: 'rgba(242, 242, 242, 1.0)',
           }}>
-            Top
+            
+            <div id="EXIT PROJECT BUTTON" 
+              style={{
+                height: '50px',
+                width: '50px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '25px',
+                backgroundColor: 'red'
+              }}
+              onClick={tabsClickToggleFalse}
+            >
+              X
+            </div>
+
           </div>
 
           <div style={{
