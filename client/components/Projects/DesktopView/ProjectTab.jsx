@@ -22,7 +22,14 @@ class ProjectTab extends React.Component {
   render() {
 
     const { clicked, hovered } = this.state;
-    const { tabClicked, applyStyles, onClick } = this.props;
+    const { 
+      tabClicked,
+      tabHoverColor = 'inset 0 0 0 1000px rgba(225, 225, 225, 0.3)',
+      tabBackgroundImage = '',
+      tabText = '',
+      applyStyles,
+      onClick 
+    } = this.props;
 
     return (
 
@@ -36,16 +43,20 @@ class ProjectTab extends React.Component {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: 'rgba(225, 225, 225, 1.0)',
-              WebkitTransition: '0.2s'
+              boxShadow: 'inset 0 0 0 1000px rgba(100, 100, 100, 0.3)',
+              background: 'rgba(225, 225, 225, 1.0)',
+              backgroundSize: 'cover',
+              backgroundImage: `url(${tabBackgroundImage})`,
+              WebkitTransition: '0.5s'
             },
             hovered && {
-              backgroundColor: 'rgba(0, 122, 193, 1.0)',
-              boxShadow: 'inset 0 4px 12px 0 rgba(0, 0, 0, 0.6)',
+              boxShadow: `${tabHoverColor}`,
+              opactiy: '0.8',
               color: 'white'
             },
             tabClicked && {
-              backgroundColor: 'rgba(225, 225, 225, 0.0)',
+              height: '25px',
+              fontSize: '0px'
             }
           )
         }
@@ -53,7 +64,7 @@ class ProjectTab extends React.Component {
         onMouseLeave={() => this.setState({hovered: false})}
         onClick={onClick}
       >
-        TAB TO CLICK
+        {tabText}
       </div>
 
     );
