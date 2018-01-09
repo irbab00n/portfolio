@@ -24,7 +24,6 @@ class ProjectView extends React.Component {
   }
 
   tabsClickToggleFalse() {
-    console.log('Toggle false function ran');
     let { tabClicked } = this.state;
     this.setState({
       tabClicked: false

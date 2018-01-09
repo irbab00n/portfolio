@@ -14,8 +14,6 @@ class ProjectTabs extends React.Component {
     const { clicked } = this.state;
     const { tabClicked, applyStyles, tabsClickToggleTrue } = this.props;
 
-    let zIndex = tabClicked ? 0: 1;
-
     return (
 
       <div 
@@ -29,12 +27,13 @@ class ProjectTabs extends React.Component {
               flexDirection: 'column',
               alignItems: 'center',
               backgroundColor: 'rgba(226, 226, 226, 1.0)',
-              zIndex: {zIndex},
-              WebkitTransition: '0.2s'
+              zIndex: 1,
+              WebkitTransition: '0.5s'
             },
             tabClicked && {
               backgroundColor: 'rgba(250, 250, 250, 0.0)',
-              color: 'rgba(255, 255, 255, 0.0)'
+              color: 'rgba(255, 255, 255, 0.0)',
+              zIndex: -1
             }
           )
         }
