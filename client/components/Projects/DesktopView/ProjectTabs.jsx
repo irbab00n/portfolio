@@ -46,7 +46,7 @@ class ProjectTabs extends React.Component {
         />
         <ProjectTab 
           tabClicked={tabClicked}
-          tabHoverColor={'inset 0 0 0 1000px rgba(225, 50, 50, 0.3)'}
+          tabHoverColor={'inset 0 0 0 1000px rgba(225, 255, 50, 0.3)'}
           tabBackgroundImage={'https://i.stack.imgur.com/kzwT7.png'}
           tabText={'Tab 2, CLICK ME!'}
           applyStyles={applyStyles}
@@ -54,7 +54,7 @@ class ProjectTabs extends React.Component {
         />
         <ProjectTab 
           tabClicked={tabClicked}
-          tabHoverColor={'inset 0 0 0 1000px rgba(225, 100, 225, 0.3)'}
+          tabHoverColor={'inset 0 0 0 1000px rgba(200, 100, 20, 0.3)'}
           tabBackgroundImage={'https://images3.alphacoders.com/853/thumb-1920-85305.jpg'}
           tabText={'Tab 3, CLICK ME!'}
           applyStyles={applyStyles}
@@ -62,7 +62,7 @@ class ProjectTabs extends React.Component {
         />
         <ProjectTab 
           tabClicked={tabClicked}
-          tabHoverColor={'inset 0 0 0 1000px rgba(225, 225, 100, 0.3)'}
+          tabHoverColor={'inset 0 0 0 1000px rgba(225, 0, 100, 0.3)'}
           tabBackgroundImage={'https://www.xmple.com/wallpaper/triangle-orange-pink-1920x1080-c2-db7093-ff8c00-l2-250-1250-a-255-f-10.svg'}
           tabText={'Tab 4, CLICK ME!'}
           applyStyles={applyStyles}
