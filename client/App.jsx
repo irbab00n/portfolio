@@ -3,6 +3,9 @@ import React from 'react';
 import Navbar from './components/Navigation/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
+import Projects from './components/Projects/index.jsx';
+
+import Board from './components/Minesweeper/Board.jsx';
 
 import getDocumentHeight from './helpers/getDocumentHeight';
 import getCurrentYOffset from './helpers/getCurrentYOffset';
@@ -36,7 +39,7 @@ class App extends React.Component {
     let documentHeight = getDocumentHeight();
     let currentYOffset = getCurrentYOffset();
     let trackLength = documentHeight - windowHeight;
-    let percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+    let percentScrolled = Math.floor(currentYOffset / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength === 0)
     this.setState({percentScrolled: percentScrolled});
   }
 
@@ -48,7 +51,7 @@ class App extends React.Component {
 
     const { screenWidth, screenHeight, percentScrolled } = this.state;
     const mobileToggle = screenWidth < 1000; // True: Mobile View, False: Desktop View
-    const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscaped
+    const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscape
     let targets = {
       block1: {
         start: 0,
@@ -102,9 +105,7 @@ class App extends React.Component {
           yOffset={getCurrentYOffset()}
         />
 
-        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.2)'}}>
-
-        </span>
+        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.2)'}}></span>
 
         <Resume 
           screenWidth={screenWidth}
@@ -116,25 +117,26 @@ class App extends React.Component {
           applyStyles={applyStyles}
         />
 
-        <div style={{
-          height: '1000px',
-          width: '100%',
-          backgroundColor: 'rgba(242, 242, 242, 1.0)',
-          padding: '15px 0'
-
-        }}>
-          1000px height block<br/>
-          Content Will be available soon!
-        </div>
+        <Projects
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={getCurrentYOffset()}
+          applyStyles={applyStyles}
+        />
 
         <div style={{
           height: '1000px',
           width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
           backgroundColor: 'rgba(236, 236, 236, 1.0)',
           padding: '15px 0'
         }}>
-          1000px height block<br/>
-          Content Will be available soon!
+          Content coming soon!
         </div>
 
       </div>
