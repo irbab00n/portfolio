@@ -18,7 +18,7 @@ class ProjectContent extends React.Component {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: '#e2e2e2',
+        backgroundColor: '#e2e2e2'
       }}>
 
          <div style={{
