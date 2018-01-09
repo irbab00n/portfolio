@@ -12,7 +12,7 @@ class ProjectTabs extends React.Component {
   render() {
 
     const { clicked } = this.state;
-    const { tabClicked, applyStyles, tabsClickToggleTrue } = this.props;
+    const { tabClicked, tabFade, applyStyles, tabsClickToggleTrue } = this.props;
 
     return (
 
@@ -31,7 +31,10 @@ class ProjectTabs extends React.Component {
               WebkitTransition: '0.5s'
             },
             tabClicked && {
-              height: '0px'
+              height: '100px'
+            },
+            tabFade && {
+              opacity: '0.1'
             }
           )
         }

@@ -55,7 +55,7 @@ class ProjectTab extends React.Component {
               color: 'white'
             },
             tabClicked && {
-              height: '0px',
+              height: '25px',
               fontSize: '0px'
             }
           )

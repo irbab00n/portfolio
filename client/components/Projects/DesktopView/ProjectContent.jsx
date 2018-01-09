@@ -4,11 +4,25 @@ import React from 'react';
 class ProjectContent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loaded: false,
+      buttonClicked: false,
+      buttonHoverd: false
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        loaded: true
+      });
+    }, 200);
   }
 
   render() {
 
-    const { tabsClickToggleFalse } = this.props;
+    const { loaded, buttonClicked, buttonHovered } = this.state;
+    const { applyStyles, tabsClickToggleFalse } = this.props;
 
     return (
 
@@ -26,22 +40,42 @@ class ProjectContent extends React.Component {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'rgba(242, 242, 242, 1.0)',
+            alignItems: 'flex-end',
+            justifyContent: 'flex-start',
+            backgroundColor: 'rgba(25, 25, 25, 1.0)',
           }}>
             
             <div id="EXIT PROJECT BUTTON" 
-              style={{
-                height: '50px',
-                width: '50px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '25px',
-                backgroundColor: 'red'
-              }}
-              onClick={tabsClickToggleFalse}
+              style={
+                applyStyles(
+                  {
+                    margin: '25px 25px 0 0',
+                    height: '0px',
+                    width: '0px',
+                    borderRadius: '25px',
+                  },
+                  loaded && {
+                    height: '50px',
+                    width: '50px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: 'rgba(242, 242, 242, 1.0)',
+                    zIndex: 1,
+                    WebkitTransition: '0.5s'
+                  },
+                  buttonHovered && {
+                    boxShadow: 'inset 0 0 0 1000px rgba(100, 100, 100, 0.3)',
+                  },
+                  buttonClicked && {
+                    backgroundColor: 'rgba(242, 242, 242, 0.0)',
+                    fontSize: '0px'
+                  }
+                )
+              }
+              onClick={() => this.setState({buttonClicked: true}, tabsClickToggleFalse)}
+              onMouseEnter={() => this.setState({buttonHovered: true})}
+              onMouseLeave={() => this.setState({buttonHovered: false})}
             >
               X
             </div>

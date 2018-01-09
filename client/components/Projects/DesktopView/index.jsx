@@ -10,7 +10,8 @@ class ProjectView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabClicked: false
+      tabClicked: false,
+      tabFade: false
     };
     this.tabsClickToggleTrue = this.tabsClickToggleTrue.bind(this);
     this.tabsClickToggleFalse = this.tabsClickToggleFalse.bind(this);
@@ -20,19 +21,27 @@ class ProjectView extends React.Component {
     let { tabClicked } = this.state;
     this.setState({
       tabClicked: true
+    }, () => {
+      setTimeout(() => {
+        this.setState({tabFade: true});
+      }, 400)
     });
   }
 
   tabsClickToggleFalse() {
     let { tabClicked } = this.state;
     this.setState({
-      tabClicked: false
+      tabFade: false
+    }, () => {
+      setTimeout(() => {
+        this.setState({tabClicked: false});
+      }, 500)
     });
   }
 
   render() {
 
-    const { tabClicked } = this.state;
+    const { tabClicked, tabFade } = this.state;
     const { applyStyles } = this.props;
 
     return (
@@ -43,6 +52,7 @@ class ProjectView extends React.Component {
 
           <ProjectTabs 
             tabClicked={tabClicked}
+            tabFade={tabFade}
             applyStyles={applyStyles}
             tabsClickToggleTrue={this.tabsClickToggleTrue}
           />
@@ -52,7 +62,7 @@ class ProjectView extends React.Component {
                   applyStyles={applyStyles}
                   tabsClickToggleFalse={this.tabsClickToggleFalse}
                 />
-              : <div style={{height:'100%', width: '100%'}}></div>
+              : <div style={{height:'100%', width: '100%', backgroundColor: 'rgba(25, 25, 25, 1.0)'}}></div>
           }
 
         </div>
