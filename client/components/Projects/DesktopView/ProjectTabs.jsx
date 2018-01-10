@@ -2,6 +2,8 @@ import React from 'react';
 
 import ProjectTab from './ProjectTab.jsx';
 
+import style from './style';
+
 
 class ProjectTabs extends React.Component {
   constructor(props) {
@@ -19,17 +21,7 @@ class ProjectTabs extends React.Component {
       <div 
         style={
           applyStyles(
-            {
-              position: 'absolute',
-              height:'100%',
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              backgroundColor: 'rgba(226, 226, 226, 1.0)',
-              zIndex: 1,
-              WebkitTransition: '0.5s'
-            },
+            style.tabsBody,
             tabClicked && {
               height: '100px'
             },
