@@ -22,7 +22,25 @@ class Carousel extends React.Component {
         justifyContent: 'center',
         backgroundColor: 'rgba(100, 100, 100, 1.0)'
       }}>
-        Carosel
+        <div id="Left Button">
+          Left Button
+        </div>
+
+        <div>
+
+          <div id="Current Image">
+            Current Image
+          </div>
+
+          <div id="Available Images">
+            Available images
+          </div>
+
+        </div>
+
+        <div id="Right Button">
+          Right Button
+        </div>
       </div>
 
     );

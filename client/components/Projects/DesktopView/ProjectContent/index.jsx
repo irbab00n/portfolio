@@ -33,15 +33,7 @@ class ProjectContent extends React.Component {
 
       <div style={style.projectContentBody}>
 
-         <div style={{
-            height:'700px',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-            justifyContent: 'flex-start',
-            backgroundColor: 'rgba(25, 25, 25, 1.0)',
-          }}>
+         <div style={style.projectContentImagesBody}>
             
             <ExitButton 
               loaded={loaded}

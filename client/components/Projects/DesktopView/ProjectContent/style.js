@@ -7,6 +7,16 @@ module.exports.projectContentBody = {
   backgroundColor: '#e2e2e2'
 };
 
+module.exports.projectContentImagesBody = {
+  height:'700px',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-end',
+  justifyContent: 'flex-start',
+  backgroundColor: 'rgba(25, 25, 25, 1.0)',
+};
+
 
 
 
