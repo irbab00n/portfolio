@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ExitButton from './ExitButton.jsx';
+
 
 class ProjectContent extends React.Component {
   constructor(props) {
@@ -45,39 +47,24 @@ class ProjectContent extends React.Component {
             backgroundColor: 'rgba(25, 25, 25, 1.0)',
           }}>
             
-            <div id="EXIT PROJECT BUTTON" 
-              style={
-                applyStyles(
-                  {
-                    margin: '25px 25px 0 0',
-                    height: '0px',
-                    width: '0px',
-                    borderRadius: '25px',
-                  },
-                  loaded && {
-                    height: '50px',
-                    width: '50px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: 'rgba(242, 242, 242, 1.0)',
-                    zIndex: 1,
-                    WebkitTransition: '0.5s'
-                  },
-                  buttonHovered && {
-                    boxShadow: 'inset 0 0 0 1000px rgba(100, 100, 100, 0.3)',
-                  },
-                  buttonClicked && {
-                    backgroundColor: 'rgba(242, 242, 242, 0.0)',
-                    fontSize: '0px'
-                  }
-                )
-              }
-              onClick={() => this.setState({buttonClicked: true}, tabsClickToggleFalse)}
-              onMouseEnter={() => this.setState({buttonHovered: true})}
-              onMouseLeave={() => this.setState({buttonHovered: false})}
-            >
-              X
+            <ExitButton 
+              loaded={loaded}
+              tabsClickToggleFalse={tabsClickToggleFalse}
+              applyStyles={applyStyles}
+            />
+
+            <div id="Carosel" style={{
+              position: 'relative',
+              top: '25px',
+              alignSelf: 'center',
+              height: '600px',
+              width: '1000px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(100, 100, 100, 1.0)'
+            }}>
+              Carosel
             </div>
 
           </div>

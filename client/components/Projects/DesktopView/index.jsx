@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ProjectTabs from './ProjectTabs.jsx';
-import ProjectContent from './ProjectContent.jsx';
+import ProjectContent from './ProjectContent/index.jsx';
 
 import style from './style';
 
@@ -35,7 +35,7 @@ class ProjectView extends React.Component {
     }, () => {
       setTimeout(() => {
         this.setState({tabClicked: false});
-      }, 500)
+      }, 400)
     });
   }
 

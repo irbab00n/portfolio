@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from './style';
+
 
 class ProjectTab extends React.Component {
   constructor(props) {
@@ -36,33 +38,14 @@ class ProjectTab extends React.Component {
       <div 
         style={
           applyStyles(
-            {
-              height: '250px',
-              width: '100%',
-              maxWidth: '1250px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: 'inset 0 0 0 1000px rgba(100, 100, 100, 0.3)',
-              background: 'rgba(225, 225, 225, 1.0)',
-              backgroundSize: 'cover',
-              backgroundImage: `url(${tabBackgroundImage})`,
-              WebkitTransition: '0.5s'
-            },
-            hovered && {
-              boxShadow: `${tabHoverColor}`,
-              opactiy: '0.8',
-              color: 'white'
-            },
-            tabClicked && {
-              height: '25px',
-              fontSize: '0px'
-            }
+            Object.assign(style.tabBody, {backgroundImage: `url(${tabBackgroundImage})`}),
+            hovered && Object.assign(style.tabBody_hovered, {boxShadow: `${tabHoverColor}`}),
+            tabClicked && style.tabBody_clicked
           )
         }
         onMouseEnter={() => this.setState({hovered: true})}
         onMouseLeave={() => this.setState({hovered: false})}
-        onClick={onClick}
+        onClick={tabClicked ? () => {} : onClick} 
       >
         {tabText}
       </div>
