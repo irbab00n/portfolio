@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ExitButton from './ExitButton.jsx';
-import Carousel from './Carousel.jsx';
+import Carousel from './Carousel/index.jsx';
 
 import style from './style';
 
