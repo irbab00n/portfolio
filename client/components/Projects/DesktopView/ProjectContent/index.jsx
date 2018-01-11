@@ -53,6 +53,20 @@ class ProjectContent extends React.Component {
               applyStyles={applyStyles}
             />
 
+            <div id="Carosel" style={{
+              position: 'relative',
+              top: '25px',
+              alignSelf: 'center',
+              height: '600px',
+              width: '1000px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(100, 100, 100, 1.0)'
+            }}>
+              Carosel
+            </div>
+
           </div>
 
           <div style={{
