@@ -1,6 +1,9 @@
 import React from 'react';
 
 import ExitButton from './ExitButton.jsx';
+import Carousel from './Carousel.jsx';
+
+import style from './style';
 
 
 class ProjectContent extends React.Component {
@@ -28,14 +31,7 @@ class ProjectContent extends React.Component {
 
     return (
 
-      <div style={{
-        position: 'absolute',
-        height:'100%',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: '#e2e2e2'
-      }}>
+      <div style={style.projectContentBody}>
 
          <div style={{
             height:'700px',
@@ -53,19 +49,7 @@ class ProjectContent extends React.Component {
               applyStyles={applyStyles}
             />
 
-            <div id="Carosel" style={{
-              position: 'relative',
-              top: '25px',
-              alignSelf: 'center',
-              height: '600px',
-              width: '1000px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(100, 100, 100, 1.0)'
-            }}>
-              Carosel
-            </div>
+            <Carousel />
 
           </div>
 
