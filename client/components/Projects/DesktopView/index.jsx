@@ -35,7 +35,7 @@ class ProjectView extends React.Component {
     }, () => {
       setTimeout(() => {
         this.setState({tabClicked: false});
-      }, 400)
+      }, 100)
     });
   }
 

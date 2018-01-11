@@ -41,7 +41,10 @@ class ProjectContent extends React.Component {
               applyStyles={applyStyles}
             />
 
-            <Carousel />
+            <Carousel 
+              loaded={loaded}
+              applyStyles={applyStyles}
+            />
 
           </div>
 
