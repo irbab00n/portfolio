@@ -8,11 +8,18 @@ import style from './style';
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      selectedPictureIndex: 0,
+      pictures: [
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png'
+      ]
+    };
   }
 
   render() {
 
+    const { selectedPictureIndex, pictures } = this.state;
     const { loaded, applyStyles } = this.props;
 
     return (
@@ -49,7 +56,7 @@ class Carousel extends React.Component {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png' style={{
+            <img src={pictures[selectedPictureIndex]} style={{
               width: '100%'
             }}/>
           </div>
@@ -62,10 +69,31 @@ class Carousel extends React.Component {
             justifyContent: 'center',
             backgroundColor: 'rgba(120, 120, 120, 1.0)'
           }}>
-            <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png' style={{
-              height: '50%',
-              opacity: '0.5'
-            }}/>
+            {
+              pictures.map((picture, index) => {
+                return (
+                  <img 
+                    key={`image${index}`} 
+                    src={picture} 
+                    style={
+                      applyStyles(
+                        {
+                          padding: '0 10px',
+                          height: '50%',
+                          opacity: '0.5',
+                          WebkitTransition: '0.2s'
+                        },
+                        index === selectedPictureIndex && {
+                          height: '60%',
+                          opacity: '0.8'
+                        }
+                      )
+                    }
+                    onClick={() => this.setState({selectedPictureIndex: index})}
+                  />
+                );
+              })
+            }
           </div>
 
         </div>
