@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TransitionButton from './TransitionButton.jsx';
+import AvailableImages from './AvailableImages.jsx';
 
 import style from './style';
 
@@ -9,17 +10,53 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedPictureIndex: 0,
+      selectedCarouselIndex: 0,
       pictures: [
         'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png'
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.png',
       ]
     };
+    this.incrementCarouselIndex = this.incrementCarouselIndex.bind(this);
+    this.decrementCarouselIndex = this.decrementCarouselIndex.bind(this);
+    this.updateCarouselIndex = this.updateCarouselIndex.bind(this);
+  }
+
+  incrementCarouselIndex() {
+    let { selectedCarouselIndex, pictures } = this.state;
+    let nextIndex = selectedCarouselIndex + 1;
+    if (nextIndex < pictures.length) {
+      this.setState({
+        selectedCarouselIndex: nextIndex
+      });
+    }
+  }
+
+  decrementCarouselIndex() {
+    let { selectedCarouselIndex, pictures } = this.state;
+    let previousIndex = selectedCarouselIndex - 1;
+    if (previousIndex >= 0) {
+      this.setState({
+        selectedCarouselIndex: previousIndex
+      });
+    }
+  }
+
+  updateCarouselIndex(index) {
+    this.setState({
+      selectedCarouselIndex: index
+    });
   }
 
   render() {
 
-    const { selectedPictureIndex, pictures } = this.state;
+    const { selectedCarouselIndex, pictures } = this.state;
     const { loaded, applyStyles } = this.props;
 
     return (
@@ -37,7 +74,8 @@ class Carousel extends React.Component {
 
         <TransitionButton 
           direction={'left'}
-          onClick={() => console.log('left button clicked')}
+          selectedCarouselIndex={selectedCarouselIndex}
+          onClick={this.decrementCarouselIndex}
           applyStyles={applyStyles}
         />        
 
@@ -50,57 +88,31 @@ class Carousel extends React.Component {
         }}>
 
           <div id="Current Image" style={{
-            height: '500px',
+            margin: '25px 0',
+            height: '450px',
             width: '800px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <img src={pictures[selectedPictureIndex]} style={{
+            <img src={pictures[selectedCarouselIndex]} style={{
               width: '100%'
             }}/>
           </div>
 
-          <div id="Available Images" style={{
-            height: '100px',
-            width: '800px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'rgba(120, 120, 120, 1.0)'
-          }}>
-            {
-              pictures.map((picture, index) => {
-                return (
-                  <img 
-                    key={`image${index}`} 
-                    src={picture} 
-                    style={
-                      applyStyles(
-                        {
-                          padding: '0 10px',
-                          height: '50%',
-                          opacity: '0.5',
-                          WebkitTransition: '0.2s'
-                        },
-                        index === selectedPictureIndex && {
-                          height: '60%',
-                          opacity: '0.8'
-                        }
-                      )
-                    }
-                    onClick={() => this.setState({selectedPictureIndex: index})}
-                  />
-                );
-              })
-            }
-          </div>
+          <AvailableImages 
+            pictures={pictures}
+            selectedCarouselIndex={selectedCarouselIndex}
+            onClick={this.updateCarouselIndex}
+            applyStyles={applyStyles}
+          />
 
         </div>
 
         <TransitionButton 
           direction={'right'}
-          onClick={() => console.log('right button clicked')}
+          selectedCarouselIndex={selectedCarouselIndex}
+          onClick={this.incrementCarouselIndex}
           applyStyles={applyStyles}
         />  
 

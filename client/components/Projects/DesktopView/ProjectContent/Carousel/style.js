@@ -1,4 +1,14 @@
+module.exports.availableImagesBody = {
+  padding: '0 10px',
+  height: '50%',
+  opacity: '0.5',
+  WebkitTransition: '0.2s'
+};
 
+module.exports.availableImagesBody_selected = {
+  height: '60%',
+  opacity: '0.8'
+};
 
 
 

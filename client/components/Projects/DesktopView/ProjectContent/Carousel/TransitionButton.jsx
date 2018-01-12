@@ -35,7 +35,7 @@ class TransitionButton extends React.Component {
   render() {
 
     const { hovered, clicked } = this.state;
-    const { direction, onClick, applyStyles } = this.props;
+    const { direction, selectedPictureIndex, onClick, applyStyles } = this.props;
 
     return (
 
