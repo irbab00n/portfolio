@@ -6,21 +6,52 @@ import style from './style';
 class AvailableImages extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loaded: false,
+      shakeLeft: false,
+      shakeRight: false
+    };
+    this.shakeAnimation = this.shakeAnimation.bind(this);
+  }
+
+  componentWillMount() {
+    setTimeout(() => {
+      this.setState({loaded: true});
+      this.shakeAnimation();
+    }, 500);
+  }
+
+  shakeAnimation() {
+    this.setState({shakeLeft: true}, () => {
+      setTimeout(() => {
+        this.setState({shakeLeft: false, shakeRight: true}, () => {
+          setTimeout(() => {
+            this.setState({shakeRight: false}, () => {
+              // setTimeout(() => {
+              //   this.setState({shakeLeft: false});
+              // }, 100);
+            })
+          }, 200);
+        })
+      }, 200);
+    });
   }
 
   render() {
 
+    const { loaded, shakeLeft, shakeRight } = this.state;
     const { pictures, selectedCarouselIndex, onClick, applyStyles } = this.props;
 
     return (
 
-      <div id="Available Images" style={{
-        height: '100px',
-        width: '800px',
-        display: 'flex',
-        alignItems: 'center',
-        overflowX: 'scroll',
-      }}>
+      <div style={
+        applyStyles(
+          style.availableImagesContainer,
+          loaded && style.availableImagesContainer_loaded,
+          shakeLeft && style.availableImagesContainer_shakeLeft,
+          shakeRight && style.availableImagesContainer_shakeRight
+        )
+      }>
         {
           pictures.map((picture, index) => {
             return (
@@ -29,8 +60,10 @@ class AvailableImages extends React.Component {
                 src={picture} 
                 style={
                   applyStyles(
-                    style.availableImagesBody,
-                    index === selectedCarouselIndex && style.availableImagesBody_selected
+                    style.availableImageBody,
+                    index === selectedCarouselIndex && style.availableImageBody_selected,
+                    shakeLeft && style.availableImageBody_shakeLeft,
+                    shakeRight && style.availableImageBody_shakeRight
                   )
                 }
                 onClick={() => onClick(index)}

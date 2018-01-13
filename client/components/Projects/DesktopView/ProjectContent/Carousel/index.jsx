@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TransitionButton from './TransitionButton.jsx';
+import CurrentImage from './CurrentImage.jsx';
 import AvailableImages from './AvailableImages.jsx';
 
 import style from './style';
@@ -87,20 +88,14 @@ class Carousel extends React.Component {
           alignItems: 'center'
         }}>
 
-          <div id="Current Image" style={{
-            margin: '25px 0',
-            height: '450px',
-            width: '800px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <img src={pictures[selectedCarouselIndex]} style={{
-              width: '100%'
-            }}/>
-          </div>
+          <CurrentImage 
+            loaded={loaded}
+            image={pictures[selectedCarouselIndex]}
+            applyStyles={applyStyles}
+          />
 
-          <AvailableImages 
+          <AvailableImages
+            loaded={loaded}
             pictures={pictures}
             selectedCarouselIndex={selectedCarouselIndex}
             onClick={this.updateCarouselIndex}
