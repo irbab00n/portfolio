@@ -39,7 +39,7 @@ module.exports.resumeLink = {
   MozUserSelect: 'none',
   OUserSelect: 'none',
   userSelect: 'none',
-  WebkitTransition: '0.4s'
+  WebkitTransition: '0.2s'
 };
 
 module.exports.resumeLink_hovered = {

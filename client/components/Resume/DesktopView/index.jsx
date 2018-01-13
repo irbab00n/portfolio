@@ -42,7 +42,7 @@ class DesktopView extends React.Component {
 
         <div>
           <img 
-            src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/me.jpg'
+            src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/headshot.jpg'
             style={
               applyStyles(
                 style.image,

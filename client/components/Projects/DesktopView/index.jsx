@@ -35,9 +35,11 @@ class ProjectView extends React.Component {
     }, () => {
       setTimeout(() => {
         this.setState({tabClicked: false});
-      }, 400)
+      }, 100)
     });
   }
+
+  // This is where we will have to manage all of the switching of the available images and the rest of the content
 
   render() {
 

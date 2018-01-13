@@ -1,4 +1,21 @@
+module.exports.projectContentBody = {
+  position: 'absolute',
+  height:'100%',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  backgroundColor: '#e2e2e2'
+};
 
+module.exports.projectContentImagesBody = {
+  height:'700px',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-end',
+  justifyContent: 'flex-start',
+  backgroundColor: 'rgba(25, 25, 25, 1.0)',
+};
 
 
 
