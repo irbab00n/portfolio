@@ -62,11 +62,11 @@ module.exports.availableImagesContainer_loaded = {
 }
 
 module.exports.availableImagesContainer_shakeLeft = {
-  top: '-5px',
+  top: '-2px',
 };
 
 module.exports.availableImagesContainer_shakeRight = {
-  top: '5px',
+  top: '2px',
 };
 
 /* Available Image Styles */

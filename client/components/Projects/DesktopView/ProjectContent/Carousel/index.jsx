@@ -13,15 +13,15 @@ class Carousel extends React.Component {
     this.state = {
       selectedCarouselIndex: 0,
       pictures: [
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.png',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.png',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg',
+        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg',
       ]
     };
     this.incrementCarouselIndex = this.incrementCarouselIndex.bind(this);
