@@ -1,3 +1,5 @@
+/* Current Image Container Styles */
+
 module.exports.currentImageBody = {
   position: 'relative',
   top: '0px',
@@ -19,6 +21,8 @@ module.exports.currentImageBody_shakeRight = {
   top: '5px'
 };
 
+/* Current Image Styles */
+
 module.exports.currentImage = {
   width: '95%',
   opacity: '0.0',
@@ -38,7 +42,7 @@ module.exports.currentImage_shakeRight = {
   transform: 'rotateX(-5deg)'
 };
 
-
+/* Available Image Container Styles */
 
 module.exports.availableImagesContainer = {
   position: 'relative',
@@ -59,25 +63,31 @@ module.exports.availableImagesContainer_loaded = {
 
 module.exports.availableImagesContainer_shakeLeft = {
   top: '-5px',
-}
+};
 
 module.exports.availableImagesContainer_shakeRight = {
   top: '5px',
-}
+};
+
+/* Available Image Styles */
 
 module.exports.availableImageBody = {
   padding: '0 10px',
   height: '50%',
-  opacity: '0.5',
+  opacity: '0.0',
   WebkitTransition: '0.2s'
 };
 
+module.exports.availableImageBody_loaded = {
+  opacity: '0.5',
+};
+
 module.exports.availableImageBody_shakeLeft = {
-  transform: 'rotateX(5deg)'
+  transform: 'rotateX(10deg)'
 };
 
 module.exports.availableImageBody_shakeRight = {
-  transform: 'rotateX(-5deg)'
+  transform: 'rotateX(-10deg)'
 };
 
 module.exports.availableImageBody_selected = {

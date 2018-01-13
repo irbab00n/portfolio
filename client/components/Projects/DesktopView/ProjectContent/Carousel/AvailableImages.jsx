@@ -18,7 +18,7 @@ class AvailableImages extends React.Component {
     setTimeout(() => {
       this.setState({loaded: true});
       this.shakeAnimation();
-    }, 500);
+    }, 800);
   }
 
   shakeAnimation() {
@@ -31,9 +31,9 @@ class AvailableImages extends React.Component {
               //   this.setState({shakeLeft: false});
               // }, 100);
             })
-          }, 200);
+          }, 100);
         })
-      }, 200);
+      }, 100);
     });
   }
 
@@ -61,12 +61,18 @@ class AvailableImages extends React.Component {
                 style={
                   applyStyles(
                     style.availableImageBody,
+                    loaded && style.availableImageBody_loaded,
                     index === selectedCarouselIndex && style.availableImageBody_selected,
                     shakeLeft && style.availableImageBody_shakeLeft,
                     shakeRight && style.availableImageBody_shakeRight
                   )
                 }
-                onClick={() => onClick(index)}
+                onClick={
+                  () => {
+                    onClick(index);
+                    this.shakeAnimation();
+                  }
+                }
               />
             );
           })
