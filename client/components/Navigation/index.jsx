@@ -6,7 +6,6 @@ import LinkRow from './LinkRow/index.jsx';
 
 import applyStyles from '../../helpers/applyStyles';
 import animationChooser from '../../helpers/animationChooser';
-import calculateDistanceToTarget from '../../helpers/calculateDistanceToTarget';
 import scrollEffects from '../../helpers/scrollEffects';
 
 import style from './style';
@@ -64,7 +63,7 @@ class Navbar extends React.Component {
           onClick={
             yOffset === 0 
               ? () => {} // True: Stub function, we're at top of page
-              : animationChooser(yOffset, 0, calculateDistanceToTarget, scrollEffects) // False: Return dynamic animation
+              : animationChooser(yOffset, 0, scrollEffects) // False: Return dynamic animation
             }
         />
         

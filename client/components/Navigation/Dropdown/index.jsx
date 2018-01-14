@@ -5,7 +5,6 @@ import CurrentSelection from './CurrentSelection.jsx'
 
 import applyStyles from '../../../helpers/applyStyles';
 
-import calculateDistanceToTarget from '../../../helpers/calculateDistanceToTarget';
 import animationChooser from '../../../helpers/animationChooser';
 import scrollEffects from '../../../helpers/scrollEffects';
 
@@ -72,19 +71,19 @@ class Dropdown extends React.Component {
               name={'About Me'}
               dropdownToggle={dropdownToggle}
               orientationFlag={orientationFlag}
-              onClick={animationChooser(yOffset, 442, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 442, scrollEffects)}
             />
             <Link 
               name={'Projects'}
               dropdownToggle={dropdownToggle}
               orientationFlag={orientationFlag}
-              onClick={animationChooser(yOffset, 928, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 928, scrollEffects)}
             />
             <Link 
               name={'Blog'}
               dropdownToggle={dropdownToggle}
               orientationFlag={orientationFlag}
-              onClick={animationChooser(yOffset, 1960, calculateDistanceToTarget, scrollEffects)}
+              onClick={animationChooser(yOffset, 1960, scrollEffects)}
             />
           </div>
           

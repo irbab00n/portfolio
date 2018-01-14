@@ -18,7 +18,7 @@ class AvailableImages extends React.Component {
     setTimeout(() => {
       this.setState({loaded: true});
       this.shakeAnimation();
-    }, 200);
+    }, 250);
   }
 
   shakeAnimation() {
