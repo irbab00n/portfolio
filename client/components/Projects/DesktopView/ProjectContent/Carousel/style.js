@@ -26,6 +26,7 @@ module.exports.currentImageBody_shakeRight = {
 module.exports.currentImage = {
   width: '95%',
   opacity: '0.0',
+  cursor: 'pointer',
   WebkitTransition: '0.2s'
 };
 
@@ -75,6 +76,7 @@ module.exports.availableImageBody = {
   padding: '0 10px',
   height: '50%',
   opacity: '0.0',
+  cursor: 'pointer',
   WebkitTransition: '0.2s'
 };
 
@@ -106,6 +108,7 @@ module.exports.button = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  cursor: 'pointer',
   fontSize: '60px',
   color: 'rgba(200, 200, 200, 0.5)',
   WebkitUserSelect: 'none',
