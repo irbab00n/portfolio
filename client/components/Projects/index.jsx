@@ -13,9 +13,7 @@ class Projects extends React.Component {
 
     return (
 
-      <DesktopView 
-        applyStyles={applyStyles}
-      />
+      <DesktopView />
 
     );
 

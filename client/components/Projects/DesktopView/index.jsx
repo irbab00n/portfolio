@@ -44,7 +44,6 @@ class ProjectView extends React.Component {
   render() {
 
     const { tabClicked, tabFade } = this.state;
-    const { applyStyles } = this.props;
 
     return (
 
@@ -55,7 +54,6 @@ class ProjectView extends React.Component {
           <ProjectTabs 
             tabClicked={tabClicked}
             tabFade={tabFade}
-            applyStyles={applyStyles}
             tabsClickToggleTrue={this.tabsClickToggleTrue}
           />
           {
