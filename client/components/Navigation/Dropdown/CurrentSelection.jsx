@@ -1,8 +1,8 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
-import applyStyles from '../../../helpers/applyStyles';
 
 class CurrentSelection extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class CurrentSelection extends React.Component {
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.currentSelection,
           dropdownToggle && style.currentSelection_pressed,
           orientationFlag && style.currentSelection_mobile

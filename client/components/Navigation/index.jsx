@@ -1,10 +1,10 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import Title from './Title/index.jsx';
 import Dropdown from './Dropdown/index.jsx';
 import LinkRow from './LinkRow/index.jsx';
 
-import applyStyles from '../../helpers/applyStyles';
 import animationChooser from '../../helpers/animationChooser';
 import scrollEffects from '../../helpers/scrollEffects';
 
@@ -50,7 +50,7 @@ class Navbar extends React.Component {
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.main,
           ...this.renderOption(animationOption),
           (mobileToggle && orientationFlag) && style.main_mobile
