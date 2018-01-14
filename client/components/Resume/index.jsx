@@ -27,13 +27,11 @@ class Resume extends React.Component {
             mobileToggle={mobileToggle}
             orientationFlag={orientationFlag}
             yOffset={yOffset}
-            applyStyles={applyStyles}
           />
         : <DesktopView 
             screenWidth={screenWidth}
             screenHeight={screenHeight}
             yOffset={yOffset}
-            applyStyles={applyStyles}
           />
 
     );

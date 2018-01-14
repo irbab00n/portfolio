@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -21,12 +22,11 @@ class DefaultSlide extends React.Component {
   render() {
 
     const { loaded } = this.state;
-    const { applyStyles } = this.props;
 
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.body,
           loaded && style.body_loaded
         )

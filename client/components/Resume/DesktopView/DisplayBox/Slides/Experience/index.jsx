@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import Job from './Job.jsx';
 import Navigation from './Navigation.jsx';
@@ -45,12 +46,11 @@ class ExperienceSlide extends React.Component {
   render() {
 
     const { loaded, jobNames, jobIndex } = this.state;
-    const { applyStyles } = this.props;
 
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.slideBody,
           loaded && style.slideBody_loaded
         )
@@ -63,7 +63,6 @@ class ExperienceSlide extends React.Component {
         <Navigation 
           prevClick={() => {this.changeIndex('left')}}
           nextClick={() => {this.changeIndex('right')}}
-          applyStyles={applyStyles}
         />
 
       </div>

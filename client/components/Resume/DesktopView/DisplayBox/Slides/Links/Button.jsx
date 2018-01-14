@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -25,10 +26,10 @@ class Button extends React.Component {
 
   renderLabel(labelType) {
     let { hovered } = this.state;
-    let { label = '', applyStyles } = this.props; // initialize label to empty string if none passed in
+    let { label = '' } = this.props; // initialize label to empty string if none passed in
     switch(labelType) {
       case 'image': 
-        return (<img style={applyStyles(hovered && style.buttonLabel_hovered)} src={label} />);
+        return (<img style={apply(hovered && style.buttonLabel_hovered)} src={label} />);
       default:
         return label;
     }
@@ -49,7 +50,6 @@ class Button extends React.Component {
       labelType,
       hoverColor = {backgroundColor: 'rgba(0, 122, 193, 1.0)'}, // initialize to blue hover color if none passed in
       onClick,
-      applyStyles
     } = this.props;
 
     return (
@@ -59,7 +59,7 @@ class Button extends React.Component {
         onMouseEnter={() => { this.setState({hovered: true}); }}
         onMouseLeave={() => { this.setState({hovered: false}); }}
         style={
-          applyStyles(
+          apply(
             style.button,
             loaded && style.button_loaded,
             hovered && Object.assign(style.button_hovered, hoverColor),

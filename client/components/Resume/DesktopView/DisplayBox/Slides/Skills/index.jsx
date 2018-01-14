@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -21,12 +22,12 @@ class SkillsSlide extends React.Component {
   render() {
 
     const { loaded } = this.state;
-    const { screenWidth, screenHeight, applyStyles } = this.props;
+    const { screenWidth, screenHeight } = this.props;
 
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.body,
           loaded && style.body_loaded
         )

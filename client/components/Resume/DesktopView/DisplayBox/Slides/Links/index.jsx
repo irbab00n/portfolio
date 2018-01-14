@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import Button from './Button.jsx';
 
@@ -28,7 +29,7 @@ class LinksSlide extends React.Component {
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.body,
           loaded && style.body_loaded
         )
@@ -41,7 +42,7 @@ class LinksSlide extends React.Component {
               label={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/github_logo.png'}
               labelType={'image'}
               hoverColor={{backgroundColor: 'rgb(64, 64, 64)'}}
-              onClick={() => { console.log('Github button click'); }}
+              onClick={() => {}}
               applyStyles={applyStyles}
             />
           </a>
@@ -51,7 +52,7 @@ class LinksSlide extends React.Component {
               label={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/linkedin_logo.png'}
               labelType={'image'}
               hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
-              onClick={() => { console.log('Linkedin button click'); }}
+              onClick={() => {}}
               applyStyles={applyStyles}
             />
           </a>
@@ -68,7 +69,7 @@ class LinksSlide extends React.Component {
             <Button 
               label={'Resume'}
               hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
-              onClick={() => { console.log('Resume button click'); }}
+              onClick={() => {}}
               applyStyles={applyStyles}
             />
           </a>
