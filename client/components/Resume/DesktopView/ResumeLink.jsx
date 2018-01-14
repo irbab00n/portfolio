@@ -1,6 +1,5 @@
 import React from 'react';
-
-import applyStyles from '../../../helpers/applyStyles';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -31,7 +30,7 @@ class ResumeLink extends React.Component {
         onMouseEnter={() => { this.setState({hovered: true}); }}
         onMouseLeave={() => { this.setState({hovered: false}); }}
         style={
-          applyStyles(
+          apply(
             style.resumeLink,
             triggeredOn && style.resumeLink_on,
             hovered && style.resumeLink_hovered,

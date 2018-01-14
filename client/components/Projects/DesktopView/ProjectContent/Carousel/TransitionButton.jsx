@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -16,9 +17,14 @@ class TransitionButton extends React.Component {
 
   clickHandler() {
     let { onClick } = this.props;
-    this.setState({clicked: true}, () => {
+    this.setState({clicked: true, shakeLeft: true}, () => {
+      onClick();
       setTimeout(() => {
-        this.setState({clicked: false}, onClick)
+        this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
+          setTimeout(() => {
+            this.setState({shakeRight: false});
+          }, 100);
+        });
       }, 100);
     });
   }
@@ -35,13 +41,13 @@ class TransitionButton extends React.Component {
   render() {
 
     const { hovered, clicked } = this.state;
-    const { direction, selectedPictureIndex, onClick, applyStyles } = this.props;
+    const { direction, selectedPictureIndex } = this.props;
 
     return (
 
       <div 
         style={
-          applyStyles(
+          apply(
             style.button,
             hovered && style.button_hovered,
             clicked && style.button_clicked

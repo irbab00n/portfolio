@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import LinkColumn from './LinkColumn.jsx';
 import DisplayBox from './DisplayBox/index.jsx';
@@ -27,14 +28,14 @@ class DesktopView extends React.Component {
   render() {
 
     const { currentSlide } = this.state;
-    const { screenWidth, screenHeight, yOffset, applyStyles } = this.props;
+    const { screenWidth, screenHeight, yOffset } = this.props;
 
     let triggeredOn = yOffset >= 50 && yOffset <= 800;
 
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.desktopBody,
           triggeredOn && style.desktopBody_on
         )
@@ -42,9 +43,9 @@ class DesktopView extends React.Component {
 
         <div>
           <img 
-            src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/headshot.jpg'
+            src="https://s3-us-west-1.amazonaws.com/cos-bytes.com/headshot.jpg"
             style={
-              applyStyles(
+              apply(
                 style.image,
                 triggeredOn && style.image_active
               )
@@ -63,7 +64,6 @@ class DesktopView extends React.Component {
           changeSlides={this.changeSlides}
           yOffset={yOffset}
           triggeredOn={triggeredOn}
-          applyStyles={applyStyles}
         />
 
         <DisplayBox
@@ -72,7 +72,6 @@ class DesktopView extends React.Component {
           screenHeight={screenHeight}
           yOffset={yOffset}
           triggeredOn={triggeredOn}
-          applyStyles={applyStyles}
         />
 
       </div>

@@ -1,6 +1,5 @@
 import React from 'react';
-
-import applyStyles from '../../../helpers/applyStyles';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -12,7 +11,7 @@ const Title = (props) => {
     <span
       onClick={() => {props.onClick()}}
       style={
-        applyStyles(
+        apply(
           style.title,
           (mobileToggle && orientationFlag) && style.title_mobile
         )
@@ -22,7 +21,7 @@ const Title = (props) => {
       <span
         onClick={() => {props.onClick()}}
         style={
-          applyStyles(
+          apply(
             style.title_blue
           )
         }

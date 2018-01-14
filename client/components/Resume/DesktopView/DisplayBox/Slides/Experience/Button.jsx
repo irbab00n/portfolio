@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -33,7 +34,7 @@ class Button extends React.Component {
   render() {
 
     const { loaded, hovered, clicked } = this.state;
-    const { label, onClick, applyStyles } = this.props;
+    const { label, onClick } = this.props;
 
     return (
 
@@ -42,7 +43,7 @@ class Button extends React.Component {
         onMouseEnter={() => { this.setState({hovered: true}); }}
         onMouseLeave={() => { this.setState({hovered: false}); }}
         style={
-          applyStyles(
+          apply(
             style.button,
             loaded && style.button_loaded,
             hovered && style.button_hovered,

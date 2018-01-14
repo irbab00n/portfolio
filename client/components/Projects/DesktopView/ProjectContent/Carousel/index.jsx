@@ -58,7 +58,7 @@ class Carousel extends React.Component {
   render() {
 
     const { selectedCarouselIndex, pictures } = this.state;
-    const { loaded, applyStyles } = this.props;
+    const { loaded } = this.props;
 
     return (
 
@@ -77,7 +77,6 @@ class Carousel extends React.Component {
           direction={'left'}
           selectedCarouselIndex={selectedCarouselIndex}
           onClick={this.decrementCarouselIndex}
-          applyStyles={applyStyles}
         />        
 
         <div style={{
@@ -91,7 +90,6 @@ class Carousel extends React.Component {
           <CurrentImage 
             loaded={loaded}
             image={pictures[selectedCarouselIndex]}
-            applyStyles={applyStyles}
           />
 
           <AvailableImages
@@ -99,7 +97,6 @@ class Carousel extends React.Component {
             pictures={pictures}
             selectedCarouselIndex={selectedCarouselIndex}
             onClick={this.updateCarouselIndex}
-            applyStyles={applyStyles}
           />
 
         </div>
@@ -108,7 +105,6 @@ class Carousel extends React.Component {
           direction={'right'}
           selectedCarouselIndex={selectedCarouselIndex}
           onClick={this.incrementCarouselIndex}
-          applyStyles={applyStyles}
         />  
 
       </div>

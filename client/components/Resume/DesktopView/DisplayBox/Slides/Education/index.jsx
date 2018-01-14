@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import Institution from './Institution.jsx';
 
@@ -25,12 +26,11 @@ class EducationSlide extends React.Component {
   render() {
 
     const { loaded } = this.state;
-    const { applyStyles } = this.props;
 
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.slideBody,
           loaded && style.slideBody_loaded
         )

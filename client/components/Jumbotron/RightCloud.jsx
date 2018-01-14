@@ -1,6 +1,5 @@
 import React from 'react';
-
-import applyStyles from '../../helpers/applyStyles';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -14,7 +13,7 @@ const RightCloud = (props) => {
 
   return (
     <div style={
-      applyStyles(
+      apply(
         style.rightCloud,
         {right: `${-(yOffset * 1.11)}px`},
         (mobileToggle && orientationFlag) && style.rightCloud_mobile_portrait

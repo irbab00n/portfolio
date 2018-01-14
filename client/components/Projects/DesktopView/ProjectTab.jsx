@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -37,7 +38,7 @@ class ProjectTab extends React.Component {
 
       <div 
         style={
-          applyStyles(
+          apply(
             Object.assign(style.tabBody, {backgroundImage: `url(${tabBackgroundImage})`}),
             hovered && Object.assign(style.tabBody_hovered, {boxShadow: `${tabHoverColor}`}),
             tabClicked && style.tabBody_clicked

@@ -1,8 +1,7 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
-
-import applyStyles from '../../../helpers/applyStyles';
 
 
 class Link extends React.Component {
@@ -22,7 +21,7 @@ class Link extends React.Component {
 
       <div
         style={
-          applyStyles(
+          apply(
             style.link_collapsed,
             dropdownToggle && style.link_expanded,
             (dropdownToggle && orientationFlag) && style.link_expanded_mobile,

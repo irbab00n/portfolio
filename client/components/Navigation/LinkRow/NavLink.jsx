@@ -1,8 +1,7 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
-
-import applyStyles from '../../../helpers/applyStyles';
 
 
 class NavLink extends React.Component {
@@ -20,7 +19,7 @@ class NavLink extends React.Component {
     return (
 
       <div
-        style={applyStyles(style.navigation_link, hovered && style.navigation_link_hovered)}
+        style={apply(style.navigation_link, hovered && style.navigation_link_hovered)}
         onMouseEnter={() => { this.setState({hovered: true}); }}
         onMouseLeave={() => { this.setState({hovered: false}); }}
         onClick={this.props.onClick}
