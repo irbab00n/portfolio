@@ -7,7 +7,7 @@ class CurrentImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false,
+      loaded: true,
       shakeLeft: false,
       shakeRight: false
     };
@@ -18,7 +18,7 @@ class CurrentImage extends React.Component {
     setTimeout(() => {
       this.setState({loaded: true});
       this.shakeAnimation();
-    }, 250);
+    }, 450);
   }
 
   shakeAnimation() {
