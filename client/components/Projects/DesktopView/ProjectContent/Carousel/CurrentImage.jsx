@@ -18,7 +18,7 @@ class CurrentImage extends React.Component {
     setTimeout(() => {
       this.setState({loaded: true});
       this.shakeAnimation();
-    }, 800);
+    }, 200);
   }
 
   shakeAnimation() {
