@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/irbab00n/portfolio#readme",
   "dependencies": {
+    "applystyles": "^1.0.0",
     "axios": "^0.17.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import ProjectTab from './ProjectTab.jsx';
 
@@ -14,13 +15,13 @@ class ProjectTabs extends React.Component {
   render() {
 
     const { clicked } = this.state;
-    const { tabClicked, tabFade, applyStyles, tabsClickToggleTrue } = this.props;
+    const { tabClicked, tabFade, tabsClickToggleTrue } = this.props;
 
     return (
 
       <div 
         style={
-          applyStyles(
+          apply(
             style.tabsBody,
             tabClicked && {
               height: '100px'

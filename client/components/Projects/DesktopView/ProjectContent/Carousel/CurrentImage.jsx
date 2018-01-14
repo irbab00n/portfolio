@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -18,7 +19,7 @@ class CurrentImage extends React.Component {
     setTimeout(() => {
       this.setState({loaded: true});
       this.shakeAnimation();
-    }, 450);
+    }, 300);
   }
 
   shakeAnimation() {
@@ -26,13 +27,9 @@ class CurrentImage extends React.Component {
       setTimeout(() => {
         this.setState({shakeLeft: false, shakeRight: true}, () => {
           setTimeout(() => {
-            this.setState({shakeRight: false}, () => {
-              // setTimeout(() => {
-              //   this.setState({shakeLeft: false});
-              // }, 100);
-            })
+            this.setState({shakeRight: false});
           }, 100);
-        })
+        });
       }, 100);
     });
   }
@@ -40,13 +37,13 @@ class CurrentImage extends React.Component {
   render() {
 
     const { loaded, shakeLeft, shakeRight } = this.state;
-    const { image, applyStyles } = this.props;
+    const { image } = this.props;
 
     return (
 
       <div 
         style={
-          applyStyles(
+          apply(
             style.currentImageBody,
             shakeLeft && style.currentImageBody_shakeLeft,
             shakeRight && style.currentImageBody_shakeRight
@@ -57,7 +54,7 @@ class CurrentImage extends React.Component {
         <img 
           src={image} 
           style={
-            applyStyles(
+            apply(
               style.currentImage,
               loaded && style.currentImage_loaded,
               shakeLeft && style.currentImage_shakeLeft,

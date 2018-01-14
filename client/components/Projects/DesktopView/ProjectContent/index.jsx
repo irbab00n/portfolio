@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import ExitButton from './ExitButton.jsx';
 import Carousel from './Carousel/index.jsx';
@@ -27,7 +28,7 @@ class ProjectContent extends React.Component {
   render() {
 
     const { loaded, buttonClicked, buttonHovered } = this.state;
-    const { applyStyles, tabsClickToggleFalse } = this.props;
+    const { tabsClickToggleFalse } = this.props;
 
     return (
 
@@ -38,12 +39,10 @@ class ProjectContent extends React.Component {
             <ExitButton 
               loaded={loaded}
               tabsClickToggleFalse={tabsClickToggleFalse}
-              applyStyles={applyStyles}
             />
 
             <Carousel 
               loaded={loaded}
-              applyStyles={applyStyles}
             />
 
           </div>

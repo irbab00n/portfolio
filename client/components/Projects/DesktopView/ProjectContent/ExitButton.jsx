@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -15,13 +16,13 @@ class ExitButton extends React.Component {
   render() {
 
     const { hovered, clicked } = this.state;
-    const { loaded, tabsClickToggleFalse, applyStyles } = this.props;
+    const { loaded, tabsClickToggleFalse } = this.props;
 
     return (
 
       <div 
         style={
-          applyStyles(
+          apply(
             style.exitButtonBody,
             loaded && style.exitButtonBody_loaded,
             hovered && style.exitButtonBody_hovered,

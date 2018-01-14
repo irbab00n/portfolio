@@ -77,7 +77,7 @@ module.exports.availableImageBody = {
   height: '50%',
   opacity: '0.0',
   cursor: 'pointer',
-  WebkitTransition: '0.2s'
+  WebkitTransition: '0.1s'
 };
 
 module.exports.availableImageBody_loaded = {
@@ -116,7 +116,8 @@ module.exports.button = {
   MozUserSelect: 'none',
   OUserSelect: 'none',
   userSelect: 'none',
-  WebkitTransition: '0.2s'
+  WebkitTransition: '0.2s',
+  perspective: '1000px'
 };
 
 module.exports.button_hovered = {
@@ -128,4 +129,12 @@ module.exports.button_hovered = {
 module.exports.button_clicked = {
   boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.2)',
   backgroundColor: 'rgba(200, 200, 200, 0.4)',
+};
+
+module.exports.button_animateLeft = {
+  transform: 'rotateY(-5deg)'
+};
+
+module.exports.button_animateRight = {
+  transform: 'rotateY(5deg)'
 };

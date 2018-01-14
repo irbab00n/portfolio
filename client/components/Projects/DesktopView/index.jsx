@@ -61,7 +61,6 @@ class ProjectView extends React.Component {
           {
             tabClicked
               ? <ProjectContent 
-                  applyStyles={applyStyles}
                   tabsClickToggleFalse={this.tabsClickToggleFalse}
                 />
               : <div style={{height:'100%', width: '100%', backgroundColor: 'rgba(25, 25, 25, 1.0)'}}></div>

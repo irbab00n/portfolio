@@ -1,4 +1,5 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
 
@@ -18,7 +19,7 @@ class AvailableImages extends React.Component {
     setTimeout(() => {
       this.setState({loaded: true});
       this.shakeAnimation();
-    }, 400);
+    }, 100);
   }
 
   shakeAnimation() {
@@ -26,13 +27,9 @@ class AvailableImages extends React.Component {
       setTimeout(() => {
         this.setState({shakeLeft: false, shakeRight: true}, () => {
           setTimeout(() => {
-            this.setState({shakeRight: false}, () => {
-              // setTimeout(() => {
-              //   this.setState({shakeLeft: false});
-              // }, 100);
-            })
+            this.setState({shakeRight: false});
           }, 100);
-        })
+        });
       }, 100);
     });
   }
@@ -40,12 +37,12 @@ class AvailableImages extends React.Component {
   render() {
 
     const { loaded, shakeLeft, shakeRight } = this.state;
-    const { pictures, selectedCarouselIndex, onClick, applyStyles } = this.props;
+    const { pictures, selectedCarouselIndex, onClick } = this.props;
 
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.availableImagesContainer,
           loaded && style.availableImagesContainer_loaded,
           shakeLeft && style.availableImagesContainer_shakeLeft,
@@ -59,7 +56,7 @@ class AvailableImages extends React.Component {
                 key={`image${index}`} 
                 src={picture} 
                 style={
-                  applyStyles(
+                  apply(
                     style.availableImageBody,
                     loaded && style.availableImageBody_loaded,
                     index === selectedCarouselIndex && style.availableImageBody_selected,
