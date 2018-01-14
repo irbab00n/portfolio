@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Precache from './components/Precache/index.jsx';
 import Navbar from './components/Navigation/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
@@ -84,6 +85,10 @@ class App extends React.Component {
         alignItems: 'center',
         color: 'black',
       }}>
+
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg' />
 
         <Navbar 
           screenWidth={screenWidth}
