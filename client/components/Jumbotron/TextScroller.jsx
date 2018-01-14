@@ -1,8 +1,7 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import TextFadeInterval from './TextFadeInterval.jsx';
-
-import applyStyles from '../../helpers/applyStyles';
 
 import style from './style';
 
@@ -46,7 +45,7 @@ class TextScroller extends React.Component {
     return (
 
       <div style={
-        applyStyles(
+        apply(
           style.textScroller,
           {color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`},
           (mobileToggle && orientationFlag) && style.textScroller_mobile_portrait

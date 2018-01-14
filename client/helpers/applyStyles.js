@@ -6,4 +6,5 @@ module.exports = function() {
     }
   }
   return res;
+  // return Object.assign({}, ...Array.prototype.slice.call(arguments));
 };
