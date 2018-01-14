@@ -1,5 +1,5 @@
 import React from 'react';
-import apply from '../../helpers/applyStyles.js';
+import apply from 'applystyles';
 
 import style from './style';
 

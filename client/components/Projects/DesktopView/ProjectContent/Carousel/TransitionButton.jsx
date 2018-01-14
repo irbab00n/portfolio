@@ -9,24 +9,46 @@ class TransitionButton extends React.Component {
     super(props);
     this.state = {
       hovered: false,
-      clicked: false
+      clicked: false,
+      shakeLeft: false,
+      shakeRight: false
     };
     this.clickHandler = this.clickHandler.bind(this);
     this.renderLabel = this.renderLabel.bind(this);
   }
 
   clickHandler() {
-    let { onClick } = this.props;
-    this.setState({clicked: true, shakeLeft: true}, () => {
-      onClick();
-      setTimeout(() => {
-        this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
-          setTimeout(() => {
-            this.setState({shakeRight: false});
-          }, 100);
-        });
-      }, 100);
-    });
+    let { direction, onClick } = this.props;
+    let animation;
+    switch(direction) {
+      case 'left': 
+        return () => {
+          this.setState({clicked: true, shakeLeft: true}, () => {
+            onClick();
+            setTimeout(() => {
+              this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
+                setTimeout(() => {
+                  this.setState({shakeRight: false});
+                }, 100);
+              });
+            }, 100);
+          });
+        }
+      case 'right':
+        return () => {
+          this.setState({clicked: true, shakeRight: true}, () => {
+            onClick();
+            setTimeout(() => {
+              this.setState({clicked: false, shakeRigt: false, shakeLeft: true}, () => {
+                setTimeout(() => {
+                  this.setState({shakeLeft: false});
+                }, 100);
+              });
+            }, 100);
+          });
+        }
+    }
+    
   }
 
   renderLabel(direction) {
@@ -40,7 +62,7 @@ class TransitionButton extends React.Component {
 
   render() {
 
-    const { hovered, clicked } = this.state;
+    const { hovered, clicked, shakeRight, shakeLeft } = this.state;
     const { direction, selectedPictureIndex } = this.props;
 
     return (
@@ -50,7 +72,8 @@ class TransitionButton extends React.Component {
           apply(
             style.button,
             hovered && style.button_hovered,
-            clicked && style.button_clicked
+            clicked && style.button_clicked,
+
           )
         }
         onMouseEnter={() => this.setState({hovered: true})}

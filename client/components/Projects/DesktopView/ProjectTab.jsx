@@ -30,7 +30,6 @@ class ProjectTab extends React.Component {
       tabHoverColor = 'inset 0 0 0 1000px rgba(225, 225, 225, 0.3)',
       tabBackgroundImage = '',
       tabText = '',
-      applyStyles,
       onClick 
     } = this.props;
 

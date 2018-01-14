@@ -6,7 +6,7 @@ import style from './style';
 
 const Navigation = (props) => {
 
-  const { prevClick, nextClick, applyStyles } = props;
+  const { prevClick, nextClick, } = props;
 
   return (
 
@@ -14,12 +14,10 @@ const Navigation = (props) => {
       <Button 
         label={'Prev'}
         onClick={prevClick}
-        applyStyles={applyStyles}
       />
       <Button 
         label={'Next'}
         onClick={nextClick}
-        applyStyles={applyStyles}
       />
     </div>
 

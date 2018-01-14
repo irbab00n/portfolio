@@ -24,7 +24,6 @@ class LinksSlide extends React.Component {
   render() {
 
     const { loaded } = this.state;
-    const { applyStyles } = this.props;
 
     return (
 
@@ -43,7 +42,6 @@ class LinksSlide extends React.Component {
               labelType={'image'}
               hoverColor={{backgroundColor: 'rgb(64, 64, 64)'}}
               onClick={() => {}}
-              applyStyles={applyStyles}
             />
           </a>
 
@@ -53,7 +51,6 @@ class LinksSlide extends React.Component {
               labelType={'image'}
               hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
               onClick={() => {}}
-              applyStyles={applyStyles}
             />
           </a>
 
@@ -70,7 +67,6 @@ class LinksSlide extends React.Component {
               label={'Resume'}
               hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
               onClick={() => {}}
-              applyStyles={applyStyles}
             />
           </a>
 
