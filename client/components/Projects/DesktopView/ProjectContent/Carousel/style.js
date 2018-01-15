@@ -117,7 +117,8 @@ module.exports.button = {
   OUserSelect: 'none',
   userSelect: 'none',
   WebkitTransition: '0.2s',
-  perspective: '1000px'
+  perspective: '1000px',
+  transform: 'rotateY(0deg)'
 };
 
 module.exports.button_hovered = {
@@ -132,9 +133,9 @@ module.exports.button_clicked = {
 };
 
 module.exports.button_animateLeft = {
-  transform: 'rotateY(-5deg)'
+  transform: 'rotateY(-35deg)'
 };
 
 module.exports.button_animateRight = {
-  transform: 'rotateY(5deg)'
+  transform: 'rotateY(35deg)'
 };

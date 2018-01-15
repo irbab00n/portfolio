@@ -20,32 +20,23 @@ class DisplayBox extends React.Component {
           <SkillsSlide
             screenWidth={this.props.screenWidth}
             screenHeight={this.props.screenHeight}
-            applyStyles={this.props.applyStyles} 
           />
         );
       case 'experience':
         return (
-          <ExperienceSlide
-            applyStyles={this.props.applyStyles} 
-          />
+          <ExperienceSlide />
         );
       case 'education':
         return (
-          <EducationSlide
-            applyStyles={this.props.applyStyles} 
-          />
+          <EducationSlide />
         );
       case 'links':
         return (
-          <LinksSlide
-            applyStyles={this.props.applyStyles} 
-          />
+          <LinksSlide />
         );
       default: 
         return (
-          <DefaultSlide
-            applyStyles={this.props.applyStyles} 
-          />
+          <DefaultSlide />
         );
     }
   }

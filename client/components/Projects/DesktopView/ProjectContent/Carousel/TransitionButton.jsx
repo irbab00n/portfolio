@@ -9,7 +9,9 @@ class TransitionButton extends React.Component {
     super(props);
     this.state = {
       hovered: false,
-      clicked: false
+      clicked: false,
+      shakeLeft: false,
+      shakeRight: false
     };
     this.clickHandler = this.clickHandler.bind(this);
     this.renderLabel = this.renderLabel.bind(this);
@@ -29,6 +31,8 @@ class TransitionButton extends React.Component {
     });
   }
 
+  
+
   renderLabel(direction) {
     switch(direction) {
       case 'left':
@@ -40,7 +44,7 @@ class TransitionButton extends React.Component {
 
   render() {
 
-    const { hovered, clicked } = this.state;
+    const { hovered, clicked, shakeRight, shakeLeft } = this.state;
     const { direction, selectedPictureIndex } = this.props;
 
     return (
@@ -50,7 +54,8 @@ class TransitionButton extends React.Component {
           apply(
             style.button,
             hovered && style.button_hovered,
-            clicked && style.button_clicked
+            clicked && style.button_clicked,
+
           )
         }
         onMouseEnter={() => this.setState({hovered: true})}
@@ -64,5 +69,7 @@ class TransitionButton extends React.Component {
 
   }
 }
+
+
 
 export default TransitionButton;

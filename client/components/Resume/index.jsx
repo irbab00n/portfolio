@@ -17,7 +17,6 @@ class Resume extends React.Component {
       mobileToggle,
       orientationFlag,
       yOffset,
-      applyStyles
     } = this.props;
 
     return (
