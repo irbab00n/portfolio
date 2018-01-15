@@ -18,38 +18,20 @@ class TransitionButton extends React.Component {
   }
 
   clickHandler() {
-    let { direction, onClick } = this.props;
-    let animation;
-    switch(direction) {
-      case 'left': 
-        return () => {
-          this.setState({clicked: true, shakeLeft: true}, () => {
-            onClick();
-            setTimeout(() => {
-              this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
-                setTimeout(() => {
-                  this.setState({shakeRight: false});
-                }, 100);
-              });
-            }, 100);
-          });
-        }
-      case 'right':
-        return () => {
-          this.setState({clicked: true, shakeRight: true}, () => {
-            onClick();
-            setTimeout(() => {
-              this.setState({clicked: false, shakeRigt: false, shakeLeft: true}, () => {
-                setTimeout(() => {
-                  this.setState({shakeLeft: false});
-                }, 100);
-              });
-            }, 100);
-          });
-        }
-    }
-    
+    let { onClick } = this.props;
+    this.setState({clicked: true, shakeLeft: true}, () => {
+      onClick();
+      setTimeout(() => {
+        this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
+          setTimeout(() => {
+            this.setState({shakeRight: false});
+          }, 100);
+        });
+      }, 100);
+    });
   }
+
+  
 
   renderLabel(direction) {
     switch(direction) {
@@ -87,5 +69,7 @@ class TransitionButton extends React.Component {
 
   }
 }
+
+
 
 export default TransitionButton;
