@@ -44,8 +44,6 @@ class ProjectView extends React.Component {
     });
   }
 
-  // This is where we will have to manage all of the switching of the available images and the rest of the content
-
   render() {
 
     console.log('Projects import: ', projects['portfolio']);

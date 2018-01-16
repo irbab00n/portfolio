@@ -14,11 +14,12 @@ class TransitionButton extends React.Component {
       shakeLeft: false,
       shakeRight: false
     };
-    this.clickHandler = this.clickHandler.bind(this);
+    this.leftClickHandler = this.leftClickHandler.bind(this);
+    this.rightClickHandler = this.rightClickHandler.bind(this);
     this.renderLabel = this.renderLabel.bind(this);
   }
 
-  clickHandler() {
+  leftClickHandler() {
     let { onClick } = this.props;
     let frame1 = new animator.keyframe({clicked: true, shakeLeft: true}, 0);
     let frame2 = new animator.keyframe({clicked: false, shakeLeft: false, shakeRight: true}, 100);
@@ -27,7 +28,14 @@ class TransitionButton extends React.Component {
     reel();
   }
 
-  
+  rightClickHandler() {
+    let { onClick } = this.props;
+    let frame1 = new animator.keyframe({clicked: true, shakeRight: true}, 0);
+    let frame2 = new animator.keyframe({clicked: false, shakeRight: false, shakeLeft: true}, 100);
+    let frame3 = new animator.keyframe({shakeLeft: false});
+    let reel = animator.buildReel(this.setState.bind(this), onClick, frame1, frame2, frame3);
+    reel();
+  }
 
   renderLabel(direction) {
     switch(direction) {
@@ -57,7 +65,7 @@ class TransitionButton extends React.Component {
         }
         onMouseEnter={() => this.setState({hovered: true})}
         onMouseLeave={() => this.setState({hovered: false})}
-        onClick={this.clickHandler}
+        onClick={direction === 'left' ? this.leftClickHandler : this.rightClickHandler}
       >
         <center>{this.renderLabel(direction)}</center>
       </div>
