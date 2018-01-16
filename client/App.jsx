@@ -18,7 +18,10 @@ class App extends React.Component {
     this.state = {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
-      percentScrolled: 0
+      percentScrolled: 0,
+      test1: false,
+      test2: false,
+      test3: false
     };
     this.calculateScrolled = this.calculateScrolled.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);

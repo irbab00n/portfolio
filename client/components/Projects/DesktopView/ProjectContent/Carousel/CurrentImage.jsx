@@ -3,6 +3,7 @@ import apply from 'applystyles';
 
 import style from './style';
 
+import animator from 'react-css-in-js-animator';
 
 class CurrentImage extends React.Component {
   constructor(props) {
@@ -23,15 +24,11 @@ class CurrentImage extends React.Component {
   }
 
   shakeAnimation() {
-    this.setState({shakeLeft: true}, () => {
-      setTimeout(() => {
-        this.setState({shakeLeft: false, shakeRight: true}, () => {
-          setTimeout(() => {
-            this.setState({shakeRight: false});
-          }, 100);
-        });
-      }, 100);
-    });
+    let keyframe1 = new animator.keyframe({shakeLeft: true}, 0);
+    let keyframe2 = new animator.keyframe({shakeLeft: false, shakeRight: true}, 100);
+    let keyframe3 = new animator.keyframe({shakeRight: false}, 100);
+    let reel = animator.buildReel(this.setState.bind(this), () => {}, keyframe1, keyframe2, keyframe3);
+    reel();
   }
 
   render() {

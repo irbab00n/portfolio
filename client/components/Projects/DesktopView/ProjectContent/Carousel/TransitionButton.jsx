@@ -1,5 +1,6 @@
 import React from 'react';
 import apply from 'applystyles';
+import animator from 'react-css-in-js-animator';
 
 import style from './style';
 
@@ -19,16 +20,21 @@ class TransitionButton extends React.Component {
 
   clickHandler() {
     let { onClick } = this.props;
-    this.setState({clicked: true, shakeLeft: true}, () => {
-      onClick();
-      setTimeout(() => {
-        this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
-          setTimeout(() => {
-            this.setState({shakeRight: false});
-          }, 100);
-        });
-      }, 100);
-    });
+    let frame1 = new animator.keyframe({clicked: true, shakeLeft: true}, 0);
+    let frame2 = new animator.keyframe({clicked: false, shakeLeft: false, shakeRight: true}, 100);
+    let frame3 = new animator.keyframe({shakeRight: false});
+    let reel = animator.buildReel(this.setState.bind(this), onClick, frame1, frame2, frame3);
+    reel();
+    // this.setState({clicked: true, shakeLeft: true}, () => {
+    //   onClick();
+    //   setTimeout(() => {
+    //     this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
+    //       setTimeout(() => {
+    //         this.setState({shakeRight: false});
+    //       }, 100);
+    //     });
+    //   }, 100);
+    // });
   }
 
   
@@ -55,7 +61,8 @@ class TransitionButton extends React.Component {
             style.button,
             hovered && style.button_hovered,
             clicked && style.button_clicked,
-
+            shakeLeft && style.button_animateLeft,
+            shakeRight && style.button_animateRight
           )
         }
         onMouseEnter={() => this.setState({hovered: true})}
