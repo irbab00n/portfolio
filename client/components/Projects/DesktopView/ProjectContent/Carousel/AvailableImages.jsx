@@ -1,5 +1,6 @@
 import React from 'react';
 import apply from 'applystyles';
+import animator from 'react-css-in-js-animator';
 
 import style from './style';
 
@@ -23,15 +24,11 @@ class AvailableImages extends React.Component {
   }
 
   shakeAnimation() {
-    this.setState({shakeLeft: true}, () => {
-      setTimeout(() => {
-        this.setState({shakeLeft: false, shakeRight: true}, () => {
-          setTimeout(() => {
-            this.setState({shakeRight: false});
-          }, 100);
-        });
-      }, 100);
-    });
+    let frame1 = new animator.keyframe({shakeLeft: true}, 0);
+    let frame2 = new animator.keyframe({shakeLeft: false, shakeRight: true}, 100);
+    let frame3 = new animator.keyframe({shakeRight: false}, 100);
+    let reel = animator.buildReel(this.setState.bind(this), () => {}, frame1, frame2, frame3);
+    reel();
   }
 
   render() {

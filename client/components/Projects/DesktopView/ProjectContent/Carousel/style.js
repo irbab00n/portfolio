@@ -25,6 +25,7 @@ module.exports.currentImageBody_shakeRight = {
 
 module.exports.currentImage = {
   width: '95%',
+  height: '100%',
   opacity: '0.0',
   cursor: 'pointer',
   WebkitTransition: '0.2s'

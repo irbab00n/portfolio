@@ -25,16 +25,6 @@ class TransitionButton extends React.Component {
     let frame3 = new animator.keyframe({shakeRight: false});
     let reel = animator.buildReel(this.setState.bind(this), onClick, frame1, frame2, frame3);
     reel();
-    // this.setState({clicked: true, shakeLeft: true}, () => {
-    //   onClick();
-    //   setTimeout(() => {
-    //     this.setState({clicked: false, shakeLeft: false, shakeRight: true}, () => {
-    //       setTimeout(() => {
-    //         this.setState({shakeRight: false});
-    //       }, 100);
-    //     });
-    //   }, 100);
-    // });
   }
 
   

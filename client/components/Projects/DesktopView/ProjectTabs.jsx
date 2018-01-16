@@ -33,6 +33,7 @@ class ProjectTabs extends React.Component {
         }
       >
         <ProjectTab 
+          label={'portfolio'}
           tabClicked={tabClicked}
           tabHoverColor={'inset 0 0 0 1000px rgba(225, 225, 225, 0.3)'}
           tabBackgroundImage={'https://www.xmple.com/wallpaper/hexagon-white-blue-gradient-black-glow-cyan-1920x1080-c4-4cdce0-ffffff-4c57e0-000000-l2-10-144-a-20-f-6.svg'}
@@ -40,6 +41,7 @@ class ProjectTabs extends React.Component {
           onClick={tabsClickToggleTrue}
         />
         <ProjectTab 
+          label={'trainerFinder'}
           tabClicked={tabClicked}
           tabHoverColor={'inset 0 0 0 1000px rgba(225, 255, 50, 0.3)'}
           tabBackgroundImage={'https://i.stack.imgur.com/kzwT7.png'}
@@ -47,6 +49,7 @@ class ProjectTabs extends React.Component {
           onClick={tabsClickToggleTrue}
         />
         <ProjectTab 
+          label={'vagabondly'}
           tabClicked={tabClicked}
           tabHoverColor={'inset 0 0 0 1000px rgba(200, 100, 20, 0.3)'}
           tabBackgroundImage={'https://images3.alphacoders.com/853/thumb-1920-85305.jpg'}
@@ -54,6 +57,7 @@ class ProjectTabs extends React.Component {
           onClick={tabsClickToggleTrue}
         />
         <ProjectTab 
+          label={''}
           tabClicked={tabClicked}
           tabHoverColor={'inset 0 0 0 1000px rgba(225, 0, 100, 0.3)'}
           tabBackgroundImage={'https://www.xmple.com/wallpaper/triangle-orange-pink-1920x1080-c2-db7093-ff8c00-l2-250-1250-a-255-f-10.svg'}

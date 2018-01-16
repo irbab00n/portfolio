@@ -1,9 +1,9 @@
 import React from 'react';
 import apply from 'applystyles';
+import animator from 'react-css-in-js-animator';
 
 import style from './style';
 
-import animator from 'react-css-in-js-animator';
 
 class CurrentImage extends React.Component {
   constructor(props) {

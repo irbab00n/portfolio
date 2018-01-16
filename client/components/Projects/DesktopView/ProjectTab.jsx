@@ -25,7 +25,8 @@ class ProjectTab extends React.Component {
   render() {
 
     const { clicked, hovered } = this.state;
-    const { 
+    const {
+      label,
       tabClicked,
       tabHoverColor = 'inset 0 0 0 1000px rgba(225, 225, 225, 0.3)',
       tabBackgroundImage = '',
@@ -45,7 +46,7 @@ class ProjectTab extends React.Component {
         }
         onMouseEnter={() => this.setState({hovered: true})}
         onMouseLeave={() => this.setState({hovered: false})}
-        onClick={tabClicked ? () => {} : onClick} 
+        onClick={tabClicked ? () => {} : () => onClick(label)} 
       >
         {tabText}
       </div>
