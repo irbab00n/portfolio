@@ -1,4 +1,6 @@
 import React from 'react';
+import TitleBlock from './TitleBlock.jsx';
+import AboutBlock from './AboutBlock.jsx';
 
 import style from './style';
 
@@ -17,33 +19,15 @@ class InfoBlocks extends React.Component {
 
       <div style={style.infoBlocksBody}>
 
-        <div style={style.titleBlockBody}>
+        <TitleBlock 
+          loaded={loaded}
+          currentProject={currentProject}
+        />
 
-          <div style={style.title}>
-            <span style={style.titleHeader}>Project Title:</span>
-            <span style={style.titleText}>{`${currentProject.title}`}</span>
-          </div>
-
-          <div style={style.description}>
-            <span style={style.descriptionHeader}>Project Description:</span>
-            <p style={style.descriptionText}>{`${currentProject.description}`}</p>
-          </div>
-
-          <div style={style.contributors}>
-            <span style={style.contributorsHeader}>Project Contributors:</span>
-            <ul style={{margin: 0}}>
-              {
-                currentProject.contributors.map((contributor, index) => {
-                  return <li style={{fontSize: '12px'}}>{contributor}</li>
-                })
-              }
-            </ul>
-          </div>
-        </div>
-
-        <div style={style.aboutBlockBody}>
-          Bottom-Right
-        </div>
+        <AboutBlock 
+          loaded={loaded}
+          currentProject={currentProject}
+        />
 
       </div>
 

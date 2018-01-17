@@ -4,6 +4,7 @@ module.exports.infoBlocksBody = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
+  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.3)',
 };
 
 
@@ -34,16 +35,6 @@ module.exports.titleText = {
   padding: '0 0 0 17px'
 };
 
-
-module.exports.aboutBlockBody = {
-  height:'100%',
-  width: '70%',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: 'rgba(232, 232, 232, 1.0)',
-};
 
 module.exports.description = {
   height: '100px',
@@ -81,6 +72,17 @@ module.exports.contributorsHeader = {
 };
 
 
+
+
+module.exports.aboutBlockBody = {
+  height:'100%',
+  width: '70%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'rgba(232, 232, 232, 1.0)',
+};
 
 
 
