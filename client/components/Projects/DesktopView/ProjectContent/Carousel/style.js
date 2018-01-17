@@ -55,12 +55,11 @@ module.exports.availableImagesContainer = {
   alignItems: 'center',
   overflowX: 'scroll',
   opacity: '0.0',
-  
+  perspective: '1000px',
 };
 
 module.exports.availableImagesContainer_loaded = {
   opacity: '1.0',
-  perspective: '1000px',
   WebkitTransition: '0.1s',
 }
 
@@ -102,7 +101,7 @@ module.exports.availableImageBody_selected = {
 
 
 module.exports.button = {
-  margin: '25px',
+  padding: '25px',
   position: 'relative',
   top: '-50px',
   left: 0,
@@ -131,16 +130,17 @@ module.exports.button_hovered = {
 };
 
 module.exports.button_clicked = {
+  width: '110px',
   boxShadow: '0 4px 6px 0 rgba(0, 0, 0, 0.2)',
   backgroundColor: 'rgba(200, 200, 200, 0.4)',
 };
 
 module.exports.button_animateLeft = {
-  left: '-5px',
+  left: '-15px',
   transform: 'rotateY(-35deg)'
 };
 
 module.exports.button_animateRight = {
-  left: '5px',
+  left: '15px',
   transform: 'rotateY(35deg)'
 };

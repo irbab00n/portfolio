@@ -15,6 +15,7 @@ module.exports.projectContentImagesBody = {
   alignItems: 'flex-end',
   justifyContent: 'flex-start',
   backgroundColor: 'rgba(25, 25, 25, 1.0)',
+  overflowX: 'hidden'
 };
 
 
