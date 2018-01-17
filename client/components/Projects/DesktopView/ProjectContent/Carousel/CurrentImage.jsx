@@ -16,13 +16,6 @@ class CurrentImage extends React.Component {
     this.shakeAnimation = this.shakeAnimation.bind(this);
   }
 
-  componentWillMount() {
-    setTimeout(() => {
-      this.setState({loaded: true});
-      this.shakeAnimation();
-    }, 300);
-  }
-
   shakeAnimation() {
     let keyframe1 = new animator.keyframe({shakeLeft: true}, 0);
     let keyframe2 = new animator.keyframe({shakeLeft: false, shakeRight: true}, 100);
@@ -33,8 +26,8 @@ class CurrentImage extends React.Component {
 
   render() {
 
-    const { loaded, shakeLeft, shakeRight } = this.state;
-    const { image } = this.props;
+    const { shakeLeft, shakeRight } = this.state;
+    const { loaded, image } = this.props;
 
     return (
 

@@ -34,6 +34,7 @@ module.exports.tabsBody = {
 
 
 module.exports.tabBody = {
+  cursor: 'pointer',
   height: '250px',
   width: '100%',
   maxWidth: '1250px',

@@ -7,18 +7,12 @@ import AvailableImages from './AvailableImages.jsx';
 import style from './style';
 
 
-/*
-
-MUST REMOVE PICTURES OUT OF THE STATE HERE, AND MOVE THEM TO AN INDEX REFERENCE TO A IMPORT OBJECT WE BRING IN ON THE 
-DESKTOPVIEW COMPONENT
-
-*/
-
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedCarouselIndex: 0,
+      reset: false,
     };
     this.incrementCarouselIndex = this.incrementCarouselIndex.bind(this);
     this.decrementCarouselIndex = this.decrementCarouselIndex.bind(this);

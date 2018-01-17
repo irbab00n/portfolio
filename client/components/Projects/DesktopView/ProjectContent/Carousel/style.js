@@ -28,12 +28,12 @@ module.exports.currentImage = {
   height: '100%',
   opacity: '0.0',
   cursor: 'pointer',
-  WebkitTransition: '0.2s'
+  WebkitTransition: '0.1s'
 };
 
 module.exports.currentImage_loaded = {
   width: '100%',
-  opacity: '1.0'
+  opacity: '1.0',
 };
 
 module.exports.currentImage_shakeLeft = {
@@ -55,12 +55,13 @@ module.exports.availableImagesContainer = {
   alignItems: 'center',
   overflowX: 'scroll',
   opacity: '0.0',
-  WebkitTransition: '0.1s',
-  perspective: '1000px'
+  
 };
 
 module.exports.availableImagesContainer_loaded = {
-  opacity: '1.0'
+  opacity: '1.0',
+  perspective: '1000px',
+  WebkitTransition: '0.1s',
 }
 
 module.exports.availableImagesContainer_shakeLeft = {

@@ -27,6 +27,7 @@ module.exports.exitButtonBody = {
   height: '0px',
   width: '0px',
   borderRadius: '25px',
+  zIndex: 0,
   WebkitUserSelect: 'none',
   khtmlUserSelect: 'none',
   MozUserSelect: 'none',
