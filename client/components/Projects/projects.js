@@ -1,8 +1,10 @@
 module.exports.portfolio = {
   pictures: [
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg',
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg',
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg'
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
   ],
   title: 'Portfolio Project',
   link: 'https://cos-bytes.com',
@@ -14,8 +16,9 @@ module.exports.portfolio = {
 
 module.exports.trainerFinder = {
   pictures: [
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_profile.jpg',
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_signup.jpg'
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_search.jpg', description: 'This is the main search page for the application.  Guests and Trainees alike could browse trainers.'},   
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_profile.jpg', description: 'This is the view of a trainers profile from the perspective of a guest.'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_signup.jpg', description: 'Our application featured a multi-tier user system that was determined by what pa'}   
   ],
   title: 'TrainerFinder',
   link: 'http://trainerfinder.herokuapp.com',
@@ -27,9 +30,9 @@ module.exports.trainerFinder = {
 
 module.exports.vagabondly = {
   pictures: [
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg',
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg',
-    'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg'
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg', description: ''},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg', description: ''},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg', description: ''}
   ],
   title: 'Vagabondly',
   link: 'http://vagabondly-staging.herokuapp.com/',
@@ -41,6 +44,7 @@ module.exports.vagabondly = {
 
 module.exports.mock = {
   pictures: [
+    {link: '', description: ''}
   ],
   title: 'Example Slide',
   link: '',

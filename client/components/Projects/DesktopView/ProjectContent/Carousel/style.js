@@ -7,32 +7,73 @@ module.exports.currentImageBody = {
   height: '450px',
   width: '800px',
   display: 'flex',
+  flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  WebkitTransition: '0.1s',
+  WebkitTransition: '0.2s',
   perspective: '1000px'
 };
 
+module.exports.currentImageBody_hovered = {
+  top: '50px'
+};
+
 module.exports.currentImageBody_shakeLeft = {
-  top: '-5px',
+  top: '45px',
 };
 
 module.exports.currentImageBody_shakeRight = {
-  top: '5px'
+  top: '55px'
+};
+
+/* Description Styles */
+
+module.exports.descriptionBody = {
+  position: 'relative',
+  top: '0px',
+  left: 0,
+  height: '0px',
+  width: '100%',
+  fontSize: '0px',
+  backgroundColor: 'rgba(55, 55, 55, 0.0)',
+  color: 'rgba(255, 255, 255, 0.8)',
+  WebkitTransition: '0.2s',
+  zIndex: 1
+};
+
+module.exports.descriptionBody_hovered = {
+  height: '100px',
+  top: '-100px',
+  fontSize: '14px',
+  backgroundColor: 'rgba(55, 55, 55, 0.6)'
+};
+
+module.exports.descriptionText = {
+  height: '100%',
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
 };
 
 /* Current Image Styles */
 
 module.exports.currentImage = {
-  width: '95%',
-  height: '100%',
+  position: 'relative',
+  top: '300px',
+  left: 0,
+  height: '0%',
+  width: '100%',
   opacity: '0.0',
   cursor: 'pointer',
-  WebkitTransition: '0.1s'
+  objectFit: 'scale-down',
+  WebkitTransition: '0.3s'
 };
 
 module.exports.currentImage_loaded = {
-  width: '100%',
+  top: 0,
+  left: 0,
+  height: '100%',
   opacity: '1.0',
 };
 
@@ -49,6 +90,7 @@ module.exports.currentImage_shakeRight = {
 module.exports.availableImagesContainer = {
   position: 'relative',
   top: '0px',
+  left: '0px',
   height: '100px',
   width: '800px',
   display: 'flex',
@@ -56,11 +98,11 @@ module.exports.availableImagesContainer = {
   overflowX: 'scroll',
   opacity: '0.0',
   perspective: '1000px',
+  WebkitTransition: '0.4s',
 };
 
 module.exports.availableImagesContainer_loaded = {
   opacity: '1.0',
-  WebkitTransition: '0.1s',
 }
 
 module.exports.availableImagesContainer_shakeLeft = {
@@ -74,14 +116,18 @@ module.exports.availableImagesContainer_shakeRight = {
 /* Available Image Styles */
 
 module.exports.availableImageBody = {
+  position: 'relative',
+  top: 0,
+  left: 0,
   padding: '0 10px',
-  height: '50%',
+  height: '40%',
   opacity: '0.0',
   cursor: 'pointer',
   WebkitTransition: '0.1s'
 };
 
 module.exports.availableImageBody_loaded = {
+  height: '50%',
   opacity: '0.5',
 };
 
@@ -98,7 +144,7 @@ module.exports.availableImageBody_selected = {
   opacity: '0.8'
 };
 
-
+/* Transition Button Styles */
 
 module.exports.button = {
   padding: '25px',
@@ -112,15 +158,20 @@ module.exports.button = {
   justifyContent: 'center',
   cursor: 'pointer',
   fontSize: '60px',
-  color: 'rgba(200, 200, 200, 0.5)',
+  color: 'rgba(230, 230, 230, 0.7)',
   WebkitUserSelect: 'none',
   khtmlUserSelect: 'none',
   MozUserSelect: 'none',
   OUserSelect: 'none',
   userSelect: 'none',
-  WebkitTransition: '0.2s',
+  WebkitTransition: '0.4s',
   perspective: '1000px',
   transform: 'rotateY(0deg)'
+};
+
+module.exports.button_loaded = {
+  color: 'rgba(200, 200, 200, 0.5)',
+  left: '0px'
 };
 
 module.exports.button_hovered = {
@@ -136,11 +187,11 @@ module.exports.button_clicked = {
 };
 
 module.exports.button_animateLeft = {
-  left: '-15px',
-  transform: 'rotateY(-35deg)'
+  left: '-25px',
+  transform: 'rotateY(-55deg)'
 };
 
 module.exports.button_animateRight = {
-  left: '15px',
-  transform: 'rotateY(35deg)'
+  left: '25px',
+  transform: 'rotateY(55deg)'
 };

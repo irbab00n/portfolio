@@ -19,6 +19,14 @@ class Carousel extends React.Component {
     this.updateCarouselIndex = this.updateCarouselIndex.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.loaded && this.state.selectedCarouselIndex > 0) {
+      this.setState({
+        selectedCarouselIndex: 0
+      });
+    }
+  }
+
   incrementCarouselIndex() {
     let { selectedCarouselIndex } = this.state;
     let { pictures } = this.props;
@@ -65,7 +73,8 @@ class Carousel extends React.Component {
         justifyContent: 'center',
       }}>
 
-        <TransitionButton 
+        <TransitionButton
+          loaded={loaded}
           direction={'left'}
           selectedCarouselIndex={selectedCarouselIndex}
           onClick={this.decrementCarouselIndex}
@@ -93,7 +102,8 @@ class Carousel extends React.Component {
 
         </div>
 
-        <TransitionButton 
+        <TransitionButton
+          loaded={loaded}
           direction={'right'}
           selectedCarouselIndex={selectedCarouselIndex}
           onClick={this.incrementCarouselIndex}

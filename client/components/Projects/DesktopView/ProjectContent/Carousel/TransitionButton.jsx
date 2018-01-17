@@ -49,14 +49,17 @@ class TransitionButton extends React.Component {
   render() {
 
     const { hovered, clicked, shakeRight, shakeLeft } = this.state;
-    const { direction, selectedPictureIndex } = this.props;
+    const { loaded, direction, selectedPictureIndex } = this.props;
+
+    let startPosition = direction === 'left' ? {left: '400px'} : {left: '-400px'};
 
     return (
 
       <div 
         style={
           apply(
-            style.button,
+            Object.assign(style.button, startPosition),
+            loaded && style.button_loaded,
             hovered && style.button_hovered,
             clicked && style.button_clicked,
             shakeLeft && style.button_animateLeft,

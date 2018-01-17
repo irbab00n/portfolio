@@ -96,6 +96,9 @@ class App extends React.Component {
         <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg' />
         <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg' />
         <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_search.jpg' />
 
         <Navbar 
           screenWidth={screenWidth}
