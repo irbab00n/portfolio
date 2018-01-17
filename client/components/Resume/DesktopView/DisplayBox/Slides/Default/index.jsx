@@ -33,7 +33,7 @@ class DefaultSlide extends React.Component {
           loaded && style.body_loaded
         )
       }>
-        <ReactPlayer url={'https://cosbyts.wistia.com/medias/gv3h2gdxoe'} playing/>
+        <ReactPlayer url={'https://cosbyts.wistia.com/medias/gv3h2gdxoe'} />
       </div>
 
     ); 
