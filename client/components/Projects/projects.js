@@ -6,7 +6,8 @@ module.exports.portfolio = {
   ],
   title: 'Portfolio Project',
   description: 'This website has served as not only a display center for who I am, but also what I am capable of as a software engineer.',
-  about: 'temporary placeholder text for now'
+  contributors: ['Thomas Cosby'],
+  about: 'temporary placeholder text for now',
 };
 
 module.exports.trainerFinder = {
@@ -16,6 +17,7 @@ module.exports.trainerFinder = {
   ],
   title: 'TrainerFinder',
   description: 'A platform for personal trainers to operate their businesses off of',
+  contributors: ['Thomas Cosby', 'Gui Choupeaux', 'Chao Zeng', 'Andy Lien'],
   about: 'temporary placeholder text for now',
 };
 
@@ -27,6 +29,7 @@ module.exports.vagabondly = {
   ],
   title: 'Vagabondly',
   description: 'A trip curation and exploration application',
+  contributors: ['Thomas Cosby', 'Miles Sorce', 'Neal Williams', 'James Critelli'],
   about: 'temporary placeholder text for now',
 };
 
@@ -35,5 +38,6 @@ module.exports.mock = {
   ],
   title: 'mock',
   description: 'mock',
+  contributors: [],
   about: 'mock',
 };

@@ -3,6 +3,7 @@ import apply from 'applystyles';
 
 import ExitButton from './ExitButton.jsx';
 import Carousel from './Carousel/index.jsx';
+import InfoBlocks from './InfoBlocks/index.jsx';
 
 import style from './style';
 
@@ -48,37 +49,10 @@ class ProjectContent extends React.Component {
 
           </div>
 
-          <div style={{
-            height:'300px',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-
-            <div style={{
-              height:'100%',
-              width: '30%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              backgroundColor: 'rgba(237, 237, 237, 1.0)',
-            }}>
-              Bottom-Left
-            </div>
-
-            <div style={{
-              height:'100%',
-              width: '70%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              backgroundColor: 'rgba(232, 232, 232, 1.0)',
-            }}>
-              Bottom-Right
-            </div>
-
-          </div>
+          <InfoBlocks 
+            currentProject={currentProject}
+            loaded={loaded}
+          />
 
       </div>
 
