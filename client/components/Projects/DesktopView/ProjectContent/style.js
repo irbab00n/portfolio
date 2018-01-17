@@ -24,6 +24,7 @@ module.exports.projectContentImagesBody = {
 
 
 module.exports.exitButtonBody = {
+  cursor: 'pointer',
   margin: '50px 50px 0 0',
   height: '0px',
   width: '0px',

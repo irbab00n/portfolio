@@ -28,6 +28,7 @@ class ProjectTab extends React.Component {
     const {
       label,
       tabClicked,
+      baseTextColor = 'white',
       tabHoverColor = 'inset 0 0 0 1000px rgba(225, 225, 225, 0.3)',
       tabBackgroundImage = '',
       tabText = '',
@@ -39,7 +40,7 @@ class ProjectTab extends React.Component {
       <div 
         style={
           apply(
-            Object.assign(style.tabBody, {backgroundImage: `url(${tabBackgroundImage})`}),
+            Object.assign(style.tabBody, {backgroundImage: `url(${tabBackgroundImage})`, color: baseTextColor}),
             hovered && Object.assign(style.tabBody_hovered, {boxShadow: `${tabHoverColor}`}),
             tabClicked && style.tabBody_clicked
           )

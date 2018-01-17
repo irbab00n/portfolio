@@ -34,6 +34,7 @@
     "lodash": "^4.17.4",
     "mysql": "^2.15.0",
     "react-css-in-js-animator": "^1.0.0",
+    "react-player": "^0.25.3",
     "webpack": "^3.8.1"
   },
   "devDependencies": {

@@ -28,7 +28,7 @@ class ProjectView extends React.Component {
     }, () => {
       setTimeout(() => {
         this.setState({tabFade: true});
-      }, 400)
+      }, 200)
     });
   }
 

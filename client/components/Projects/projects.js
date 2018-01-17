@@ -3,6 +3,7 @@ module.exports.portfolio = {
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
   ],
@@ -16,9 +17,9 @@ module.exports.portfolio = {
 
 module.exports.trainerFinder = {
   pictures: [
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_search.jpg', description: 'This is the main search page for the application.  Guests and Trainees alike could browse trainers.'},   
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_profile.jpg', description: 'This is the view of a trainers profile from the perspective of a guest.'},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_signup.jpg', description: 'Our application featured a multi-tier user system that was determined by what pa'}   
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_search.jpg', description: 'This is the main search page for the application.  Guests and Trainees alike could browse trainers'},   
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_profile.jpg', description: 'This is the view of a trainers profile from the perspective of a guest'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_signup.jpg', description: 'Our application featured a multi-tier user system that was determined by how a user signed up at this stage'}   
   ],
   title: 'TrainerFinder',
   link: 'http://trainerfinder.herokuapp.com',
@@ -30,9 +31,10 @@ module.exports.trainerFinder = {
 
 module.exports.vagabondly = {
   pictures: [
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg', description: ''},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg', description: ''},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg', description: ''}
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg', description: 'Progress shot showing the bare skeletal structure as we were working along'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg', description: 'This is the same component as the last photo, however this one is fully fleshed out'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_google_maps.jpg', description: 'We offered the user the ability to toggle between a grid list view, and a view containing Google Maps API'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg', description: 'Once you created a trip, you could view a list of all the trips you created and can go back and edit any of them'},
   ],
   title: 'Vagabondly',
   link: 'http://vagabondly-staging.herokuapp.com/',
@@ -44,7 +46,7 @@ module.exports.vagabondly = {
 
 module.exports.mock = {
   pictures: [
-    {link: '', description: ''}
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/click.png', description: 'Example slide'}
   ],
   title: 'Example Slide',
   link: '',
