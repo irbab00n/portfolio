@@ -35,33 +35,37 @@ class ProjectTabs extends React.Component {
         <ProjectTab 
           label={'portfolio'}
           tabClicked={tabClicked}
-          tabHoverColor={'inset 0 0 0 1000px rgba(225, 225, 225, 0.3)'}
-          tabBackgroundImage={'https://www.xmple.com/wallpaper/hexagon-white-blue-gradient-black-glow-cyan-1920x1080-c4-4cdce0-ffffff-4c57e0-000000-l2-10-144-a-20-f-6.svg'}
+          baseTextColor={'rgba(25, 25, 25, 1.0)'}
+          tabHoverColor={'inset 0 0 0 1000px rgba(175, 100, 200, 0.3)'}
+          tabBackgroundImage={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_tab.jpg'}
           tabText={'Portfolio'}
           onClick={tabsClickToggleTrue}
         />
         <ProjectTab 
           label={'trainerFinder'}
           tabClicked={tabClicked}
-          tabHoverColor={'inset 0 0 0 1000px rgba(225, 255, 50, 0.3)'}
-          tabBackgroundImage={'https://i.stack.imgur.com/kzwT7.png'}
+          baseTextColor={'rgba(25, 25, 25, 1.0)'}
+          tabHoverColor={'inset 0 0 0 1000px rgba(225, 150, 50, 0.3)'}
+          tabBackgroundImage={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_tab.jpg'}
           tabText={'TrainerFinder'}
           onClick={tabsClickToggleTrue}
         />
         <ProjectTab 
           label={'vagabondly'}
           tabClicked={tabClicked}
-          tabHoverColor={'inset 0 0 0 1000px rgba(200, 100, 20, 0.3)'}
-          tabBackgroundImage={'https://images3.alphacoders.com/853/thumb-1920-85305.jpg'}
+          baseTextColor={'rgba(25, 25, 25, 1.0)'}
+          tabHoverColor={'inset 0 0 0 1000px rgba(50, 100, 200, 0.3)'}
+          tabBackgroundImage={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_tab.jpg'}
           tabText={'Vagabondly'}
           onClick={tabsClickToggleTrue}
         />
         <ProjectTab 
           label={'mock'}
           tabClicked={tabClicked}
-          tabHoverColor={'inset 0 0 0 1000px rgba(225, 0, 100, 0.3)'}
-          tabBackgroundImage={'https://www.xmple.com/wallpaper/triangle-orange-pink-1920x1080-c2-db7093-ff8c00-l2-250-1250-a-255-f-10.svg'}
-          tabText={'Mock tab for now'}
+          baseTextColor={'rgba(200, 200, 200, 1.0)'}
+          tabHoverColor={'inset 0 0 0 1000px rgba(150, 75, 100, 0.3)'}
+          tabBackgroundImage={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/example_tab.jpg'}
+          tabText={'Example Tab Component'}
           onClick={tabsClickToggleTrue}
         />
       </div>

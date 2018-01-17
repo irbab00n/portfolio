@@ -9,18 +9,11 @@ class CurrentImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: true,
+      hovered: false,
       shakeLeft: false,
       shakeRight: false
     };
     this.shakeAnimation = this.shakeAnimation.bind(this);
-  }
-
-  componentWillMount() {
-    setTimeout(() => {
-      this.setState({loaded: true});
-      this.shakeAnimation();
-    }, 300);
   }
 
   shakeAnimation() {
@@ -33,8 +26,8 @@ class CurrentImage extends React.Component {
 
   render() {
 
-    const { loaded, shakeLeft, shakeRight } = this.state;
-    const { image } = this.props;
+    const { hovered, shakeLeft, shakeRight } = this.state;
+    const { loaded, image } = this.props;
 
     return (
 
@@ -42,6 +35,7 @@ class CurrentImage extends React.Component {
         style={
           apply(
             style.currentImageBody,
+            hovered && style.currentImageBody_hovered,
             shakeLeft && style.currentImageBody_shakeLeft,
             shakeRight && style.currentImageBody_shakeRight
           )
@@ -49,7 +43,9 @@ class CurrentImage extends React.Component {
         onClick={this.shakeAnimation}
       >
         <img 
-          src={image} 
+          src={image.link}
+          onMouseEnter={() => this.setState({hovered: true})}
+          onMouseLeave={() => this.setState({hovered: false})}
           style={
             apply(
               style.currentImage,
@@ -59,6 +55,24 @@ class CurrentImage extends React.Component {
             )
           }
         />
+
+        <div
+          style={
+            apply(
+              style.descriptionBody,
+              hovered && style.descriptionBody_hovered
+            )
+          }
+        >
+          <div 
+            style={style.descriptionText}
+            onMouseEnter={() => this.setState({hovered: true})}
+            onMouseLeave={() => this.setState({hovered: false})}
+          >
+            {image.description}
+          </div>
+        </div>
+
       </div>
 
     );

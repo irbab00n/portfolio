@@ -14,7 +14,7 @@ class ProjectContent extends React.Component {
     this.state = {
       loaded: false,
       buttonClicked: false,
-      buttonHoverd: false
+      buttonHovered: false
     };
   }
 
@@ -29,7 +29,7 @@ class ProjectContent extends React.Component {
   render() {
 
     const { loaded, buttonClicked, buttonHovered } = this.state;
-    const { currentProject, tabsClickToggleFalse } = this.props;
+    const { tabClicked, currentProject, tabsClickToggleFalse } = this.props;
 
     return (
 
@@ -38,13 +38,13 @@ class ProjectContent extends React.Component {
          <div style={style.projectContentImagesBody}>
             
             <ExitButton 
-              loaded={loaded}
+              loaded={tabClicked}
               tabsClickToggleFalse={tabsClickToggleFalse}
             />
 
             <Carousel 
               pictures={currentProject.pictures}
-              loaded={loaded}
+              loaded={tabClicked}
             />
 
           </div>

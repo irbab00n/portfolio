@@ -26,7 +26,6 @@ class ExitButton extends React.Component {
             style.exitButtonBody,
             loaded && style.exitButtonBody_loaded,
             hovered && style.exitButtonBody_hovered,
-            clicked && style.exitButtonBody_clicked
           )
         }
         onClick={() => this.setState({clicked: true}, tabsClickToggleFalse)}

@@ -26,14 +26,14 @@ module.exports.tabsBody = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  backgroundColor: 'rgba(226, 226, 226, 1.0)',
   zIndex: 1,
-  WebkitTransition: '0.5s'
+  WebkitTransition: '0.2s'
 };
 
 
 
 module.exports.tabBody = {
+  cursor: 'pointer',
   height: '250px',
   width: '100%',
   maxWidth: '1250px',
@@ -41,13 +41,14 @@ module.exports.tabBody = {
   alignItems: 'center',
   justifyContent: 'center',
   boxShadow: 'inset 0 0 0 1000px rgba(100, 100, 100, 0.3)',
+  boxShadow: 'inset 0 0 3px 3px rgba(55, 55, 55, 0.1)',
   background: 'rgba(225, 225, 225, 1.0)',
   backgroundSize: 'cover',
-  WebkitTransition: '0.5s'
+  WebkitTransition: '0.2s'
 };
 
 module.exports.tabBody_hovered = {
-  opactiy: '0.8',
+  opactiy: '0.6',
   color: 'white'
 }
 

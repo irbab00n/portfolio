@@ -15,6 +15,7 @@ module.exports.projectContentImagesBody = {
   alignItems: 'flex-end',
   justifyContent: 'flex-start',
   backgroundColor: 'rgba(25, 25, 25, 1.0)',
+  overflowX: 'hidden'
 };
 
 
@@ -23,10 +24,12 @@ module.exports.projectContentImagesBody = {
 
 
 module.exports.exitButtonBody = {
+  cursor: 'pointer',
   margin: '50px 50px 0 0',
   height: '0px',
   width: '0px',
   borderRadius: '25px',
+  zIndex: 0,
   WebkitUserSelect: 'none',
   khtmlUserSelect: 'none',
   MozUserSelect: 'none',

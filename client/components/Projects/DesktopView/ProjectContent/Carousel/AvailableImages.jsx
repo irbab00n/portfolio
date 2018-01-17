@@ -9,18 +9,10 @@ class AvailableImages extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: true,
       shakeLeft: false,
       shakeRight: false
     };
     this.shakeAnimation = this.shakeAnimation.bind(this);
-  }
-
-  componentWillMount() {
-    setTimeout(() => {
-      this.setState({loaded: true});
-      this.shakeAnimation();
-    }, 100);
   }
 
   shakeAnimation() {
@@ -33,8 +25,8 @@ class AvailableImages extends React.Component {
 
   render() {
 
-    const { loaded, shakeLeft, shakeRight } = this.state;
-    const { pictures, selectedCarouselIndex, onClick } = this.props;
+    const { shakeLeft, shakeRight } = this.state;
+    const { loaded, pictures, selectedCarouselIndex, onClick } = this.props;
 
     return (
 
@@ -51,12 +43,12 @@ class AvailableImages extends React.Component {
             return (
               <img 
                 key={`image${index}`} 
-                src={picture} 
+                src={picture.link} 
                 style={
                   apply(
                     style.availableImageBody,
                     loaded && style.availableImageBody_loaded,
-                    index === selectedCarouselIndex && style.availableImageBody_selected,
+                    (loaded && index === selectedCarouselIndex) && style.availableImageBody_selected,
                     shakeLeft && style.availableImageBody_shakeLeft,
                     shakeRight && style.availableImageBody_shakeRight
                   )

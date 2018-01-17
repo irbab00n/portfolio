@@ -28,7 +28,7 @@ class ProjectView extends React.Component {
     }, () => {
       setTimeout(() => {
         this.setState({tabFade: true});
-      }, 400)
+      }, 200)
     });
   }
 
@@ -58,14 +58,12 @@ class ProjectView extends React.Component {
             tabFade={tabFade}
             tabsClickToggleTrue={this.tabsClickToggleTrue}
           />
-          {
-            tabClicked
-              ? <ProjectContent
-                  currentProject={projects[currentProjectLabel]}
-                  tabsClickToggleFalse={this.tabsClickToggleFalse}
-                />
-              : <div style={{height:'100%', width: '100%', backgroundColor: 'rgba(25, 25, 25, 1.0)'}}></div>
-          }
+
+          <ProjectContent
+            tabClicked={tabClicked}
+            currentProject={projects[currentProjectLabel]}
+            tabsClickToggleFalse={this.tabsClickToggleFalse}
+          />
 
         </div>
 

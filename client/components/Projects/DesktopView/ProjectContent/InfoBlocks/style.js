@@ -14,6 +14,12 @@ module.exports.titleBlockBody = {
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: 'rgba(237, 237, 237, 1.0)',
+  WebkitTransition: '0.2s'
+};
+
+module.exports.titleBlockBody_hovered = {
+  backgroundColor: 'rgba(250, 250, 250, 1.0)',
+  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.3)',
 };
 
 module.exports.title = {

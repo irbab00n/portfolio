@@ -64,7 +64,7 @@ class LinksSlide extends React.Component {
 
           <a style={style.textLabelFormat} href={'https://s3-us-west-1.amazonaws.com/cos-bytes.com/resume.pdf'} target='_blank'>
             <Button 
-              label={'Resume'}
+              label={'View / Download'}
               hoverColor={{backgroundColor: 'rgba(0, 122, 193, 1.0)'}}
               onClick={() => {}}
             />
