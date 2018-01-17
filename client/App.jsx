@@ -18,7 +18,10 @@ class App extends React.Component {
     this.state = {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
-      percentScrolled: 0
+      percentScrolled: 0,
+      test1: false,
+      test2: false,
+      test3: false
     };
     this.calculateScrolled = this.calculateScrolled.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
@@ -85,6 +88,11 @@ class App extends React.Component {
         color: 'black',
       }}>
 
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_signup.jpg' />
+        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_profile.jpg' />
         <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg' />
         <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg' />
         <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg' />

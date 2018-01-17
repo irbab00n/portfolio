@@ -7,22 +7,18 @@ import AvailableImages from './AvailableImages.jsx';
 import style from './style';
 
 
+/*
+
+MUST REMOVE PICTURES OUT OF THE STATE HERE, AND MOVE THEM TO AN INDEX REFERENCE TO A IMPORT OBJECT WE BRING IN ON THE 
+DESKTOPVIEW COMPONENT
+
+*/
+
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedCarouselIndex: 0,
-      pictures: [
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg',
-        'https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg',
-      ]
     };
     this.incrementCarouselIndex = this.incrementCarouselIndex.bind(this);
     this.decrementCarouselIndex = this.decrementCarouselIndex.bind(this);
@@ -30,7 +26,8 @@ class Carousel extends React.Component {
   }
 
   incrementCarouselIndex() {
-    let { selectedCarouselIndex, pictures } = this.state;
+    let { selectedCarouselIndex } = this.state;
+    let { pictures } = this.props;
     let nextIndex = selectedCarouselIndex + 1;
     if (nextIndex < pictures.length) {
       this.setState({
@@ -40,7 +37,8 @@ class Carousel extends React.Component {
   }
 
   decrementCarouselIndex() {
-    let { selectedCarouselIndex, pictures } = this.state;
+    let { selectedCarouselIndex } = this.state;
+    let { pictures } = this.props;
     let previousIndex = selectedCarouselIndex - 1;
     if (previousIndex >= 0) {
       this.setState({
@@ -57,8 +55,8 @@ class Carousel extends React.Component {
 
   render() {
 
-    const { selectedCarouselIndex, pictures } = this.state;
-    const { loaded } = this.props;
+    const { selectedCarouselIndex } = this.state;
+    const { pictures, loaded } = this.props;
 
     return (
 

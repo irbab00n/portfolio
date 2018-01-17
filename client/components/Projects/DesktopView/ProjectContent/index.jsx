@@ -28,7 +28,7 @@ class ProjectContent extends React.Component {
   render() {
 
     const { loaded, buttonClicked, buttonHovered } = this.state;
-    const { tabsClickToggleFalse } = this.props;
+    const { currentProject, tabsClickToggleFalse } = this.props;
 
     return (
 
@@ -42,6 +42,7 @@ class ProjectContent extends React.Component {
             />
 
             <Carousel 
+              pictures={currentProject.pictures}
               loaded={loaded}
             />
 

@@ -25,6 +25,7 @@ module.exports.currentImageBody_shakeRight = {
 
 module.exports.currentImage = {
   width: '95%',
+  height: '100%',
   opacity: '0.0',
   cursor: 'pointer',
   WebkitTransition: '0.2s'
@@ -103,6 +104,7 @@ module.exports.button = {
   margin: '25px',
   position: 'relative',
   top: '-50px',
+  left: 0,
   height: '400px',
   width: '75px',
   display: 'flex',
@@ -128,14 +130,16 @@ module.exports.button_hovered = {
 };
 
 module.exports.button_clicked = {
-  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.2)',
+  boxShadow: '0 4px 6px 0 rgba(0, 0, 0, 0.2)',
   backgroundColor: 'rgba(200, 200, 200, 0.4)',
 };
 
 module.exports.button_animateLeft = {
+  left: '-5px',
   transform: 'rotateY(-35deg)'
 };
 
 module.exports.button_animateRight = {
+  left: '5px',
   transform: 'rotateY(35deg)'
 };

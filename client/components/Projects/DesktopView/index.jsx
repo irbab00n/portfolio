@@ -5,11 +5,14 @@ import ProjectContent from './ProjectContent/index.jsx';
 
 import style from './style';
 
+import projects from '../projects';
+
 
 class ProjectView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentProjectLabel: 'portfolio', 
       tabClicked: false,
       tabFade: false
     };
@@ -17,9 +20,11 @@ class ProjectView extends React.Component {
     this.tabsClickToggleFalse = this.tabsClickToggleFalse.bind(this);
   }
 
-  tabsClickToggleTrue() {
+  tabsClickToggleTrue(label) {
+    console.log('tabsClickToggleTrue function ran: ', label);
     let { tabClicked } = this.state;
     this.setState({
+      currentProjectLabel: label,
       tabClicked: true
     }, () => {
       setTimeout(() => {
@@ -39,11 +44,11 @@ class ProjectView extends React.Component {
     });
   }
 
-  // This is where we will have to manage all of the switching of the available images and the rest of the content
-
   render() {
 
-    const { tabClicked, tabFade } = this.state;
+    console.log('Projects import: ', projects['portfolio']);
+
+    const { currentProjectLabel, tabClicked, tabFade } = this.state;
 
     return (
 
@@ -58,7 +63,8 @@ class ProjectView extends React.Component {
           />
           {
             tabClicked
-              ? <ProjectContent 
+              ? <ProjectContent
+                  currentProject={projects[currentProjectLabel]}
                   tabsClickToggleFalse={this.tabsClickToggleFalse}
                 />
               : <div style={{height:'100%', width: '100%', backgroundColor: 'rgba(25, 25, 25, 1.0)'}}></div>
