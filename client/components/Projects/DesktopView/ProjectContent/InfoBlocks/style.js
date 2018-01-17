@@ -19,6 +19,7 @@ module.exports.titleBlockBody = {
 
 module.exports.titleBlockBody_hovered = {
   backgroundColor: 'rgba(250, 250, 250, 1.0)',
+  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.3)',
 };
 
 module.exports.title = {
