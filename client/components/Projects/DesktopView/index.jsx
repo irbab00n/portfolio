@@ -46,8 +46,6 @@ class ProjectView extends React.Component {
 
   render() {
 
-    console.log('Projects import: ', projects['portfolio']);
-
     const { currentProjectLabel, tabClicked, tabFade } = this.state;
 
     return (

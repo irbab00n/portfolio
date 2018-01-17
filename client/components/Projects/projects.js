@@ -30,3 +30,10 @@ module.exports.vagabondly = {
   about: 'temporary placeholder text for now',
 };
 
+module.exports.mock = {
+  pictures: [
+  ],
+  title: 'mock',
+  description: 'mock',
+  about: 'mock',
+};

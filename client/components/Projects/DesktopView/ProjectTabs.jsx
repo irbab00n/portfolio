@@ -57,11 +57,11 @@ class ProjectTabs extends React.Component {
           onClick={tabsClickToggleTrue}
         />
         <ProjectTab 
-          label={''}
+          label={'mock'}
           tabClicked={tabClicked}
           tabHoverColor={'inset 0 0 0 1000px rgba(225, 0, 100, 0.3)'}
           tabBackgroundImage={'https://www.xmple.com/wallpaper/triangle-orange-pink-1920x1080-c2-db7093-ff8c00-l2-250-1250-a-255-f-10.svg'}
-          tabText={'Tab 4, CLICK ME!'}
+          tabText={'Mock tab for now'}
           onClick={tabsClickToggleTrue}
         />
       </div>
