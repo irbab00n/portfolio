@@ -35,6 +35,16 @@ class TitleBlock extends React.Component {
           <span style={style.titleText}>{`${currentProject.title}`}</span>
         </div>
 
+        <a 
+          href={currentProject.link}
+          style={{
+            margin: '0 0 8px 17px',
+            fontSize: '12px'
+          }}
+        >
+          {currentProject.link}
+        </a>
+
         <div style={style.description}>
           <span style={style.descriptionHeader}>Project Description:</span>
           <p style={style.descriptionText}>{`${currentProject.description}`}</p>

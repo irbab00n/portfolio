@@ -7,7 +7,7 @@ module.exports.portfolio = {
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
   ],
-  title: 'Portfolio Project',
+  title: 'cos-bytes.com',
   link: 'https://cos-bytes.com',
   description: 'This website has served as not only a display center for who I am, but also what I am capable of as a software engineer.',
   contributors: ['Thomas Cosby'],
