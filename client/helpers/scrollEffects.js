@@ -26,7 +26,7 @@ const calculatePercentage = (i, destination, originalGap) => {
 };
 
 const calculateCoefficient = (i, destination, originalGap) => {
-    return  (2.5 - (3 * calculatePercentage(i, destination, originalGap))); // Percentage based on visual testing
+    return  (Math.PI - (Math.PI * calculatePercentage(i, destination, originalGap))); // Percentage based on visual testing
 };
 
 module.exports.accelerate = (start, destination) => {
@@ -40,13 +40,13 @@ module.exports.accelerate = (start, destination) => {
   let int = setInterval(() => {
     if (scrollDown) {
       window.scrollTo(0, i);
-      i += (8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
+      i += (9.8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
       if (i >= destination) {
         clearInterval(int);
       }
     } else {
       window.scrollTo(0, i);
-      i -= (8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
+      i -= (9.8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
       if (i <= destination) {
         clearInterval(int);
       }

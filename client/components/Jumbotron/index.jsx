@@ -4,15 +4,30 @@ import apply from 'applystyles';
 import LeftCloud from './LeftCloud.jsx';
 import RightCloud from './RightCloud.jsx';
 import TextScroller from './TextScroller.jsx';
+import ReactPlayer from 'react-player';
 
 import style from './style';
 
 class Jumbotron extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loadingPulse: false
+    };
+  }
+
+  componentWillMount() {
+    setInterval(() => {
+      let { loadingPulse } = this.state;
+      this.setState({
+        loadingPulse: !loadingPulse
+      });
+    }, 500);
   }
 
   render() {
+
+    const { loadingPulse } = this.state;
 
     const {
       screenWidth,
@@ -28,7 +43,6 @@ class Jumbotron extends React.Component {
       <div style={
         apply(
           style.body,
-          {color: `rgba(41, 67, 78, ${(1 - (percentScrolled / 7))})`},
           mobileToggle && style.body_mobile_landscape,
           (mobileToggle && orientationFlag) && style.body_mobile_portrait
         )
@@ -39,6 +53,43 @@ class Jumbotron extends React.Component {
           orientationFlag={orientationFlag}
           yOffset={yOffset}
         />
+
+        <div style={
+          apply(  
+            {
+              height: '360px',
+              marginBottom: '30px',
+              width: '640px',
+              backgroundColor: 'rgba(240, 240, 240, 0.8)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              zIndex: 2,
+            }
+          )
+        }>
+          <div style={
+            apply(  
+              {
+                position: 'relative',
+                top: '180px',
+                left: '0px',
+                height: '30px',
+                fontSize: '20px',
+                color: 'rgba(15, 15, 15, 0.2)',
+                WebkitTransition: '0.5s'
+              },
+              loadingPulse && {color: 'rgba(15, 15, 15, 1.0)'}
+            )
+          }>
+            Loading...
+          </div>
+          <ReactPlayer url={'https://cosbyts.wistia.com/medias/gv3h2gdxoe'} style={{
+            position: 'relative',
+            top: '-24px',
+            boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.6)',
+          }}/>
+        </div>
 
         <TextScroller
           mobileToggle={mobileToggle}
@@ -58,5 +109,7 @@ class Jumbotron extends React.Component {
 
   }
 }
+
+
 
 export default Jumbotron;

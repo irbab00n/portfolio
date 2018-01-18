@@ -6,6 +6,7 @@ module.exports.body = {
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: 'rgba(225, 225, 225, 1.0)',
+  zIndex: 0
 };
 
 module.exports.layeringAncestor = {

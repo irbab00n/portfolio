@@ -1,11 +1,10 @@
 module.exports.body = {
   display: 'flex',
-  zIndex: '-2',
   overflow: 'hidden',
   flexDirection: 'column',
   alignItems:'center',
   justifyContent: 'center',
-  height: '500px',
+  height: '1000px',
   width: '100%',
   background: `linear-gradient(to top, #ffffff 6%, #b3e3ff 68%)`,
   backgroundImage: 'url("https://s3-us-west-1.amazonaws.com/cos-bytes.com/backgroundClouds.png"), linear-gradient(to top, #ffffff 6%, #b3e3ff 68%)',
@@ -23,10 +22,10 @@ module.exports.body_mobile_portrait = {
 
 module.exports.rightCloud = {
   position: 'relative',
-  zIndex: '-1',
+  zIndex: '1',
   top: '-100px',
-  height: '100px',
-  width: '500px',
+  height: '200px',
+  width: '1000px',
   alignSelf: 'flex-end',
   WebkitUserSelect: 'none',
   khtmlUserSelect: 'none',
@@ -42,7 +41,7 @@ module.exports.rightCloud_mobile_portrait = {
 
 module.exports.leftCloud = {
   position: 'relative',
-  zIndex: '-1',
+  zIndex: '1',
   top: '-150px',
   height: '100px',
   width: '500px',
@@ -65,9 +64,25 @@ module.exports.textScroller = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  zIndex: 1,
+  color: 'rgba(41, 67, 78, 1.0)',
+  zIndex: 2,
 };
 
 module.exports.textScroller_mobile_portrait = {
   fontSize: '42px'
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,6 +5,7 @@ import Navbar from './components/Navigation/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
 import Projects from './components/Projects/index.jsx';
+import Contact from './components/Contact/index.jsx';
 
 import Board from './components/Minesweeper/Board.jsx';
 
@@ -58,23 +59,18 @@ class App extends React.Component {
     let targets = {
       block1: {
         start: 0,
-        end: 438,
+        end: 923,
         label: 'Home'
       },
       block2: {
-        start: 439,
-        end: 926,
+        start: 931,
+        end: 1433,
         label: 'About Me'
       },
       block3: {
-        start: 927,
-        end: 1960,
+        start: 1434,
+        end: 2437,
         label: 'Projects'
-      },
-      block4: {
-        start: 1961,
-        end: getDocumentHeight(),
-        label: 'Blog'
       }
     };
 
@@ -122,7 +118,7 @@ class App extends React.Component {
           yOffset={getCurrentYOffset()}
         />
 
-        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.2)'}}></span>
+        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(89, 89, 89, 0.1)'}}></span>
 
         <Resume 
           screenWidth={screenWidth}
@@ -133,6 +129,7 @@ class App extends React.Component {
           yOffset={getCurrentYOffset()}
         />
 
+
         <Projects
           screenWidth={screenWidth}
           screenHeight={screenHeight}
@@ -140,19 +137,6 @@ class App extends React.Component {
           orientationFlag={orientationFlag}
           yOffset={getCurrentYOffset()}
         />
-
-        <div style={{
-          height: '1000px',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'rgba(236, 236, 236, 1.0)',
-          padding: '15px 0'
-        }}>
-          Content coming soon!
-        </div>
 
       </div>
 

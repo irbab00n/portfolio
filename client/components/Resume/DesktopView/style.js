@@ -7,8 +7,14 @@ module.exports.desktopBody = {
   alignItems: 'center',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: 'rgba(250, 250, 250, 1.0)',
-  WebkitTransition: '0.4s'
+  backgroundColor: 'rgba(235, 235, 235, 1.0)',
+  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+  zIndex: 1,
+  WebkitTransition: '0.2s'
+};
+
+module.exports.desktopBody_on = {
+  backgroundColor: 'rgba(250, 250, 250, 1.0)'
 };
 
 
@@ -33,7 +39,7 @@ module.exports.resumeLink = {
   alignItems: 'center',
   borderRadius: '2px',
   justifyContent: 'center',
-  backgroundColor: 'rgb(250, 250, 250)',
+  backgroundColor: 'rgba(235, 235, 235, 1.0)',
   WebkitUserSelect: 'none',
   khtmlUserSelect: 'none',
   MozUserSelect: 'none',
@@ -55,5 +61,6 @@ module.exports.resumeLink_clicked = {
 };
 
 module.exports.resumeLink_on = {
+  backgroundColor: 'rgba(250, 250, 250, 1.0)',
   boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.3)',
 };

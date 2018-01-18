@@ -14,14 +14,13 @@ class LinkRow extends React.Component {
 
   render() {
 
-    const { yOffset } = this.props;
+    const { yOffset, targets } = this.props;
 
     return (
 
       <div style={style.navigation_body}>
-        <NavLink name={'About Me'} onClick={animationChooser(yOffset, 440 , scrollEffects)}/>
-        <NavLink name={'Projects'} onClick={animationChooser(yOffset, 927, scrollEffects)}/>
-        <NavLink name={'Blog'} onClick={animationChooser(yOffset, 1962, scrollEffects)}/>
+        <NavLink name={'About Me'} onClick={animationChooser(yOffset, targets.block2.start , scrollEffects)}/>
+        <NavLink name={'Projects'} onClick={animationChooser(yOffset, targets.block3.start, scrollEffects)}/>
       </div>
 
     );

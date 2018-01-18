@@ -15,7 +15,7 @@ const LeftCloud = (props) => {
     <div style={
       apply(
         style.leftCloud,
-        {left: `${-250 -(yOffset * 1.11)}px`},
+        {left: `${-200 - yOffset}px`},
         (mobileToggle && orientationFlag) && style.leftCloud_mobile_portrait
       )
     }>
