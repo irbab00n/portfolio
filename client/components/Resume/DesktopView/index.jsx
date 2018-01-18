@@ -30,7 +30,7 @@ class DesktopView extends React.Component {
     const { currentSlide } = this.state;
     const { screenWidth, screenHeight, yOffset } = this.props;
 
-    let triggeredOn = yOffset >= 50 && yOffset <= 800;
+    let triggeredOn = yOffset >= 285 && yOffset <= 1200;
 
     return (
 

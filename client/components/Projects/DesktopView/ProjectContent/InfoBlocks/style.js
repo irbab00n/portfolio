@@ -41,6 +41,10 @@ module.exports.titleText = {
   padding: '0 0 0 17px'
 };
 
+module.exports.link = {
+  margin: '0 0 8px 17px',
+  fontSize: '12px'
+};
 
 module.exports.description = {
   height: '100px',

@@ -79,7 +79,7 @@ class Dropdown extends React.Component {
               onClick={animationChooser(yOffset, 928, scrollEffects)}
             />
             <Link 
-              name={'Blog'}
+              name={'Contact'}
               dropdownToggle={dropdownToggle}
               orientationFlag={orientationFlag}
               onClick={animationChooser(yOffset, 1960, scrollEffects)}

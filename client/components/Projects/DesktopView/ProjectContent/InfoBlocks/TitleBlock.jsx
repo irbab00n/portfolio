@@ -37,10 +37,7 @@ class TitleBlock extends React.Component {
 
         <a 
           href={currentProject.link}
-          style={{
-            margin: '0 0 8px 17px',
-            fontSize: '12px'
-          }}
+          style={style.link}
         >
           {currentProject.link}
         </a>
