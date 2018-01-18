@@ -22,14 +22,15 @@ class SkillsSlide extends React.Component {
   render() {
 
     const { loaded } = this.state;
-    const { screenWidth, screenHeight } = this.props;
+    const { screenWidth, screenHeight, triggeredOn } = this.props;
 
     return (
 
       <div style={
         apply(
           style.body,
-          loaded && style.body_loaded
+          loaded && style.body_loaded,
+          triggeredOn && style.body_on
         )
       }>
 

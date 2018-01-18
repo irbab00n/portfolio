@@ -14,29 +14,39 @@ class DisplayBox extends React.Component {
   }
 
   renderSlide(slide) {
+    let { screenWidth, screenHeight, triggeredOn } = this.props;
     switch(slide) {
       case 'skills':
         return (
           <SkillsSlide
-            screenWidth={this.props.screenWidth}
-            screenHeight={this.props.screenHeight}
+            screenWidth={screenWidth}
+            screenHeight={screenHeight}
+            triggeredOn={triggeredOn}
           />
         );
       case 'experience':
         return (
-          <ExperienceSlide />
+          <ExperienceSlide 
+            triggeredOn={triggeredOn}
+          />
         );
       case 'education':
         return (
-          <EducationSlide />
+          <EducationSlide
+            triggeredOn={triggeredOn}
+          />
         );
       case 'links':
         return (
-          <LinksSlide />
+          <LinksSlide 
+            triggeredOn={triggeredOn}
+          />
         );
       default: 
         return (
-          <DefaultSlide />
+          <DefaultSlide 
+            triggeredOn={triggeredOn}
+          />
         );
     }
   }
