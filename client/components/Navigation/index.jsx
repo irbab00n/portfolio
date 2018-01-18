@@ -19,7 +19,7 @@ class Navbar extends React.Component {
   }
 
   renderOption(option) {
-    const { percentScrolled, yOffset } = this.props;
+    const { percentScrolled, yOffset, targets } = this.props;
     switch(option) {
       case 'fadeIn':
         return ([{
@@ -28,8 +28,8 @@ class Navbar extends React.Component {
         }]);
       case 'sharp':
         return ([
-          yOffset >= 423 && {WebkitTransition: '0.2s', backgroundColor: `rgba(250, 250, 250,${(percentScrolled / 10).toFixed(1)})`}, 
-          yOffset >= 425 && {boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)'}
+          yOffset >= targets.block1.end - 5 && {WebkitTransition: '0.2s', backgroundColor: `rgba(250, 250, 250,${(percentScrolled / 10).toFixed(1)})`}, 
+          yOffset >= targets.block1.end && {boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)'}
         ]);
     }
   }
@@ -76,6 +76,7 @@ class Navbar extends React.Component {
               />
             : <LinkRow 
                 yOffset={yOffset}
+                targets={targets}
                 orientationFlag={orientationFlag}
               />
         }

@@ -6,6 +6,8 @@ module.exports.body = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  fontSize: '16px',
+  lineHeight: '150%',
   justifyContent: 'center',
   backgroundColor: 'rgb(250, 250, 250)',
   WebkitTransition: '0.2s'

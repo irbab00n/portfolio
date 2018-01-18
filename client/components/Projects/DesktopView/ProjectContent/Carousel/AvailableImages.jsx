@@ -12,20 +12,10 @@ class AvailableImages extends React.Component {
       shakeLeft: false,
       shakeRight: false
     };
-    this.shakeAnimation = this.shakeAnimation.bind(this);
-  }
-
-  shakeAnimation() {
-    let frame1 = new animator.keyframe({shakeLeft: true}, 0);
-    let frame2 = new animator.keyframe({shakeLeft: false, shakeRight: true}, 100);
-    let frame3 = new animator.keyframe({shakeRight: false}, 100);
-    let reel = animator.buildReel(this.setState.bind(this), () => {}, frame1, frame2, frame3);
-    reel();
   }
 
   render() {
 
-    const { shakeLeft, shakeRight } = this.state;
     const { loaded, pictures, selectedCarouselIndex, onClick } = this.props;
 
     return (
@@ -34,8 +24,6 @@ class AvailableImages extends React.Component {
         apply(
           style.availableImagesContainer,
           loaded && style.availableImagesContainer_loaded,
-          shakeLeft && style.availableImagesContainer_shakeLeft,
-          shakeRight && style.availableImagesContainer_shakeRight
         )
       }>
         {
@@ -49,8 +37,6 @@ class AvailableImages extends React.Component {
                     style.availableImageBody,
                     loaded && style.availableImageBody_loaded,
                     (loaded && index === selectedCarouselIndex) && style.availableImageBody_selected,
-                    shakeLeft && style.availableImageBody_shakeLeft,
-                    shakeRight && style.availableImageBody_shakeRight
                   )
                 }
                 onClick={

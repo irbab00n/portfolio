@@ -15,7 +15,7 @@ const RightCloud = (props) => {
     <div style={
       apply(
         style.rightCloud,
-        {right: `${-(yOffset * 1.11)}px`},
+        {right: `${-(yOffset + 300)}px`},
         (mobileToggle && orientationFlag) && style.rightCloud_mobile_portrait
       )
     }>

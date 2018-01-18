@@ -106,11 +106,11 @@ module.exports.availableImagesContainer_loaded = {
 }
 
 module.exports.availableImagesContainer_shakeLeft = {
-  top: '-2px',
+  top: '0px',
 };
 
 module.exports.availableImagesContainer_shakeRight = {
-  top: '2px',
+  top: '0px',
 };
 
 /* Available Image Styles */
@@ -123,7 +123,7 @@ module.exports.availableImageBody = {
   height: '40%',
   opacity: '0.0',
   cursor: 'pointer',
-  WebkitTransition: '0.1s'
+  WebkitTransition: '0.2s',
 };
 
 module.exports.availableImageBody_loaded = {

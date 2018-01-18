@@ -58,21 +58,21 @@ class App extends React.Component {
     let targets = {
       block1: {
         start: 0,
-        end: 438,
+        end: 923,
         label: 'Home'
       },
       block2: {
-        start: 439,
-        end: 926,
+        start: 931,
+        end: 1430,
         label: 'About Me'
       },
       block3: {
-        start: 927,
-        end: 1960,
+        start: 1431,
+        end: 2430,
         label: 'Projects'
       },
       block4: {
-        start: 1961,
+        start: 2431,
         end: getDocumentHeight(),
         label: 'Blog'
       }
@@ -142,7 +142,7 @@ class App extends React.Component {
         />
 
         <div style={{
-          height: '1000px',
+          height: '200px',
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
