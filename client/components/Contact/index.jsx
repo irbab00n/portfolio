@@ -18,12 +18,46 @@ class Contact extends React.Component {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         backgroundColor: 'rgba(236, 236, 236, 1.0)',
         padding: '15px 0'
       }}>
-        Content coming soon!
+
+        <div style={{
+          height: '100%',
+          width: '50%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-evenly',
+        }}>
+          <div style={{
+            paddingLeft: '50px',
+            height: '30px',
+            width: '100%',
+            fontSize: '14px',
+          }}>
+            Email: thomas@cos-bytes.com
+          </div>
+
+          <div style={{
+            paddingLeft: '50px',
+            height: '30px',
+            width: '100%',
+            fontSize: '14px',
+          }}>
+            <a href="https://www.linkedin.com/in/cosbyts/">Linkedin</a>
+          </div>
+
+          <div style={{
+            paddingLeft: '50px',
+            height: '30px',
+            width: '100%',
+            fontSize: '14px',
+          }}>
+            Github: https://github.com/irbab00n
+          </div>
+        </div>
+
       </div>
 
     );
