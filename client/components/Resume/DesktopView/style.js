@@ -8,6 +8,8 @@ module.exports.desktopBody = {
   justifyContent: 'center',
   alignItems: 'center',
   backgroundColor: 'rgba(250, 250, 250, 1.0)',
+  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+  zIndex: 1,
   WebkitTransition: '0.4s'
 };
 
