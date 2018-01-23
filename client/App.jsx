@@ -59,17 +59,17 @@ class App extends React.Component {
     let targets = {
       block1: {
         start: 0,
-        end: 923,
+        end: 920,
         label: 'Home'
       },
       block2: {
-        start: 931,
-        end: 1433,
+        start: 927,
+        end: 1930,
         label: 'About Me'
       },
       block3: {
-        start: 1434,
-        end: 2437,
+        start: 1931,
+        end: 2434,
         label: 'Projects'
       }
     };

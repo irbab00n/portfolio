@@ -39,9 +39,11 @@ class DesktopView extends React.Component {
             minWidth : '400px',
             maxWidth: '600px',
             backgroundColor: 'rgba(200, 200, 200, 1.0)',
+            boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            zIndex: 2
           }}>
 
             <div>
@@ -74,7 +76,8 @@ class DesktopView extends React.Component {
             width: '100%',
             minWidth : '600px',
             maxWidth: '1000px',
-            backgroundColor: 'rgba(200, 200, 200, 1.0)'
+            backgroundColor: 'rgba(220, 220, 220, 1.0)',
+            boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)'
           }}>
             Container 2
           </div>
