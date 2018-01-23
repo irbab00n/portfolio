@@ -28,7 +28,8 @@ module.exports.tabsBody = {
   flexDirection: 'column',
   alignItems: 'center',
   zIndex: 1,
-  WebkitTransition: '0.2s'
+  WebkitTransition: '0.2s',
+  fontSize: '30px'
 };
 
 

@@ -10,7 +10,7 @@ module.exports.desktopBody = {
   backgroundColor: 'rgba(235, 235, 235, 1.0)',
   boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
   zIndex: 1,
-  WebkitTransition: '0.2s'
+  WebkitTransition: '0.4s'
 };
 
 module.exports.desktopBody_on = {
@@ -45,7 +45,7 @@ module.exports.resumeLink = {
   MozUserSelect: 'none',
   OUserSelect: 'none',
   userSelect: 'none',
-  WebkitTransition: '0.2s'
+  WebkitTransition: '0.4s'
 };
 
 module.exports.resumeLink_hovered = {
