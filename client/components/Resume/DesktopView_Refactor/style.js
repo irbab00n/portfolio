@@ -1,13 +1,14 @@
 module.exports.desktopBody = {
+  padding: '25px 0',
   height: '1000px',
   width: '100%',
+  maxWidth: '1600px',
   display: 'flex',
   overflowX: 'hidden',
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: 'rgba(235, 235, 235, 1.0)',
   WebkitTransition: '0.4s'
 };
 

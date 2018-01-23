@@ -14,7 +14,7 @@ module.exports.projectContentImagesBody = {
   flexDirection: 'column',
   alignItems: 'flex-end',
   justifyContent: 'flex-start',
-  backgroundColor: 'rgba(25, 25, 25, 1.0)',
+  background: 'linear-gradient(to top, rgba(15, 15, 15, 1.0) 10%, rgba(25, 25, 25, 1.0) 100%)',
   overflowX: 'hidden'
 };
 

@@ -3,6 +3,7 @@ import apply from 'applystyles';
 
 import Skills from './Skills/index.jsx';
 import Experience from './Experience/index.jsx';
+import Education from './Education/index.jsx';
 
 import style from './style';
 
@@ -30,16 +31,14 @@ class DesktopView extends React.Component {
           width: '100%',
           backgroundColor: 'rgba(255, 255, 255, 1.0)',
           display: 'flex',
-          alignItems: 'stretch',
-          justifyContent: 'center',
+          alignItems: 'center',
+          justifyContent: 'space-evenly',
         }}>
           <div style={{
             height: '100%',
             width: '100%',
             minWidth : '400px',
-            maxWidth: '600px',
-            backgroundColor: 'rgba(200, 200, 200, 1.0)',
-            boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
+            maxWidth: '500px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -75,11 +74,18 @@ class DesktopView extends React.Component {
             height: '100%',
             width: '100%',
             minWidth : '600px',
-            maxWidth: '1000px',
-            backgroundColor: 'rgba(220, 220, 220, 1.0)',
-            boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)'
+            maxWidth: '900px',
+            backgroundColor: 'rgba(240, 240, 240, 1.0)',
+            boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-evenly'
           }}>
-            Container 2
+            <span style={{paddingLeft: '50px', width: '100%'}}>EXPERIENCE</span>
+            <Experience />
+            <span style={{paddingLeft: '50px', width: '100%'}}>EDUCATION</span>
+            <Education />
           </div>
         </div>
 

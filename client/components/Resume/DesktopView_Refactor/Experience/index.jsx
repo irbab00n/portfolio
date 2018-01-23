@@ -46,15 +46,12 @@ class ExperienceSlide extends React.Component {
   render() {
 
     const { loaded, jobNames, jobIndex } = this.state;
-    const { triggeredOn } = this.props;
 
     return (
 
       <div style={
         apply(
           style.slideBody,
-          loaded && style.slideBody_loaded,
-          triggeredOn && style.slideBody_on
         )
       }>
 

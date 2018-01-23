@@ -5,7 +5,7 @@ module.exports.body = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: 'rgb(255, 255, 255)',
+  backgroundColor: 'rgb(35, 35, 35)',
 };
 
 module.exports.layeringAncestor = {
