@@ -1,5 +1,5 @@
 module.exports.desktopBody = {
-  padding: '25px 0',
+  padding: '50px 0',
   height: '1000px',
   width: '100%',
   maxWidth: '1600px',

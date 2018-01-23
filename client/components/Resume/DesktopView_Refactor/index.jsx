@@ -75,7 +75,7 @@ class DesktopView extends React.Component {
             width: '100%',
             minWidth : '600px',
             maxWidth: '900px',
-            backgroundColor: 'rgba(240, 240, 240, 1.0)',
+            backgroundColor: 'rgba(235, 235, 245, 0.3)',
             boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
             display: 'flex',
             flexDirection: 'column',

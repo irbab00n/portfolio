@@ -28,7 +28,7 @@ class Navbar extends React.Component {
         }]);
       case 'sharp':
         return ([
-          yOffset >= targets.block1.end - 5 && {WebkitTransition: '0.2s', backgroundColor: `rgba(250, 250, 250,${(percentScrolled / 10).toFixed(1)})`}, 
+          yOffset >= targets.block1.end && {WebkitTransition: '0.2s', backgroundColor: `rgba(250, 250, 250,${(percentScrolled / 10).toFixed(1)})`}, 
           yOffset >= targets.block1.end && {boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)'}
         ]);
     }
