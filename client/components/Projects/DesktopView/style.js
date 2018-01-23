@@ -1,5 +1,5 @@
 module.exports.body = {
-  paddingBottom: '5px',
+  padding: '25px 0',
   height: '1000px',
   width: '100%',
   display: 'flex',

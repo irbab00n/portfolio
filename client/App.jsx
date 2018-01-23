@@ -118,8 +118,6 @@ class App extends React.Component {
           yOffset={getCurrentYOffset()}
         />
 
-        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(250, 250, 250, 0.8)'}}></span>
-
         <Resume 
           screenWidth={screenWidth}
           screenHeight={screenHeight}
