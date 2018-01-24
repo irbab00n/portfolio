@@ -1,66 +1,18 @@
 module.exports.desktopBody = {
-  height: '500px',
+  height: '1650px',
   width: '100%',
   display: 'flex',
-  overflowX: 'hidden',
-  flexDirection: 'row',
+  backgroundImage: 'url("https://s3-us-west-1.amazonaws.com/cos-bytes.com/backgroundClouds.png"), linear-gradient(to bottom, #ffffff 0%, rgba(226, 224, 230, 1.0) 20%)',
+  overflow: 'hidden',
+  flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: 'rgba(235, 235, 235, 1.0)',
-  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-  zIndex: 1,
+  justifyContent: 'space-between',
   WebkitTransition: '0.4s'
-};
-
-module.exports.desktopBody_on = {
-  backgroundColor: 'rgba(250, 250, 250, 1.0)'
 };
 
 
 module.exports.image = {
-  height: '300px',
-  margin: '25px 25px 25px 50px',
+  marginTop: '40px',
+  height: '250px',
   WebkitTransition: '0.4s'
-};
-
-module.exports.image_active = {
-  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.3)',
-  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5)',
-};
-
-
-
-module.exports.resumeLink = {
-  cursor: 'pointer',
-  height: '70px',
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  borderRadius: '2px',
-  justifyContent: 'center',
-  backgroundColor: 'rgba(235, 235, 235, 1.0)',
-  WebkitUserSelect: 'none',
-  khtmlUserSelect: 'none',
-  MozUserSelect: 'none',
-  OUserSelect: 'none',
-  userSelect: 'none',
-  WebkitTransition: '0.4s'
-};
-
-module.exports.resumeLink_hovered = {
-  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.6)',
-  backgroundColor: 'rgba(0, 122, 193, 1.0)',
-  color: '#f2f2f2'
-};
-
-module.exports.resumeLink_clicked = {
-  boxShadow: '0 0 0 0 rgba(0, 0, 0, 0.0)',
-  backgroundColor: 'rgba(0, 60, 100, 1.0)',
-  color: '#f2f2f2'
-};
-
-module.exports.resumeLink_on = {
-  backgroundColor: 'rgba(250, 250, 250, 1.0)',
-  boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.3)',
 };

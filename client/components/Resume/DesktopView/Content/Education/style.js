@@ -1,19 +1,13 @@
 /* Education Slide Component Styles */
 
 module.exports.slideBody = {
-  position: 'relative',
-  right: '-1000px',
   height: '400px',
-  width: '100%',
+  width: '95%',
+  maxWidth: '900px',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  backgroundColor: 'rgba(235, 235, 235, 1.0)',
   WebkitTransition: '0.2s'
-};
-
-module.exports.slideBody_loaded = {
-  right: '0px'
 };
 
 module.exports.slideBody_on = {
@@ -92,7 +86,7 @@ module.exports.rightTextLocation = {
 };
 
 module.exports.rightTextStudied = {
-  fontSize: '12px'
+  fontSize: '14px'
 };
 
 module.exports.rightImage = {
@@ -107,7 +101,7 @@ module.exports.descriptionBody = {
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
-  fontSize: '12px'
+  fontSize: '14px'
 };
 
 module.exports.rangeAttended = {

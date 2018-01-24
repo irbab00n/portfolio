@@ -20,9 +20,6 @@ class App extends React.Component {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
       percentScrolled: 0,
-      test1: false,
-      test2: false,
-      test3: false
     };
     this.calculateScrolled = this.calculateScrolled.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
@@ -59,17 +56,17 @@ class App extends React.Component {
     let targets = {
       block1: {
         start: 0,
-        end: 923,
+        end: 985,
         label: 'Home'
       },
       block2: {
-        start: 931,
-        end: 1433,
+        start: 985,
+        end: 2582,
         label: 'About Me'
       },
       block3: {
-        start: 1434,
-        end: 2437,
+        start: 2583,
+        end: 3583,
         label: 'Projects'
       }
     };
@@ -117,8 +114,6 @@ class App extends React.Component {
           orientationFlag={orientationFlag}
           yOffset={getCurrentYOffset()}
         />
-
-        <span style={{height: '3px', width: '100%', backgroundColor: 'rgba(250, 250, 250, 0.8)'}}></span>
 
         <Resume 
           screenWidth={screenWidth}

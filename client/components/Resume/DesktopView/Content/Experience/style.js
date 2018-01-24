@@ -1,18 +1,12 @@
 module.exports.slideBody = {
-  position: 'relative',
-  right: '-2000px',
   height: '400px',
   width: '100%',
+  maxWith: '800px',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'space-evenly',
-  backgroundColor: 'rgba(235, 235, 235, 1.0)',
   WebkitTransition: '0.2s'
-};
-
-module.exports.slideBody_loaded = {
-  right: '0px'
 };
 
 module.exports.slideBody_on = {
@@ -21,8 +15,8 @@ module.exports.slideBody_on = {
 
 
 module.exports.slideLayout = {
-  height: '350px',
-  width: '100%',
+  height: '250px',
+  width: '95%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -39,7 +33,7 @@ module.exports.headerLayout = {
 };
 
 module.exports.headerImage = {
-  width: '40%'
+  width: '25%'
 };
 
 module.exports.headerTitleLayout = {
@@ -72,12 +66,13 @@ module.exports.navigationLayout = {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
 };
 
 
 
 module.exports.button = {
+  margin: '0 15px',
   cursor: 'pointer',
   height: '30px',
   width: '50px',

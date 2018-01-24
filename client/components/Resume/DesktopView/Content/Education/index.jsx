@@ -26,7 +26,6 @@ class EducationSlide extends React.Component {
   render() {
 
     const { loaded } = this.state;
-    const { triggeredOn } = this.props;
 
     return (
 
@@ -34,7 +33,6 @@ class EducationSlide extends React.Component {
         apply(
           style.slideBody,
           loaded && style.slideBody_loaded,
-          triggeredOn && style.slideBody_on
         )
       }>
 

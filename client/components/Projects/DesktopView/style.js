@@ -1,12 +1,11 @@
 module.exports.body = {
-  paddingBottom: '5px',
+  padding: '50px 0',
   height: '1000px',
   width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: 'rgba(225, 225, 225, 1.0)',
-  zIndex: 0
+  backgroundColor: 'rgb(35, 35, 35)',
 };
 
 module.exports.layeringAncestor = {
