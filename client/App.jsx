@@ -20,9 +20,6 @@ class App extends React.Component {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
       percentScrolled: 0,
-      test1: false,
-      test2: false,
-      test3: false
     };
     this.calculateScrolled = this.calculateScrolled.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
@@ -64,11 +61,11 @@ class App extends React.Component {
       },
       block2: {
         start: 986,
-        end: 2038,
+        end: 2432,
         label: 'About Me'
       },
       block3: {
-        start: 2039,
+        start: 2433,
         end: 3030,
         label: 'Projects'
       }

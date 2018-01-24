@@ -86,7 +86,7 @@ module.exports.rightTextLocation = {
 };
 
 module.exports.rightTextStudied = {
-  fontSize: '12px'
+  fontSize: '14px'
 };
 
 module.exports.rightImage = {
@@ -101,7 +101,7 @@ module.exports.descriptionBody = {
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
-  fontSize: '12px'
+  fontSize: '14px'
 };
 
 module.exports.rangeAttended = {

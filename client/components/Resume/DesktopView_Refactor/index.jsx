@@ -16,7 +16,7 @@ class DesktopView extends React.Component {
 
     const { screenWidth, screenHeight, yOffset } = this.props;
 
-    // let triggeredOn = yOffset >= 285 && yOffset <= 1200;
+    let toggleLeftOff = screenWidth <= 1420;
 
     return (
 
@@ -45,7 +45,21 @@ class DesktopView extends React.Component {
             zIndex: 2
           }}>
 
-            <div>
+            <div style={
+              apply(
+                {
+                  height: '463px',
+                  width: '100%',
+                  backgroundColor: 'rgba(235, 235, 245, 0.3)',
+                  boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  WebkitTransition: '0.4s'
+                },
+                toggleLeftOff && {backgroundColor: 'rgba(235, 235, 245, 0.0)', boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.0)'}
+              )
+            }>
               <img 
                 src="https://s3-us-west-1.amazonaws.com/cos-bytes.com/headshot.jpg"
                 style={
@@ -55,18 +69,45 @@ class DesktopView extends React.Component {
                 }
               />
               <div style={{
-                height: '30px',
-                padding: '25px 25px 25px 50px'
+                marginTop: '32px',
+                height: '100px',
+                width: '100%',
+                backgroundColor: 'rgba(235, 235, 245, 0.5)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
-                <center>Thomas Cosby</center>
+                Links
               </div>
             </div>
 
-
-            <Skills 
-              screenWidth={screenWidth}
-              screenHeight={screenHeight}
-            />
+            <div style={
+              apply(
+                {
+                  marginTop: '50px',
+                  height: '537px',
+                  width: '100%',
+                  backgroundColor: 'rgba(235, 235, 245, 0.3)',
+                  boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  WebkitTransition: '0.4s'
+                },
+                toggleLeftOff && {backgroundColor: 'rgba(235, 235, 245, 0.0)', boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.0)'} 
+              )
+            }>
+              <span style={{marginTop: '30px', paddingLeft: '50px', width: '100%', fontSize: '36px'}}>ABOUT ME</span>
+              <span style={{
+                marginTop: '35px',
+                width: '90%',
+                fontSize: '14px'
+              }}>
+                Hello everyone!  My name is Thomas Cosby, a former gearbox technician turned software engineer.  What started out as a hobby, learning how to program very small video games in Unity, turned into a fascination of how we been able to build programs that connect the world in so many ways and impacts our daily lives on such a fundamental level.  After weeks of researching and learning more about how software is made, I knew I was going to enjoy diving deep into becoming an engineer.  I attended the Advanced Software Engineering Immersive, Hack Reactor, to learn the techniques and technologies necessary for web-based application development.<br/>
+                <br/>
+                After I graduated, I was selected to work for Hack Reactor as a Teaching Assistant for the next round of students.  I had to apply a mixture of my technical knowledge, team-oriented spirit, and problem solving skills to be a resource for students in need.  I hosted code and concept reviews, pair programming sessions, whiteboarding and verbalization exercises all centered around constantly improving student technical competency.  In the end, I helped train over 80 software engineers to develop with JavaScript and it's vast ecosystem of frameworks and technologies.
+              </span>
+            </div>
 
           </div>
 
@@ -82,11 +123,30 @@ class DesktopView extends React.Component {
             alignItems: 'center',
             justifyContent: 'space-evenly'
           }}>
-            <span style={{paddingLeft: '50px', width: '100%'}}>EXPERIENCE</span>
+            <span style={{paddingLeft: '50px', width: '100%', fontSize: '36px', }}>EXPERIENCE</span>
             <Experience />
-            <span style={{paddingLeft: '50px', width: '100%'}}>EDUCATION</span>
+            <span style={{paddingLeft: '50px', width: '100%', fontSize: '36px'}}>EDUCATION</span>
             <Education />
           </div>
+        </div>
+
+        <div style={
+          apply(
+            {
+              marginTop: '50px',
+              height: '400px',
+              width: '100%',
+              maxWidth: '1470px',
+              backgroundColor: 'rgba(235, 235, 245, 0.3)',
+              boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }
+          )
+        }>
+          Skills Section
+          <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/skills_S3.png' />
         </div>
 
       </div>
@@ -95,25 +155,6 @@ class DesktopView extends React.Component {
 
   }
 }
-
-
-
-
-// <LinkColumn
-//   currentSlide={currentSlide}
-//   changeSlides={this.changeSlides}
-//   yOffset={yOffset}
-//   triggeredOn={triggeredOn}
-// />
-
-// <DisplayBox
-//   currentSlide={currentSlide}
-//   screenWidth={screenWidth}
-//   screenHeight={screenHeight}
-//   yOffset={yOffset}
-//   triggeredOn={triggeredOn}
-// />
-
 
 
 export default DesktopView;
