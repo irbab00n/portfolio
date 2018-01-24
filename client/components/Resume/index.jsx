@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DesktopView from './DesktopView_Refactor/index.jsx';
+import DesktopView from './DesktopView/index.jsx';
 import MobileView from './MobileView/index.jsx';
 
 class Resume extends React.Component {

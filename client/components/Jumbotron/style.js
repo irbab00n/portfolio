@@ -6,7 +6,7 @@ module.exports.body = {
   justifyContent: 'center',
   height: '1000px',
   width: '100%',
-  background: `linear-gradient(to top, #ffffff 6%, #b3e3ff 68%)`,
+  background: `linear-gradient(to top, #ffffff 0%, #b3e3ff 48%)`,
   backgroundImage: 'url("https://s3-us-west-1.amazonaws.com/cos-bytes.com/backgroundClouds.png"), linear-gradient(to top, #ffffff 6%, #b3e3ff 68%)',
   fontSize: '30px',
 };

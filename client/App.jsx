@@ -60,13 +60,13 @@ class App extends React.Component {
         label: 'Home'
       },
       block2: {
-        start: 986,
-        end: 2432,
+        start: 985,
+        end: 2582,
         label: 'About Me'
       },
       block3: {
-        start: 2433,
-        end: 3030,
+        start: 2583,
+        end: 3583,
         label: 'Projects'
       }
     };
