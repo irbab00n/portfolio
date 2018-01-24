@@ -25,11 +25,98 @@ class DesktopView extends React.Component {
           style.desktopBody
         )
       }>
-
         <div style={{
-          height: '100%',
+          height: '0px',
+          position: 'relative',
+          top: '200px',
+          left: 0
+        }}>
+          <img src="http://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Cloud-PNG-Transparent-Image.png" style={{height: '1500px'}}/>
+        </div>
+        <div id="Skills Component" style={
+          apply(
+            {
+              height: '400px',
+              width: '100%',
+              // backgroundColor: 'rgba(235, 235, 245, 0.3)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-evenly',
+              zIndex: 1
+            }
+          )
+        }>
+          <div style={{
+            width: '100%',
+            maxWidth: '1600px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <div style={{
+              height: '400px',
+              width: '100%',
+              maxWidth: '500px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}>
+              <img src="https://s3-us-west-1.amazonaws.com/cos-bytes.com/jsLogo_619x619.jpg" style={{height: '100px', margin: '50px 0 25px 0'}}/>
+              <span style={{
+                fontSize: '30px'
+              }}>
+                JavaScript
+              </span>
+              <div>
+
+              </div>
+            </div>
+
+            <div style={{
+              height: '400px',
+              width: '100%',
+              maxWidth: '500px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}>
+              <img src="https://s3-us-west-1.amazonaws.com/cos-bytes.com/nodeExpress.png" style={{height: '100px', margin: '50px 0 25px 0'}}/>
+              <span style={{
+                fontSize: '30px'
+              }}>
+                Node & Express
+              </span>
+              <div>
+
+              </div>
+            </div>
+
+            <div style={{
+              height: '400px',
+              width: '100%',
+              maxWidth: '500px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}>
+              <img src="https://s3-us-west-1.amazonaws.com/cos-bytes.com/jsLogo_619x619.jpg" style={{height: '100px', margin: '50px 0 25px 0'}}/>
+              <span style={{
+                fontSize: '30px'
+              }}>
+                JavaScript
+              </span>
+              <div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Resume Content" style={{
+          height: '1050px',
           width: '100%',
-          backgroundColor: 'rgba(255, 255, 255, 1.0)',
+          // backgroundColor: 'rgba(255, 255, 255, 1.0)',
+          backgroundRepeat: 'repeat-y',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-evenly',
@@ -42,7 +129,7 @@ class DesktopView extends React.Component {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            zIndex: 2
+            zIndex: 1
           }}>
 
             <div style={
@@ -50,12 +137,13 @@ class DesktopView extends React.Component {
                 {
                   height: '463px',
                   width: '100%',
-                  backgroundColor: 'rgba(235, 235, 245, 0.3)',
+                  backgroundColor: 'rgba(235, 235, 245, 0.4)',
                   boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  WebkitTransition: '0.4s'
+                  WebkitTransition: '0.4s',
+                  zIndex: 1
                 },
                 toggleLeftOff && {backgroundColor: 'rgba(235, 235, 245, 0.0)', boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.0)'}
               )
@@ -87,7 +175,7 @@ class DesktopView extends React.Component {
                   marginTop: '50px',
                   height: '537px',
                   width: '100%',
-                  backgroundColor: 'rgba(235, 235, 245, 0.3)',
+                  backgroundColor: 'rgba(235, 235, 245, 0.4)',
                   boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
                   display: 'flex',
                   flexDirection: 'column',
@@ -112,16 +200,18 @@ class DesktopView extends React.Component {
           </div>
 
           <div style={{
-            height: '100%',
+            alignSelf: 'flex-start',
+            height: '1050px',
             width: '100%',
             minWidth : '600px',
             maxWidth: '900px',
-            backgroundColor: 'rgba(235, 235, 245, 0.3)',
+            backgroundColor: 'rgba(235, 235, 245, 0.4)',
             boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'space-evenly'
+            justifyContent: 'space-evenly',
+            zIndex: 1
           }}>
             <span style={{paddingLeft: '50px', width: '100%', fontSize: '36px', }}>EXPERIENCE</span>
             <Experience />
@@ -130,24 +220,9 @@ class DesktopView extends React.Component {
           </div>
         </div>
 
-        <div style={
-          apply(
-            {
-              marginTop: '50px',
-              height: '400px',
-              width: '100%',
-              maxWidth: '1470px',
-              backgroundColor: 'rgba(235, 235, 245, 0.3)',
-              boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }
-          )
-        }>
-          Skills Section
-          <img src='https://s3-us-west-1.amazonaws.com/cos-bytes.com/skills_S3.png' />
-        </div>
+        
+
+
 
       </div>
 
