@@ -169,7 +169,7 @@ class Skills extends React.Component {
             <span style={{
               fontSize: '30px'
             }}>
-              Miscellaneous
+              Other Technologies
             </span>
             <div style={{
               margin: '25px 0',

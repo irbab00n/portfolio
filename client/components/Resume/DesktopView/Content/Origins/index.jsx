@@ -10,7 +10,7 @@ const Origins = (props) => {
       maxWidth: '1600px',
       display: 'flex',
       flexDirection: 'column',
-      alignitems: 'center',
+      alignItems: 'center',
     }}>
 
       <div id="Title" style={{
