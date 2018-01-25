@@ -57,9 +57,11 @@ class Jumbotron extends React.Component {
         <div style={
           apply(  
             {
-              height: '360px',
+              position: 'relative',
+              top: '-50px',
+              height: '480px',
               marginBottom: '30px',
-              width: '640px',
+              width: '720px',
               backgroundColor: 'rgba(240, 240, 240, 0.8)',
               display: 'flex',
               flexDirection: 'column',
@@ -72,7 +74,7 @@ class Jumbotron extends React.Component {
             apply(  
               {
                 position: 'relative',
-                top: '180px',
+                top: '240px',
                 left: '0px',
                 height: '30px',
                 fontSize: '20px',
@@ -84,11 +86,15 @@ class Jumbotron extends React.Component {
           }>
             Loading...
           </div>
-          <ReactPlayer url={'https://cosbyts.wistia.com/medias/gv3h2gdxoe'} style={{
-            position: 'relative',
-            top: '-24px',
-            boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.6)',
-          }}/>
+          <ReactPlayer url={'https://cosbyts.wistia.com/medias/gv3h2gdxoe'} 
+            style={{
+              position: 'relative',
+              top: '-24px',
+              boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.6)',
+            }}
+            height={480}
+            width={720}
+          />
         </div>
 
         <TextScroller

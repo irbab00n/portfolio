@@ -4,6 +4,7 @@ module.exports.body = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.0) 0%, rgba(226, 224, 230, 1.0) 30%)',
   justifyContent: 'space-evenly',
   WebkitTransition: '0.2s'
 };

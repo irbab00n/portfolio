@@ -1,7 +1,7 @@
 /* Education Slide Component Styles */
 
 module.exports.slideBody = {
-  height: '400px',
+  height: '300px',
   width: '95%',
   maxWidth: '900px',
   display: 'flex',

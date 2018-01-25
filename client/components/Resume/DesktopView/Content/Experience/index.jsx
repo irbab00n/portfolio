@@ -13,26 +13,7 @@ class ExperienceSlide extends React.Component {
     super(props);
     this.state = {
       loaded: false,
-      jobNames: ['hackReactor', 'eisenbeiss', 'republic'],
-      jobIndex: 0
     };
-    this.changeIndex = this.changeIndex.bind(this);
-  }
-
-  changeIndex(direction) {
-    let { jobNames, jobIndex } = this.state;
-    switch(direction) {
-      case 'left': 
-        if (jobIndex > 0) {
-          this.setState({jobIndex: jobIndex -= 1});
-        }
-        break;
-      case 'right':
-        if (jobIndex < jobNames.length - 1) {
-          this.setState({jobIndex: jobIndex += 1});
-        }
-        break;
-    }
   }
 
   componentDidMount() {
@@ -56,12 +37,15 @@ class ExperienceSlide extends React.Component {
       }>
 
         <Job 
-          job={jobs[jobNames[jobIndex]]}
+          job={jobs['hackReactor']}
         />
 
-        <Navigation 
-          prevClick={() => {this.changeIndex('left')}}
-          nextClick={() => {this.changeIndex('right')}}
+        <Job 
+          job={jobs['eisenbeiss']}
+        />
+
+        <Job 
+          job={jobs['republic']}
         />
 
       </div>

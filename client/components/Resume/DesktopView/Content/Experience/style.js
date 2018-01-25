@@ -1,7 +1,7 @@
 module.exports.slideBody = {
-  height: '400px',
+  height: '1000px',
   width: '100%',
-  maxWith: '800px',
+  maxWidth: '1500px',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -15,7 +15,7 @@ module.exports.slideBody_on = {
 
 
 module.exports.slideLayout = {
-  height: '250px',
+  height: '200px',
   width: '95%',
   display: 'flex',
   flexDirection: 'column',
@@ -24,7 +24,7 @@ module.exports.slideLayout = {
 
 
 module.exports.headerLayout = {
-  height: '70px',
+  height: '90px',
   paddingBottom: '30px',
   width: '100%',
   display: 'flex',
@@ -33,7 +33,8 @@ module.exports.headerLayout = {
 };
 
 module.exports.headerImage = {
-  width: '25%'
+  width: '25%',
+  maxWidth: '300px'
 };
 
 module.exports.headerTitleLayout = {
@@ -52,6 +53,7 @@ module.exports.headerTitleRange = {
 
 
 module.exports.descriptionLayout = {
+  marginTop: '20px',
   height: '250px',
   width: '100%',
   display: 'flex',
