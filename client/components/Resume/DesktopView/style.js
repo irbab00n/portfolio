@@ -5,7 +5,6 @@ module.exports.desktopBody = {
   overflow: 'hidden',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'space-between',
   WebkitTransition: '0.4s'
 };
 

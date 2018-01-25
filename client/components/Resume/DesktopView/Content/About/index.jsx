@@ -14,18 +14,36 @@ export default class About extends React.Component {
     return(
 
       <div style={{
-        height: '500px',
+        marginBottom: '50px',
+        height: '550px',
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.1)',
         zIndex: 1
       }}>
 
         <div style={{
-          height: '500px',
+          alignSelf: 'center',
+          marginTop: '30px',
+          height: '100px',
           width: '100%',
           maxWidth: '1600px',
+          display: 'flex',
+          alignItems: 'center',
+          fontSize: '60px',
+          color: 'rgba(0, 122, 193, 1.0)',
+        }}>
+          <span style={{marginLeft: '50px'}}>ABOUT ME</span>
+        </div>
+
+
+        <div style={{
+          alignSelf: 'center',
+          height: '550px',
+          width: '100%',
+          maxWidth: '1500px',
           display: 'flex',
         }}>
 
@@ -34,22 +52,14 @@ export default class About extends React.Component {
           <div style={
             apply(
               {
-                marginTop: '70px',
                 width: '100%',
                 display: 'flex',
-                flexDirection: 'column',
                 WebkitTransition: '0.4s'
               }
             )
           }>
-            <div style={{
-              height: '65px',
-              fontSize: '36px',
-              color: 'rgba(0, 122, 193, 1.0)',
-            }}>
-              <span>ABOUT ME</span>
-            </div>
             <span style={{
+              marginTop: '30px',
               width: '95%',
               fontSize: '16px',
               lineHeight: '1.5'

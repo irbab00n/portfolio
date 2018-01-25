@@ -16,7 +16,7 @@ export default class ImageBlock extends React.Component {
       <div style={
         apply(
           {
-            height: '500px',
+            height: '400px',
             width: '40%',
             minWidth: '350px',
             display: 'flex',
@@ -32,7 +32,7 @@ export default class ImageBlock extends React.Component {
           style={
             apply(
               {
-                marginTop: '70px',
+                marginTop: '30px',
                 height: '250px',
                 WebkitTransition: '0.4s'
               }
