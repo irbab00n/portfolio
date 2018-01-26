@@ -14,7 +14,7 @@ export default class About extends React.Component {
     return(
 
       <div style={{
-        marginBottom: '50px',
+        marginBottom: '25px',
         height: '550px',
         width: '100%',
         display: 'flex',

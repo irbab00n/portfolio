@@ -5,27 +5,13 @@ const Origins = (props) => {
   return (
 
     <div id="Origins body" style={{
-      height: '950px',
+      height: '870px',
       width: '100%',
       maxWidth: '1600px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
     }}>
-
-      <div id="Title" style={{
-        marginBottom: '30px',
-        height: '50px',
-        width: '100%',
-        maxWidth: '1600px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        fontSize: '30px',
-        color: 'rgba(0, 122, 193, 1.0)',
-      }}>
-        <span style={{marginRight: '50px'}}>WHERE I COME FROM</span>
-      </div>
 
       <div id="Welding Row" style={{
         height: '450px',
@@ -125,7 +111,7 @@ const Origins = (props) => {
             fontSize: '16px',
             lineHeight: '1.5'
           }}>
-            Working for Eisenbeiss was one of best experiences of my life.  When I entered the company, my main responsibility was to degrease, clean, and recondition parts.  Over a couple months I was able to use resources available to teach myself how to read technical drawings and created the opportunity to advance within the company.  Soon enough, I would be re-assembling gearboxes that in a few short months would be shepherding commuters on the light-rail system in St. Louis, MI.  The next would be a machine fresh off the potato chip extrusion line from Frito-Lay, due for a service.  The work was great because my creative mind was stimulated and my hands were busy building.  Every new gearbox was a new puzzle to solve, and I loved it.  It was during this time when a personal hobby turned into an exciting new career prospect.
+            Working for Eisenbeiss was one of best experiences of my life.  When I entered the company, my main responsibility was to degrease, clean, and recondition parts.  Over a couple months I was able to use resources available to teach myself how to read technical drawings and created the opportunity to advance within the company.  Soon enough, I would be re-assembling gearboxes that in a few short months would be shepherding commuters on the light-rail system in St. Louis, MI.  The next would be a machine fresh off the potato chip extrusion line from Frito-Lay, due for a service.  The work was great because my creative mind was stimulated and my hands were busy building.  Every new gearbox was a new puzzle to solve, and I loved it.  However, it was during this time when a personal hobby turned into an exciting new career prospect.
           </div>
 
         </div>

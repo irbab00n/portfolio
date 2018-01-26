@@ -5,9 +5,6 @@ import About from './About/index.jsx';
 import Origins from './Origins/index.jsx';
 import Journey from './Journey/index.jsx';
 
-import Experience from './Experience/index.jsx';
-import Education from './Education/index.jsx';
-
 
 class Content extends React.Component {
   constructor(props) {

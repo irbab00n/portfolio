@@ -1,8 +1,8 @@
 module.exports.body = {
-  padding: '50px 0',
-  height: '1000px',
+  height: '1138px',
   width: '100%',
   display: 'flex',
+  flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: 'rgb(35, 35, 35)',

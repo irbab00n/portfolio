@@ -26,7 +26,7 @@ const calculatePercentage = (i, destination, originalGap) => {
 };
 
 const calculateCoefficient = (i, destination, originalGap) => {
-    return  (Math.PI - (Math.PI * calculatePercentage(i, destination, originalGap))); // Percentage based on visual testing
+  return Math.round(90 * calculatePercentage(i, destination, originalGap));
 };
 
 module.exports.accelerate = (start, destination) => {
@@ -40,18 +40,18 @@ module.exports.accelerate = (start, destination) => {
   let int = setInterval(() => {
     if (scrollDown) {
       window.scrollTo(0, i);
-      i += (9.8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
+      i += (100 - calculateCoefficient(i, destination, originalGap)); // Incrementation based on visual testing
       if (i >= destination) {
         clearInterval(int);
       }
     } else {
       window.scrollTo(0, i);
-      i -= (9.8 * (1 + calculateCoefficient(i, destination, originalGap))); // Incrementation based on visual testing
+      i -= (100 - calculateCoefficient(i, destination, originalGap)); // Incrementation based on visual testing
       if (i <= destination) {
         clearInterval(int);
       }
     }
-  }, 0.1);
+  }, 0.5);
 }
 
 // must update the speed while the start isn't half of the difference between itself and the destination
