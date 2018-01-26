@@ -21,6 +21,13 @@ class LinkRow extends React.Component {
       <div style={style.navigation_body}>
         <NavLink name={'About Me'} onClick={animationChooser(yOffset, targets.block2.start + 10 , scrollEffects)}/>
         <NavLink name={'Projects'} onClick={animationChooser(yOffset, targets.block3.start + 10, scrollEffects)}/>
+        <a
+          style={{color: 'rgba(0, 122, 193, 1.0)', textDecoration: 'none'}}
+          href="https://s3-us-west-1.amazonaws.com/cos-bytes.com/resume.pdf" 
+          target="_blank"
+        >
+          <NavLink name={'Resume'} onClick={() => {}}/>
+        </a>
       </div>
 
     );
