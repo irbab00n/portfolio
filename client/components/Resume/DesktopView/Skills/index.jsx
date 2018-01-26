@@ -53,7 +53,7 @@ class Skills extends React.Component {
               height: '100px',
               width: '100%',
             }}>
-              <center>Well practiced in writing <br/> performant ES6 to power all custom <br/> features seen in this application!</center>
+              <center>Well practiced in writing <br/> performant ES6 to power all custom <br/> features seen in this application</center>
             </div>
           </div>
 
