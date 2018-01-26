@@ -11,24 +11,20 @@ export default class ImageBlock extends React.Component {
 
   render() {
 
-    const { toggleLeftOff } = this.props;
-
     return (
 
       <div style={
         apply(
           {
-            height: '463px',
-            width: '100%',
-            backgroundColor: 'rgba(245, 245, 245, 0.6)',
-            boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.2)',
+            height: '400px',
+            width: '40%',
+            minWidth: '350px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             WebkitTransition: '0.4s',
             zIndex: 1
           },
-          toggleLeftOff && {backgroundColor: 'rgba(245, 245, 245, 0.0)', boxShadow: '0 6px 12px 0 rgba(0, 0, 0, 0.0)'}
         )
       }>
         <img 
@@ -36,7 +32,7 @@ export default class ImageBlock extends React.Component {
           style={
             apply(
               {
-                marginTop: '40px',
+                marginTop: '30px',
                 height: '250px',
                 WebkitTransition: '0.4s'
               }

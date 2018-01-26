@@ -51,6 +51,20 @@ class ProjectView extends React.Component {
 
       <div style={style.body}>
 
+        <div style={{
+          margin: '25px 0',
+          alignSelf: 'center',
+          height: '100px',
+          width: '100%',
+          maxWidth: '1600px',
+          display: 'flex',
+          alignItems: 'center',
+          fontSize: '60px',
+          color: 'rgba(0, 122, 193, 1.0)',
+        }}>
+          <span style={{marginLeft: '50px'}}>MY PROJECTS</span>
+        </div>
+
         <div style={style.layeringAncestor}>
 
           <ProjectTabs 

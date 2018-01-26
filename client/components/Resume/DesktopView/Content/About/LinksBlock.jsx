@@ -17,7 +17,6 @@ export default class LinksBlock extends React.Component {
         marginTop: '32px',
         height: '100px',
         width: '100%',
-        backgroundColor: 'rgba(245, 245, 245, 0.5)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -56,7 +55,7 @@ export default class LinksBlock extends React.Component {
           justifyContent: 'center',
           fontSize: '14px'
         }}>
-          <span style={{fontWeight: 'bold'}}>Contact Me:</span>&nbsp;&nbsp;thomas@cos-bytes.com
+          <span style={{fontWeight: 'bold', fontSize: '16px'}}>Email:</span>&nbsp;&nbsp;thomas@cos-bytes.com
         </div>
       </div>
 
