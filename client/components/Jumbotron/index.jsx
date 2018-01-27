@@ -93,7 +93,7 @@ class Jumbotron extends React.Component {
               boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.6)',
             }}
             height={480}
-            width={720}
+            width={853}
           />
         </div>
 
