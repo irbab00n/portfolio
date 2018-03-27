@@ -16,24 +16,14 @@ class Skills extends React.Component {
 
       <div style={
         apply(
-          {
-            height: '800px',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.0) 0%, rgba(226, 224, 230, 0.4) 50%)',
-            zIndex: 1
-          }
+          style.skillsList_container
         )
       }>
-        <div style={{
-          width: '100%',
-          maxWidth: '1600px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
+        <div style={
+          apply(
+            style.skillsList_grid
+          )
+        }>
           <div style={{
             height: '400px',
             width: '100%',
