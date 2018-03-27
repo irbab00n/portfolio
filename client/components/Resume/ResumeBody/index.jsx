@@ -6,7 +6,7 @@ import Content from './Content/index.jsx';
 
 import style from './style';
 
-class DesktopView extends React.Component {
+export default class ResumeBody extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -21,7 +21,7 @@ class DesktopView extends React.Component {
 
       <div style={
         apply(
-          style.desktopBody
+          style.body
         )
       }>
         <div style={{
@@ -50,6 +50,3 @@ class DesktopView extends React.Component {
 
   }
 }
-
-
-export default DesktopView;

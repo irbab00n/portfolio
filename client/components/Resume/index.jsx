@@ -1,7 +1,6 @@
 import React from 'react';
 
-import DesktopView from './DesktopView/index.jsx';
-import MobileView from './MobileView/index.jsx';
+import ResumeBody from './ResumeBody/index.jsx';
 
 class Resume extends React.Component {
   constructor(props) {
@@ -21,17 +20,12 @@ class Resume extends React.Component {
 
     return (
 
-      mobileToggle
-        ? <MobileView
-            mobileToggle={mobileToggle}
-            orientationFlag={orientationFlag}
-            yOffset={yOffset}
-          />
-        : <DesktopView 
-            screenWidth={screenWidth}
-            screenHeight={screenHeight}
-            yOffset={yOffset}
-          />
+      <ResumeBody 
+        mobileToggle={mobileToggle}
+        screenWidth={screenWidth}
+        screenHeight={screenHeight}
+        yOffset={yOffset}
+      />
 
     );
 
