@@ -12,7 +12,7 @@ module.exports.body = {
 };
 
 module.exports.body_mobile_landscape = {
-  height: '550px'
+
 };
 
 module.exports.body_mobile_portrait = {

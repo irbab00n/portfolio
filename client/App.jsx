@@ -54,20 +54,39 @@ class App extends React.Component {
     const mobileToggle = screenWidth < 1000; // True: Mobile View, False: Desktop View
     const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscape
     let targets = {
-      block1: {
-        start: 0,
-        end: 950,
-        label: 'Home'
+      desktop: {
+        block1: {
+          start: 0,
+          end: 950,
+          label: 'Home'
+        },
+        block2: {
+          start: 951,
+          end: 4525,
+          label: 'About Me'
+        },
+        block3: {
+          start: 4526,
+          end: 5727,
+          label: 'Projects'
+        }
       },
-      block2: {
-        start: 951,
-        end: 4525,
-        label: 'About Me'
-      },
-      block3: {
-        start: 4526,
-        end: 5727,
-        label: 'Projects'
+      mobile: {
+        block1: {
+          start: 0,
+          end: 880,
+          label: 'Home'
+        },
+        block2: {
+          start: 881,
+          end: 4525,
+          label: 'About Me'
+        },
+        block3: {
+          start: 4526,
+          end: 5727,
+          label: 'Projects'
+        }
       }
     };
 
