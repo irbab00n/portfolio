@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Precache from './components/Precache/index.jsx';
-import Navbar from './components/Navigation/index.jsx';
+import Navbar from './components/Navbar/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
 import Projects from './components/Projects/index.jsx';
@@ -73,19 +73,40 @@ class App extends React.Component {
       },
       mobile: {
         block1: {
-          start: 0,
-          end: 880,
-          label: 'Home'
+          portrait:{
+            start: 0,
+            end: 900,
+            label: 'Home'
+          },
+          landscape:{
+            start: 0,
+            end: 960,
+            label: 'Home'
+          }
         },
         block2: {
-          start: 881,
-          end: 4525,
-          label: 'About Me'
+          portrait:{
+            start: 901,
+            end: 3500,
+            label: 'About Me'
+          },
+          landscape:{
+            start: 961,
+            end: 4440,
+            label: 'About Me'
+          }
         },
         block3: {
-          start: 4526,
-          end: 5727,
-          label: 'Projects'
+          portrait:{
+            start: 3501,
+            end: 3894,
+            label: 'Projects'
+          },
+          landscape:{
+            start: 4440,
+            end: 5085,
+            label: 'Projects'
+          }
         }
       }
     };
