@@ -56,11 +56,11 @@ module.exports.dropdownBody_collapsed = {
 module.exports.dropdownBody_expanded = {
   display: 'flex',
   justifyContent: 'center',
-  height: '150px'
+  height: '225px'
 };
 
 module.exports.dropdownBody_mobile = {
-  height: '200px'
+  height: '300px'
 };
 
 

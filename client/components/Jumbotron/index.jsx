@@ -42,9 +42,7 @@ class Jumbotron extends React.Component {
 
       <div style={
         apply(
-          style.body,
-          mobileToggle && style.body_mobile_landscape,
-          (mobileToggle && orientationFlag) && style.body_mobile_portrait
+          style.body
         )
       }>
 

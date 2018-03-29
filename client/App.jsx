@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Precache from './components/Precache/index.jsx';
-import Navbar from './components/Navigation/index.jsx';
+import Navbar from './components/Navbar/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
 import Projects from './components/Projects/index.jsx';
@@ -54,20 +54,60 @@ class App extends React.Component {
     const mobileToggle = screenWidth < 1000; // True: Mobile View, False: Desktop View
     const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscape
     let targets = {
-      block1: {
-        start: 0,
-        end: 950,
-        label: 'Home'
+      desktop: {
+        block1: {
+          start: 0,
+          end: 950,
+          label: 'Home'
+        },
+        block2: {
+          start: 951,
+          end: 4525,
+          label: 'About Me'
+        },
+        block3: {
+          start: 4526,
+          end: 5727,
+          label: 'Projects'
+        }
       },
-      block2: {
-        start: 951,
-        end: 4525,
-        label: 'About Me'
-      },
-      block3: {
-        start: 4526,
-        end: 5727,
-        label: 'Projects'
+      mobile: {
+        block1: {
+          portrait:{
+            start: 0,
+            end: 900,
+            label: 'Home'
+          },
+          landscape:{
+            start: 0,
+            end: 960,
+            label: 'Home'
+          }
+        },
+        block2: {
+          portrait:{
+            start: 901,
+            end: 3850,
+            label: 'About Me'
+          },
+          landscape:{
+            start: 961,
+            end: 4440,
+            label: 'About Me'
+          }
+        },
+        block3: {
+          portrait:{
+            start: 3800,
+            end: 3894,
+            label: 'Projects'
+          },
+          landscape:{
+            start: 4440,
+            end: 5085,
+            label: 'Projects'
+          }
+        }
       }
     };
 
