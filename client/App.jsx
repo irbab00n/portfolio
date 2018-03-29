@@ -87,7 +87,7 @@ class App extends React.Component {
         block2: {
           portrait:{
             start: 901,
-            end: 3500,
+            end: 3850,
             label: 'About Me'
           },
           landscape:{
@@ -98,7 +98,7 @@ class App extends React.Component {
         },
         block3: {
           portrait:{
-            start: 3501,
+            start: 3800,
             end: 3894,
             label: 'Projects'
           },
