@@ -37,5 +37,15 @@ module.exports.skillsList_card = {
   maxWidth: '500px',
   display: 'flex',
   flexDirection: 'column',
+  WebkitTransition: '1.0s ease',
   alignItems: 'center',
+  perspective: '0px',
+  transform: 'scale(1.0, 1.0)'
+
 };
+
+module.exports.skillsList_card_hovered = {
+  backgroundColor: 'rgba(230, 230, 240, 0.4)',
+  perspective: '1000px',
+  transform: 'scale(1.05, 1.05)'
+}

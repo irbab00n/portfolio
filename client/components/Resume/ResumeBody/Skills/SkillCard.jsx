@@ -6,12 +6,12 @@ import style from './style';
 export default class SkillCard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      hovered: false
+    };
   }
 
   render() {
-
-    // need an image, a header, and an element to place as the description
 
     let {
       image,
@@ -19,15 +19,24 @@ export default class SkillCard extends React.Component {
       description
     } = this.props;
 
+    let {
+      hovered
+    } = this.state;
+
     let splitDescription = description.split('*');
 
     return (
 
-      <div style={
-        apply(
-          style.skillsList_card
-        )
-      }>
+      <div 
+        style={
+          apply(
+            style.skillsList_card,
+            hovered && style.skillsList_card_hovered
+          )
+        }
+        onMouseEnter={() => this.setState({hovered: true})}
+        onMouseLeave={() => this.setState({hovered: false})}
+      >
         <img src={image} style={{height: '100px', margin: '50px 0 25px 0'}}/>
         <span style={{
           fontSize: '30px'
@@ -39,7 +48,7 @@ export default class SkillCard extends React.Component {
           height: '100px',
           width: '100%',
         }}>
-          <center>
+          <center style={{margin: '0 14px'}}>
             {
               splitDescription
             }
