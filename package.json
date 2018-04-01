@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "webpack --watch",
+    "build": "webpack --mode production",
+    "compile": "webpack --mode development --watch",
     "server-dev": "nodemon server",
-    "server-deploy": "nodejs server",
-    "start": "npm run compile & npm run server-dev"
+    "start-dev": "npm run compile & npm run server-dev",
+    "start": "npm run build & node server"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,8 @@
     "mysql": "^2.15.0",
     "react-css-in-js-animator": "^1.0.0",
     "react-player": "^0.25.3",
-    "webpack": "^3.8.1"
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
