@@ -38,7 +38,8 @@
     "mysql": "^2.15.0",
     "react-css-in-js-animator": "^1.0.0",
     "react-player": "^0.25.3",
-    "webpack": "^4.4.1"
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
