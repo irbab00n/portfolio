@@ -1,6 +1,6 @@
-#Thomas Cosby's Portfolio
+# Thomas Cosby's Portfolio
 
-###Welcome to my portfolio repository!
+### Welcome to my portfolio repository!
 
 This portfolio has been a labor of love as I am not only able to display my projects, but also to continue to learn and experiment.
 
