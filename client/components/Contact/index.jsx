@@ -36,7 +36,7 @@ class Contact extends React.Component {
             width: '100%',
             fontSize: '14px',
           }}>
-            Email: thomas@cos-bytes.com
+            Email: thomas@cosbytes.com
           </div>
 
           <div style={{

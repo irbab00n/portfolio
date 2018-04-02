@@ -55,7 +55,7 @@ export default class LinksBlock extends React.Component {
           justifyContent: 'center',
           fontSize: '14px'
         }}>
-          <span style={{fontWeight: 'bold', fontSize: '16px'}}>Email:</span>&nbsp;&nbsp;thomas@cos-bytes.com
+          <span style={{fontWeight: 'bold', fontSize: '16px'}}>Email:</span>&nbsp;&nbsp;thomas@cosbytes.com
         </div>
       </div>
 
