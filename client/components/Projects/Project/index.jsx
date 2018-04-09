@@ -1,8 +1,7 @@
 import React from 'react';
+import apply from 'applystyles';
 
 import style from './style';
-
-// container with a list with list-items
 
 export default class ProjectsList extends React.Component {
   constructor(props) {
@@ -12,10 +11,25 @@ export default class ProjectsList extends React.Component {
 
   render() {
 
+    const {
+      screenWidth,
+      screenHeight,
+      mobileToggle,
+      orientationFlag,
+      yOffset
+    } = this.props;
+
     return (
 
-      <div style={style.list_body}>
-        
+      <div 
+        style={
+          apply(
+            style.list_body,
+            mobileToggle && style.list_body_mobile
+          )
+        }
+      >
+        Project
       </div>
 
     );
