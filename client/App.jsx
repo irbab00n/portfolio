@@ -88,24 +88,24 @@ class App extends React.Component {
         block2: {
           portrait:{
             start: 901,
-            end: 3850,
+            end: 4364,
             label: 'About Me'
           },
           landscape:{
             start: 961,
-            end: 4440,
+            end: 4439,
             label: 'About Me'
           }
         },
         block3: {
           portrait:{
-            start: 3800,
-            end: 3894,
+            start: 4365,
+            end: getDocumentHeight(),
             label: 'Projects'
           },
           landscape:{
             start: 4440,
-            end: 5085,
+            end: getDocumentHeight(),
             label: 'Projects'
           }
         }

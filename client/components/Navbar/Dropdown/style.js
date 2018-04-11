@@ -9,7 +9,7 @@ module.exports.buttonBody = {
   alignItems: 'center',
   borderWidth: '2px',
   borderRadius: '2px',
-  WebkitTransition: '0.2s'
+  WebkitTransition: '0.5s'
 };
 
 module.exports.buttonBody_mobile = {

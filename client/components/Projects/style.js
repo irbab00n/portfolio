@@ -42,7 +42,7 @@ module.exports.title_text_mobile_portrait = {
 };
 
 module.exports.title_text_mobile_landscape = {
-  fontSize: '10vh',
+  fontSize: '12vh',
   marginLeft: '5vw'
 };
 
@@ -74,5 +74,5 @@ module.exports.description_text_mobile_portrait = {
 }
 
 module.exports.description_text_mobile_landscape = {
-  fontSize: '4vh',
+  fontSize: '5vh',
 };

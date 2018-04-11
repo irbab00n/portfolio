@@ -14,16 +14,6 @@ class Projects extends React.Component {
     super(props);
   }
 
-  /*
-  
-  need 3 appearances:
-
-  Desktop
-  Mobile (portrait)
-  Mobile (landscape)
-
-  */
-
   render() {
 
     const {
@@ -72,7 +62,7 @@ class Projects extends React.Component {
           <p style={
             apply(
               style.description_text,
-              style.description_text_mobile_landscape,
+              mobileToggle && style.description_text_mobile_landscape,
               orientationFlag && style.description_text_mobile_portrait,
             )
           }>
@@ -81,7 +71,7 @@ class Projects extends React.Component {
           <p style={
             apply(
               style.description_text,
-              style.description_text_mobile_landscape,
+              mobileToggle && style.description_text_mobile_landscape,
               orientationFlag && style.description_text_mobile_portrait,
             )
           }>
