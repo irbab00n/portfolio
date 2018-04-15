@@ -27,7 +27,11 @@ export default class Carousel extends React.Component {
         id="carousel-box"
         style={
           apply(
-            
+            style.carousel_body,
+            mobileToggle && style.carousel_body_mobile_landscape,
+            orientationFlag && style.carousel_body_mobile_portrait,
+            (collapsed && mobileToggle) && style.carousel_body_collapsed_mobile_landscape,
+            (collapsed && orientationFlag) && style.carousel_body_collapsed_mobile_portrait
           )
         }
       >

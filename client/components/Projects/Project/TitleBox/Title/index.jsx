@@ -24,7 +24,7 @@ export default class Title extends React.Component {
     return (
 
       <div 
-        id="left-side"
+        id="title"
         style={
           apply(
             style.title_block,

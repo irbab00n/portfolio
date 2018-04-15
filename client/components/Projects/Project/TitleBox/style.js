@@ -4,12 +4,13 @@ module.exports.container_body = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  height: '30%',
   width: '100%',
   WebkitTransition: '0.2s ease-out',
 };
 
 module.exports.container_body_mobile_landscape = {
-  
+  height: '50%'
 };
 
 module.exports.container_body_mobile_portrait = {
@@ -32,7 +33,7 @@ module.exports.container_body_collapsed_mobile_landscape = {
 };
 
 module.exports.container_body_collapsed_mobile_portrait = {
-  height: '40%',
+  height: '50%',
   width: '100%'
 };
 

@@ -19,7 +19,6 @@ module.exports.description_block_collapsed = {
 
 module.exports.description_text = {
   overflowY: 'scroll',
-  padding: '5% 5%',
   width: '90%',
   fontSize: '80%',
   lineHeight: '1.5',

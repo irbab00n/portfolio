@@ -21,13 +21,13 @@ export default class Description extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.collapsed && this.props.collapsed) {
+    if (!nextProps.collapsed && this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
       this.fadeInAnimation();
     }
   }
 
   shouldComponentUpdate(nextProps, prevState) {
-    if (nextProps.collapsed !== this.props.collapsed || prevState.fadeIn !== this.state.fadeIn) {
+    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag || prevState.fadeIn !== this.state.fadeIn) {
       return true
     } else {
       return false;
