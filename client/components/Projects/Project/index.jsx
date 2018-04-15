@@ -46,7 +46,9 @@ export default class Project extends React.Component {
             style.list_body,
             mobileToggle && style.list_body_mobile_landscape,
             orientationFlag && style.list_body_mobile_portrait,
-            collapsed && style.list_body_collapsed
+            collapsed && style.list_body_collapsed,
+            (collapsed && mobileToggle) && style.list_body_collapsed_mobile_landscape,
+            (collapsed && orientationFlag) && style.list_body_collapsed_mobile_portrait
           )
         }
       >
@@ -84,7 +86,7 @@ export default class Project extends React.Component {
                 {height: '70%'},
                 style.project_content_container,
                 collapsed && style.project_content_container_collapsed,
-                {backgroundColor: 'rgba(200, 200, 200, 1.0)'}
+                {backgroundColor: 'rgba(120, 120, 120, 1.0)'}
               )
             }
           >

@@ -1,24 +1,36 @@
+// expanded styling
+
 module.exports.list_body = {
   display: 'flex',
   flexDirection: 'column',
   width: '100vw',
-  height: '100vh',
+  height: '90vh',
   backgroundColor: 'rgba(200, 200, 200, 1.0)',
   WebkitTransition: '0.5s'
 };
 
 module.exports.list_body_mobile_landscape = {
-
+  height: '180vh'
 };
 
 module.exports.list_body_mobile_portrait = {
   height: '200vh'
 };
 
+
+// collapsed styling
+
 module.exports.list_body_collapsed = {
-  height: '86vh'
+  height: '40vh'
 };
 
+module.exports.list_body_collapsed_mobile_landscape = {
+  height: '80vh'
+};
+
+module.exports.list_body_collapsed_mobile_portrait = {
+  height: '100vh'
+};
 
 
 
