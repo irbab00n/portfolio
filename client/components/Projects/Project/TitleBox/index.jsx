@@ -30,10 +30,10 @@ export default class TitleBox extends React.Component {
         id="title-box"
         style={
           apply(
-            {height: '30%'},
             style.container_body,
             collapsed && style.container_body_collapsed,
-            {backgroundColor: 'rgba(210, 210, 210, 1.0)'}
+            mobileToggle && style.container_body_mobile_landscape,
+            orientationFlag && style.container_body_mobile_portrait,
           )
         }
       >

@@ -20,8 +20,18 @@ export default class Description extends React.Component {
     reel();
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps);
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.collapsed && this.props.collapsed) {
+      this.fadeInAnimation();
+    }
+  }
+
+  shouldComponentUpdate(nextProps, prevState) {
+    if (nextProps.collapsed !== this.props.collapsed || prevState.fadeIn !== this.state.fadeIn) {
+      return true
+    } else {
+      return false;
+    }
   }
 
   render() {
@@ -35,6 +45,8 @@ export default class Description extends React.Component {
       orientationFlag,
       yOffset
     } = this.props;
+
+    const { fadeIn } = this.state;
 
     return (
 
@@ -50,7 +62,10 @@ export default class Description extends React.Component {
         <div
           style={
             apply(
-              style.description_text
+              style.description_text,
+              fadeIn && style.description_text_fadein,
+              mobileToggle && style.description_text_mobile_landscape,
+              orientationFlag && style.description_text_mobile_portrait
             )
           }
         >

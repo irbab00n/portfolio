@@ -1,6 +1,7 @@
 module.exports.description_block = {
   overflowY: 'scroll',
   width: '50%',
+  height: '100%',
   display: 'flex',
   justifyContent: 'center',
 };
@@ -22,5 +23,19 @@ module.exports.description_text = {
   width: '90%',
   fontSize: '80%',
   lineHeight: '1.5',
-  color: 'rgb(35, 35, 35)'
+  color: 'rgba(35, 35, 35, 1.0)',
+  WebkitTransition: 'ease-in 0.2s'
 }
+
+module.exports.description_text_fadein = {
+  color: 'rgba(35, 35, 35, 0.0)',
+  WebkitTransition: 'none'
+}
+
+module.exports.description_text_mobile_landscape = {
+
+};
+
+module.exports.description_text_mobile_portrait = {
+  
+};

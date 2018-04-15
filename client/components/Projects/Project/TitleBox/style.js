@@ -12,3 +12,11 @@ module.exports.container_body_collapsed = {
   flexDirection: 'column',
   WebkitTransition: '0.5s ease-out',
 };
+
+module.exports.container_body_mobile_landscape = {
+  
+};
+
+module.exports.container_body_mobile_portrait = {
+  flexDirection: 'column',
+};

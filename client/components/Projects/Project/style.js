@@ -7,12 +7,16 @@ module.exports.list_body = {
   WebkitTransition: '0.5s'
 };
 
-module.exports.list_body_mobile = {
-  width: '100vw',
+module.exports.list_body_mobile_landscape = {
+
+};
+
+module.exports.list_body_mobile_portrait = {
+  height: '200vh'
 };
 
 module.exports.list_body_collapsed = {
-  height: '40vh'
+  height: '86vh'
 };
 
 
@@ -30,9 +34,19 @@ module.exports.project_container = {
   WebkitTransition: '0.5s'
 };
 
+module.exports.project_container_mobile_landscape = {
+
+};
+
+module.exports.project_container_mobile_portrait = {
+
+};
+
 module.exports.project_container_collapsed = {
   flexDirection: 'row',
 };
+
+
 
 
 

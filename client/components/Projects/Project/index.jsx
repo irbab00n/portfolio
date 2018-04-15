@@ -39,11 +39,13 @@ export default class Project extends React.Component {
 
     return (
 
-      <div 
+      <div
+        id="project-container"
         style={
           apply(
             style.list_body,
-            mobileToggle && style.list_body_mobile,
+            mobileToggle && style.list_body_mobile_landscape,
+            orientationFlag && style.list_body_mobile_portrait,
             collapsed && style.list_body_collapsed
           )
         }
@@ -56,10 +58,13 @@ export default class Project extends React.Component {
         />
 
         <div
+          id="project-content"
           style={
             apply(
               style.project_container,
-              collapsed && style.project_container_collapsed
+              mobileToggle && style.project_container_mobile_landscape,
+              orientationFlag && style.project_container_mobile_portrait,
+              collapsed && style.project_container_collapsed,
             )
           }
         >

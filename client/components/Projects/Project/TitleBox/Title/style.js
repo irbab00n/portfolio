@@ -16,3 +16,18 @@ module.exports.title_block_collapsed = {
   alignItems: 'center',
   justifyContent: 'center'
 };
+
+module.exports.title_block_mobile_landscape = {
+
+};
+
+module.exports.title_block_mobile_portrait = {
+  height: '50vh',
+  width: '100vw',
+};
+
+
+
+module.exports.title_text = {};
+
+module.exports.title_text_collapsed = {};
