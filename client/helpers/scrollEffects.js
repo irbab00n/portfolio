@@ -33,7 +33,7 @@ module.exports.accelerate = (start, destination) => {
   clearInterval(int);
   let i = start;
   let originalGap = Math.abs(start - destination);
-  if (originalGap <= 10) {
+  if (originalGap <= 5) {
     return;
   } 
   let scrollDown = start <= destination; // True: Scroll Down, False: Scroll Up
@@ -41,13 +41,13 @@ module.exports.accelerate = (start, destination) => {
     if (scrollDown) {
       window.scrollTo(0, i);
       i += (100 - calculateCoefficient(i, destination, originalGap)); // Incrementation based on visual testing
-      if (i >= destination) {
+      if (i > destination) {
         clearInterval(int);
       }
     } else {
       window.scrollTo(0, i);
       i -= (100 - calculateCoefficient(i, destination, originalGap)); // Incrementation based on visual testing
-      if (i <= destination) {
+      if (i < destination) {
         clearInterval(int);
       }
     }
