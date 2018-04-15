@@ -10,7 +10,8 @@ module.exports.container_body = {
 };
 
 module.exports.container_body_mobile_landscape = {
-  height: '50%'
+  height: '50%',
+  flexDirection: 'column'
 };
 
 module.exports.container_body_mobile_portrait = {

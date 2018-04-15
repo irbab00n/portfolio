@@ -55,17 +55,25 @@ export default class Description extends React.Component {
         style={
           apply(
             style.description_block,
-            collapsed && style.description_block_collapsed
+            mobileToggle && style.description_block_mobile_landscape,
+            orientationFlag && style.description_block_mobile_portrait,
+            collapsed && style.description_block_collapsed,
+            (collapsed && mobileToggle) && style.description_block_collapsed_mobile_landscape,
+            (collapsed && orientationFlag) && style.description_block_collapsed_mobile_portrait
           )
         }
       >
         <div
+          id="description-text"
           style={
             apply(
               style.description_text,
               fadeIn && style.description_text_fadein,
               mobileToggle && style.description_text_mobile_landscape,
-              orientationFlag && style.description_text_mobile_portrait
+              orientationFlag && style.description_text_mobile_portrait,
+              collapsed && style.description_text_collapsed,
+              (collapsed && mobileToggle) && style.description_text_collapsed_mobile_landscape,
+              (collapsed && orientationFlag) && style.description_text_collapsed_mobile_portrait
             )
           }
         >

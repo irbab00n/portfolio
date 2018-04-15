@@ -10,7 +10,7 @@ module.exports.list_body = {
 };
 
 module.exports.list_body_mobile_landscape = {
-  height: '200vh'
+  height: '174vh'
 };
 
 module.exports.list_body_mobile_portrait = {
@@ -25,7 +25,7 @@ module.exports.list_body_collapsed = {
 };
 
 module.exports.list_body_collapsed_mobile_landscape = {
-  height: '80vh'
+  height: '87vh'
 };
 
 module.exports.list_body_collapsed_mobile_portrait = {
