@@ -1,6 +1,9 @@
 import React from 'react';
 import apply from 'applystyles';
 
+import Title from './Title/index.jsx';
+import Description from './Description/index.jsx';
+
 import style from './style';
 
 export default class TitleBox extends React.Component {
@@ -11,7 +14,15 @@ export default class TitleBox extends React.Component {
 
   render() {
 
-    const { collapsed } = this.props;
+    const {
+      collapsed,
+      project,
+      screenWidth,
+      screenHeight,
+      mobileToggle,
+      orientationFlag,
+      yOffset
+    } = this.props;
 
     return (
 
@@ -27,31 +38,26 @@ export default class TitleBox extends React.Component {
         }
       >
 
-        <div 
-          id="left-side"
-          style={
-            apply(
-              style.title_block,
-              collapsed && style.title_block_collapsed
-            )
-          }
-        >
-          Title
-        </div>
+        <Title 
+          collapsed={collapsed}
+          project={project}
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={yOffset}
+        />
 
 
-
-        <div 
-          id="right-side"
-          style={
-            apply(
-              style.description_block,
-              collapsed && style.description_block_collapsed
-            )
-          }
-        >
-          Right
-        </div>
+        <Description 
+          collapsed={collapsed}
+          project={project}
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={yOffset}
+        />
 
 
       </div>
@@ -62,8 +68,11 @@ export default class TitleBox extends React.Component {
 
 /*
 
-Project Title Label
-Project Title
+Project Title Block
+  Project Title Label
+  Project Title
+
+Deployment Link
 
 Project Description Label
 Project Description

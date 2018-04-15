@@ -14,6 +14,10 @@ class Projects extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    console.log(document.getElementById('projects-body').getBoundingClientRect().top);
+  }
+
   render() {
 
     const {
@@ -26,7 +30,9 @@ class Projects extends React.Component {
 
     return (
 
-      <div style={style.body}> 
+      <div
+        id="projects-body"
+        style={style.body}> 
 
 
         <div 

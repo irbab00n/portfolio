@@ -6,7 +6,7 @@ import ToggleStrip from './ToggleStrip/index.jsx';
 
 import style from './style';
 
-export default class ProjectsList extends React.Component {
+export default class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -65,6 +65,12 @@ export default class ProjectsList extends React.Component {
         >
           <TitleBox 
             collapsed={collapsed}
+            project={project}
+            screenWidth={screenWidth}
+            screenHeight={screenHeight}
+            mobileToggle={mobileToggle}
+            orientationFlag={orientationFlag}
+            yOffset={yOffset}
           />
           <div
             id="carousel-box"
