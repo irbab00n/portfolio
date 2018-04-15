@@ -11,7 +11,7 @@ module.exports.list_body_button = {
 };
 
 module.exports.list_body_button_mobile = {
-  height: '8vh',
+  height: '10vh',
 };
 
 module.exports.list_body_button_collapsed = {

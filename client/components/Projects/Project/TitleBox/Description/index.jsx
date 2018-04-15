@@ -20,8 +20,18 @@ export default class Description extends React.Component {
     reel();
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps);
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
+      this.fadeInAnimation();
+    }
+  }
+
+  shouldComponentUpdate(nextProps, prevState) {
+    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag || prevState.fadeIn !== this.state.fadeIn) {
+      return true
+    } else {
+      return false;
+    }
   }
 
   render() {
@@ -36,6 +46,8 @@ export default class Description extends React.Component {
       yOffset
     } = this.props;
 
+    const { fadeIn } = this.state;
+
     return (
 
       <div 
@@ -43,14 +55,25 @@ export default class Description extends React.Component {
         style={
           apply(
             style.description_block,
-            collapsed && style.description_block_collapsed
+            mobileToggle && style.description_block_mobile_landscape,
+            orientationFlag && style.description_block_mobile_portrait,
+            collapsed && style.description_block_collapsed,
+            (collapsed && mobileToggle) && style.description_block_collapsed_mobile_landscape,
+            (collapsed && orientationFlag) && style.description_block_collapsed_mobile_portrait
           )
         }
       >
         <div
+          id="description-text"
           style={
             apply(
-              style.description_text
+              style.description_text,
+              mobileToggle && style.description_text_mobile_landscape,
+              orientationFlag && style.description_text_mobile_portrait,
+              collapsed && style.description_text_collapsed,
+              (collapsed && mobileToggle) && style.description_text_collapsed_mobile_landscape,
+              (collapsed && orientationFlag) && style.description_text_collapsed_mobile_portrait,
+              fadeIn && style.description_text_fadein,
             )
           }
         >

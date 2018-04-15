@@ -1,8 +1,9 @@
 import React from 'react';
 import apply from 'applystyles';
 
-import TitleBox from './TitleBox/index.jsx';
 import ToggleStrip from './ToggleStrip/index.jsx';
+import TitleBox from './TitleBox/index.jsx';
+import Carousel from './Carousel/index.jsx';
 
 import style from './style';
 
@@ -39,12 +40,16 @@ export default class Project extends React.Component {
 
     return (
 
-      <div 
+      <div
+        id="project-body"
         style={
           apply(
             style.list_body,
-            mobileToggle && style.list_body_mobile,
-            collapsed && style.list_body_collapsed
+            mobileToggle && style.list_body_mobile_landscape,
+            orientationFlag && style.list_body_mobile_portrait,
+            collapsed && style.list_body_collapsed,
+            (collapsed && mobileToggle) && style.list_body_collapsed_mobile_landscape,
+            (collapsed && orientationFlag) && style.list_body_collapsed_mobile_portrait
           )
         }
       >
@@ -56,10 +61,15 @@ export default class Project extends React.Component {
         />
 
         <div
+          id="project-container"
           style={
             apply(
               style.project_container,
-              collapsed && style.project_container_collapsed
+              mobileToggle && style.project_container_mobile_landscape,
+              orientationFlag && style.project_container_mobile_portrait,
+              collapsed && style.project_container_collapsed,
+              (collapsed && mobileToggle) && style.project_container_collapsed_mobile_landscape,
+              (collapsed && orientationFlag) && style.project_container_collapsed_mobile_portrait
             )
           }
         >
@@ -72,19 +82,17 @@ export default class Project extends React.Component {
             orientationFlag={orientationFlag}
             yOffset={yOffset}
           />
-          <div
-            id="carousel-box"
-            style={
-              apply(
-                {height: '70%'},
-                style.project_content_container,
-                collapsed && style.project_content_container_collapsed,
-                {backgroundColor: 'rgba(200, 200, 200, 1.0)'}
-              )
-            }
-          >
-            Carousel
-          </div>
+
+          <Carousel 
+            collapsed={collapsed}
+            project={project}
+            screenWidth={screenWidth}
+            screenHeight={screenHeight}
+            mobileToggle={mobileToggle}
+            orientationFlag={orientationFlag}
+            yOffset={yOffset}
+          />
+          
         </div>
 
       </div>

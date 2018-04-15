@@ -24,10 +24,12 @@ export default class Title extends React.Component {
     return (
 
       <div 
-        id="left-side"
+        id="title"
         style={
           apply(
             style.title_block,
+            mobileToggle && style.title_block_mobile_landscape,
+            orientationFlag && style.title_block_mobile_portrait,
             collapsed && style.title_block_collapsed
           )
         }
