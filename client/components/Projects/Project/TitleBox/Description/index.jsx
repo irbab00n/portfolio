@@ -21,7 +21,7 @@ export default class Description extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.collapsed && this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
+    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
       this.fadeInAnimation();
     }
   }
@@ -68,12 +68,12 @@ export default class Description extends React.Component {
           style={
             apply(
               style.description_text,
-              fadeIn && style.description_text_fadein,
               mobileToggle && style.description_text_mobile_landscape,
               orientationFlag && style.description_text_mobile_portrait,
               collapsed && style.description_text_collapsed,
               (collapsed && mobileToggle) && style.description_text_collapsed_mobile_landscape,
-              (collapsed && orientationFlag) && style.description_text_collapsed_mobile_portrait
+              (collapsed && orientationFlag) && style.description_text_collapsed_mobile_portrait,
+              fadeIn && style.description_text_fadein,
             )
           }
         >
