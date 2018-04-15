@@ -31,9 +31,11 @@ export default class TitleBox extends React.Component {
         style={
           apply(
             style.container_body,
-            collapsed && style.container_body_collapsed,
             mobileToggle && style.container_body_mobile_landscape,
             orientationFlag && style.container_body_mobile_portrait,
+            collapsed && style.container_body_collapsed,
+            (collapsed && mobileToggle) && style.container_body_collapsed_mobile_landscape,
+            (collapsed && orientationFlag) && style.container_body_collapsed_mobile_portrait
           )
         }
       >

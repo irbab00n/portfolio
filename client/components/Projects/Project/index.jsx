@@ -1,8 +1,9 @@
 import React from 'react';
 import apply from 'applystyles';
 
-import TitleBox from './TitleBox/index.jsx';
 import ToggleStrip from './ToggleStrip/index.jsx';
+import TitleBox from './TitleBox/index.jsx';
+import Carousel from './Carousel/index.jsx';
 
 import style from './style';
 
@@ -40,7 +41,7 @@ export default class Project extends React.Component {
     return (
 
       <div
-        id="project-container"
+        id="project-body"
         style={
           apply(
             style.list_body,
@@ -60,13 +61,15 @@ export default class Project extends React.Component {
         />
 
         <div
-          id="project-content"
+          id="project-container"
           style={
             apply(
               style.project_container,
               mobileToggle && style.project_container_mobile_landscape,
               orientationFlag && style.project_container_mobile_portrait,
               collapsed && style.project_container_collapsed,
+              (collapsed && mobileToggle) && style.project_container_collapsed_mobile_landscape,
+              (collapsed && orientationFlag) && style.project_container_collapsed_mobile_portrait
             )
           }
         >
@@ -79,19 +82,17 @@ export default class Project extends React.Component {
             orientationFlag={orientationFlag}
             yOffset={yOffset}
           />
-          <div
-            id="carousel-box"
-            style={
-              apply(
-                {height: '70%'},
-                style.project_content_container,
-                collapsed && style.project_content_container_collapsed,
-                {backgroundColor: 'rgba(120, 120, 120, 1.0)'}
-              )
-            }
-          >
-            Carousel
-          </div>
+
+          <Carousel 
+            collapsed={collapsed}
+            project={project}
+            screenWidth={screenWidth}
+            screenHeight={screenHeight}
+            mobileToggle={mobileToggle}
+            orientationFlag={orientationFlag}
+            yOffset={yOffset}
+          />
+          
         </div>
 
       </div>

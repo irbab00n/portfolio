@@ -40,7 +40,6 @@ module.exports.project_container = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
   width: '100%',
   height: '100%',
   WebkitTransition: '0.5s'
@@ -58,20 +57,10 @@ module.exports.project_container_collapsed = {
   flexDirection: 'row',
 };
 
-
-
-
-
-module.exports.project_content_container = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100%',
-  WebkitTransition: '0.1s ease-out',
+module.exports.project_container_collapsed_mobile_landscape = {
+  flexDirection: 'row',
 };
 
-module.exports.project_content_container_collapsed = {
-  height: '100%',
-  width: '50%',
-  WebkitTransition: '0.5s ease-out',
+module.exports.project_container_collapsed_mobile_portrait = {
+  flexDirection: 'column',
 };
