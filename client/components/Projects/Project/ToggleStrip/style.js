@@ -1,6 +1,6 @@
 module.exports.list_body_button = {
   cursor: 'pointer',
-  height: '4vh',
+  height: '5vh',
   width: '100%',
   display: 'flex',
   alignItems: 'center',
