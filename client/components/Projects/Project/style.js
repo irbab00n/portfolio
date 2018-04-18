@@ -10,11 +10,11 @@ module.exports.list_body = {
 };
 
 module.exports.list_body_mobile_landscape = {
-  height: '174vh'
+  height: '180vh'
 };
 
 module.exports.list_body_mobile_portrait = {
-  height: '200vh'
+  height: '150vh'
 };
 
 
@@ -29,7 +29,7 @@ module.exports.list_body_collapsed_mobile_landscape = {
 };
 
 module.exports.list_body_collapsed_mobile_portrait = {
-  height: '100vh'
+  height: '90vh'
 };
 
 
@@ -39,7 +39,6 @@ module.exports.list_body_collapsed_mobile_portrait = {
 module.exports.project_container = {
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
   width: '100%',
   height: '100%',
   WebkitTransition: '0.5s'

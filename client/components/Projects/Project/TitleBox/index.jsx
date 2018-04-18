@@ -10,6 +10,33 @@ export default class TitleBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.renderDescription = this.renderDescription.bind(this);
+    this.renderDescription = this.renderDescription.bind(this);
+  }
+
+  renderDescription() {
+    let {
+      collapsed,
+      project,
+      screenWidth,
+      screenHeight,
+      mobileToggle,
+      orientationFlag,
+      yOffset
+    } = this.props;
+    if (!collapsed) {
+      return (
+        <Description 
+          collapsed={collapsed}
+          project={project}
+          screenWidth={screenWidth}
+          screenHeight={screenHeight}
+          mobileToggle={mobileToggle}
+          orientationFlag={orientationFlag}
+          yOffset={yOffset}
+        />
+      )
+    }
   }
 
   render() {
@@ -51,15 +78,7 @@ export default class TitleBox extends React.Component {
         />
 
 
-        <Description 
-          collapsed={collapsed}
-          project={project}
-          screenWidth={screenWidth}
-          screenHeight={screenHeight}
-          mobileToggle={mobileToggle}
-          orientationFlag={orientationFlag}
-          yOffset={yOffset}
-        />
+        {this.renderDescription()}
 
 
       </div>

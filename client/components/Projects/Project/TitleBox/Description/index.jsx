@@ -8,7 +8,8 @@ export default class Description extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fadeIn: false
+      fadeIn: false,
+      closing: false
     };
     this.fadeInAnimation = this.fadeInAnimation.bind(this);
   }
@@ -20,18 +21,8 @@ export default class Description extends React.Component {
     reel();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
-      this.fadeInAnimation();
-    }
-  }
-
-  shouldComponentUpdate(nextProps, prevState) {
-    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag || prevState.fadeIn !== this.state.fadeIn) {
-      return true
-    } else {
-      return false;
-    }
+  componentDidMount() {
+    this.fadeInAnimation();
   }
 
   render() {
@@ -51,7 +42,7 @@ export default class Description extends React.Component {
     return (
 
       <div 
-        id="description-box"
+        id="description-block"
         style={
           apply(
             style.description_block,

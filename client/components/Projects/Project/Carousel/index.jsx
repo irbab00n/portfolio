@@ -30,6 +30,7 @@ export default class Carousel extends React.Component {
             style.carousel_body,
             mobileToggle && style.carousel_body_mobile_landscape,
             orientationFlag && style.carousel_body_mobile_portrait,
+            collapsed && style.carousel_body_collapsed,
             (collapsed && mobileToggle) && style.carousel_body_collapsed_mobile_landscape,
             (collapsed && orientationFlag) && style.carousel_body_collapsed_mobile_portrait
           )

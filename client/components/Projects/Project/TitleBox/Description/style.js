@@ -1,6 +1,6 @@
 module.exports.description_block = {
   overflowY: 'scroll',
-  width: '50%',
+  width: '60%',
   height: '95%',
   display: 'flex',
   justifyContent: 'center',
@@ -8,10 +8,12 @@ module.exports.description_block = {
 };
 
 module.exports.description_block_mobile_landscape = {
+  height: '50%',
   width: '100%',
 };
 
 module.exports.description_block_mobile_portrait = {
+  height: '50vh',
   width: '100%',
 };
 

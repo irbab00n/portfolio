@@ -3,30 +3,32 @@
 module.exports.container_body = {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
-  height: '30%',
+  flexDirection: 'row',
   width: '100%',
-  WebkitTransition: '0.2s ease-out',
+  height: '40%',
+  backgroundColor: 'rgba(150, 150, 150, 0.2)',
 };
 
 module.exports.container_body_mobile_landscape = {
-  height: '50%',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  height: '90vh'
 };
 
 module.exports.container_body_mobile_portrait = {
-  flexDirection: 'column',
-  height: '50%'
+  width: '100%',
+  height: '100vh'
 };
 
 
 // collapsed styles
 
 module.exports.container_body_collapsed = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'row',
+  width: '40%',
   height: '100%',
-  width: '50%',
-  flexDirection: 'column',
-  WebkitTransition: '0.5s ease-out',
 };
 
 module.exports.container_body_collapsed_mobile_landscape = {
@@ -34,8 +36,8 @@ module.exports.container_body_collapsed_mobile_landscape = {
 };
 
 module.exports.container_body_collapsed_mobile_portrait = {
-  height: '50%',
-  width: '100%'
+  width: '100%',
+  height: '45vh'
 };
 
 
