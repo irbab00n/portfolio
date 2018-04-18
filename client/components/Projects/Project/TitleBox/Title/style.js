@@ -12,7 +12,7 @@ module.exports.title_block = {
 };
 
 module.exports.title_block_mobile_landscape = {
-  height: '50vh',
+  height: '50%',
   width: '100%'
 };
 
@@ -30,17 +30,25 @@ module.exports.title_block_collapsed = {
 };
 
 module.exports.title_block_collapsed_mobile_landscape = {
-
+  height: '100%'
 };
 
 module.exports.title_block_collapsed_mobile_portrait = {
-  
+  width: '100%',
 };
 
 
 // Title Text Styles
 
 
-module.exports.title_text = {};
+module.exports.title_text = {
+  color: 'rgba(35, 35, 35, 1.0)',
+  WebkitTransition: '0.5s'
+};
 
 module.exports.title_text_collapsed = {};
+
+module.exports.title_text_fadein = {
+  color: 'rgba(35, 35, 35, 0.0)',
+  WebkitTransition: 'none'
+}

@@ -10,7 +10,7 @@ module.exports.list_body = {
 };
 
 module.exports.list_body_mobile_landscape = {
-  height: '200vh'
+  height: '180vh'
 };
 
 module.exports.list_body_mobile_portrait = {

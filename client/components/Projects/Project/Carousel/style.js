@@ -18,17 +18,17 @@ module.exports.carousel_body_mobile_portrait = {
 
 
 module.exports.carousel_body_collapsed = {
-  width: '70%',
+  width: '60%',
   height: '100%'
 };
 
 module.exports.carousel_body_collapsed_mobile_landscape = {
   height: '100%',
-  width: '70%',
+  width: '60%',
   backgroundColor: 'rgba(150, 150, 150, 1.0)'
 };
 
 module.exports.carousel_body_collapsed_mobile_portrait = {
-  height: '50vh',
+  height: '45vh',
   width: '100%'
 };

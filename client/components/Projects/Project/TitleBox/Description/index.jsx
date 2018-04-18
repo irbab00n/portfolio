@@ -42,7 +42,7 @@ export default class Description extends React.Component {
     return (
 
       <div 
-        id="description-box"
+        id="description-block"
         style={
           apply(
             style.description_block,

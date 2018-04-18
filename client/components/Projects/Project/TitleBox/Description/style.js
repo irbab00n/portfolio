@@ -8,6 +8,7 @@ module.exports.description_block = {
 };
 
 module.exports.description_block_mobile_landscape = {
+  height: '50%',
   width: '100%',
 };
 
