@@ -17,7 +17,7 @@ module.exports.title_block_mobile_landscape = {
 };
 
 module.exports.title_block_mobile_portrait = {
-  height: '50vh',
+  height: '50%',
   width: '100vw',
 };
 

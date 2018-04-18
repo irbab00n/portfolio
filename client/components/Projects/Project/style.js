@@ -40,7 +40,7 @@ module.exports.project_container = {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  height: '100%',
+  height: '140vh',
   WebkitTransition: '0.5s'
 };
 
@@ -53,6 +53,7 @@ module.exports.project_container_mobile_portrait = {
 };
 
 module.exports.project_container_collapsed = {
+  height: '80vh',
   flexDirection: 'row',
 };
 

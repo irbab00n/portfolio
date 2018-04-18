@@ -29,6 +29,6 @@ module.exports.carousel_body_collapsed_mobile_landscape = {
 };
 
 module.exports.carousel_body_collapsed_mobile_portrait = {
-  height: '45vh',
+  height: '40vh',
   width: '100%'
 };
