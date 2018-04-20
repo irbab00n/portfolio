@@ -48,6 +48,7 @@ class App extends React.Component {
     this.setState({screenWidth: window.innerWidth, screenHeight: window.innerHeight})
   }
 
+
   render() {
 
     const { screenWidth, screenHeight, percentScrolled } = this.state;

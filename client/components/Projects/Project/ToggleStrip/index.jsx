@@ -9,15 +9,31 @@ export default class ToggleStrip extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.handleUserTap = this.handleUserTap.bind(this);
+  }
+
+  componentWillMount() {
+    window.addEventListener('touchstart', this.handleUserTap);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('touchstart', this.handleUserTap);
+  }
+
+  handleUserTap(e) {
+    if (e.target.id === `toggle-strip-${this.props.number}`) {
+      this.props.toggleFunction();
+    }
   }
 
   render() {
 
-    const { mobileToggle, collapsed, toggleFunction } = this.props;
+    const { number, mobileToggle, collapsed, toggleFunction } = this.props;
 
     return (
 
-      <div 
+      <div
+        id={`toggle-strip-${number}`}
         style={
           apply(
             style.list_body_button,
@@ -25,7 +41,7 @@ export default class ToggleStrip extends React.Component {
             collapsed && style.list_body_button_collapsed
           )
         }
-        onClick={toggleFunction}
+        onClick={mobileToggle ? () => {} : toggleFunction}
       >
         <Triangle 
           toggle={collapsed}

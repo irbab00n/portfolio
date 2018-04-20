@@ -3,7 +3,6 @@
 module.exports.title_block = {
   height: '100%',
   width: '40%',
-  minWidth: '40vw',
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: 'rgba(220, 220, 220, 0.4)'
@@ -23,8 +22,8 @@ module.exports.title_block_mobile_portrait = {
 
 module.exports.title_block_collapsed = {
   height: '100%',
-  width: '40%',
-  minWidth: '40vw'
+  width: '100%',
+  minWidth: '30vw'
 };
 
 module.exports.title_block_collapsed_mobile_landscape = {

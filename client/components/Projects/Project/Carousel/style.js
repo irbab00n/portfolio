@@ -18,7 +18,7 @@ module.exports.carousel_body_mobile_portrait = {
 
 
 module.exports.carousel_body_collapsed = {
-  width: '60%',
+  width: '70%',
   height: '100%'
 };
 
