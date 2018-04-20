@@ -96,7 +96,6 @@ export default class Title extends React.Component {
 
           </div>
 
-          {/* Project Deploy Link */}
 
           <div
             style={
@@ -108,6 +107,9 @@ export default class Title extends React.Component {
               )
             }
           >
+
+            {/* Project Deploy Link */}
+            
             <a
               id="title-link"
               href={project.link}
@@ -194,7 +196,7 @@ export default class Title extends React.Component {
             apply(
               style.overview_text,
               mobileToggle && {},
-              orientationFlag && {margin: '2% 0', fontSize: '160%'},
+              orientationFlag && {marginTop: '2%', fontSize: '160%'},
               collapsed && {fontSize: '80%'},
               (collapsed && mobileToggle) && {},
               (collapsed && orientationFlag) && {fontSize: '160%'},

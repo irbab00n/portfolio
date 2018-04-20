@@ -40,7 +40,7 @@ module.exports.project_container = {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  height: '140vh',
+  height: '180vh',
   WebkitTransition: '0.5s'
 };
 

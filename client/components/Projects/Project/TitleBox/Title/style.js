@@ -54,7 +54,7 @@ module.exports.title_text = {
   // height: '20%',
   color: 'rgba(0, 122, 193, 1.0)',
   textShadow: '1px 1px rgba(35, 35, 35, 0.4)',
-  fontSize: '300%',
+  fontSize: '250%',
   WebkitTransition: '0.5s'
 };
 
