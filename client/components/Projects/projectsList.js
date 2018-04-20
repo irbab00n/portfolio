@@ -60,6 +60,7 @@ module.exports.portfolio = {
   ],
   title: 'cosbytes.com',
   link: 'https://cosbytes.com',
+  repo: 'https://github.com/irbab00n/portfolio',
   contributors: ['Thomas Cosby'],
   stackImage: '',
   description: 'Everything that you have seen so far has been composed of components I have created myself.  As a labor of love, my portfolio has been one of the best resources for my continually developing front-end skills.  I have combined the most popular JS front-end framework, React, with a technique known as CSS-in-JS to create a highly interactive and performant user experience.  It is packed full of unique features, inluding a custom built simulated scrolling navigation.  This project has inspired me to create a CSS-in-JS animation builder for React!',
@@ -74,6 +75,7 @@ module.exports.trainerFinder = {
   ],
   title: 'TrainerFinder',
   link: 'http://trainerfinder.herokuapp.com',
+  repo: 'https://github.com/nucleobase/nucleobase',
   contributors: ['Thomas Cosby', 'Gui Choupeaux', 'Chao Zeng', 'Andy Lien'],
   stackImage: '',
   description: 'TrainerFinder was my Hack Reactor Thesis project.  The main challenge of our thesis was to use a starter repo designed to simulate an in-progress codebase and build our product on top of it.  I converted the server-side rendering into a React client that featured multi-tier user types to create a platform for personal trainers to create and manage their clients, appointments, and payments.  My team and I also designed a system for clients to rate and review trainers to provide more visualization to potential customers.',
@@ -89,20 +91,9 @@ module.exports.vagabondly = {
   ],
   title: 'Vagabondly',
   link: 'http://vagabondly-staging.herokuapp.com/',
+  repo: 'https://github.com/vagabondly/vagabondly',
   contributors: ['Thomas Cosby', 'Miles Sorce', 'Neal Williams', 'James Critelli'],
   stackImage: '',
   description: 'This project was what is considered the Hack Reactor "Legacy" project.  Legacy meaning that we inherited the codebase from another team within the cohort, and given one week to improve the application and implement a new feature.  Right away, my team and I identified that we could improve the user interface by making the trip planning process more linear by introducing a step-by-step trip creator.  This allowed us to display more information to the user, allow them to filter by price, and see a map view of where the attractions are in their destination city.',
   overview: 'A trip curation and exploration application'
-};
-
-module.exports.mock = {
-  pictures: [
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/click.png', description: 'Example slide'}
-  ],
-  title: 'Example Slide',
-  link: '',
-  contributors: ['Thomas Cosby'],
-  stackImage: '',
-  description: 'This slide is not only meant as a temporary placeholder, but also to serve as a demonstration of my ability to create unique and re-useable components.  The text you have been seeing on these slides is being contained within object literals that I import within the application.  These components can be used with data that you can return from a server, too!  That is what is great about it!',
-  overview: 'This slide exists as an example to show how the content gets replaced dynamically'
 };
