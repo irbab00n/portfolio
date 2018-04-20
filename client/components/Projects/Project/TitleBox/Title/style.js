@@ -6,8 +6,6 @@ module.exports.title_block = {
   minWidth: '40vw',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
   backgroundColor: 'rgba(220, 220, 220, 0.4)'
 };
 
@@ -38,17 +36,78 @@ module.exports.title_block_collapsed_mobile_portrait = {
 };
 
 
+
+
+
 // Title Text Styles
-
-
-module.exports.title_text = {
-  color: 'rgba(35, 35, 35, 1.0)',
-  WebkitTransition: '0.5s'
-};
-
-module.exports.title_text_collapsed = {};
 
 module.exports.title_text_fadein = {
   color: 'rgba(35, 35, 35, 0.0)',
+  textShadow: '1px 1px rgba(35, 35, 35, 0.0)',
   WebkitTransition: 'none'
 }
+
+module.exports.title_text = {
+  display: 'flex',
+  alignItems: 'center',
+  width: '100%',
+  // height: '20%',
+  color: 'rgba(0, 122, 193, 1.0)',
+  textShadow: '1px 1px rgba(35, 35, 35, 0.4)',
+  fontSize: '250%',
+  WebkitTransition: '0.5s'
+};
+
+module.exports.title_text_mobile_landscape = {
+  fontSize: '240%'
+};
+
+module.exports.title_text_mobile_portrait = {
+  fontSize: '550%'
+};
+
+module.exports.title_text_mobile_portrait_collapsed = {
+  fontSize: '350%'
+};
+
+
+
+
+
+
+
+// Overview Text Styles
+
+module.exports.overview_text_fadein = {
+  color: 'rgba(35, 35, 35, 0.0)',
+  WebkitTransition: 'none'
+}
+
+module.exports.overview_text = {
+  display: 'flex',
+  alignItems: 'center',
+  width: '100%',
+  height: '20%',
+  color: 'rgba(35, 35, 35, 1.0)',
+  fontSize: '70%',
+  WebkitTransition: '0.5s'
+};
+
+module.exports.overview_text_mobile_landscape = {
+  fontSize: '100%'
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

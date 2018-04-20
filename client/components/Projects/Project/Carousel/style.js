@@ -6,7 +6,7 @@ module.exports.carousel_body = {
 };
 
 module.exports.carousel_body_mobile_landscape = {
-  height: '50%',
+  height: '90vh',
   width: '100%',
   backgroundColor: 'rgba(150, 150, 150, 1.0)'
 };
