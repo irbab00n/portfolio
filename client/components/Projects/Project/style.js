@@ -49,7 +49,7 @@ module.exports.project_container_mobile_landscape = {
 };
 
 module.exports.project_container_mobile_portrait = {
-
+  height: '140vh'
 };
 
 module.exports.project_container_collapsed = {

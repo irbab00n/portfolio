@@ -27,12 +27,12 @@ module.exports.container_body_collapsed = {
   alignItems: 'center',
   justifyContent: 'center',
   flexDirection: 'row',
-  width: '40%',
+  width: '30%',
   height: '100%',
 };
 
 module.exports.container_body_collapsed_mobile_landscape = {
-
+  width: '40%'
 };
 
 module.exports.container_body_collapsed_mobile_portrait = {

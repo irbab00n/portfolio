@@ -21,6 +21,12 @@ export default class Description extends React.Component {
     reel();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
+      this.fadeInAnimation();
+    }
+  }
+
   componentDidMount() {
     this.fadeInAnimation();
   }

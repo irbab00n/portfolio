@@ -89,6 +89,7 @@ class Projects extends React.Component {
             return (
               <Project 
                 key={`project${index}`}
+                number={index}
                 project={projectsList[key]}
                 screenWidth={screenWidth}
                 screenHeight={screenHeight}

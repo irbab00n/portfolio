@@ -30,6 +30,7 @@ export default class Project extends React.Component {
     } = this.state;
 
     const {
+      number,
       project,
       screenWidth,
       screenHeight,
@@ -37,6 +38,7 @@ export default class Project extends React.Component {
       orientationFlag,
       yOffset
     } = this.props;
+
 
     return (
 
@@ -55,6 +57,7 @@ export default class Project extends React.Component {
       >
 
         <ToggleStrip
+          number={number}
           mobileToggle={mobileToggle}
           collapsed={collapsed}
           toggleFunction={this.toggleCollapse}

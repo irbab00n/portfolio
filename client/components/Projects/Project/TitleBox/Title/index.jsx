@@ -59,7 +59,7 @@ export default class Title extends React.Component {
         <div
           style={
             apply(
-              {marginTop: '2%', display: 'flex', flexDirection: 'column', alignItems: 'center'},
+              {marginTop: '1%', display: 'flex', flexDirection: 'column', alignItems: 'center'},
               mobileToggle && {marginBottom: '1%', flexDirection: 'row'},
               orientationFlag && {marginTop: '2%', flexDirection: 'column'},
               collapsed && {flexDirection: 'column'},
@@ -98,9 +98,10 @@ export default class Title extends React.Component {
 
 
           <div
+            id="project-links"
             style={
               apply(
-                {marginTop: '4%', width: '100%', display: 'flex', flexDirection: 'column'},
+                {marginTop: '2%', width: '100%', display: 'flex', flexDirection: 'column'},
                 mobileToggle && {marginTop: '0%'},
                 orientationFlag && {marginTop: '4%'},
                 (collapsed && mobileToggle) && {marginTop: '4%'}
@@ -123,7 +124,7 @@ export default class Title extends React.Component {
                 id="link-container"
                 style={
                   apply(
-                    {marginLeft: '5%', fontSize: '80%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
+                    {marginLeft: '5%', fontSize: '70%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
                     mobileToggle && {fontSize: '100%'},
                     orientationFlag && {fontSize: '160%'},
                     collapsed && {fontSize: '80%'},
@@ -162,7 +163,7 @@ export default class Title extends React.Component {
                 id="link-container"
                 style={
                   apply(
-                    {marginLeft: '5%', fontSize: '80%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
+                    {marginLeft: '5%', fontSize: '70%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
                     mobileToggle && {fontSize: '100%'},
                     orientationFlag && {fontSize: '160%'},
                     collapsed && {fontSize: '80%'},
@@ -227,8 +228,8 @@ export default class Title extends React.Component {
           id="contributor-list"
           style={
             apply(
-              {margin: '2% 0 2% 5%', width: '90%', WebkitTransition: '0.5s'},
-              mobileToggle && {margin: '0 auto'},
+              {margin: '2% 5%', paddingLeft: '5%', WebkitTransition: '0.5s'},
+              mobileToggle && {},
               orientationFlag && {margin: '2% 0 2% 5%'},
               collapsed && {margin: '2% 0 2% 5%'}
             )
@@ -241,11 +242,11 @@ export default class Title extends React.Component {
                   key={`contrib-${index}`}
                   style={
                     apply(
-                      {fontSize: '70%', color: 'rgba(35, 35, 35, 1.0)', WebkitTransition: '0.5s'},
-                      mobileToggle && {margin: '0 1%', color: 'rgba(35, 35, 35, 1.0)', display: 'inline-block'},
-                      orientationFlag && {fontSize: '160%', display: 'list-item'},
-                      collapsed && {fontSize: '80%'},
-                      (collapsed && mobileToggle) && {fontSize: '80%', display: 'list-item'},
+                      {margin: '0 1%', fontSize: '70%', color: 'rgba(35, 35, 35, 1.0)', WebkitTransition: '0.5s', display: 'inline-block'},
+                      mobileToggle && {color: 'rgba(35, 35, 35, 1.0)', display: 'inline-block'},
+                      orientationFlag && {fontSize: '160%', display: 'block'},
+                      collapsed && {fontSize: '80%', display: 'block'},
+                      (collapsed && mobileToggle) && {fontSize: '80%', display: 'block'},
                       (collapsed && orientationFlag) && {fontSize: '160%'},
                       fadein && {color: 'rgba(35, 35, 35, 0.0)', WebkitTransition: 'none'}
                     )
