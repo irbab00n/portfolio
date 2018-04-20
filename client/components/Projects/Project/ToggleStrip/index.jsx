@@ -26,13 +26,8 @@ export default class ToggleStrip extends React.Component {
             collapsed && style.list_body_button_collapsed
           )
         }
-        onClick={toggleFunction}
-        onTouchEnd={
-          (e) => {
-            e.preventDefault();
-            toggleFunction();
-          }
-        }
+        onClick={(e) => {toggleFunction(e)}}
+        onTouchEnd={(e) => {toggleFunction(e)}}
       >
         <Triangle 
           toggle={collapsed}

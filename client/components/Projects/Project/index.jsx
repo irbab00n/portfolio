@@ -16,7 +16,8 @@ export default class Project extends React.Component {
     this.toggleCollapse = this.toggleCollapse.bind(this);
   }
 
-  toggleCollapse() {
+  toggleCollapse(e) {
+    e.preventDefault();
     let { collapsed } = this.state;
     this.setState({
       collapsed: !collapsed
