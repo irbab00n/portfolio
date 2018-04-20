@@ -21,7 +21,7 @@ export default class Title extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.collapsed !== this.props.collapsed) {
+    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
       this.fadeInAnimation();
     }
   }
