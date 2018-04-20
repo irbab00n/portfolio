@@ -51,19 +51,23 @@ module.exports.title_text = {
   display: 'flex',
   alignItems: 'center',
   width: '100%',
-  height: '20%',
+  // height: '20%',
   color: 'rgba(0, 122, 193, 1.0)',
   textShadow: '1px 1px rgba(35, 35, 35, 0.4)',
-  fontSize: '150%',
+  fontSize: '300%',
   WebkitTransition: '0.5s'
 };
 
 module.exports.title_text_mobile_landscape = {
-  fontSize: '150%'
+  fontSize: '240%'
 };
 
 module.exports.title_text_mobile_portrait = {
-  fontSize: '300%'
+  fontSize: '550%'
+};
+
+module.exports.title_text_mobile_portrait_collapsed = {
+  fontSize: '350%'
 };
 
 
@@ -80,7 +84,6 @@ module.exports.overview_text_fadein = {
 }
 
 module.exports.overview_text = {
-  margin: '1% 0',
   display: 'flex',
   alignItems: 'center',
   width: '100%',
