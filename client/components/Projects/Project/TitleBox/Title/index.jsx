@@ -197,7 +197,7 @@ export default class Title extends React.Component {
             apply(
               style.overview_text,
               mobileToggle && {fontSize: '90%'},
-              orientationFlag && {marginTop: '2%', fontSize: '160%'},
+              orientationFlag && {marginTop: '0%', fontSize: '160%'},
               collapsed && {fontSize: '70%'},
               (collapsed && mobileToggle) && {},
               (collapsed && orientationFlag) && {fontSize: '160%'},
