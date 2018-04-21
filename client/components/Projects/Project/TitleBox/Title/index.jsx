@@ -101,10 +101,10 @@ export default class Title extends React.Component {
             id="project-links"
             style={
               apply(
-                {marginTop: '2%', width: '100%', display: 'flex', flexDirection: 'column'},
-                mobileToggle && {marginTop: '0%'},
-                orientationFlag && {marginTop: '4%'},
-                (collapsed && mobileToggle) && {marginTop: '4%'}
+                {margin: '2% 0', width: '100%', display: 'flex', flexDirection: 'column'},
+                mobileToggle && {margin: '0 0'},
+                orientationFlag && {margin: '4% 0'},
+                (collapsed && mobileToggle) && {margin: '4% 0'}
               )
             }
           >
@@ -124,7 +124,7 @@ export default class Title extends React.Component {
                 id="link-container"
                 style={
                   apply(
-                    {marginLeft: '5%', fontSize: '70%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
+                    {marginLeft: '5%', fontSize: '90%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
                     mobileToggle && {fontSize: '100%'},
                     orientationFlag && {fontSize: '160%'},
                     collapsed && {fontSize: '80%'},
@@ -163,7 +163,7 @@ export default class Title extends React.Component {
                 id="link-container"
                 style={
                   apply(
-                    {marginLeft: '5%', fontSize: '70%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
+                    {marginLeft: '5%', fontSize: '90%', color: 'rgba(35, 35, 135, 1.0)', WebkitTransition: '0.5s', textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center'},
                     mobileToggle && {fontSize: '100%'},
                     orientationFlag && {fontSize: '160%'},
                     collapsed && {fontSize: '80%'},
@@ -196,9 +196,9 @@ export default class Title extends React.Component {
           style={
             apply(
               style.overview_text,
-              mobileToggle && {},
+              mobileToggle && {fontSize: '90%'},
               orientationFlag && {marginTop: '2%', fontSize: '160%'},
-              collapsed && {fontSize: '80%'},
+              collapsed && {fontSize: '70%'},
               (collapsed && mobileToggle) && {},
               (collapsed && orientationFlag) && {fontSize: '160%'},
               fadein && style.overview_text_fadein
@@ -210,11 +210,16 @@ export default class Title extends React.Component {
         {/* Contributors Label */}
         <div
           id="contributors-label"
+          style={
+            apply(
+              {marginTop: '1%'}
+            )
+          }
         >
           <span 
             style={
               apply(
-                {marginLeft: '5%', width: '90%', fontSize: '80%', fontWeight: 'bold', color: 'rgba(35, 35, 35, 1.0)', WebkitTransition: '0.5s'},
+                {marginLeft: '5%', width: '90%', fontSize: '100%', fontWeight: 'bold', color: 'rgba(35, 35, 35, 1.0)', WebkitTransition: '0.5s'},
                 orientationFlag && {fontSize: '160%'},
                 fadein && {color: 'rgba(35, 35, 35, 0.0)', WebkitTransition: 'none'}
               )
@@ -228,9 +233,9 @@ export default class Title extends React.Component {
           id="contributor-list"
           style={
             apply(
-              {margin: '2% 5%', paddingLeft: '5%', WebkitTransition: '0.5s'},
+              {margin: 'auto 5%', padding: '0 5%', WebkitTransition: '0.5s'},
               mobileToggle && {},
-              orientationFlag && {margin: '2% 0 2% 5%'},
+              orientationFlag && {margin: '2% 5%'},
               collapsed && {margin: '2% 0 2% 5%'}
             )
           }
@@ -242,7 +247,7 @@ export default class Title extends React.Component {
                   key={`contrib-${index}`}
                   style={
                     apply(
-                      {margin: '0 1%', fontSize: '70%', color: 'rgba(35, 35, 35, 1.0)', WebkitTransition: '0.5s', display: 'inline-block'},
+                      {margin: '0 1%', fontSize: '80%', color: 'rgba(35, 35, 35, 0.8)', WebkitTransition: '0.5s', display: 'inline-block'},
                       mobileToggle && {color: 'rgba(35, 35, 35, 1.0)', display: 'inline-block'},
                       orientationFlag && {fontSize: '160%', display: 'block'},
                       collapsed && {fontSize: '80%', display: 'block'},

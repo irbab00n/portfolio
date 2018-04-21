@@ -87,8 +87,8 @@ module.exports.overview_text = {
   alignItems: 'center',
   width: '100%',
   height: '20%',
-  color: 'rgba(35, 35, 35, 1.0)',
-  fontSize: '70%',
+  color: 'rgba(35, 35, 35, 0.8)',
+  fontSize: '90%',
   WebkitTransition: '0.5s'
 };
 
