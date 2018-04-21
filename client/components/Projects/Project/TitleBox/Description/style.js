@@ -17,24 +17,6 @@ module.exports.description_block_mobile_portrait = {
   width: '100%',
 };
 
-
-module.exports.description_block_collapsed = {
-  overflowY: 'scroll',
-  height: '50%',
-  width: '100%',
-  backgroundColor: 'rgba(170, 170, 170, 0.2)',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'flex-start'
-};
-
-module.exports.description_block_collapsed_mobile_landscape = {
-
-};
-
-module.exports.description_block_collapsed_mobile_portrait = {};
-
-
 // Description Text
 
 // expanded styles
