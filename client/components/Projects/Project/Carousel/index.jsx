@@ -2,6 +2,8 @@ import React from 'react';
 import apply from 'applystyles';
 import animator from 'react-css-in-js-animator';
 
+import RightReturn from './RightReturn.jsx';
+
 import style from './style';
 
 export default class Carousel extends React.Component {
@@ -147,7 +149,7 @@ export default class Carousel extends React.Component {
               currentIndex === 0 ?
                 null :
                 <img 
-                  src={project.pictures[currentIndex - 1].link}
+                  src={project.pictures[currentIndex - 1].link || ''}
                   style={
                     apply(
                       style.carousel_image,
@@ -166,7 +168,7 @@ export default class Carousel extends React.Component {
           >
 
             <img 
-              src={project.pictures[currentIndex].link}
+              src={project.pictures[currentIndex].link || ''}
               style={
                 apply(
                   style.carousel_image,
@@ -192,10 +194,10 @@ export default class Carousel extends React.Component {
             onMouseLeave={() => {this.toggleHover('right', 'off')}}
           >
             {
-              currentIndex === project.pictures.length - 1 ?
-                null :
+              currentIndex === project.pictures.length - 1 && project.pictures.length > 1 ?
+                <RightReturn /> :
                 <img 
-                  src={project.pictures[currentIndex + 1].link}
+                  src={project.pictures[currentIndex + 1].link || ''}
                   style={
                     apply(
                       style.carousel_image,

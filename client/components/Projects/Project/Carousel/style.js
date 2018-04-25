@@ -10,7 +10,6 @@ module.exports.carousel_body = {
 module.exports.carousel_body_mobile_landscape = {
   height: '90vh',
   width: '100%',
-  backgroundColor: 'rgba(120, 120, 120, 1.0)'
 };
 
 module.exports.carousel_body_mobile_portrait = {
@@ -27,7 +26,6 @@ module.exports.carousel_body_collapsed = {
 module.exports.carousel_body_collapsed_mobile_landscape = {
   height: '100%',
   width: '60%',
-  backgroundColor: 'rgba(150, 150, 150, 1.0)'
 };
 
 module.exports.carousel_body_collapsed_mobile_portrait = {
@@ -60,6 +58,7 @@ module.exports.track_side = {
   margin: '0 1%',
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'center',
   width: '18%',
   height: '90%',
   backgroundColor: 'rgba(255, 255, 255, 0.0)',
