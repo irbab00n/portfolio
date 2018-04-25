@@ -17,3 +17,7 @@ module.exports.list_body_button_mobile = {
 module.exports.list_body_button_collapsed = {
   background: 'rgba(180, 180, 180, 1.0)'
 };
+
+module.exports.list_body_button_hovered = {
+  background: 'rgba(230, 230, 230, 1.0)'
+}

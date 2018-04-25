@@ -22,7 +22,8 @@ export default class Carousel extends React.Component {
     this.fadeInAnimation = this.fadeInAnimation.bind(this);
   }
 
-  advanceIndex(action) {
+  advanceIndex(e, action) {
+    e.preventDefault();
     let { currentIndex } = this.state;
     let { project } = this.props;
     if (project.pictures.length <= 1) {
@@ -143,10 +144,10 @@ export default class Carousel extends React.Component {
                 fadein && style.track_side_fadein
               )
             }
-            onClick={mobileToggle ? () => {} : () => {this.advanceIndex('decrement')}}
+            onClick={mobileToggle ? () => {} : (e) => {this.advanceIndex(e, 'decrement')}}
             onTouchStart={() => {() => {this.toggleHover('left', 'on')}}}
-            onTouchEnd={() => {
-              this.toggleHover('left', 'off', () => {this.advanceIndex('decrement')});
+            onTouchEnd={(e) => {
+              this.toggleHover('left', 'off', () => {this.advanceIndex(e, 'decrement')});
             }}
             onMouseEnter={() => {this.toggleHover('left', 'on')}}
             onMouseLeave={() => {this.toggleHover('left', 'off')}}
@@ -195,10 +196,10 @@ export default class Carousel extends React.Component {
                 rightHover && style.track_side_hover
               )
             }
-            onClick={mobileToggle ? () => {} : () => {this.advanceIndex('increment')}}
+            onClick={mobileToggle ? () => {} : (e) => {this.advanceIndex(e, 'increment')}}
             onTouchStart={() => {() => {this.toggleHover('right', 'on')}}}
-            onTouchEnd={() => {
-              this.toggleHover('right', 'off', () => {this.advanceIndex('increment')});
+            onTouchEnd={(e) => {
+              this.toggleHover('right', 'off', () => {this.advanceIndex(e, 'increment')});
             }}
             onMouseEnter={() => {this.toggleHover('right', 'on')}}
             onMouseLeave={() => {this.toggleHover('right', 'off')}}
