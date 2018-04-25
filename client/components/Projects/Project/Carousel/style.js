@@ -3,7 +3,7 @@ module.exports.carousel_body = {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
-  backgroundColor: 'rgba(120, 120, 120, 1.0)',
+  backgroundColor: 'rgba(35, 35, 35, 1.0)',
   WebkitTransition: '0.2s'
 };
 
@@ -52,13 +52,29 @@ module.exports.carousel_track = {
   alignItems: 'center',
 };
 
-module.exports.track_left = {
+
+
+
+module.exports.track_side = {
+  cursor: 'pointer',
   margin: '0 1%',
   display: 'flex',
   alignItems: 'center',
   width: '18%',
-  height: '80%',
+  height: '90%',
+  backgroundColor: 'rgba(255, 255, 255, 0.0)',
+  WebkitTransition: '0.5s'
 };
+
+module.exports.track_side_hover = {
+  backgroundColor: 'rgba(255, 255, 255, 0.1)'
+};
+
+module.exports.track_side_fadein = {
+
+};
+
+
 
 module.exports.track_current = {
   margin: '0 1%',
@@ -67,12 +83,23 @@ module.exports.track_current = {
   height: '100%',
 };
 
-module.exports.track_right = {
-  margin: '0 1%',
-  display: 'flex',
-  alignItems: 'center',
-  width: '18%',
-  height: '80%',
+module.exports.carousel_image = {
+  display: 'block',
+  objectFit: 'scale-down',
+  width: '100%',
+  height: 'auto',
+  WebkitUserSelect: 'none',
+  khtmlUserSelect: 'none',
+  MozUserSelect: 'none',
+  OUserSelect: 'none',
+  userSelect: 'none',
+  WebkitTransition: '0.5s',
+  opacity: '1.0'
+};
+
+module.exports.carousel_image_transition = {
+  WebkitTransition: '0.0s',
+  opacity: '0.0'
 };
 
 

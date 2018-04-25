@@ -1,5 +1,6 @@
 import React from 'react';
 import apply from 'applystyles';
+import animator from 'react-css-in-js-animator';
 
 import style from './style';
 
@@ -7,9 +8,16 @@ export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentIndex: 0
+      currentIndex: 0,
+      transition: false,
+      leftHover: false,
+      rightHover: false,
+      fadein: false
     };
     this.advanceIndex = this.advanceIndex.bind(this);
+    this.toggleHover = this.toggleHover.bind(this);
+    this.transitionAnimation = this.transitionAnimation.bind(this);
+    this.fadeInAnimation = this.fadeInAnimation.bind(this);
   }
 
   advanceIndex(action) {
@@ -20,23 +28,60 @@ export default class Carousel extends React.Component {
         if (currentIndex === 0) {
           this.setState({
             currentIndex: project.pictures.length - 1
-          });
+          }, () => {this.transitionAnimation()});
         } else {
           this.setState({
             currentIndex: currentIndex - 1
-          });
+          }, () => {this.transitionAnimation()});
         }
         break;
       case 'increment':
         if (currentIndex === project.pictures.length - 1) {
           this.setState({
             currentIndex: 0
-          });
+          }, () => {this.transitionAnimation()});
         } else {
           this.setState({
             currentIndex: currentIndex + 1
-          });
+          }, () => {this.transitionAnimation()});
         }
+    }
+  }
+
+  toggleHover(side, state) {
+    let toggle = state === 'on';
+    switch(side) {
+      case 'left':
+        this.setState({
+          leftHover: toggle
+        });
+        break;
+      case 'right': 
+        this.setState({
+          rightHover: toggle
+        });
+        break;
+    }
+
+  }
+
+  transitionAnimation() {
+    let keyframe1 = new animator.keyframe({transition: true}, 0);
+    let keyframe2 = new animator.keyframe({transition: false}, 100);
+    let reel = animator.buildReel(this.setState.bind(this), () => {}, keyframe1, keyframe2);
+    reel();
+  }
+
+  fadeInAnimation() {
+    let keyframe1 = new animator.keyframe({fadein: true}, 0);
+    let keyframe2 = new animator.keyframe({fadein: false}, 500);
+    let reel = animator.buildReel(this.setState.bind(this), () => {}, keyframe1, keyframe2);
+    reel();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.collapsed !== this.props.collapsed || nextProps.orientationFlag !== this.props.orientationFlag) {
+      this.fadeInAnimation();
     }
   }
 
@@ -52,7 +97,13 @@ export default class Carousel extends React.Component {
       yOffset
     } = this.props;
 
-    const { currentIndex } = this.state;
+    const { 
+      currentIndex, 
+      transition,
+      leftHover,
+      rightHover,
+      fadein
+    } = this.state;
 
     return (
 
@@ -80,27 +131,29 @@ export default class Carousel extends React.Component {
           <div
             id="track-left"
             style={
-              style.track_left
+              apply(
+                style.track_side,
+                leftHover && style.track_side_hover,
+                fadein && style.track_side_fadein
+              )
             }
-            onClick={() => {this.advanceIndex('decrement')}}
+            onClick={mobileToggle ? () => {} : () => {this.advanceIndex('decrement')}}
+            onTouchEnd={() => {this.advanceIndex('decrement')}}
+            onMouseEnter={() => {this.toggleHover('left', 'on')}}
+            onMouseLeave={() => {this.toggleHover('left', 'off')}}
           >
+
             {
               currentIndex === 0 ?
                 null :
                 <img 
                   src={project.pictures[currentIndex - 1].link}
-                  style={{
-                    display: 'block',
-                    overflow: 'hidden',
-                    objectFit: 'scale-down',
-                    width: '100%',
-                    height: 'auto',
-                    WebkitUserSelect: 'none',
-                    khtmlUserSelect: 'none',
-                    MozUserSelect: 'none',
-                    OUserSelect: 'none',
-                    userSelect: 'none'
-                  }}
+                  style={
+                    apply(
+                      style.carousel_image,
+                      fadein && style.carousel_image_transition
+                    )
+                  }
                 />
             }
           </div>
@@ -114,17 +167,13 @@ export default class Carousel extends React.Component {
 
             <img 
               src={project.pictures[currentIndex].link}
-              style={{
-                display: 'block',
-                objectFit: 'scale-down',
-                width: '100%',
-                height: 'auto',
-                WebkitUserSelect: 'none',
-                khtmlUserSelect: 'none',
-                MozUserSelect: 'none',
-                OUserSelect: 'none',
-                userSelect: 'none'
-              }}
+              style={
+                apply(
+                  style.carousel_image,
+                  transition && style.carousel_image_transition,
+                  fadein && style.carousel_image_transition
+                )
+              }
             />
 
           </div>
@@ -132,27 +181,27 @@ export default class Carousel extends React.Component {
           <div
             id="track-right"
             style={
-              style.track_right
+              apply(
+                style.track_side,
+                rightHover && style.track_side_hover
+              )
             }
-            onClick={() => {this.advanceIndex('increment')}}
+            onClick={mobileToggle ? () => {} : () => {this.advanceIndex('increment')}}
+            onTouchEnd={() => {this.advanceIndex('increment')}}
+            onMouseEnter={() => {this.toggleHover('right', 'on')}}
+            onMouseLeave={() => {this.toggleHover('right', 'off')}}
           >
             {
               currentIndex === project.pictures.length - 1 ?
                 null :
                 <img 
                   src={project.pictures[currentIndex + 1].link}
-                  style={{
-                    display: 'block',
-                    overflow: 'hidden',
-                    objectFit: 'scale-down',
-                    width: '100%',
-                    height: 'auto',
-                    WebkitUserSelect: 'none',
-                    khtmlUserSelect: 'none',
-                    MozUserSelect: 'none',
-                    OUserSelect: 'none',
-                    userSelect: 'none'
-                  }}
+                  style={
+                    apply(
+                      style.carousel_image,
+                      fadein && style.carousel_image_transition
+                    )
+                  }
                 />
             }
           </div>
@@ -166,27 +215,6 @@ export default class Carousel extends React.Component {
   }
 }
 
-
-/*
-
-For the list of pictures:
-
-we want 1 general container that will hold lists of 5 pictures.  
-
-So if we pass in 7 pictures, we're going to need to split the pictures into lists
-
-we will need to know how many lists need to be created
-
-we will need to know how far the current offset is
-
-if we click next, and the next set isn't full, we want to know how much we need to adjust the overall offset of the track by
-
-  To do this, we need to know the following:
-
-    - Size of the uniform slide width
-    - Size of the margin
-
-*/
 
 
 

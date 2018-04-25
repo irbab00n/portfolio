@@ -247,7 +247,7 @@ export default class Title extends React.Component {
                   key={`contrib-${index}`}
                   style={
                     apply(
-                      {margin: '0', fontSize: '80%', color: 'rgba(35, 35, 35, 0.8)', WebkitTransition: '0.5s', display: 'inline-block'},
+                      {margin: '0 1%', fontSize: '80%', color: 'rgba(35, 35, 35, 0.8)', WebkitTransition: '0.5s', display: 'inline-block'},
                       mobileToggle && {color: 'rgba(35, 35, 35, 1.0)', display: 'inline-block'},
                       orientationFlag && {fontSize: '160%', display: 'block'},
                       collapsed && {fontSize: '80%', display: 'block'},
