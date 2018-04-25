@@ -25,6 +25,9 @@ export default class Carousel extends React.Component {
   advanceIndex(action) {
     let { currentIndex } = this.state;
     let { project } = this.props;
+    if (project.pictures.length <= 1) {
+      return;
+    }
     switch(action) {
       case 'decrement':
         if (currentIndex === 0) {
@@ -50,18 +53,19 @@ export default class Carousel extends React.Component {
     }
   }
 
-  toggleHover(side, state) {
+  toggleHover(side, state, cb) {
+    let callback = cb || new Function();
     let toggle = state === 'on';
     switch(side) {
       case 'left':
         this.setState({
           leftHover: toggle
-        });
+        }, callback);
         break;
       case 'right': 
         this.setState({
           rightHover: toggle
-        });
+        }, callback);
         break;
     }
 
@@ -140,7 +144,10 @@ export default class Carousel extends React.Component {
               )
             }
             onClick={mobileToggle ? () => {} : () => {this.advanceIndex('decrement')}}
-            onTouchEnd={() => {this.advanceIndex('decrement')}}
+            onTouchStart={() => {() => {this.toggleHover('left', 'on')}}}
+            onTouchEnd={() => {
+              this.toggleHover('left', 'off', () => {this.advanceIndex('decrement')});
+            }}
             onMouseEnter={() => {this.toggleHover('left', 'on')}}
             onMouseLeave={() => {this.toggleHover('left', 'off')}}
           >
@@ -189,7 +196,10 @@ export default class Carousel extends React.Component {
               )
             }
             onClick={mobileToggle ? () => {} : () => {this.advanceIndex('increment')}}
-            onTouchEnd={() => {this.advanceIndex('increment')}}
+            onTouchStart={() => {() => {this.toggleHover('right', 'on')}}}
+            onTouchEnd={() => {
+              this.toggleHover('right', 'off', () => {this.advanceIndex('increment')});
+            }}
             onMouseEnter={() => {this.toggleHover('right', 'on')}}
             onMouseLeave={() => {this.toggleHover('right', 'off')}}
           >
@@ -197,7 +207,7 @@ export default class Carousel extends React.Component {
               currentIndex === project.pictures.length - 1 && project.pictures.length > 1 ?
                 <RightReturn /> :
                 <img 
-                  src={project.pictures[currentIndex + 1].link || ''}
+                  src={project.pictures.length > 1 ? project.pictures[currentIndex + 1].link : ''}
                   style={
                     apply(
                       style.carousel_image,

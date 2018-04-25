@@ -52,11 +52,11 @@ module.exports.noteapp = {
 module.exports.portfolio = {
   pictures: [
     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
-    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
+    // {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
+    // {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
+    // {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
+    // {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
+    // {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
   ],
   title: 'cosbytes.com',
   link: 'https://cosbytes.com',
