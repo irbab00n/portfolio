@@ -60,7 +60,7 @@ module.exports.track_side = {
   alignItems: 'center',
   justifyContent: 'center',
   width: '18%',
-  height: '90%',
+  height: '100%',
   backgroundColor: 'rgba(255, 255, 255, 0.0)',
   WebkitTransition: '0.5s'
 };
