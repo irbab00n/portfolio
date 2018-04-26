@@ -4,7 +4,7 @@ module.exports.body = {
   alignItems: 'center',
   justifyContent: 'center',
   width: '100vw',
-  backgroundColor: 'rgba(35, 35, 35, 1.0)'
+  backgroundColor: 'rgba(255, 255, 255, 0.5)',
 };
 
 

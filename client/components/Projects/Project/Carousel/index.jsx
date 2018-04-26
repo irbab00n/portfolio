@@ -54,19 +54,18 @@ export default class Carousel extends React.Component {
     }
   }
 
-  toggleHover(side, state, cb) {
-    let callback = cb || new Function();
+  toggleHover(side, state) {
     let toggle = state === 'on';
     switch(side) {
       case 'left':
         this.setState({
           leftHover: toggle
-        }, callback);
+        });
         break;
       case 'right': 
         this.setState({
           rightHover: toggle
-        }, callback);
+        });
         break;
     }
 
@@ -147,7 +146,7 @@ export default class Carousel extends React.Component {
             onClick={mobileToggle ? () => {} : (e) => {this.advanceIndex(e, 'decrement')}}
             onTouchStart={() => {() => {this.toggleHover('left', 'on')}}}
             onTouchEnd={(e) => {
-              this.toggleHover('left', 'off', () => {this.advanceIndex(e, 'decrement')});
+              this.advanceIndex(e, 'decrement');
             }}
             onMouseEnter={() => {this.toggleHover('left', 'on')}}
             onMouseLeave={() => {this.toggleHover('left', 'off')}}
@@ -199,7 +198,7 @@ export default class Carousel extends React.Component {
             onClick={mobileToggle ? () => {} : (e) => {this.advanceIndex(e, 'increment')}}
             onTouchStart={() => {() => {this.toggleHover('right', 'on')}}}
             onTouchEnd={(e) => {
-              this.toggleHover('right', 'off', () => {this.advanceIndex(e, 'increment')});
+              this.advanceIndex(e, 'increment');
             }}
             onMouseEnter={() => {this.toggleHover('right', 'on')}}
             onMouseLeave={() => {this.toggleHover('right', 'off')}}

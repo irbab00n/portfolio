@@ -55,35 +55,6 @@ class Projects extends React.Component {
             MY PROJECTS
           </span>
         </div>
-
-
-        <div 
-          style={
-            apply(
-              style.description_container,
-              mobileToggle && style.description_container_mobile,
-            )
-          }
-        >
-          <p style={
-            apply(
-              style.description_text,
-              mobileToggle && style.description_text_mobile_landscape,
-              orientationFlag && style.description_text_mobile_portrait,
-            )
-          }>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in fringilla nunc. Cras pharetra suscipit nunc, in convallis felis maximus eu. Donec euismod risus nec leo iaculis vulputate. Fusce in euismod elit. Nam lacinia diam vitae sollicitudin viverra. Morbi eu urna malesuada, fermentum eros lobortis, iaculis nisi. Nunc bibendum ligula enim, eget aliquet eros ultricies eget. Nulla vitae consectetur dui. Nam eget leo sed eros sodales tristique.
-          </p>
-          <p style={
-            apply(
-              style.description_text,
-              mobileToggle && style.description_text_mobile_landscape,
-              orientationFlag && style.description_text_mobile_portrait,
-            )
-          }>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in fringilla nunc. Cras pharetra suscipit nunc, in convallis felis maximus eu. Donec euismod risus nec leo iaculis vulputate. Fusce in euismod elit. Nam lacinia diam vitae sollicitudin viverra. Morbi eu urna malesuada, fermentum eros lobortis, iaculis nisi. Nunc bibendum ligula enim, eget aliquet eros ultricies eget. Nulla vitae consectetur dui. Nam eget leo sed eros sodales tristique.
-          </p>
-        </div>
         {
           Object.keys(projectsList).map((key, index) => {
             return (
