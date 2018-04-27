@@ -74,7 +74,9 @@ export default class Carousel extends React.Component {
 
   }
 
-  togglePreview(state) {
+  togglePreview(state, e) {
+    e = e || window.event;
+    e.preventDefault();
     let toggle = state === 'on';
     this.setState({
       preview: toggle

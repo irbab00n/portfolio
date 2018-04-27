@@ -8,9 +8,11 @@ export default class FullPageReview extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fadein: true
+      fadein: true,
+      hovered: false,
     };
     this.fadeInAnimation = this.fadeInAnimation.bind(this);
+    this.toggleHover = this.toggleHover.bind(this);
   }
 
   componentWillMount() {
@@ -57,6 +59,15 @@ export default class FullPageReview extends React.Component {
     reel();
   }
 
+  toggleHover(state, e) {
+    e = e || window.event;
+    e.preventDefault();
+    let toggle = state === 'on';
+    this.setState({
+      hovered: toggle
+    });
+  }
+
   render() {
 
     const { 
@@ -70,7 +81,10 @@ export default class FullPageReview extends React.Component {
       yOffset
     } = this.props;
 
-    const { fadein } = this.state;
+    const { 
+      fadein,
+      hovered
+    } = this.state;
 
     return (
 
@@ -80,8 +94,38 @@ export default class FullPageReview extends React.Component {
             style.full_page_preview_body
           )
         }
-        onClick={() => {togglePreview('off')}}
       > 
+
+        <div
+          id="button-container"
+          style={
+            apply(
+              style.button_container,
+              mobileToggle && style.button_container_mobile_landscape,
+              orientationFlag && style.button_container_mobile_portrait
+            )
+          }
+        >
+          <div
+            id="button"
+            style={
+              apply(
+                style.button,
+                mobileToggle && style.button_mobile_landscape,
+                orientationFlag && style.button_mobile_portait,
+                hovered && style.button_hovered,
+                fadein && style.button_fadein
+              )
+            }
+            onMouseEnter={e => this.toggleHover('on', e)}
+            onMouseLeave={e => this.toggleHover('off', e)}
+            onClick={e => togglePreview('off', e)}
+            onTouchEnd={e => togglePreview('off', e)}
+          >
+            X
+          </div>
+        </div>
+
         <div
           id="image-container"
           style={
