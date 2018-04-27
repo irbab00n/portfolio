@@ -33,9 +33,6 @@ class Dropdown extends React.Component {
     const { dropdownToggle } = this.state;
     const { yOffset, targets, orientationFlag } = this.props;
 
-    let orientation = orientationFlag ? 'portrait' : 'landscape';
-
-
     return (
 
       <div 
@@ -73,13 +70,13 @@ class Dropdown extends React.Component {
               name={'About Me'}
               dropdownToggle={dropdownToggle}
               orientationFlag={orientationFlag}
-              onClick={animationChooser(yOffset, targets.mobile.block2[orientation].start + 5, scrollEffects)}
+              onClick={animationChooser(yOffset, targets.block2.start + 5, scrollEffects)}
             />
             <Link 
               name={'Projects'}
               dropdownToggle={dropdownToggle}
               orientationFlag={orientationFlag}
-              onClick={animationChooser(yOffset, targets.mobile.block3[orientation].start + 5, scrollEffects)}
+              onClick={animationChooser(yOffset, targets.block3.start + 5, scrollEffects)}
             />
             <a
               style={{textDecoration: 'none'}}

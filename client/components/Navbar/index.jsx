@@ -28,8 +28,8 @@ class Navbar extends React.Component {
         }]);
       case 'sharp':
         return ([
-          yOffset >= targets.desktop.block1.end && {WebkitTransition: '0.4s', backgroundColor: `rgba(250, 250, 250,${(percentScrolled / 10).toFixed(1)})`}, 
-          yOffset >= targets.desktop.block1.end && {boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)'}
+          yOffset >= targets.block1.end && {WebkitTransition: '0.4s', backgroundColor: `rgba(250, 250, 250,${(percentScrolled / 10).toFixed(1)})`}, 
+          yOffset >= targets.block1.end && {boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.4)'}
         ]);
     }
   }
@@ -49,13 +49,16 @@ class Navbar extends React.Component {
 
     return (
 
-      <div style={
-        apply(
-          style.main,
-          ...this.renderOption(animationOption),
-          (mobileToggle && orientationFlag) && style.main_mobile
-        )
-      }>
+      <div
+        id="navigation-body"
+        style={
+          apply(
+            style.main,
+            ...this.renderOption(animationOption),
+            (mobileToggle && orientationFlag) && style.main_mobile
+          )
+        }
+      >
 
         <Title
           mobileToggle={mobileToggle}

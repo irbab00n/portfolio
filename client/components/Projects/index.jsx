@@ -14,10 +14,6 @@ class Projects extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    console.log(document.getElementById('projects-body').getBoundingClientRect().top);
-  }
-
   render() {
 
     const {
