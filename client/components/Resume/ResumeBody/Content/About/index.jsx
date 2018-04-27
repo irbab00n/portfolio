@@ -41,7 +41,7 @@ export default class About extends React.Component {
 
         <div style={{
           alignSelf: 'center',
-          height: '550px',
+          height: '450px',
           width: '100%',
           maxWidth: '1500px',
           display: 'flex',
