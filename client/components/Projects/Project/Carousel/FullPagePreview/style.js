@@ -54,7 +54,7 @@ module.exports.button = {
 };
 
 module.exports.button_hovered = {
-  backgroundColor: 'rgba(235, 235, 235, 0.4)',
+  backgroundColor: 'rgba(235, 235, 235, 0.6)',
 };
 
 module.exports.button_fadein = {
