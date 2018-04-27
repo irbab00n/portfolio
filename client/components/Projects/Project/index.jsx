@@ -87,7 +87,8 @@ export default class Project extends React.Component {
             yOffset={yOffset}
           />
 
-          <Carousel 
+          <Carousel
+            toggleCollapse={this.toggleCollapse}
             collapsed={collapsed}
             project={project}
             screenWidth={screenWidth}

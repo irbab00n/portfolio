@@ -94,6 +94,7 @@ export default class Carousel extends React.Component {
   render() {
 
     const {
+      toggleCollapse,
       collapsed,
       project,
       screenWidth,
@@ -183,6 +184,7 @@ export default class Carousel extends React.Component {
                   fadein && style.carousel_image_transition
                 )
               }
+              onClick={collapsed ? e => toggleCollapse(e) : () => console.log('Not collapsed!')}
             />
 
           </div>
