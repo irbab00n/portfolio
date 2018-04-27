@@ -95,7 +95,7 @@ class App extends React.Component {
   }
 
   handleWindowResize() {
-    this.setState({screenWidth: window.innerWidth, screenHeight: window.innerHeight}, () => {setTimeout(this.buildNavigationTargets, 100)});
+    this.setState({screenWidth: window.innerWidth, screenHeight: window.innerHeight}, () => {setTimeout(this.buildNavigationTargets, 300)});
   }
 
 
