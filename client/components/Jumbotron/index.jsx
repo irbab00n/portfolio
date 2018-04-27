@@ -40,11 +40,14 @@ class Jumbotron extends React.Component {
 
     return (
 
-      <div style={
-        apply(
-          style.body
-        )
-      }>
+      <div
+        id="jumbotron-body" 
+        style={
+          apply(
+            style.body
+          )
+        }
+      >
 
         <RightCloud
           mobileToggle={mobileToggle}

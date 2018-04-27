@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Precache from './components/Precache/index.jsx';
 import Navbar from './components/Navbar/index.jsx';
 import Jumbotron from './components/Jumbotron/index.jsx';
 import Resume from './components/Resume/index.jsx';
@@ -20,14 +19,65 @@ class App extends React.Component {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
       percentScrolled: 0,
+      targets: {
+        block1: {
+          start: 0,
+          end: 0,
+          label: 'Home'
+        },
+        block2: {
+          start: 0,
+          end: 0,
+          label: 'About Me'
+        },
+        block3: {
+          start: 0,
+          end: 0,
+          label: 'Projects'
+        }
+      }
     };
+    this.buildNavigationTargets = this.buildNavigationTargets.bind(this);
     this.calculateScrolled = this.calculateScrolled.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
+  }
+
+  buildNavigationTargets() {
+    let navbarHeight = document.getElementById('navigation-body').scrollHeight;
+    let jumbotronHeight = document.getElementById('jumbotron-body').scrollHeight;
+    let resumeHeight = document.getElementById('resume-body').scrollHeight;
+    let projectsHeight = document.getElementById('projects-body').scrollHeight;
+
+    let targets = {
+      block1: {
+        start: 0,
+        end: jumbotronHeight - navbarHeight,
+        label: 'Home'
+      },
+      block2: {
+        start: jumbotronHeight - navbarHeight + 1,
+        end: jumbotronHeight + resumeHeight - navbarHeight,
+        label: 'About Me'
+      },
+      block3: {
+        start: jumbotronHeight + resumeHeight - navbarHeight + 1,
+        end: jumbotronHeight + resumeHeight + projectsHeight - navbarHeight,
+        label: 'Projects'
+      }
+    };
+
+    this.setState({
+      targets
+    });
   }
 
   componentWillMount() {
     window.addEventListener('resize', this.handleWindowResize);
     window.addEventListener('scroll', this.calculateScrolled);
+  }
+
+  componentDidMount() {
+    this.buildNavigationTargets();
   }
 
   componentWillUnmount() {
@@ -45,72 +95,16 @@ class App extends React.Component {
   }
 
   handleWindowResize() {
-    this.setState({screenWidth: window.innerWidth, screenHeight: window.innerHeight})
+    this.setState({screenWidth: window.innerWidth, screenHeight: window.innerHeight}, () => {setTimeout(this.buildNavigationTargets, 100)});
   }
 
 
   render() {
 
-    const { screenWidth, screenHeight, percentScrolled } = this.state;
+    const { screenWidth, screenHeight, percentScrolled, targets } = this.state;
     const mobileToggle = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscape
-    let targets = {
-      desktop: {
-        block1: {
-          start: 0,
-          end: 950,
-          label: 'Home'
-        },
-        block2: {
-          start: 951,
-          end: 4525,
-          label: 'About Me'
-        },
-        block3: {
-          start: 4526,
-          end: 5727,
-          label: 'Projects'
-        }
-      },
-      mobile: {
-        block1: {
-          portrait:{
-            start: 0,
-            end: 900,
-            label: 'Home'
-          },
-          landscape:{
-            start: 0,
-            end: 960,
-            label: 'Home'
-          }
-        },
-        block2: {
-          portrait:{
-            start: 901,
-            end: 4364,
-            label: 'About Me'
-          },
-          landscape:{
-            start: 961,
-            end: 4439,
-            label: 'About Me'
-          }
-        },
-        block3: {
-          portrait:{
-            start: 4365,
-            end: getDocumentHeight(),
-            label: 'Projects'
-          },
-          landscape:{
-            start: 4440,
-            end: getDocumentHeight(),
-            label: 'Projects'
-          }
-        }
-      }
-    };
+
 
     return (
 
@@ -121,20 +115,6 @@ class App extends React.Component {
         alignItems: 'center',
         color: 'black',
       }}>
-
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_signup.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_profile.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/trainerFinder_search.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_fleshed.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_skeleton.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_google_maps.jpg' />
-        <Precache image='https://s3-us-west-1.amazonaws.com/cos-bytes.com/vagabondly_trips.jpg' />
 
         <Navbar 
           screenWidth={screenWidth}
@@ -155,6 +135,7 @@ class App extends React.Component {
           orientationFlag={orientationFlag}
           yOffset={getCurrentYOffset()}
         />
+
 
         <Resume 
           screenWidth={screenWidth}

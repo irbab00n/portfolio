@@ -12,10 +12,9 @@ class CurrentSelection extends React.Component {
 
   displayCurrentSection(y, orientationFlag, targetsObj) {
     let targets = Object.keys(targetsObj);
-    let orientation = orientationFlag ? 'portrait' : 'landscape';
 
     for (let i = 0; i < targets.length; i++) {
-      let range = targetsObj[targets[i]][orientation];
+      let range = targetsObj[targets[i]];
       if (y >= range.start && y <= range.end) {
         return range.label;
       }
@@ -36,7 +35,7 @@ class CurrentSelection extends React.Component {
         )
       }>
         {
-          this.displayCurrentSection(yOffset, orientationFlag, targets.mobile)
+          this.displayCurrentSection(yOffset, orientationFlag, targets)
         }
       </div>
 

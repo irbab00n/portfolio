@@ -19,11 +19,14 @@ export default class ResumeBody extends React.Component {
 
     return (
 
-      <div style={
-        apply(
-          style.body
-        )
-      }>
+      <div 
+        id="resume-body"
+        style={
+          apply(
+            style.body
+          )
+        }
+      >
         <div style={{
           height: '0px',
           position: 'relative',
