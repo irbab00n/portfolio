@@ -83,6 +83,7 @@ module.exports.track_current = {
 };
 
 module.exports.carousel_image = {
+  cursor: 'pointer',
   display: 'block',
   objectFit: 'scale-down',
   width: '100%',
@@ -94,6 +95,10 @@ module.exports.carousel_image = {
   userSelect: 'none',
   WebkitTransition: '0.5s',
   opacity: '1.0'
+};
+
+module.exports.carousel_image_collapsed = {
+  cursor: 'row-resize'
 };
 
 module.exports.carousel_image_transition = {

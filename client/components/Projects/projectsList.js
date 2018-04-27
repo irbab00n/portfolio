@@ -1,53 +1,54 @@
-// module.exports.redoku = {
-//   pictures: [
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
-//   ],
-//   title: 'cos-bytes.com',
-//   link: 'https://cos-bytes.com',
-//   contributors: ['Thomas Cosby'],
-//   stackImage: '',
-//   description: 'Everything that you have seen so far has been composed of components I have created myself.  As a labor of love, my portfolio has been one of the best resources for my continually developing front-end skills.  I have combined the most popular JS front-end framework, React, with a technique known as CSS-in-JS to create a highly interactive and performant user experience.  It is packed full of unique features, inluding a custom built simulated scrolling navigation.  This project has inspired me to create a CSS-in-JS animation builder for React!',
-//   overview: 'This website has served as not only a display center for who I am, but also what I am capable of as a software engineer'
-// };
+module.exports.redoku = {
+  pictures: [
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
+  ],
+  title: 'cos-bytes.com',
+  link: 'https://cos-bytes.com',
+  contributors: ['Thomas Cosby'],
+  stackImage: '',
+  description: 'Everything that you have seen so far has been composed of components I have created myself.  As a labor of love, my portfolio has been one of the best resources for my continually developing front-end skills.  I have combined the most popular JS front-end framework, React, with a technique known as CSS-in-JS to create a highly interactive and performant user experience.  It is packed full of unique features, inluding a custom built simulated scrolling navigation.  This project has inspired me to create a CSS-in-JS animation builder for React!',
+  overview: 'This website has served as not only a display center for who I am, but also what I am capable of as a software engineer'
+};
 
-// module.exports.particles = {
-//   pictures: [
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
-//   ],
-//   title: 'cos-bytes.com',
-//   link: 'https://cos-bytes.com',
-//   contributors: ['Thomas Cosby'],
-//   stackImage: '',
-//   description: 'Everything that you have seen so far has been composed of components I have created myself.  As a labor of love, my portfolio has been one of the best resources for my continually developing front-end skills.  I have combined the most popular JS front-end framework, React, with a technique known as CSS-in-JS to create a highly interactive and performant user experience.  It is packed full of unique features, inluding a custom built simulated scrolling navigation.  This project has inspired me to create a CSS-in-JS animation builder for React!',
-//   overview: 'This website has served as not only a display center for who I am, but also what I am capable of as a software engineer'
-// };
+module.exports.particles = {
+  pictures: [
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
+  ],
+  title: 'Particles',
+  link: 'http://particles-app-tc.herokuapp.com',
+  repo: 'https://github.com/irbab00n/particles-app',
+  contributors: ['Thomas Cosby'],
+  stackImage: '',
+  description: 'Everything that you have seen so far has been composed of components I have created myself.  As a labor of love, my portfolio has been one of the best resources for my continually developing front-end skills.  I have combined the most popular JS front-end framework, React, with a technique known as CSS-in-JS to create a highly interactive and performant user experience.  It is packed full of unique features, inluding a custom built simulated scrolling navigation.  This project has inspired me to create a CSS-in-JS animation builder for React!',
+  overview: 'This website has served as not only a display center for who I am, but also what I am capable of as a software engineer'
+};
 
-// module.exports.noteapp = {
-//   pictures: [
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design.jpg', description: 'Designs for the Links slide - Before... '},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design_after.jpg', description: '...After!  I have always enjoyed the process of going from frames / drawings to fully constructed components'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_design2.jpg', description: 'Designs for the Tabs that encapsulate this carousel of images'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_project_tabs.jpg', description: 'The project tabs in their most recently published glory'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_projects_component.jpg', description: 'A fully functioning Carousel component that is completely custom built'},
-//     {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/portfolio_fleshed.jpg', description: 'I have created an animated background for the jumbotron component that has clouds that animate outwards as the user scrolls the page'}  
-//   ],
-//   title: 'cos-bytes.com',
-//   link: 'https://cos-bytes.com',
-//   contributors: ['Thomas Cosby'],
-//   stackImage: '',
-//   description: 'Everything that you have seen so far has been composed of components I have created myself.  As a labor of love, my portfolio has been one of the best resources for my continually developing front-end skills.  I have combined the most popular JS front-end framework, React, with a technique known as CSS-in-JS to create a highly interactive and performant user experience.  It is packed full of unique features, inluding a custom built simulated scrolling navigation.  This project has inspired me to create a CSS-in-JS animation builder for React!',
-//   overview: 'This website has served as not only a display center for who I am, but also what I am capable of as a software engineer'
-// };
+module.exports.noteapp = {
+  pictures: [
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/note-app_home.jpg', description: 'The Note-app!  This allows you to create small convenient colorized tab notes!'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/note-app_add.jpg', description: 'Add a new note!'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/note-app_edit.jpg', description: 'If you make a mistake, no sweat! Go back and edit the note!'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/note-app_delete_hover.jpg', description: 'Last but not least, if you want to delete a note'},
+    {link: 'https://s3-us-west-1.amazonaws.com/cos-bytes.com/note-app_delete.jpg', description: 'We want to make sure you\'re serious before you do'}
+  ],
+  title: 'Note-app',
+  link: 'http://note-app-tc.herokuapp.com',
+  repo: 'https://github.com/irbab00n/note-app',
+  contributors: ['Thomas Cosby'],
+  stackImage: '',
+  description: 'This application allowed me to practice building a responsive grid layout containing reusable note card components that you can change and update.  This was also a great exercise to practice building functionality into a form to enrich the user experience.  One example is being able to prevent a blank card from being created by detecting whether the user has added a title and/or note body has any content added.  It was a great experience also working with in-line CSS-in-JS styling to create event-based animations to trigger.',
+  overview: 'My take on the note-taking/making app built in React featuring CSS-in-JS styling'
+};
 
 module.exports.portfolio = {
   pictures: [

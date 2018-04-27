@@ -53,7 +53,6 @@ class App extends React.Component {
 
     const { screenWidth, screenHeight, percentScrolled } = this.state;
     const mobileToggle = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    // screenWidth < 1000; // True: Mobile View, False: Desktop View
     const orientationFlag = screenWidth < screenHeight; // True: Portrait, False: Landscape
     let targets = {
       desktop: {
