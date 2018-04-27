@@ -3,6 +3,7 @@ import apply from 'applystyles';
 import animator from 'react-css-in-js-animator';
 
 import RightReturn from './RightReturn.jsx';
+import FullPagePreview from './FullPagePreview/index.jsx';
 
 import style from './style';
 
@@ -12,12 +13,14 @@ export default class Carousel extends React.Component {
     this.state = {
       currentIndex: 0,
       transition: false,
+      preview: false,
       leftHover: false,
       rightHover: false,
       fadein: false
     };
     this.advanceIndex = this.advanceIndex.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
+    this.togglePreview = this.togglePreview.bind(this);
     this.transitionAnimation = this.transitionAnimation.bind(this);
     this.fadeInAnimation = this.fadeInAnimation.bind(this);
   }
@@ -71,6 +74,13 @@ export default class Carousel extends React.Component {
 
   }
 
+  togglePreview(state) {
+    let toggle = state === 'on';
+    this.setState({
+      preview: toggle
+    });
+  }
+
   transitionAnimation() {
     let keyframe1 = new animator.keyframe({transition: true}, 0);
     let keyframe2 = new animator.keyframe({transition: false}, 100);
@@ -107,6 +117,7 @@ export default class Carousel extends React.Component {
     const { 
       currentIndex, 
       transition,
+      preview,
       leftHover,
       rightHover,
       fadein
@@ -180,11 +191,12 @@ export default class Carousel extends React.Component {
               style={
                 apply(
                   style.carousel_image,
+                  collapsed && style.carousel_image_collapsed,
                   transition && style.carousel_image_transition,
                   fadein && style.carousel_image_transition
                 )
               }
-              onClick={collapsed ? e => toggleCollapse(e) : () => console.log('Not collapsed!')}
+              onClick={collapsed ? e => toggleCollapse(e) : () => this.togglePreview('on')}
             />
 
           </div>
@@ -221,6 +233,21 @@ export default class Carousel extends React.Component {
           </div>
 
         </div>
+
+        {
+          preview ?
+            <FullPagePreview 
+              togglePreview={this.togglePreview}
+              collapsed={collapsed}
+              picture={project.pictures[currentIndex]}
+              screenWidth={screenWidth}
+              screenHeight={screenHeight}
+              mobileToggle={mobileToggle}
+              orientationFlag={orientationFlag}
+              yOffset={yOffset}
+            /> :
+            null
+        }
 
       </div>
 
