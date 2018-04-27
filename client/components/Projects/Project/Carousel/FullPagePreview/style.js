@@ -117,6 +117,7 @@ module.exports.description_container = {
   alignItems: 'center',
   justifyContent: 'center',
   color: 'rgba(235, 235, 235, 0.8)',
+  fontSize: '100%',
   WebkitTransition: '0.5s',
 };
 
@@ -124,3 +125,7 @@ module.exports.description_container_fadein = {
   color: 'rgba(235, 235, 235, 0.0)',
   WebkitTransition: '0.0s',
 };
+
+module.exports.description_container_mobile_portait = {
+  fontSize: '150%',
+}

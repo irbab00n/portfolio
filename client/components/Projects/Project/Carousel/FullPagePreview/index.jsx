@@ -152,6 +152,7 @@ export default class FullPageReview extends React.Component {
           style={
             apply(
               style.description_container,
+              orientationFlag && style.description_container_mobile_portait,
               fadein && style.description_container_fadein
             )
           }
